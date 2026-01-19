@@ -15,8 +15,8 @@
   "upload": "Upload",
   "uploadedFail": "Image upload failed, please re-upload.",
   "uploading": "Uploading",
-  "webapp.changeLogo": "Change Powered by Brand Image",
+  "webapp.changeLogo": "Change Powered by G-Group Image",
   "webapp.changeLogoTip": "SVG or PNG format with a minimum size of 40x40px",
-  "webapp.removeBrand": "Remove Powered by Dify",
+  "webapp.removeBrand": "Remove Powered by G-Group",
   "webapp.title": "Customize web app brand"
 }

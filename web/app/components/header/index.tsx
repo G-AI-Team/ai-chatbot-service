@@ -46,15 +46,15 @@ const Header = () => {
   const renderLogo = () => (
     <h1>
       <Link href="/apps" className="flex h-8 shrink-0 items-center justify-center overflow-hidden whitespace-nowrap px-0.5 indent-[-9999px]">
-        {isBrandingEnabled && systemFeatures.branding.application_title ? systemFeatures.branding.application_title : 'Dify'}
+        {isBrandingEnabled && systemFeatures.branding.application_title ? systemFeatures.branding.application_title : 'Logo'}
         {systemFeatures.branding.enabled && systemFeatures.branding.workspace_logo
           ? (
-              <img
-                src={systemFeatures.branding.workspace_logo}
-                className="block h-[22px] w-auto object-contain"
-                alt="logo"
-              />
-            )
+            <img
+              src={systemFeatures.branding.workspace_logo}
+              className="block h-[22px] object-contain"
+              alt="logo"
+            />
+          )
           : <DifyLogo />}
       </Link>
     </h1>
