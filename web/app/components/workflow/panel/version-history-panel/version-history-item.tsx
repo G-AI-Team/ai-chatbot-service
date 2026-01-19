@@ -68,7 +68,7 @@ const VersionHistoryItem: React.FC<VersionHistoryItemProps> = ({
   return (
     <div
       className={cn(
-        'group relative flex gap-x-1 rounded-lg p-2',
+        'group relative flex gap-x-1 rounded-md p-2',
         isSelected ? 'cursor-not-allowed bg-state-accent-active' : 'cursor-pointer hover:bg-state-base-hover',
       )}
       onClick={handleClickItem}
@@ -85,7 +85,7 @@ const VersionHistoryItem: React.FC<VersionHistoryItemProps> = ({
       {!isLast && <div className="absolute left-4 top-6 h-[calc(100%-0.75rem)] w-0.5 bg-divider-subtle" />}
       <div className=" flex h-5 w-[18px] shrink-0 items-center justify-center">
         <div className={cn(
-          'h-2 w-2 rounded-lg border-[2px]',
+          'h-2 w-2 rounded-md border-[2px]',
           isSelected ? 'border-text-accent' : 'border-text-quaternary',
         )}
         />

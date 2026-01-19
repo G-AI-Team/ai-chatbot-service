@@ -111,7 +111,7 @@ const JsonImporter: FC<JsonImporterProps> = ({
           {/* Content */}
           <div className="px-4 py-2">
             <CodeEditor
-              className="rounded-lg"
+              className="rounded-md"
               editorWrapperClassName="h-[340px]"
               value={json}
               onUpdate={setJson}

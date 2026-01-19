@@ -117,20 +117,20 @@ const AppIconPicker: FC<AppIconPickerProps> = ({
     >
       {!DISABLE_UPLOAD_IMAGE_AS_ICON && (
         <div className="w-full p-2 pb-0">
-          <div className="flex items-center justify-center gap-2 rounded-xl bg-background-body p-1 text-text-primary">
+          <div className="flex items-center justify-center gap-2 rounded-md bg-background-body p-1 text-text-primary">
             {tabs.map(tab => (
               <button
                 type="button"
                 key={tab.key}
                 className={cn(
-                  'system-sm-medium flex h-8 flex-1 shrink-0 items-center justify-center rounded-lg p-2 text-text-tertiary',
+                  'system-sm-medium flex h-8 flex-1 shrink-0 items-center justify-center rounded-md p-2 text-text-tertiary',
                   activeTab === tab.key && 'bg-components-main-nav-nav-button-bg-active text-text-accent shadow-md',
                 )}
                 onClick={() => setActiveTab(tab.key as AppIconType)}
               >
                 {tab.icon}
                 {' '}
-&nbsp;
+                &nbsp;
                 {tab.label}
               </button>
             ))}

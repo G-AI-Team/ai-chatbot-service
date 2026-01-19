@@ -54,7 +54,7 @@ const MCPToolItem = ({
     <Tooltip
       key={tool.name}
       position="left"
-      popupClassName="!p-0 !px-4 !py-3.5 !w-[360px] !border-[0.5px] !border-components-panel-border !rounded-xl !shadow-lg"
+      popupClassName="!p-0 !px-4 !py-3.5 !w-[360px] !border-[0.5px] !border-components-panel-border !rounded-md !shadow-lg"
       popupContent={(
         <div>
           <div className="title-xs-semi-bold mb-1 text-text-primary">{tool.label[language]}</div>
@@ -64,7 +64,7 @@ const MCPToolItem = ({
       )}
     >
       <div
-        className={cn('bg-components-panel-item-bg cursor-pointer rounded-xl border-[0.5px] border-components-panel-border-subtle px-4 py-3 shadow-xs hover:bg-components-panel-on-panel-item-bg-hover')}
+        className={cn('bg-components-panel-item-bg cursor-pointer rounded-md border-[0.5px] border-components-panel-border-subtle px-4 py-3 shadow-xs hover:bg-components-panel-on-panel-item-bg-hover')}
       >
         <div className="system-md-semibold pb-0.5 text-text-secondary">{tool.label[language]}</div>
         <div className="system-xs-regular line-clamp-2 text-text-tertiary" title={tool.description[language]}>{tool.description[language]}</div>

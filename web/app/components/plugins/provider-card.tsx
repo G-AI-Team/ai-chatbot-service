@@ -42,7 +42,7 @@ const ProviderCardComponent: FC<Props> = ({
   const marketplaceLinkParams = useMemo(() => ({ language: locale, theme }), [locale, theme])
 
   return (
-    <div className={cn('group relative rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-on-panel-item-bg p-4 pb-3 shadow-xs hover:bg-components-panel-on-panel-item-bg', className)}>
+    <div className={cn('group relative rounded-md border-[0.5px] border-components-panel-border bg-components-panel-on-panel-item-bg p-4 pb-3 shadow-xs hover:bg-components-panel-on-panel-item-bg', className)}>
       {/* Header */}
       <div className="flex">
         <Icon src={payload.icon} />
@@ -67,7 +67,7 @@ const ProviderCardComponent: FC<Props> = ({
         ))}
       </div>
       <div
-        className="absolute bottom-0 left-0 right-0 hidden items-center gap-2 rounded-xl bg-gradient-to-tr from-components-panel-on-panel-item-bg to-background-gradient-mask-transparent p-4 pt-4 group-hover:flex"
+        className="absolute bottom-0 left-0 right-0 hidden items-center gap-2 rounded-md bg-gradient-to-tr from-components-panel-on-panel-item-bg to-background-gradient-mask-transparent p-4 pt-4 group-hover:flex"
       >
         <Button
           className="grow"

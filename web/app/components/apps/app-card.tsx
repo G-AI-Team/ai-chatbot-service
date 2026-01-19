@@ -268,14 +268,14 @@ const AppCard = ({ app, onRefresh }: AppCardProps) => {
     }
     return (
       <div className="relative flex w-full flex-col py-1" onMouseLeave={onMouseLeave}>
-        <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-lg px-3 hover:bg-state-base-hover" onClick={onClickSettings}>
+        <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-md px-3 hover:bg-state-base-hover" onClick={onClickSettings}>
           <span className="system-sm-regular text-text-secondary">{t('editApp', { ns: 'app' })}</span>
         </button>
         <Divider className="my-1" />
-        <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-lg px-3 hover:bg-state-base-hover" onClick={onClickDuplicate}>
+        <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-md px-3 hover:bg-state-base-hover" onClick={onClickDuplicate}>
           <span className="system-sm-regular text-text-secondary">{t('duplicate', { ns: 'app' })}</span>
         </button>
-        <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-lg px-3 hover:bg-state-base-hover" onClick={onClickExport}>
+        <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-md px-3 hover:bg-state-base-hover" onClick={onClickExport}>
           <span className="system-sm-regular text-text-secondary">{t('export', { ns: 'app' })}</span>
         </button>
         {(app.mode === AppModeEnum.COMPLETION || app.mode === AppModeEnum.CHAT) && (
@@ -283,7 +283,7 @@ const AppCard = ({ app, onRefresh }: AppCardProps) => {
             <Divider className="my-1" />
             <button
               type="button"
-              className="mx-1 flex h-8 cursor-pointer items-center rounded-lg px-3 hover:bg-state-base-hover"
+              className="mx-1 flex h-8 cursor-pointer items-center rounded-md px-3 hover:bg-state-base-hover"
               onClick={onClickSwitch}
             >
               <span className="text-sm leading-5 text-text-secondary">{t('switch', { ns: 'app' })}</span>
@@ -294,28 +294,28 @@ const AppCard = ({ app, onRefresh }: AppCardProps) => {
           !app.has_draft_trigger && (
             (!systemFeatures.webapp_auth.enabled)
               ? (
-                  <>
-                    <Divider className="my-1" />
-                    <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-lg px-3 hover:bg-state-base-hover" onClick={onClickInstalledApp}>
-                      <span className="system-sm-regular text-text-secondary">{t('openInExplore', { ns: 'app' })}</span>
-                    </button>
-                  </>
-                )
+                <>
+                  <Divider className="my-1" />
+                  <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-md px-3 hover:bg-state-base-hover" onClick={onClickInstalledApp}>
+                    <span className="system-sm-regular text-text-secondary">{t('openInExplore', { ns: 'app' })}</span>
+                  </button>
+                </>
+              )
               : !(isGettingUserCanAccessApp || !userCanAccessApp?.result) && (
-                  <>
-                    <Divider className="my-1" />
-                    <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-lg px-3 hover:bg-state-base-hover" onClick={onClickInstalledApp}>
-                      <span className="system-sm-regular text-text-secondary">{t('openInExplore', { ns: 'app' })}</span>
-                    </button>
-                  </>
-                )
+                <>
+                  <Divider className="my-1" />
+                  <button type="button" className="mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-md px-3 hover:bg-state-base-hover" onClick={onClickInstalledApp}>
+                    <span className="system-sm-regular text-text-secondary">{t('openInExplore', { ns: 'app' })}</span>
+                  </button>
+                </>
+              )
           )
         }
         <Divider className="my-1" />
         {
           systemFeatures.webapp_auth.enabled && isCurrentWorkspaceEditor && (
             <>
-              <button type="button" className="mx-1 flex h-8 cursor-pointer items-center rounded-lg px-3 hover:bg-state-base-hover" onClick={onClickAccessControl}>
+              <button type="button" className="mx-1 flex h-8 cursor-pointer items-center rounded-md px-3 hover:bg-state-base-hover" onClick={onClickAccessControl}>
                 <span className="text-sm leading-5 text-text-secondary">{t('accessControl', { ns: 'app' })}</span>
               </button>
               <Divider className="my-1" />
@@ -324,7 +324,7 @@ const AppCard = ({ app, onRefresh }: AppCardProps) => {
         }
         <button
           type="button"
-          className="group mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-lg px-3 py-[6px] hover:bg-state-destructive-hover"
+          className="group mx-1 flex h-8 cursor-pointer items-center gap-2 rounded-md px-3 py-[6px] hover:bg-state-destructive-hover"
           onClick={onClickDelete}
         >
           <span className="system-sm-regular text-text-secondary group-hover:text-text-destructive">
@@ -355,7 +355,7 @@ const AppCard = ({ app, onRefresh }: AppCardProps) => {
           e.preventDefault()
           getRedirection(isCurrentWorkspaceEditor, app, push)
         }}
-        className="group relative col-span-1 inline-flex h-[160px] cursor-pointer flex-col rounded-xl border-[1px] border-solid border-components-card-border bg-components-card-bg shadow-sm transition-all duration-200 ease-in-out hover:shadow-lg"
+        className="group relative col-span-1 inline-flex h-[160px] cursor-pointer flex-col rounded-md border-[1px] border-solid border-components-card-border bg-components-card-bg shadow-sm transition-all duration-200 ease-in-out hover:shadow-lg"
       >
         <div className="flex h-[66px] shrink-0 grow-0 items-center gap-3 px-[14px] pb-3 pt-[14px]">
           <div className="relative shrink-0">

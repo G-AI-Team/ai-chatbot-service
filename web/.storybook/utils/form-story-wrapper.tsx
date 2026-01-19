@@ -46,7 +46,7 @@ export const FormStoryWrapper = ({
         )}
         {children(form)}
       </div>
-      <aside className="w-full max-w-sm rounded-xl border border-divider-subtle bg-components-panel-bg p-4 text-xs text-text-secondary shadow-sm">
+      <aside className="w-full max-w-sm rounded-md border border-divider-subtle bg-components-panel-bg p-4 text-xs text-text-secondary shadow-sm">
         <div className="flex items-center justify-between text-[11px] uppercase tracking-wide text-text-tertiary">
           <span>Form State</span>
           <span>

@@ -11,7 +11,7 @@ type DatasourceIconProps = {
 const ICON_CONTAINER_CLASSNAME_SIZE_MAP: Record<string, string> = {
   xs: 'w-4 h-4 rounded-[5px] shadow-xs',
   sm: 'w-5 h-5 rounded-md shadow-xs',
-  md: 'w-6 h-6 rounded-lg shadow-md',
+  md: 'w-6 h-6 rounded-md shadow-md',
 }
 
 const DatasourceIcon: FC<DatasourceIconProps> = ({

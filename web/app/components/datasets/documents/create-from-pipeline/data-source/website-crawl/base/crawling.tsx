@@ -72,7 +72,7 @@ const Crawling = ({
         /
         {totalNum}
       </div>
-      <div className="overflow-hidden rounded-xl border border-components-panel-border bg-components-panel-bg">
+      <div className="overflow-hidden rounded-md border border-components-panel-border bg-components-panel-bg">
         <div className="flex items-center gap-x-2 px-4 py-2">
           <Block className="size-4 rounded-[4px]" />
           <Block className="h-2.5 w-14 rounded-sm" />

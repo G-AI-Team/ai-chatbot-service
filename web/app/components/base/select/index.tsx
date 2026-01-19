@@ -86,8 +86,8 @@ const Select: FC<ISelectProps> = ({
     = query === ''
       ? items
       : items.filter((item) => {
-          return item.name.toLowerCase().includes(query.toLowerCase())
-        })
+        return item.name.toLowerCase().includes(query.toLowerCase())
+      })
 
   return (
     <Combobox
@@ -107,28 +107,28 @@ const Select: FC<ISelectProps> = ({
         <div className="group text-text-secondary">
           {allowSearch
             ? (
-                <ComboboxInput
-                  className={`w-full rounded-lg border-0 ${bgClassName} py-1.5 pl-3 pr-10 shadow-sm focus-visible:bg-state-base-hover focus-visible:outline-none group-hover:bg-state-base-hover sm:text-sm sm:leading-6 ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-                  onChange={(event) => {
-                    if (!disabled)
-                      setQuery(event.target.value)
-                  }}
-                  displayValue={(item: Item) => item?.name}
-                />
-              )
+              <ComboboxInput
+                className={`w-full rounded-md border-0 ${bgClassName} py-1.5 pl-3 pr-10 shadow-sm focus-visible:bg-state-base-hover focus-visible:outline-none group-hover:bg-state-base-hover sm:text-sm sm:leading-6 ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                onChange={(event) => {
+                  if (!disabled)
+                    setQuery(event.target.value)
+                }}
+                displayValue={(item: Item) => item?.name}
+              />
+            )
             : (
-                <ComboboxButton
-                  onClick={
-                    () => {
-                      if (!disabled)
-                        setOpen(!open)
-                    }
+              <ComboboxButton
+                onClick={
+                  () => {
+                    if (!disabled)
+                      setOpen(!open)
                   }
-                  className={cn(`flex h-9 w-full items-center rounded-lg border-0 ${bgClassName} py-1.5 pl-3 pr-10 shadow-sm focus-visible:bg-state-base-hover focus-visible:outline-none group-hover:bg-state-base-hover sm:text-sm sm:leading-6`, optionClassName)}
-                >
-                  <div className="w-0 grow truncate text-left" title={selectedItem?.name}>{selectedItem?.name}</div>
-                </ComboboxButton>
-              )}
+                }
+                className={cn(`flex h-9 w-full items-center rounded-md border-0 ${bgClassName} py-1.5 pl-3 pr-10 shadow-sm focus-visible:bg-state-base-hover focus-visible:outline-none group-hover:bg-state-base-hover sm:text-sm sm:leading-6`, optionClassName)}
+              >
+                <div className="w-0 grow truncate text-left" title={selectedItem?.name}>{selectedItem?.name}</div>
+              </ComboboxButton>
+            )}
           <ComboboxButton
             className="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
             onClick={
@@ -149,24 +149,24 @@ const Select: FC<ISelectProps> = ({
                 key={item.value}
                 value={item}
                 className={({ active }: { active: boolean }) =>
-                  cn('relative cursor-default select-none rounded-lg py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover', active ? 'bg-state-base-hover' : '', optionClassName)}
+                  cn('relative cursor-default select-none rounded-md py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover', active ? 'bg-state-base-hover' : '', optionClassName)}
               >
                 {({ /* active, */ selected }) => (
                   <>
                     {renderOption
                       ? renderOption({ item, selected })
                       : (
-                          <>
-                            <span className={cn('block', selected && 'font-normal')}>{item.name}</span>
-                            {selected && (
-                              <span
-                                className={cn('absolute inset-y-0 right-0 flex items-center pr-4 text-text-secondary')}
-                              >
-                                <RiCheckLine className="h-4 w-4" aria-hidden="true" />
-                              </span>
-                            )}
-                          </>
-                        )}
+                        <>
+                          <span className={cn('block', selected && 'font-normal')}>{item.name}</span>
+                          {selected && (
+                            <span
+                              className={cn('absolute inset-y-0 right-0 flex items-center pr-4 text-text-secondary')}
+                            >
+                              <RiCheckLine className="h-4 w-4" aria-hidden="true" />
+                            </span>
+                          )}
+                        </>
+                      )}
                   </>
                 )}
               </ComboboxOption>
@@ -234,45 +234,45 @@ const SimpleSelect: FC<ISelectProps> = ({
               onClick={() => {
                 onOpenChange?.(open)
               }}
-              className={cn(`flex h-full w-full items-center rounded-lg border-0 bg-components-input-bg-normal pl-3 pr-10 focus-visible:bg-state-base-hover-alt focus-visible:outline-none group-hover/simple-select:bg-state-base-hover-alt sm:text-sm sm:leading-6 ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`, className)}
+              className={cn(`flex h-full w-full items-center rounded-md border-0 bg-components-input-bg-normal pl-3 pr-10 focus-visible:bg-state-base-hover-alt focus-visible:outline-none group-hover/simple-select:bg-state-base-hover-alt sm:text-sm sm:leading-6 ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`, className)}
             >
               <span className={cn('system-sm-regular block truncate text-left text-components-input-text-filled', !selectedItem?.name && 'text-components-input-text-placeholder')}>{selectedItem?.name ?? localPlaceholder}</span>
               <span className="absolute inset-y-0 right-0 flex items-center pr-2">
                 {isLoading
                   ? <RiLoader4Line className="h-3.5 w-3.5 animate-spin text-text-secondary" />
                   : (selectedItem && !notClearable)
-                      ? (
-                          <XMarkIcon
-                            onClick={(e) => {
-                              e.stopPropagation()
-                              setSelectedItem(null)
-                              onSelect({ name: '', value: '' })
-                            }}
-                            className="h-4 w-4 cursor-pointer text-text-quaternary"
-                            aria-hidden="false"
+                    ? (
+                      <XMarkIcon
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setSelectedItem(null)
+                          onSelect({ name: '', value: '' })
+                        }}
+                        className="h-4 w-4 cursor-pointer text-text-quaternary"
+                        aria-hidden="false"
+                      />
+                    )
+                    : (
+                      open
+                        ? (
+                          <ChevronUpIcon
+                            className="h-4 w-4 text-text-quaternary group-hover/simple-select:text-text-secondary"
+                            aria-hidden="true"
                           />
                         )
-                      : (
-                          open
-                            ? (
-                                <ChevronUpIcon
-                                  className="h-4 w-4 text-text-quaternary group-hover/simple-select:text-text-secondary"
-                                  aria-hidden="true"
-                                />
-                              )
-                            : (
-                                <ChevronDownIcon
-                                  className="h-4 w-4 text-text-quaternary group-hover/simple-select:text-text-secondary"
-                                  aria-hidden="true"
-                                />
-                              )
-                        )}
+                        : (
+                          <ChevronDownIcon
+                            className="h-4 w-4 text-text-quaternary group-hover/simple-select:text-text-secondary"
+                            aria-hidden="true"
+                          />
+                        )
+                    )}
               </span>
             </ListboxButton>
           )}
 
           {(!disabled) && (
-            <ListboxOptions className={cn('absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur px-1 py-1 text-base shadow-lg backdrop-blur-sm focus:outline-none sm:text-sm', optionWrapClassName)}>
+            <ListboxOptions className={cn('absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur px-1 py-1 text-base shadow-lg backdrop-blur-sm focus:outline-none sm:text-sm', optionWrapClassName)}>
               {items.map((item: Item) =>
                 item.isGroup ? (
                   <div
@@ -285,7 +285,7 @@ const SimpleSelect: FC<ISelectProps> = ({
                   <ListboxOption
                     key={item.value}
                     className={
-                      cn('relative cursor-pointer select-none rounded-lg py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover', optionClassName)
+                      cn('relative cursor-pointer select-none rounded-md py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover', optionClassName)
                     }
                     value={item}
                     disabled={item.disabled || disabled}
@@ -295,17 +295,17 @@ const SimpleSelect: FC<ISelectProps> = ({
                         {renderOption
                           ? renderOption({ item, selected })
                           : (
-                              <>
-                                <span className={cn('block', selected && 'font-normal')}>{item.name}</span>
-                                {selected && !hideChecked && (
-                                  <span
-                                    className={cn('absolute inset-y-0 right-0 flex items-center pr-2 text-text-accent')}
-                                  >
-                                    <RiCheckLine className="h-4 w-4" aria-hidden="true" />
-                                  </span>
-                                )}
-                              </>
-                            )}
+                            <>
+                              <span className={cn('block', selected && 'font-normal')}>{item.name}</span>
+                              {selected && !hideChecked && (
+                                <span
+                                  className={cn('absolute inset-y-0 right-0 flex items-center pr-2 text-text-accent')}
+                                >
+                                  <RiCheckLine className="h-4 w-4" aria-hidden="true" />
+                                </span>
+                              )}
+                            </>
+                          )}
                       </>
                     )}
                   </ListboxOption>
@@ -364,46 +364,46 @@ const PortalSelect: FC<PortalSelectProps> = ({
         {renderTrigger
           ? renderTrigger(selectedItem)
           : (
-              <div
-                className={cn(`
-                          group flex h-9 items-center justify-between rounded-lg border-0 bg-components-input-bg-normal px-2.5 text-sm hover:bg-state-base-hover-alt ${readonly ? 'cursor-not-allowed' : 'cursor-pointer'}
+            <div
+              className={cn(`
+                          group flex h-9 items-center justify-between rounded-md border-0 bg-components-input-bg-normal px-2.5 text-sm hover:bg-state-base-hover-alt ${readonly ? 'cursor-not-allowed' : 'cursor-pointer'}
                         `, triggerClassName, triggerClassNameFn?.(open))}
-                title={selectedItem?.name}
-              >
-                <span
-                  className={`
+              title={selectedItem?.name}
+            >
+              <span
+                className={`
               grow truncate text-text-secondary
               ${!selectedItem?.name && 'text-components-input-text-placeholder'}
             `}
-                >
-                  {selectedItem?.name ?? localPlaceholder}
-                </span>
-                <div className="mx-0.5">
-                  {installedValue && selectedItem && selectedItem.value !== installedValue && (
-                    <Badge>
-                      {installedValue}
-                      {' '}
-                      {'->'}
-                      {' '}
-                      {selectedItem.value}
-                      {' '}
-                    </Badge>
-                  )}
-                </div>
-                <ChevronDownIcon className="h-4 w-4 shrink-0 text-text-quaternary group-hover:text-text-secondary" />
+              >
+                {selectedItem?.name ?? localPlaceholder}
+              </span>
+              <div className="mx-0.5">
+                {installedValue && selectedItem && selectedItem.value !== installedValue && (
+                  <Badge>
+                    {installedValue}
+                    {' '}
+                    {'->'}
+                    {' '}
+                    {selectedItem.value}
+                    {' '}
+                  </Badge>
+                )}
               </div>
-            )}
+              <ChevronDownIcon className="h-4 w-4 shrink-0 text-text-quaternary group-hover:text-text-secondary" />
+            </div>
+          )}
 
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className={`z-20 ${popupClassName}`}>
         <div
-          className={cn('max-h-60 overflow-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg px-1 py-1 text-base shadow-lg focus:outline-none sm:text-sm', popupInnerClassName)}
+          className={cn('max-h-60 overflow-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg px-1 py-1 text-base shadow-lg focus:outline-none sm:text-sm', popupInnerClassName)}
         >
           {items.map((item: Item) => (
             <div
               key={item.value}
               className={`
-                flex h-9 cursor-pointer items-center justify-between rounded-lg px-2.5 text-text-secondary hover:bg-state-base-hover
+                flex h-9 cursor-pointer items-center justify-between rounded-md px-2.5 text-text-secondary hover:bg-state-base-hover
                 ${item.value === value && 'bg-state-base-hover'}
               `}
               title={item.name}

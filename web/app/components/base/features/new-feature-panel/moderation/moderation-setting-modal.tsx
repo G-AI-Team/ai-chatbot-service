@@ -79,12 +79,12 @@ const ModerationSettingModal: FC<ModerationSettingModalProps> = ({
     ...(
       codeBasedExtensionList
         ? codeBasedExtensionList.data.map((item) => {
-            return {
-              key: item.name,
-              name: locale === 'zh-Hans' ? item.label['zh-Hans'] : item.label['en-US'],
-              form_schema: item.form_schema,
-            }
-          })
+          return {
+            key: item.name,
+            name: locale === 'zh-Hans' ? item.label['zh-Hans'] : item.label['en-US'],
+            form_schema: item.form_schema,
+          }
+        })
         : []
     ),
   ]
@@ -271,7 +271,7 @@ const ModerationSettingModal: FC<ModerationSettingModalProps> = ({
         </div>
         {
           !isLoading && !isOpenAIProviderConfigured && localeData.type === 'openai_moderation' && (
-            <div className="mt-2 flex items-center rounded-lg border border-[#FEF0C7] bg-[#FFFAEB] px-3 py-2">
+            <div className="mt-2 flex items-center rounded-md border border-[#FEF0C7] bg-[#FFFAEB] px-3 py-2">
               <InfoCircle className="mr-1 h-4 w-4 text-[#F79009]" />
               <div className="flex items-center text-xs font-medium text-gray-700">
                 {t('feature.moderation.modal.openaiNotConfig.before', { ns: 'appDebug' })}
@@ -281,7 +281,7 @@ const ModerationSettingModal: FC<ModerationSettingModalProps> = ({
                 >
                   &nbsp;
                   {t('settings.provider', { ns: 'common' })}
-&nbsp;
+                  &nbsp;
                 </span>
                 {t('feature.moderation.modal.openaiNotConfig.after', { ns: 'appDebug' })}
               </div>
@@ -294,7 +294,7 @@ const ModerationSettingModal: FC<ModerationSettingModalProps> = ({
           <div className="py-2">
             <div className="mb-1 text-sm font-medium text-text-primary">{t('feature.moderation.modal.provider.keywords', { ns: 'appDebug' })}</div>
             <div className="mb-2 text-xs text-text-tertiary">{t('feature.moderation.modal.keywords.tip', { ns: 'appDebug' })}</div>
-            <div className="relative h-[88px] rounded-lg bg-components-input-bg-normal px-3 py-2">
+            <div className="relative h-[88px] rounded-md bg-components-input-bg-normal px-3 py-2">
               <textarea
                 value={localeData.config?.keywords || ''}
                 onChange={handleDataKeywordsChange}

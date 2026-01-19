@@ -52,7 +52,7 @@ const OptionCard = <T,>({
     <div
       ref={ref}
       className={cn(
-        'cursor-pointer overflow-hidden rounded-xl border border-components-option-card-option-border bg-components-option-card-option-bg',
+        'cursor-pointer overflow-hidden rounded-md border border-components-option-card-option-border bg-components-option-card-option-bg',
         isActive && 'border border-components-option-card-option-selected-border ring-[1px] ring-components-option-card-option-selected-border',
         disabled && 'cursor-not-allowed opacity-50',
       )}

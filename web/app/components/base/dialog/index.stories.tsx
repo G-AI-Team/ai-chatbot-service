@@ -81,7 +81,7 @@ const DialogDemo = (props: React.ComponentProps<typeof Dialog>) => {
           <p>
             Centralize API key management for collaborators. You can revoke, rotate, or generate new keys directly from this dialog.
           </p>
-          <div className="rounded-lg border border-dashed border-gray-200 bg-gray-50 p-4 text-xs text-gray-500">
+          <div className="rounded-md border border-dashed border-gray-200 bg-gray-50 p-4 text-xs text-gray-500">
             This placeholder area represents a form or table that would live inside the dialog body.
           </div>
         </div>
@@ -125,7 +125,7 @@ export const CustomStyling: Story = {
   render: args => <DialogDemo {...args} />,
   args: {
     className: 'max-w-[560px] bg-white/95 backdrop-blur',
-    bodyClassName: 'bg-gray-50 rounded-xl p-5',
+    bodyClassName: 'bg-gray-50 rounded-md p-5',
     footerClassName: 'justify-between px-4 pb-4 pt-4',
     titleClassName: 'text-lg text-primary-600',
     footer: (

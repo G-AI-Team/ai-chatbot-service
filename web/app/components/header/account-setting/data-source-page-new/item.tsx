@@ -24,7 +24,7 @@ const Item = ({
   const [renameValue, setRenameValue] = useState(credentialItem.name)
 
   return (
-    <div className="flex h-10 items-center rounded-lg bg-components-panel-on-panel-item-bg pl-3 pr-1">
+    <div className="flex h-10 items-center rounded-md bg-components-panel-on-panel-item-bg pl-3 pr-1">
       {/* <div className='mr-2 h-5 w-5 shrink-0'></div> */}
       {
         renaming && (

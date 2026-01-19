@@ -25,7 +25,7 @@ const ResultItemExternal: FC<Props> = ({ payload, positionId }) => {
   ] = useBoolean(false)
 
   return (
-    <div className={cn('cursor-pointer rounded-xl bg-chat-bubble-bg pt-3 hover:shadow-lg')} onClick={showDetailModal}>
+    <div className={cn('cursor-pointer rounded-md bg-chat-bubble-bg pt-3 hover:shadow-lg')} onClick={showDetailModal}>
       {/* Meta info */}
       <ResultItemMeta className="px-3" labelPrefix="Chunk" positionId={positionId} wordCount={content.length} score={score} />
 

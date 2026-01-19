@@ -10,7 +10,7 @@ const Empty = () => {
   const docLink = useDocLink()
 
   return (
-    <div className="mb-2 rounded-xl bg-background-section p-6">
+    <div className="mb-2 rounded-md bg-background-section p-6">
       <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-[10px] border-[0.5px] border-components-card-border bg-components-card-bg-alt shadow-lg backdrop-blur-sm">
         <RiPuzzle2Line className="h-5 w-5 text-text-accent" />
       </div>

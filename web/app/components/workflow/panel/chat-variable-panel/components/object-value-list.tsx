@@ -16,7 +16,7 @@ const ObjectValueList: FC<Props> = ({
   const { t } = useTranslation()
 
   return (
-    <div className="w-full overflow-hidden rounded-lg border border-gray-200">
+    <div className="w-full overflow-hidden rounded-md border border-gray-200">
       <div className="system-xs-medium flex h-7 items-center uppercase text-text-tertiary">
         <div className="flex h-full w-[120px] items-center border-r border-gray-200 pl-2">{t('chatVariable.modal.objectKey', { ns: 'workflow' })}</div>
         <div className="flex h-full w-[96px] items-center border-r border-gray-200 pl-2">{t('chatVariable.modal.objectType', { ns: 'workflow' })}</div>

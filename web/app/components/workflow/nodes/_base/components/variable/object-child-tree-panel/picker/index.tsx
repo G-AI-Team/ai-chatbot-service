@@ -74,7 +74,7 @@ const PickerPanel: FC<Props> = ({
   ...props
 }) => {
   return (
-    <div className={cn('w-[296px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]', className)}>
+    <div className={cn('w-[296px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]', className)}>
       <PickerPanelMain {...props} />
     </div>
   )

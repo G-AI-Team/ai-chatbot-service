@@ -203,7 +203,7 @@ const QueryInput = ({
   }, [isExternal, externalRetrievalTestingOnSubmit, onSubmit, text, loading, t, images, isAllUploaded])
 
   return (
-    <div className={cn('relative flex h-80 shrink-0 flex-col overflow-hidden rounded-xl bg-gradient-to-r from-components-input-border-active-prompt-1 to-components-input-border-active-prompt-2 p-0.5 shadow-xs')}>
+    <div className={cn('relative flex h-80 shrink-0 flex-col overflow-hidden rounded-md bg-gradient-to-r from-components-input-border-active-prompt-1 to-components-input-border-active-prompt-2 p-0.5 shadow-xs')}>
       <div className="flex h-full flex-col overflow-hidden rounded-[10px] bg-background-section-burn">
         <div className="relative flex shrink-0 items-center justify-between p-1.5 pb-1 pl-3">
           <span className="system-sm-semibold-uppercase text-text-secondary">
@@ -211,27 +211,27 @@ const QueryInput = ({
           </span>
           {isExternal
             ? (
-                <Button
-                  variant="secondary"
-                  size="small"
-                  onClick={() => setIsSettingsOpen(!isSettingsOpen)}
-                >
-                  <RiEqualizer2Line className="h-3.5 w-3.5 text-components-button-secondary-text" />
-                  <div className="flex items-center justify-center gap-1 px-[3px]">
-                    <span className="system-xs-medium text-components-button-secondary-text">{t('settingTitle', { ns: 'datasetHitTesting' })}</span>
-                  </div>
-                </Button>
-              )
-            : (
-                <div
-                  onClick={onClickRetrievalMethod}
-                  className="flex h-7 cursor-pointer items-center space-x-0.5 rounded-lg border-[0.5px] border-components-button-secondary-bg bg-components-button-secondary-bg px-1.5 shadow-xs backdrop-blur-[5px] hover:bg-components-button-secondary-bg-hover"
-                >
-                  {icon}
-                  <div className="text-xs font-medium uppercase text-text-secondary">{t(`retrieval.${retrievalMethod}.title`, { ns: 'dataset' })}</div>
-                  <RiEqualizer2Line className="size-4 text-components-menu-item-text"></RiEqualizer2Line>
+              <Button
+                variant="secondary"
+                size="small"
+                onClick={() => setIsSettingsOpen(!isSettingsOpen)}
+              >
+                <RiEqualizer2Line className="h-3.5 w-3.5 text-components-button-secondary-text" />
+                <div className="flex items-center justify-center gap-1 px-[3px]">
+                  <span className="system-xs-medium text-components-button-secondary-text">{t('settingTitle', { ns: 'datasetHitTesting' })}</span>
                 </div>
-              )}
+              </Button>
+            )
+            : (
+              <div
+                onClick={onClickRetrievalMethod}
+                className="flex h-7 cursor-pointer items-center space-x-0.5 rounded-md border-[0.5px] border-components-button-secondary-bg bg-components-button-secondary-bg px-1.5 shadow-xs backdrop-blur-[5px] hover:bg-components-button-secondary-bg-hover"
+              >
+                {icon}
+                <div className="text-xs font-medium uppercase text-text-secondary">{t(`retrieval.${retrievalMethod}.title`, { ns: 'dataset' })}</div>
+                <RiEqualizer2Line className="size-4 text-components-menu-item-text"></RiEqualizer2Line>
+              </div>
+            )}
           {
             isSettingsOpen && (
               <ModifyExternalRetrievalModal

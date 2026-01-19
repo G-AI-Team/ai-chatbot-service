@@ -33,7 +33,7 @@ const TransferOwnership = ({ onOperate }: Props) => {
     <Menu as="div" className="relative h-full w-full">
       {
         ({ open }) => (
-          <>
+          <>rounded-md
             <MenuButton className={cn('system-sm-regular group flex h-full w-full cursor-pointer items-center justify-between px-3 text-text-secondary hover:bg-state-base-hover', open && 'bg-state-base-hover')}>
               {t('members.owner', { ns: 'common' })}
               <RiArrowDownSLine className={cn('h-4 w-4 group-hover:block', open ? 'block' : 'hidden')} />
@@ -52,7 +52,7 @@ const TransferOwnership = ({ onOperate }: Props) => {
               >
                 <div className="p-1">
                   <MenuItem>
-                    <div className="flex cursor-pointer rounded-lg px-3 py-2 hover:bg-state-base-hover" onClick={onOperate}>
+                    <div className="flex cursor-pointer rounded-md px-3 py-2 hover:bg-state-base-hover" onClick={onOperate}>
                       <div className="system-md-regular whitespace-nowrap text-text-secondary">{t('members.transferOwnership', { ns: 'common' })}</div>
                     </div>
                   </MenuItem>

@@ -44,7 +44,7 @@ const Trigger: FC<TriggerProps> = ({
   return (
     <div
       className={cn(
-        'relative flex h-8 cursor-pointer items-center rounded-lg  px-2',
+        'relative flex h-8 cursor-pointer items-center rounded-md  px-2',
         !isInWorkflow && 'border ring-inset hover:ring-[0.5px]',
         !isInWorkflow && (disabled ? 'border-text-warning bg-state-warning-hover ring-text-warning' : 'border-util-colors-indigo-indigo-600 bg-state-accent-hover ring-util-colors-indigo-indigo-600'),
         isInWorkflow && 'border border-workflow-block-parma-bg bg-workflow-block-parma-bg pr-[30px]  hover:border-components-input-border-active',
@@ -88,21 +88,21 @@ const Trigger: FC<TriggerProps> = ({
       {
         disabled
           ? (
-              <Tooltip
-                popupContent={
-                  hasDeprecated
-                    ? t('modelProvider.deprecated', { ns: 'common' })
-                    : (modelDisabled && currentModel)
-                        ? MODEL_STATUS_TEXT[currentModel.status as string][language]
-                        : ''
-                }
-              >
-                <AlertTriangle className="h-4 w-4 text-[#F79009]" />
-              </Tooltip>
-            )
+            <Tooltip
+              popupContent={
+                hasDeprecated
+                  ? t('modelProvider.deprecated', { ns: 'common' })
+                  : (modelDisabled && currentModel)
+                    ? MODEL_STATUS_TEXT[currentModel.status as string][language]
+                    : ''
+              }
+            >
+              <AlertTriangle className="h-4 w-4 text-[#F79009]" />
+            </Tooltip>
+          )
           : (
-              <SlidersH className={cn(!isInWorkflow ? 'text-indigo-600' : 'text-text-tertiary', 'h-4 w-4 shrink-0')} />
-            )
+            <SlidersH className={cn(!isInWorkflow ? 'text-indigo-600' : 'text-text-tertiary', 'h-4 w-4 shrink-0')} />
+          )
       }
       {isInWorkflow && (<RiArrowDownSLine className="absolute right-2 top-[9px] h-3.5 w-3.5 text-text-tertiary" />)}
     </div>

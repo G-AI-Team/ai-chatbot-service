@@ -226,7 +226,7 @@ const SelectAllExampleDemo = () => {
   const toggleItem = createToggleItem(items, setItems)
 
   return (
-    <div className="flex flex-col gap-3 rounded-lg bg-gray-50 p-4">
+    <div className="flex flex-col gap-3 rounded-md bg-gray-50 p-4">
       <div className="flex items-center gap-3 border-b border-gray-200 pb-3">
         <Checkbox
           checked={allChecked}
@@ -270,7 +270,7 @@ const FormExampleDemo = () => {
   })
 
   return (
-    <div className="w-96 rounded-lg border border-gray-200 bg-white p-6">
+    <div className="w-96 rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Account Settings</h3>
       <div className="flex flex-col gap-4">
         <div className="flex items-start gap-3">
@@ -345,7 +345,7 @@ const TaskListExampleDemo = () => {
   const completedCount = tasks.filter(t => t.completed).length
 
   return (
-    <div className="w-96 rounded-lg border border-gray-200 bg-white p-4">
+    <div className="w-96 rounded-md border border-gray-200 bg-white p-4">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-sm font-semibold text-gray-700">Today's Tasks</h3>
         <span className="text-xs text-gray-500">
@@ -369,9 +369,8 @@ const TaskListExampleDemo = () => {
               onCheck={() => toggleTask(task.id)}
             />
             <span
-              className={`cursor-pointer text-sm ${
-                task.completed ? 'text-gray-400 line-through' : 'text-gray-700'
-              }`}
+              className={`cursor-pointer text-sm ${task.completed ? 'text-gray-400 line-through' : 'text-gray-700'
+                }`}
               onClick={() => toggleTask(task.id)}
             >
               {task.title}

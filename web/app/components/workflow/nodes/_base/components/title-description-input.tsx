@@ -63,7 +63,7 @@ export const DescriptionInput = memo(({
   return (
     <div
       className={`
-        leading-0 group flex max-h-[60px] overflow-y-auto rounded-lg bg-components-panel-bg
+        leading-0 group flex max-h-[60px] overflow-y-auto rounded-md bg-components-panel-bg
         px-2 py-[5px]
         ${focus && '!shadow-xs'}
       `}

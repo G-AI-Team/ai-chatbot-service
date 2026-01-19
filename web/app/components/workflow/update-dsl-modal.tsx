@@ -143,11 +143,11 @@ const UpdateDSLModal = ({
       const nodes = data?.workflow?.graph?.nodes ?? []
       const invalidNodes = appDetail?.mode === AppModeEnum.ADVANCED_CHAT
         ? [
-            BlockEnum.End,
-            BlockEnum.TriggerWebhook,
-            BlockEnum.TriggerSchedule,
-            BlockEnum.TriggerPlugin,
-          ]
+          BlockEnum.End,
+          BlockEnum.TriggerWebhook,
+          BlockEnum.TriggerSchedule,
+          BlockEnum.TriggerPlugin,
+        ]
         : [BlockEnum.Answer]
       const hasInvalidNode = nodes.some((node: Node<CommonNodeType>) => {
         return invalidNodes.includes(node?.data?.type)
@@ -267,7 +267,7 @@ const UpdateDSLModal = ({
             <RiCloseLine className="h-[18px] w-[18px] text-text-tertiary" />
           </div>
         </div>
-        <div className="relative mb-2 flex grow gap-0.5 overflow-hidden rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 shadow-xs">
+        <div className="relative mb-2 flex grow gap-0.5 overflow-hidden rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 shadow-xs">
           <div className="absolute left-0 top-0 h-full w-full bg-toast-warning-bg opacity-40" />
           <div className="flex items-start justify-center p-1">
             <RiAlertFill className="h-4 w-4 shrink-0 text-text-warning-secondary" />

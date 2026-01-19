@@ -43,7 +43,7 @@ const Input: FC<InputProps> = ({
         tabIndex={0}
         // Do not set autoComplete for security - prevents browser from storing sensitive API keys
         className={`
-          block h-8 w-full appearance-none rounded-lg border border-transparent bg-components-input-bg-normal px-3 text-sm
+          block h-8 w-full appearance-none rounded-md border border-transparent bg-components-input-bg-normal px-3 text-sm
           text-components-input-text-filled caret-primary-600 outline-none
           placeholder:text-sm placeholder:text-text-tertiary
           hover:border-components-input-border-hover hover:bg-components-input-bg-hover focus:border-components-input-border-active

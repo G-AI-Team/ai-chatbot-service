@@ -84,7 +84,7 @@ const ViewHistory = ({
           {
             withText && (
               <div className={cn(
-                'flex h-8 items-center rounded-lg border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg px-3 shadow-xs',
+                'flex h-8 items-center rounded-md border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg px-3 shadow-xs',
                 'cursor-pointer text-[13px] font-medium text-components-button-secondary-text hover:bg-components-button-secondary-bg-hover',
                 open && 'bg-components-button-secondary-bg-hover',
               )}
@@ -115,7 +115,7 @@ const ViewHistory = ({
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[12]">
           <div
-            className="ml-2 flex w-[240px] flex-col overflow-y-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl"
+            className="ml-2 flex w-[240px] flex-col overflow-y-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl"
             style={{
               maxHeight: 'calc(2 / 3 * 100vh)',
             }}
@@ -157,7 +157,7 @@ const ViewHistory = ({
                       <div
                         key={item.id}
                         className={cn(
-                          'mb-0.5 flex cursor-pointer rounded-lg px-2 py-[7px] hover:bg-state-base-hover',
+                          'mb-0.5 flex cursor-pointer rounded-md px-2 py-[7px] hover:bg-state-base-hover',
                           item.id === historyWorkflowData?.id && 'bg-state-accent-hover hover:bg-state-accent-hover',
                         )}
                         onClick={() => {

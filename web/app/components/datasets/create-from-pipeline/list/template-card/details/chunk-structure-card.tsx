@@ -30,7 +30,7 @@ const ChunkStructureCard = ({
 }: ChunkStructureCardProps) => {
   return (
     <div className={cn(
-      'relative flex overflow-hidden rounded-xl border-[0.5px] border-components-panel-border-subtle bg-components-panel-bg p-2 shadow-xs shadow-shadow-shadow-3',
+      'relative flex overflow-hidden rounded-md border-[0.5px] border-components-panel-border-subtle bg-components-panel-bg p-2 shadow-xs shadow-shadow-shadow-3',
       className,
     )}
     >
@@ -41,7 +41,7 @@ const ChunkStructureCard = ({
       />
       <div className="p-1">
         <div className={cn(
-          'flex size-6 shrink-0 items-center justify-center rounded-lg border-[0.5px] border-divider-subtle text-text-primary-on-surface shadow-md shadow-shadow-shadow-5',
+          'flex size-6 shrink-0 items-center justify-center rounded-md border-[0.5px] border-divider-subtle text-text-primary-on-surface shadow-md shadow-shadow-shadow-5',
           `${IconBackgroundColorMap[effectColor]}`,
         )}
         >

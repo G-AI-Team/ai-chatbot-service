@@ -67,7 +67,7 @@ const Website: FC<Props> = ({
           {ENABLE_WEBSITE_JINAREADER && (
             <button
               type="button"
-              className={cn('flex items-center justify-center rounded-lg px-4 py-2', selectedProvider === DataSourceProvider.jinaReader
+              className={cn('flex items-center justify-center rounded-md px-4 py-2', selectedProvider === DataSourceProvider.jinaReader
                 ? 'system-sm-medium border-[1.5px] border-components-option-card-option-selected-border bg-components-option-card-option-selected-bg text-text-primary'
                 : `system-sm-regular border border-components-option-card-option-border bg-components-option-card-option-bg text-text-secondary
                 hover:border-components-option-card-option-border-hover hover:bg-components-option-card-option-bg-hover hover:shadow-xs hover:shadow-shadow-shadow-3`)}
@@ -83,7 +83,7 @@ const Website: FC<Props> = ({
           {ENABLE_WEBSITE_FIRECRAWL && (
             <button
               type="button"
-              className={cn('rounded-lg px-4 py-2', selectedProvider === DataSourceProvider.fireCrawl
+              className={cn('rounded-md px-4 py-2', selectedProvider === DataSourceProvider.fireCrawl
                 ? 'system-sm-medium border-[1.5px] border-components-option-card-option-selected-border bg-components-option-card-option-selected-bg text-text-primary'
                 : `system-sm-regular border border-components-option-card-option-border bg-components-option-card-option-bg text-text-secondary
                 hover:border-components-option-card-option-border-hover hover:bg-components-option-card-option-bg-hover hover:shadow-xs hover:shadow-shadow-shadow-3`)}
@@ -98,7 +98,7 @@ const Website: FC<Props> = ({
           {ENABLE_WEBSITE_WATERCRAWL && (
             <button
               type="button"
-              className={cn('flex items-center justify-center rounded-lg px-4 py-2', selectedProvider === DataSourceProvider.waterCrawl
+              className={cn('flex items-center justify-center rounded-md px-4 py-2', selectedProvider === DataSourceProvider.waterCrawl
                 ? 'system-sm-medium border-[1.5px] border-components-option-card-option-selected-border bg-components-option-card-option-selected-bg text-text-primary'
                 : `system-sm-regular border border-components-option-card-option-border bg-components-option-card-option-bg text-text-secondary
                 hover:border-components-option-card-option-border-hover hover:bg-components-option-card-option-bg-hover hover:shadow-xs hover:shadow-shadow-shadow-3`)}

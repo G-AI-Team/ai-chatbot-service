@@ -192,33 +192,33 @@ const Authorized = ({
             renderTrigger
               ? renderTrigger(mergedIsOpen)
               : (
-                  <Button
-                    className={cn(
-                      'w-full',
-                      isOpen && 'bg-components-button-secondary-bg-hover',
-                    )}
-                  >
-                    <Indicator className="mr-2" color={unavailableCredential ? 'gray' : 'green'} />
-                    {credentials.length}
-&nbsp;
-                    {
-                      credentials.length > 1
-                        ? t('auth.authorizations', { ns: 'plugin' })
-                        : t('auth.authorization', { ns: 'plugin' })
-                    }
-                    {
-                      !!unavailableCredentials.length && (
-                        ` (${unavailableCredentials.length} ${t('auth.unavailable', { ns: 'plugin' })})`
-                      )
-                    }
-                    <RiArrowDownSLine className="ml-0.5 h-4 w-4" />
-                  </Button>
-                )
+                <Button
+                  className={cn(
+                    'w-full',
+                    isOpen && 'bg-components-button-secondary-bg-hover',
+                  )}
+                >
+                  <Indicator className="mr-2" color={unavailableCredential ? 'gray' : 'green'} />
+                  {credentials.length}
+                  &nbsp;
+                  {
+                    credentials.length > 1
+                      ? t('auth.authorizations', { ns: 'plugin' })
+                      : t('auth.authorization', { ns: 'plugin' })
+                  }
+                  {
+                    !!unavailableCredentials.length && (
+                      ` (${unavailableCredentials.length} ${t('auth.unavailable', { ns: 'plugin' })})`
+                    )
+                  }
+                  <RiArrowDownSLine className="ml-0.5 h-4 w-4" />
+                </Button>
+              )
           }
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[100]">
           <div className={cn(
-            'max-h-[360px] overflow-y-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg',
+            'max-h-[360px] overflow-y-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg',
             popupClassName,
           )}
           >

@@ -56,25 +56,25 @@ const TypeSelector: FC<Props> = ({
     <div className={cn(!trigger && !noLeft && 'left-[-8px]', 'relative select-none', className)} ref={ref}>
       {trigger
         ? (
-            <div
-              onClick={toggleShow}
-              className={cn(!readonly && 'cursor-pointer')}
-            >
-              {trigger}
-            </div>
-          )
+          <div
+            onClick={toggleShow}
+            className={cn(!readonly && 'cursor-pointer')}
+          >
+            {trigger}
+          </div>
+        )
         : (
-            <div
-              onClick={toggleShow}
-              className={cn(showOption && 'bg-state-base-hover', 'flex h-5 cursor-pointer items-center rounded-md pl-1 pr-0.5 text-xs font-semibold text-text-secondary hover:bg-state-base-hover')}
-            >
-              <div className={cn('text-sm font-semibold', uppercase && 'uppercase', noValue && 'text-text-tertiary', triggerClassName)}>{!noValue ? item?.label : placeholder}</div>
-              {!readonly && <DropDownIcon className="h-3 w-3 " />}
-            </div>
-          )}
+          <div
+            onClick={toggleShow}
+            className={cn(showOption && 'bg-state-base-hover', 'flex h-5 cursor-pointer items-center rounded-md pl-1 pr-0.5 text-xs font-semibold text-text-secondary hover:bg-state-base-hover')}
+          >
+            <div className={cn('text-sm font-semibold', uppercase && 'uppercase', noValue && 'text-text-tertiary', triggerClassName)}>{!noValue ? item?.label : placeholder}</div>
+            {!readonly && <DropDownIcon className="h-3 w-3 " />}
+          </div>
+        )}
 
       {(showOption && !readonly) && (
-        <div className={cn('absolute top-[24px] z-10 w-[120px]  select-none rounded-lg border border-components-panel-border bg-components-panel-bg p-1 shadow-lg', popupClassName)}>
+        <div className={cn('absolute top-[24px] z-10 w-[120px]  select-none rounded-md border border-components-panel-border bg-components-panel-bg p-1 shadow-lg', popupClassName)}>
           {list.map(item => (
             <div
               key={item.value}
@@ -82,7 +82,7 @@ const TypeSelector: FC<Props> = ({
                 setHide()
                 onChange(item.value)
               }}
-              className={cn(itemClassName, uppercase && 'uppercase', 'flex h-[30px] min-w-[44px] cursor-pointer items-center justify-between rounded-lg px-3 text-[13px] font-medium text-text-secondary hover:bg-state-base-hover')}
+              className={cn(itemClassName, uppercase && 'uppercase', 'flex h-[30px] min-w-[44px] cursor-pointer items-center justify-between rounded-md px-3 text-[13px] font-medium text-text-secondary hover:bg-state-base-hover')}
             >
               <div>{item.label}</div>
               {showChecked && item.value === value && <Check className="h-4 w-4 text-text-primary" />}

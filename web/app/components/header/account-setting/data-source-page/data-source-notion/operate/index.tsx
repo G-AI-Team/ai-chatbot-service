@@ -48,7 +48,7 @@ export default function Operate({
       {
         ({ open }) => (
           <>
-            <MenuButton className={cn('flex h-8 w-8 items-center justify-center rounded-lg hover:bg-state-base-hover', open && 'bg-state-base-hover')}>
+            <MenuButton className={cn('flex h-8 w-8 items-center justify-center rounded-md hover:bg-state-base-hover', open && 'bg-state-base-hover')}>
               <RiMoreFill className="h-4 w-4 text-text-secondary" />
             </MenuButton>
             <Transition
@@ -60,11 +60,11 @@ export default function Operate({
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <MenuItems className="absolute right-0 top-9 w-60 max-w-80 origin-top-right rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
+              <MenuItems className="absolute right-0 top-9 w-60 max-w-80 origin-top-right rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
                 <div className="px-1 py-1">
                   <MenuItem>
                     <div
-                      className="flex cursor-pointer rounded-lg px-3 py-2 hover:bg-state-base-hover"
+                      className="flex cursor-pointer rounded-md px-3 py-2 hover:bg-state-base-hover"
                       onClick={onAuthAgain}
                     >
                       <RiStickyNoteAddLine className="mr-2 mt-[2px] h-4 w-4 text-text-tertiary" />
@@ -79,7 +79,7 @@ export default function Operate({
                     </div>
                   </MenuItem>
                   <MenuItem>
-                    <div className="flex cursor-pointer rounded-lg px-3 py-2 hover:bg-state-base-hover" onClick={handleSync}>
+                    <div className="flex cursor-pointer rounded-md px-3 py-2 hover:bg-state-base-hover" onClick={handleSync}>
                       <RiLoopLeftLine className="mr-2 mt-[2px] h-4 w-4 text-text-tertiary" />
                       <div className="system-sm-semibold text-text-secondary">{t('dataSource.notion.sync', { ns: 'common' })}</div>
                     </div>
@@ -87,7 +87,7 @@ export default function Operate({
                 </div>
                 <MenuItem>
                   <div className="border-t border-divider-subtle p-1">
-                    <div className="flex cursor-pointer rounded-lg px-3 py-2 hover:bg-state-base-hover" onClick={handleRemove}>
+                    <div className="flex cursor-pointer rounded-md px-3 py-2 hover:bg-state-base-hover" onClick={handleRemove}>
                       <RiDeleteBinLine className="mr-2 mt-[2px] h-4 w-4 text-text-tertiary" />
                       <div className="system-sm-semibold text-text-secondary">{t('dataSource.notion.remove', { ns: 'common' })}</div>
                     </div>

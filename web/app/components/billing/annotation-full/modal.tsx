@@ -26,8 +26,8 @@ const AnnotationFullModal: FC<Props> = ({
       closable
       className="!p-0"
     >
-      <GridMask wrapperClassName="rounded-lg" canvasClassName="rounded-lg" gradientClassName="rounded-lg">
-        <div className="mt-6 flex cursor-pointer flex-col rounded-lg border-2 border-solid border-transparent px-7 py-6 shadow-md transition-all duration-200 ease-in-out">
+      <GridMask wrapperClassName="rounded-md" canvasClassName="rounded-md" gradientClassName="rounded-md">
+        <div className="mt-6 flex cursor-pointer flex-col rounded-md border-2 border-solid border-transparent px-7 py-6 shadow-md transition-all duration-200 ease-in-out">
           <div className="flex items-center justify-between">
             <div className={cn(s.textGradient, 'text-[18px] font-semibold leading-[27px]')}>
               <div>{t('annotatedResponse.fullTipLine1', { ns: 'billing' })}</div>

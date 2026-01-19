@@ -55,7 +55,7 @@ const ExternalRetrievalSection: FC<ExternalRetrievalSectionProps> = ({
         <div className="system-sm-semibold text-text-secondary">{t('form.externalKnowledgeAPI', { ns: 'datasetSettings' })}</div>
       </div>
       <div className="w-full max-w-[480px]">
-        <div className="flex h-full items-center gap-1 rounded-lg bg-components-input-bg-normal px-3 py-2">
+        <div className="flex h-full items-center gap-1 rounded-md bg-components-input-bg-normal px-3 py-2">
           <ApiConnectionMod className="h-4 w-4 text-text-secondary" />
           <div className="system-sm-medium overflow-hidden text-ellipsis text-text-secondary">
             {currentDataset?.external_knowledge_info.external_knowledge_api_name}
@@ -70,7 +70,7 @@ const ExternalRetrievalSection: FC<ExternalRetrievalSectionProps> = ({
         <div className="system-sm-semibold text-text-secondary">{t('form.externalKnowledgeID', { ns: 'datasetSettings' })}</div>
       </div>
       <div className="w-full max-w-[480px]">
-        <div className="flex h-full items-center gap-1 rounded-lg bg-components-input-bg-normal px-3 py-2">
+        <div className="flex h-full items-center gap-1 rounded-md bg-components-input-bg-normal px-3 py-2">
           <div className="system-xs-regular text-text-tertiary">{currentDataset?.external_knowledge_info.external_knowledge_id}</div>
         </div>
       </div>
@@ -110,25 +110,25 @@ const InternalRetrievalSection: FC<InternalRetrievalSectionProps> = ({
     <div>
       {indexMethod === IndexingType.QUALIFIED
         ? (
-            <RetrievalMethodConfig
-              value={retrievalConfig}
-              onChange={onRetrievalConfigChange}
-              showMultiModalTip={showMultiModalTip}
-            />
-          )
+          <RetrievalMethodConfig
+            value={retrievalConfig}
+            onChange={onRetrievalConfigChange}
+            showMultiModalTip={showMultiModalTip}
+          />
+        )
         : (
-            <EconomicalRetrievalMethodConfig
-              value={retrievalConfig}
-              onChange={onRetrievalConfigChange}
-            />
-          )}
+          <EconomicalRetrievalMethodConfig
+            value={retrievalConfig}
+            onChange={onRetrievalConfigChange}
+          />
+        )}
     </div>
   </div>
 )
 
 type RetrievalSectionProps
   = | (ExternalRetrievalSectionProps & { isExternal: true })
-    | (InternalRetrievalSectionProps & { isExternal: false })
+  | (InternalRetrievalSectionProps & { isExternal: false })
 
 export const RetrievalSection: FC<RetrievalSectionProps> = (props) => {
   if (props.isExternal) {
@@ -197,7 +197,7 @@ export const RetrievalChangeTip: FC<RetrievalChangeTipProps> = ({
     return null
 
   return (
-    <div className="absolute bottom-[76px] left-[30px] right-[30px] z-10 flex h-10 items-center justify-between rounded-lg border border-[#FEF0C7] bg-[#FFFAEB] px-3 shadow-lg">
+    <div className="absolute bottom-[76px] left-[30px] right-[30px] z-10 flex h-10 items-center justify-between rounded-md border border-[#FEF0C7] bg-[#FFFAEB] px-3 shadow-lg">
       <div className="flex items-center">
         <AlertTriangle className="mr-1 h-3 w-3 text-[#F79009]" />
         <div className="text-xs font-medium leading-[18px] text-gray-700">{message}</div>

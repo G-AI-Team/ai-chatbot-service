@@ -43,7 +43,7 @@ const CardWrapperComponent = ({
   if (showInstallButton) {
     return (
       <div
-        className="group relative cursor-pointer rounded-xl  hover:bg-components-panel-on-panel-item-bg-hover"
+        className="group relative cursor-pointer rounded-md  hover:bg-components-panel-on-panel-item-bg-hover"
       >
         <Card
           key={plugin.name}
@@ -88,7 +88,7 @@ const CardWrapperComponent = ({
 
   return (
     <a
-      className="group relative inline-block cursor-pointer rounded-xl"
+      className="group relative inline-block cursor-pointer rounded-md"
       href={getPluginDetailLinkInMarketplace(plugin)}
     >
       <Card

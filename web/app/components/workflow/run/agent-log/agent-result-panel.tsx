@@ -37,9 +37,9 @@ const AgentResultPanel = ({
       </div>
       {
         top.hasCircle && (
-          <div className="mt-1 flex items-center rounded-xl border border-components-panel-border bg-components-panel-bg-blur px-3 pr-2 shadow-md">
+          <div className="mt-1 flex items-center rounded-md border border-components-panel-border bg-components-panel-bg-blur px-3 pr-2 shadow-md">
             <div
-              className="absolute inset-0 rounded-xl opacity-[0.4]"
+              className="absolute inset-0 rounded-md opacity-[0.4]"
               style={{
                 background: 'linear-gradient(92deg, rgba(247, 144, 9, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%)',
               }}

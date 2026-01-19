@@ -61,7 +61,7 @@ const ChunkCard = (props: ChunkCardProps) => {
   }, [content, chunkType])
 
   return (
-    <div className="flex flex-col gap-1 rounded-lg bg-components-panel-bg px-3 py-2.5">
+    <div className="flex flex-col gap-1 rounded-md bg-components-panel-bg px-3 py-2.5">
       {!isFullDoc && (
         <div className="inline-flex items-center justify-start gap-2">
           <SegmentIndexTag

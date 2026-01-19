@@ -84,7 +84,7 @@ const Base: FC<Props> = ({
 
   return (
     <Wrap className={cn(wrapClassName)} style={wrapStyle} isInNode={isInNode} isExpand={isExpand}>
-      <div ref={ref} className={cn(className, isExpand && 'h-full', 'rounded-lg border', !isFocus ? 'border-transparent bg-components-input-bg-normal' : 'overflow-hidden border-components-input-border-hover bg-components-input-bg-hover')}>
+      <div ref={ref} className={cn(className, isExpand && 'h-full', 'rounded-md border', !isFocus ? 'border-transparent bg-components-input-bg-normal' : 'overflow-hidden border-components-input-border-hover bg-components-input-bg-hover')}>
         <div className="flex h-7 items-center justify-between pl-3 pr-2 pt-1">
           <div className="system-xs-semibold-uppercase text-text-secondary">{title}</div>
           <div
@@ -108,11 +108,11 @@ const Base: FC<Props> = ({
             <ActionButton className="ml-1" onClick={handleCopy}>
               {!isCopied
                 ? (
-                    <Copy className="h-4 w-4 cursor-pointer" />
-                  )
+                  <Copy className="h-4 w-4 cursor-pointer" />
+                )
                 : (
-                    <CopyCheck className="h-4 w-4" />
-                  )}
+                  <CopyCheck className="h-4 w-4" />
+                )}
             </ActionButton>
             <div className="ml-1">
               <ToggleExpandBtn isExpand={isExpand} onExpandChange={setIsExpand} />

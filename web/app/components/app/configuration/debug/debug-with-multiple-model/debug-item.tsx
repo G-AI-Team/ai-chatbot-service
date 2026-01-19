@@ -65,7 +65,7 @@ const DebugItem: FC<DebugItemProps> = ({
 
   return (
     <div
-      className={`flex min-w-[320px] flex-col rounded-xl bg-background-section-burn ${className}`}
+      className={`flex min-w-[320px] flex-col rounded-md bg-background-section-burn ${className}`}
       style={style}
     >
       <div className="flex h-10 shrink-0 items-center justify-between border-b-[0.5px] border-divider-regular px-3">
@@ -82,32 +82,32 @@ const DebugItem: FC<DebugItemProps> = ({
             ...(
               multipleModelConfigs.length <= 3
                 ? [
-                    {
-                      value: 'duplicate',
-                      text: t('duplicateModel', { ns: 'appDebug' }),
-                    },
-                  ]
+                  {
+                    value: 'duplicate',
+                    text: t('duplicateModel', { ns: 'appDebug' }),
+                  },
+                ]
                 : []
             ),
             ...(
               (modelAndParameter.provider && modelAndParameter.model)
                 ? [
-                    {
-                      value: 'debug-as-single-model',
-                      text: t('debugAsSingleModel', { ns: 'appDebug' }),
-                    },
-                  ]
+                  {
+                    value: 'debug-as-single-model',
+                    text: t('debugAsSingleModel', { ns: 'appDebug' }),
+                  },
+                ]
                 : []
             ),
           ]}
           secondItems={
             multipleModelConfigs.length > 2
               ? [
-                  {
-                    value: 'remove',
-                    text: t('operation.remove', { ns: 'common' }) as string,
-                  },
-                ]
+                {
+                  value: 'remove',
+                  text: t('operation.remove', { ns: 'common' }) as string,
+                },
+              ]
               : undefined
           }
         />

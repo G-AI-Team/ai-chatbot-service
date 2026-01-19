@@ -9,7 +9,7 @@ const DefaultCards = React.memo(() => {
         renderArray.map((_, index) => (
           <div
             key={index}
-            className="inline-flex h-[160px] rounded-xl bg-background-default-lighter"
+            className="inline-flex h-[160px] rounded-md bg-background-default-lighter"
           />
         ))
       }

@@ -33,7 +33,7 @@ const TriggerPluginActionItem: FC<Props> = ({
       key={payload.name}
       position="right"
       needsDelay={false}
-      popupClassName="!p-0 !px-3 !py-2.5 !w-[224px] !leading-[18px] !text-xs !text-gray-700 !border-[0.5px] !border-black/5 !rounded-xl !shadow-lg"
+      popupClassName="!p-0 !px-3 !py-2.5 !w-[224px] !leading-[18px] !text-xs !text-gray-700 !border-[0.5px] !border-black/5 !rounded-md !shadow-lg"
       popupContent={(
         <div>
           <BlockIcon
@@ -49,7 +49,7 @@ const TriggerPluginActionItem: FC<Props> = ({
     >
       <div
         key={payload.name}
-        className="flex cursor-pointer items-center justify-between rounded-lg pl-[21px] pr-1 hover:bg-state-base-hover"
+        className="flex cursor-pointer items-center justify-between rounded-md pl-[21px] pr-1 hover:bg-state-base-hover"
         onClick={() => {
           if (disabled)
             return

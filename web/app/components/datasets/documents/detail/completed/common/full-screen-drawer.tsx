@@ -32,7 +32,7 @@ const FullScreenDrawer = ({
       )}
       panelContentClassName={cn(
         'bg-components-panel-bg',
-        !fullScreen && 'rounded-xl border-[0.5px] border-components-panel-border',
+        !fullScreen && 'rounded-md border-[0.5px] border-components-panel-border',
       )}
       showOverlay={showOverlay}
       needCheckChunks={needCheckChunks}

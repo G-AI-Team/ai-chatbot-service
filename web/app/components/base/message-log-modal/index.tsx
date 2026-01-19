@@ -41,19 +41,19 @@ const MessageLogModal: FC<MessageLogModalProps> = ({
 
   return (
     <div
-      className={cn('relative z-10 flex flex-col rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg pt-3 shadow-xl')}
+      className={cn('relative z-10 flex flex-col rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg pt-3 shadow-xl')}
       style={{
         width: fixedWidth ? width : 480,
         ...(!fixedWidth
           ? {
-              position: 'fixed',
-              top: 56 + 8,
-              left: 8 + (width - 480),
-              bottom: 16,
-            }
+            position: 'fixed',
+            top: 56 + 8,
+            left: 8 + (width - 480),
+            bottom: 16,
+          }
           : {
-              marginRight: 8,
-            }),
+            marginRight: 8,
+          }),
       }}
       ref={ref}
     >

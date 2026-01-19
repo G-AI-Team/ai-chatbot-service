@@ -144,7 +144,7 @@ const VolumeControlDemo = () => {
   }
 
   return (
-    <div style={{ width: '400px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '400px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-semibold">Volume Control</h3>
         <span className="text-2xl">{getVolumeIcon(volume)}</span>
@@ -178,7 +178,7 @@ const BrightnessControlDemo = () => {
   const [brightness, setBrightness] = useState(80)
 
   return (
-    <div style={{ width: '400px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '400px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-semibold">Screen Brightness</h3>
         <span className="text-2xl">☀️</span>
@@ -190,7 +190,7 @@ const BrightnessControlDemo = () => {
         step={5}
         onChange={setBrightness}
       />
-      <div className="mt-4 rounded-lg bg-gray-50 p-4" style={{ opacity: brightness / 100 }}>
+      <div className="mt-4 rounded-md bg-gray-50 p-4" style={{ opacity: brightness / 100 }}>
         <div className="text-sm text-gray-700">
           Preview at
           {' '}
@@ -223,7 +223,7 @@ const PriceRangeFilterDemo = () => {
   const filteredProducts = products.filter(p => p.price >= minPrice && p.price <= maxPrice)
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Filter by Price</h3>
       <div className="mb-2">
         <div className="mb-2 flex items-center justify-between text-sm text-gray-600">
@@ -255,7 +255,7 @@ const PriceRangeFilterDemo = () => {
         </div>
         <div className="space-y-2">
           {filteredProducts.map(product => (
-            <div key={product.name} className="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+            <div key={product.name} className="flex items-center justify-between rounded-md bg-gray-50 p-3">
               <span className="text-sm">{product.name}</span>
               <span className="font-semibold text-gray-900">
                 $
@@ -280,7 +280,7 @@ const TemperatureSelectorDemo = () => {
   const fahrenheit = ((temperature * 9) / 5 + 32).toFixed(1)
 
   return (
-    <div style={{ width: '400px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '400px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Thermostat Control</h3>
       <div className="mb-6">
         <Slider
@@ -292,14 +292,14 @@ const TemperatureSelectorDemo = () => {
         />
       </div>
       <div className="grid grid-cols-2 gap-4">
-        <div className="rounded-lg bg-blue-50 p-4 text-center">
+        <div className="rounded-md bg-blue-50 p-4 text-center">
           <div className="mb-1 text-xs text-gray-600">Celsius</div>
           <div className="text-3xl font-bold text-blue-600">
             {temperature}
             °C
           </div>
         </div>
-        <div className="rounded-lg bg-orange-50 p-4 text-center">
+        <div className="rounded-md bg-orange-50 p-4 text-center">
           <div className="mb-1 text-xs text-gray-600">Fahrenheit</div>
           <div className="text-3xl font-bold text-orange-600">
             {fahrenheit}
@@ -326,7 +326,7 @@ const ProgressSliderDemo = () => {
   const [progress, setProgress] = useState(65)
 
   return (
-    <div style={{ width: '450px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '450px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Project Completion</h3>
       <Slider
         value={progress}
@@ -376,7 +376,7 @@ const ZoomControlDemo = () => {
   const [zoom, setZoom] = useState(100)
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Zoom Level</h3>
       <div className="flex items-center gap-4">
         <button
@@ -409,7 +409,7 @@ const ZoomControlDemo = () => {
         </span>
         <span>200%</span>
       </div>
-      <div className="mt-4 rounded-lg bg-gray-50 p-4 text-center" style={{ transform: `scale(${zoom / 100})`, transformOrigin: 'center' }}>
+      <div className="mt-4 rounded-md bg-gray-50 p-4 text-center" style={{ transform: `scale(${zoom / 100})`, transformOrigin: 'center' }}>
         <div className="text-sm">Preview content</div>
       </div>
     </div>
@@ -428,7 +428,7 @@ const AIModelParametersDemo = () => {
   const [topP, setTopP] = useState(0.9)
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Model Configuration</h3>
       <div className="space-y-6">
         <div>
@@ -482,7 +482,7 @@ const AIModelParametersDemo = () => {
           </p>
         </div>
       </div>
-      <div className="mt-6 rounded-lg bg-blue-50 p-4 text-xs text-gray-700">
+      <div className="mt-6 rounded-md bg-blue-50 p-4 text-xs text-gray-700">
         <div>
           <strong>Temperature:</strong>
           {' '}
@@ -525,7 +525,7 @@ const ImageQualitySelectorDemo = () => {
   const estimatedSize = Math.round((quality / 100) * 5)
 
   return (
-    <div style={{ width: '450px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '450px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Image Export Quality</h3>
       <Slider
         value={quality}
@@ -535,7 +535,7 @@ const ImageQualitySelectorDemo = () => {
         onChange={setQuality}
       />
       <div className="mt-4 grid grid-cols-2 gap-4">
-        <div className="rounded-lg bg-gray-50 p-3">
+        <div className="rounded-md bg-gray-50 p-3">
           <div className="text-xs text-gray-600">Quality</div>
           <div className="text-lg font-semibold">{getQualityLabel(quality)}</div>
           <div className="text-xs text-gray-500">
@@ -543,7 +543,7 @@ const ImageQualitySelectorDemo = () => {
             %
           </div>
         </div>
-        <div className="rounded-lg bg-gray-50 p-3">
+        <div className="rounded-md bg-gray-50 p-3">
           <div className="text-xs text-gray-600">File Size</div>
           <div className="text-lg font-semibold">
             ~
@@ -572,7 +572,7 @@ const MultipleSlidersDemo = () => {
   const rgbColor = `rgb(${red}, ${green}, ${blue})`
 
   return (
-    <div style={{ width: '450px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '450px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">RGB Color Picker</h3>
       <div className="space-y-4">
         <div>
@@ -599,7 +599,7 @@ const MultipleSlidersDemo = () => {
       </div>
       <div className="mt-6 flex items-center justify-between">
         <div
-          className="h-24 w-24 rounded-lg border-2 border-gray-300"
+          className="h-24 w-24 rounded-md border-2 border-gray-300"
           style={{ backgroundColor: rgbColor }}
         />
         <div className="text-right">

@@ -68,13 +68,13 @@ const Form = () => {
   const [embeddingModel, setEmbeddingModel] = useState<DefaultModel>(
     currentDataset?.embedding_model
       ? {
-          provider: currentDataset.embedding_model_provider,
-          model: currentDataset.embedding_model,
-        }
+        provider: currentDataset.embedding_model_provider,
+        model: currentDataset.embedding_model,
+      }
       : {
-          provider: '',
-          model: '',
-        },
+        provider: '',
+        model: '',
+      },
   )
   const { data: rerankModelList } = useModelList(ModelTypeEnum.rerank)
   const { data: embeddingModelList } = useModelList(ModelTypeEnum.textEmbedding)
@@ -319,7 +319,7 @@ const Form = () => {
               onKeywordNumberChange={setKeywordNumber}
             />
             {currentDataset.indexing_technique === IndexingType.ECONOMICAL && indexMethod === IndexingType.QUALIFIED && (
-              <div className="relative mt-2 flex h-10 items-center gap-x-0.5 overflow-hidden rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur px-2 shadow-xs shadow-shadow-shadow-3">
+              <div className="relative mt-2 flex h-10 items-center gap-x-0.5 overflow-hidden rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur px-2 shadow-xs shadow-shadow-shadow-3">
                 <div className="absolute left-0 top-0 flex h-full w-full items-center bg-toast-warning-bg opacity-40" />
                 <div className="p-1">
                   <RiAlertFill className="size-4 text-text-warning-secondary" />
@@ -351,6 +351,61 @@ const Form = () => {
       {/* Retrieval Method Config */}
       {currentDataset?.provider === 'external'
         ? (
+          <>
+            <Divider
+              type="horizontal"
+              className="my-1 h-px bg-divider-subtle"
+            />
+            <div className={rowClass}>
+              <div className={labelClass}>
+                <div className="system-sm-semibold text-text-secondary">{t('form.retrievalSetting.title', { ns: 'datasetSettings' })}</div>
+              </div>
+              <RetrievalSettings
+                topK={topK}
+                scoreThreshold={scoreThreshold}
+                scoreThresholdEnabled={scoreThresholdEnabled}
+                onChange={handleSettingsChange}
+                isInRetrievalSetting={true}
+              />
+            </div>
+            <Divider
+              type="horizontal"
+              className="my-1 h-px bg-divider-subtle"
+            />
+            <div className={rowClass}>
+              <div className={labelClass}>
+                <div className="system-sm-semibold text-text-secondary">{t('form.externalKnowledgeAPI', { ns: 'datasetSettings' })}</div>
+              </div>
+              <div className="w-full">
+                <div className="flex h-full items-center gap-1 rounded-md bg-components-input-bg-normal px-3 py-2">
+                  <ApiConnectionMod className="h-4 w-4 text-text-secondary" />
+                  <div className="system-sm-medium overflow-hidden text-ellipsis text-text-secondary">
+                    {currentDataset?.external_knowledge_info.external_knowledge_api_name}
+                  </div>
+                  <div className="system-xs-regular text-text-tertiary">·</div>
+                  <div className="system-xs-regular text-text-tertiary">
+                    {currentDataset?.external_knowledge_info.external_knowledge_api_endpoint}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={rowClass}>
+              <div className={labelClass}>
+                <div className="system-sm-semibold text-text-secondary">{t('form.externalKnowledgeID', { ns: 'datasetSettings' })}</div>
+              </div>
+              <div className="w-full">
+                <div className="flex h-full items-center gap-1 rounded-md bg-components-input-bg-normal px-3 py-2">
+                  <div className="system-xs-regular text-text-tertiary">
+                    {currentDataset?.external_knowledge_info.external_knowledge_id}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        )
+        // eslint-disable-next-line sonarjs/no-nested-conditional
+        : indexMethod
+          ? (
             <>
               <Divider
                 type="horizontal"
@@ -358,100 +413,45 @@ const Form = () => {
               />
               <div className={rowClass}>
                 <div className={labelClass}>
-                  <div className="system-sm-semibold text-text-secondary">{t('form.retrievalSetting.title', { ns: 'datasetSettings' })}</div>
-                </div>
-                <RetrievalSettings
-                  topK={topK}
-                  scoreThreshold={scoreThreshold}
-                  scoreThresholdEnabled={scoreThresholdEnabled}
-                  onChange={handleSettingsChange}
-                  isInRetrievalSetting={true}
-                />
-              </div>
-              <Divider
-                type="horizontal"
-                className="my-1 h-px bg-divider-subtle"
-              />
-              <div className={rowClass}>
-                <div className={labelClass}>
-                  <div className="system-sm-semibold text-text-secondary">{t('form.externalKnowledgeAPI', { ns: 'datasetSettings' })}</div>
-                </div>
-                <div className="w-full">
-                  <div className="flex h-full items-center gap-1 rounded-lg bg-components-input-bg-normal px-3 py-2">
-                    <ApiConnectionMod className="h-4 w-4 text-text-secondary" />
-                    <div className="system-sm-medium overflow-hidden text-ellipsis text-text-secondary">
-                      {currentDataset?.external_knowledge_info.external_knowledge_api_name}
+                  <div className="flex w-[180px] shrink-0 flex-col">
+                    <div className="system-sm-semibold flex h-7 items-center pt-1 text-text-secondary">
+                      {t('form.retrievalSetting.title', { ns: 'datasetSettings' })}
                     </div>
-                    <div className="system-xs-regular text-text-tertiary">·</div>
-                    <div className="system-xs-regular text-text-tertiary">
-                      {currentDataset?.external_knowledge_info.external_knowledge_api_endpoint}
+                    <div className="body-xs-regular text-text-tertiary">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={docLink('/guides/knowledge-base/create-knowledge-and-upload-documents/setting-indexing-methods#setting-the-retrieval-setting', {
+                          'zh-Hans': '/guides/knowledge-base/create-knowledge-and-upload-documents/setting-indexing-methods#指定检索方式',
+                          'ja-JP': '/guides/knowledge-base/create-knowledge-and-upload-documents/setting-indexing-methods#検索方法の指定',
+                        })}
+                        className="text-text-accent"
+                      >
+                        {t('form.retrievalSetting.learnMore', { ns: 'datasetSettings' })}
+                      </a>
+                      {t('form.retrievalSetting.description', { ns: 'datasetSettings' })}
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className={rowClass}>
-                <div className={labelClass}>
-                  <div className="system-sm-semibold text-text-secondary">{t('form.externalKnowledgeID', { ns: 'datasetSettings' })}</div>
-                </div>
-                <div className="w-full">
-                  <div className="flex h-full items-center gap-1 rounded-lg bg-components-input-bg-normal px-3 py-2">
-                    <div className="system-xs-regular text-text-tertiary">
-                      {currentDataset?.external_knowledge_info.external_knowledge_id}
-                    </div>
-                  </div>
+                <div className="grow">
+                  {indexMethod === IndexingType.QUALIFIED
+                    ? (
+                      <RetrievalMethodConfig
+                        value={retrievalConfig}
+                        onChange={setRetrievalConfig}
+                        showMultiModalTip={showMultiModalTip}
+                      />
+                    )
+                    : (
+                      <EconomicalRetrievalMethodConfig
+                        value={retrievalConfig}
+                        onChange={setRetrievalConfig}
+                      />
+                    )}
                 </div>
               </div>
             </>
           )
-        // eslint-disable-next-line sonarjs/no-nested-conditional
-        : indexMethod
-          ? (
-              <>
-                <Divider
-                  type="horizontal"
-                  className="my-1 h-px bg-divider-subtle"
-                />
-                <div className={rowClass}>
-                  <div className={labelClass}>
-                    <div className="flex w-[180px] shrink-0 flex-col">
-                      <div className="system-sm-semibold flex h-7 items-center pt-1 text-text-secondary">
-                        {t('form.retrievalSetting.title', { ns: 'datasetSettings' })}
-                      </div>
-                      <div className="body-xs-regular text-text-tertiary">
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={docLink('/guides/knowledge-base/create-knowledge-and-upload-documents/setting-indexing-methods#setting-the-retrieval-setting', {
-                            'zh-Hans': '/guides/knowledge-base/create-knowledge-and-upload-documents/setting-indexing-methods#指定检索方式',
-                            'ja-JP': '/guides/knowledge-base/create-knowledge-and-upload-documents/setting-indexing-methods#検索方法の指定',
-                          })}
-                          className="text-text-accent"
-                        >
-                          {t('form.retrievalSetting.learnMore', { ns: 'datasetSettings' })}
-                        </a>
-                        {t('form.retrievalSetting.description', { ns: 'datasetSettings' })}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="grow">
-                    {indexMethod === IndexingType.QUALIFIED
-                      ? (
-                          <RetrievalMethodConfig
-                            value={retrievalConfig}
-                            onChange={setRetrievalConfig}
-                            showMultiModalTip={showMultiModalTip}
-                          />
-                        )
-                      : (
-                          <EconomicalRetrievalMethodConfig
-                            value={retrievalConfig}
-                            onChange={setRetrievalConfig}
-                          />
-                        )}
-                  </div>
-                </div>
-              </>
-            )
           : null}
       <Divider
         type="horizontal"

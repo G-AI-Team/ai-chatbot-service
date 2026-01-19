@@ -51,7 +51,7 @@ describe('ConfirmModal', () => {
       renderComponent()
 
       // Assert
-      const iconContainer = document.querySelector('.rounded-xl')
+      const iconContainer = document.querySelector('.rounded-md')
       expect(iconContainer).toBeInTheDocument()
       expect(iconContainer).toHaveClass('border-[0.5px]')
       expect(iconContainer).toHaveClass('bg-background-section')

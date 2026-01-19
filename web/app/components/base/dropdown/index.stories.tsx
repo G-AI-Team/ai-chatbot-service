@@ -46,7 +46,7 @@ const DropdownDemo = (props: React.ComponentProps<typeof Dropdown>) => {
           props.onSelect?.(item)
         }}
       />
-      <div className="rounded-lg border border-divider-subtle bg-components-panel-bg px-3 py-2 text-xs text-text-secondary">
+      <div className="rounded-md border border-divider-subtle bg-components-panel-bg px-3 py-2 text-xs text-text-secondary">
         Last action:
         {' '}
         <span className="font-mono text-text-primary">{lastAction}</span>

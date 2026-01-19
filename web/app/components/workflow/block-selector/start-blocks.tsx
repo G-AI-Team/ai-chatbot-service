@@ -71,7 +71,7 @@ const StartBlocks = ({
     <Tooltip
       key={block.type}
       position="right"
-      popupClassName="w-[224px] rounded-xl"
+      popupClassName="w-[224px] rounded-md"
       needsDelay={false}
       popupContent={(
         <div>
@@ -99,7 +99,7 @@ const StartBlocks = ({
       )}
     >
       <div
-        className="flex h-8 w-full cursor-pointer items-center rounded-lg px-3 hover:bg-state-base-hover"
+        className="flex h-8 w-full cursor-pointer items-center rounded-md px-3 hover:bg-state-base-hover"
         onClick={() => onSelect(block.type)}
       >
         <BlockIcon

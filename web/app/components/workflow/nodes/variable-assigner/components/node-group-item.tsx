@@ -83,7 +83,7 @@ const NodeGroupItem = ({
   return (
     <div
       className={cn(
-        'relative rounded-lg border-[1.5px] border-transparent px-1.5 pb-1.5 pt-1',
+        'relative rounded-md border-[1.5px] border-transparent px-1.5 pb-1.5 pt-1',
         showSelectionBorder && '!border-dashed !border-divider-subtle bg-state-base-hover',
         showSelectedBorder && '!border-text-accent !bg-util-colors-blue-blue-50',
       )}

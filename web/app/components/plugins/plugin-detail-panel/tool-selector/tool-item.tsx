@@ -71,15 +71,15 @@ const ToolItem = ({
 
   return (
     <div className={cn(
-      'group flex cursor-default items-center gap-1 rounded-lg border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg p-1.5 pr-2 shadow-xs hover:bg-components-panel-on-panel-item-bg-hover hover:shadow-sm',
+      'group flex cursor-default items-center gap-1 rounded-md border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg p-1.5 pr-2 shadow-xs hover:bg-components-panel-on-panel-item-bg-hover hover:shadow-sm',
       open && 'bg-components-panel-on-panel-item-bg-hover shadow-sm',
       isDeleting && 'border-state-destructive-border shadow-xs hover:bg-state-destructive-hover',
     )}
     >
       {icon && (
         <div className={cn('shrink-0', isTransparent && 'opacity-50', isShowCanNotChooseMCPTip && 'opacity-30')}>
-          {typeof icon === 'string' && <div className="h-7 w-7 rounded-lg border-[0.5px] border-components-panel-border-subtle bg-background-default-dodge bg-cover bg-center" style={{ backgroundImage: `url(${icon})` }} />}
-          {typeof icon !== 'string' && <AppIcon className="h-7 w-7 rounded-lg border-[0.5px] border-components-panel-border-subtle bg-background-default-dodge" size="xs" icon={icon?.content} background={icon?.background} />}
+          {typeof icon === 'string' && <div className="h-7 w-7 rounded-md border-[0.5px] border-components-panel-border-subtle bg-background-default-dodge bg-cover bg-center" style={{ backgroundImage: `url(${icon})` }} />}
+          {typeof icon !== 'string' && <AppIcon className="h-7 w-7 rounded-md border-[0.5px] border-components-panel-border-subtle bg-background-default-dodge" size="xs" icon={icon?.content} background={icon?.background} />}
         </div>
       )}
       {!icon && (

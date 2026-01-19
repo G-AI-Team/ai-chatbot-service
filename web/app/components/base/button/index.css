@@ -14,7 +14,7 @@
   }
 
   .btn-medium {
-    @apply px-3.5 h-8 rounded-lg text-[13px] leading-4 font-medium;
+    @apply px-3.5 h-8 rounded-md text-[13px] leading-4 font-medium;
   }
 
   .btn-large {

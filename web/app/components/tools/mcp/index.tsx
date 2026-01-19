@@ -18,7 +18,7 @@ function renderDefaultCard() {
     <div
       key={index}
       className={cn(
-        'inline-flex h-[111px] rounded-xl bg-background-default-lighter opacity-10',
+        'inline-flex h-[111px] rounded-md bg-background-default-lighter opacity-10',
         index < 4 && 'opacity-60',
         index >= 4 && index < 8 && 'opacity-50',
         index >= 8 && index < 12 && 'opacity-40',

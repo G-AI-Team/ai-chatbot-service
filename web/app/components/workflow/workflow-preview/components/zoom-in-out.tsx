@@ -114,13 +114,13 @@ const ZoomInOut: FC = () => {
       <PortalToFollowElemTrigger asChild>
         <div
           className={cn(
-            'h-9 cursor-pointer rounded-lg border-[0.5px] border-components-actionbar-border bg-components-actionbar-bg',
+            'h-9 cursor-pointer rounded-md border-[0.5px] border-components-actionbar-border bg-components-actionbar-bg',
             'p-0.5 text-[13px] shadow-lg backdrop-blur-[5px]',
             'hover:bg-state-base-hover',
           )}
         >
           <div className={cn(
-            'flex h-8 w-[98px] items-center justify-between rounded-lg',
+            'flex h-8 w-[98px] items-center justify-between rounded-md',
           )}
           >
             <TipPopup
@@ -128,7 +128,7 @@ const ZoomInOut: FC = () => {
               shortcuts={['ctrl', '-']}
             >
               <div
-                className={`flex h-8 w-8 items-center justify-center rounded-lg ${zoom <= 0.25 ? 'cursor-not-allowed' : 'cursor-pointer hover:bg-black/5'}`}
+                className={`flex h-8 w-8 items-center justify-center rounded-md ${zoom <= 0.25 ? 'cursor-not-allowed' : 'cursor-pointer hover:bg-black/5'}`}
                 onClick={(e) => {
                   if (zoom <= 0.25)
                     return
@@ -149,7 +149,7 @@ const ZoomInOut: FC = () => {
               shortcuts={['ctrl', '+']}
             >
               <div
-                className={`flex h-8 w-8 items-center justify-center rounded-lg ${zoom >= 2 ? 'cursor-not-allowed' : 'cursor-pointer hover:bg-black/5'}`}
+                className={`flex h-8 w-8 items-center justify-center rounded-md ${zoom >= 2 ? 'cursor-not-allowed' : 'cursor-pointer hover:bg-black/5'}`}
                 onClick={(e) => {
                   if (zoom >= 2)
                     return
@@ -165,7 +165,7 @@ const ZoomInOut: FC = () => {
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-10">
-        <div className="w-[145px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px]">
+        <div className="w-[145px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px]">
           {
             ZOOM_IN_OUT_OPTIONS.map((options, i) => (
               <Fragment key={i}>
@@ -179,7 +179,7 @@ const ZoomInOut: FC = () => {
                     options.map(option => (
                       <div
                         key={option.key}
-                        className="system-md-regular flex h-8 cursor-pointer items-center justify-between space-x-1 rounded-lg py-1.5 pl-3 pr-2 text-text-secondary hover:bg-state-base-hover"
+                        className="system-md-regular flex h-8 cursor-pointer items-center justify-between space-x-1 rounded-md py-1.5 pl-3 pr-2 text-text-secondary hover:bg-state-base-hover"
                         onClick={() => handleZoom(option.key)}
                       >
                         <span>{option.text}</span>

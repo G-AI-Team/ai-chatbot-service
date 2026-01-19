@@ -43,7 +43,7 @@ const ConfigSelect: FC<IConfigSelectProps> = ({
             {options.map((o, index) => (
               <div
                 className={cn(
-                  'group relative flex items-center rounded-lg border border-components-panel-border-subtle bg-components-panel-on-panel-item-bg pl-2.5 hover:bg-components-panel-on-panel-item-bg-hover',
+                  'group relative flex items-center rounded-md border border-components-panel-border-subtle bg-components-panel-on-panel-item-bg pl-2.5 hover:bg-components-panel-on-panel-item-bg-hover',
                   focusID === index && 'border-components-input-border-active bg-components-input-bg-active hover:border-components-input-border-active hover:bg-components-input-bg-active',
                   deletingID === index && 'border-components-input-border-destructive bg-state-destructive-hover hover:border-components-input-border-destructive hover:bg-state-destructive-hover',
                 )}
@@ -63,7 +63,7 @@ const ConfigSelect: FC<IConfigSelectProps> = ({
                       return item
                     }))
                   }}
-                  className="h-9 w-full grow cursor-pointer overflow-x-auto rounded-lg border-0 bg-transparent pl-1.5 pr-8 text-sm leading-9 text-text-secondary focus:outline-none"
+                  className="h-9 w-full grow cursor-pointer overflow-x-auto rounded-md border-0 bg-transparent pl-1.5 pr-8 text-sm leading-9 text-text-secondary focus:outline-none"
                   onFocus={() => setFocusID(index)}
                   onBlur={() => setFocusID(null)}
                 />
@@ -87,7 +87,7 @@ const ConfigSelect: FC<IConfigSelectProps> = ({
 
       <div
         onClick={() => { onChange([...options, '']) }}
-        className="mt-1 flex h-9 cursor-pointer items-center gap-2 rounded-lg bg-components-button-tertiary-bg px-3  text-components-button-tertiary-text hover:bg-components-button-tertiary-bg-hover"
+        className="mt-1 flex h-9 cursor-pointer items-center gap-2 rounded-md bg-components-button-tertiary-bg px-3  text-components-button-tertiary-text hover:bg-components-button-tertiary-bg-hover"
       >
         <RiAddLine className="h-4 w-4" />
         <div className="system-sm-medium text-[13px]">{t('variableConfig.addOption', { ns: 'appDebug' })}</div>

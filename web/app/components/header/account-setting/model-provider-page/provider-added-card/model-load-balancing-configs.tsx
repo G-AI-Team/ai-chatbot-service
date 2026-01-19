@@ -146,11 +146,11 @@ const ModelLoadBalancingConfigs = ({
   return (
     <>
       <div
-        className={cn('min-h-16 rounded-xl border bg-components-panel-bg transition-colors', (withSwitch || !draftConfig.enabled) ? 'border-components-panel-border' : 'border-util-colors-blue-blue-600', (withSwitch || draftConfig.enabled) ? 'cursor-default' : 'cursor-pointer', className)}
+        className={cn('min-h-16 rounded-md border bg-components-panel-bg transition-colors', (withSwitch || !draftConfig.enabled) ? 'border-components-panel-border' : 'border-util-colors-blue-blue-600', (withSwitch || draftConfig.enabled) ? 'cursor-default' : 'cursor-pointer', className)}
         onClick={(!withSwitch && !draftConfig.enabled) ? () => toggleModalBalancing(true) : undefined}
       >
         <div className="flex select-none items-center gap-2 px-[15px] py-3">
-          <div className="flex h-8 w-8 shrink-0 grow-0 items-center justify-center rounded-lg border border-util-colors-indigo-indigo-100 bg-util-colors-indigo-indigo-50 text-util-colors-blue-blue-600">
+          <div className="flex h-8 w-8 shrink-0 grow-0 items-center justify-center rounded-md border border-util-colors-indigo-indigo-100 bg-util-colors-indigo-indigo-50 text-util-colors-blue-blue-600">
             <Balance className="h-4 w-4" />
           </div>
           <div className="grow">
@@ -182,18 +182,18 @@ const ModelLoadBalancingConfigs = ({
               const isProviderManaged = config.name === '__inherit__'
               const credential = modelCredential.available_credentials.find(c => c.credential_id === config.credential_id)
               return (
-                <div key={config.id || index} className="group flex h-10 items-center rounded-lg border border-components-panel-border bg-components-panel-on-panel-item-bg px-3 shadow-xs">
+                <div key={config.id || index} className="group flex h-10 items-center rounded-md border border-components-panel-border bg-components-panel-on-panel-item-bg px-3 shadow-xs">
                   <div className="flex grow items-center">
                     <div className="mr-2 flex h-3 w-3 items-center justify-center">
                       {(config.in_cooldown && Boolean(config.ttl))
                         ? (
-                            <CooldownTimer secondsRemaining={config.ttl} onFinish={() => clearCountdown(index)} />
-                          )
+                          <CooldownTimer secondsRemaining={config.ttl} onFinish={() => clearCountdown(index)} />
+                        )
                         : (
-                            <Tooltip popupContent={t('modelProvider.apiKeyStatusNormal', { ns: 'common' })}>
-                              <Indicator color={credential?.not_allowed_to_use ? 'gray' : 'green'} />
-                            </Tooltip>
-                          )}
+                          <Tooltip popupContent={t('modelProvider.apiKeyStatusNormal', { ns: 'common' })}>
+                            <Indicator color={credential?.not_allowed_to_use ? 'gray' : 'green'} />
+                          </Tooltip>
+                        )}
                     </div>
                     <div className="mr-1 text-[13px] text-text-secondary">
                       {isProviderManaged ? t('modelProvider.defaultConfig', { ns: 'common' }) : config.name}
@@ -213,7 +213,7 @@ const ModelLoadBalancingConfigs = ({
                         <div className="flex items-center gap-1 opacity-0 transition-opacity group-hover:opacity-100">
                           <Tooltip popupContent={t('operation.remove', { ns: 'common' })}>
                             <span
-                              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg bg-components-button-secondary-bg text-text-tertiary transition-colors hover:bg-components-button-secondary-bg-hover"
+                              className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-md bg-components-button-secondary-bg text-text-tertiary transition-colors hover:bg-components-button-secondary-bg-hover"
                               onClick={() => updateConfigEntry(index, () => undefined)}
                             >
                               <RiIndeterminateCircleLine className="h-4 w-4" />
@@ -262,8 +262,8 @@ const ModelLoadBalancingConfigs = ({
       </div>
 
       {!modelLoadBalancingEnabled && !IS_CE_EDITION && (
-        <GridMask canvasClassName="!rounded-xl">
-          <div className="mt-2 flex h-14 items-center justify-between rounded-xl border-[0.5px] border-components-panel-border px-4 shadow-md">
+        <GridMask canvasClassName="!rounded-md">
+          <div className="mt-2 flex h-14 items-center justify-between rounded-md border-[0.5px] border-components-panel-border px-4 shadow-md">
             <div
               className={cn('text-gradient text-sm font-semibold leading-tight', s.textGradient)}
             >

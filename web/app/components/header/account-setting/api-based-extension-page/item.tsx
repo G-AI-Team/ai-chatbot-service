@@ -37,7 +37,7 @@ const Item: FC<ItemProps> = ({
   }
 
   return (
-    <div className="group mb-2 flex items-center rounded-xl border-[0.5px] border-transparent bg-components-input-bg-normal px-4 py-2 hover:border-components-input-border-active hover:shadow-xs">
+    <div className="group mb-2 flex items-center rounded-md border-[0.5px] border-transparent bg-components-input-bg-normal px-4 py-2 hover:border-components-input-border-active hover:shadow-xs">
       <div className="grow">
         <div className="mb-0.5 text-[13px] font-medium text-text-secondary">{data.name}</div>
         <div className="text-xs text-text-tertiary">{data.api_endpoint}</div>

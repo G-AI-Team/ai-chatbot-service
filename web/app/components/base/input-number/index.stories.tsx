@@ -211,7 +211,7 @@ const FontSizePickerDemo = () => {
   const [fontSize, setFontSize] = useState(16)
 
   return (
-    <div style={{ width: '350px' }} className="rounded-lg border border-gray-200 bg-white p-4">
+    <div style={{ width: '350px' }} className="rounded-md border border-gray-200 bg-white p-4">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-gray-700">Font Size</label>
@@ -224,7 +224,7 @@ const FontSizePickerDemo = () => {
             unit="px"
           />
         </div>
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="rounded-md bg-gray-50 p-4">
           <p style={{ fontSize: `${fontSize}px` }} className="text-gray-900">
             Preview Text
           </p>
@@ -246,7 +246,7 @@ const QuantitySelectorDemo = () => {
   const total = (quantity * pricePerItem).toFixed(2)
 
   return (
-    <div style={{ width: '350px' }} className="rounded-lg border border-gray-200 bg-white p-4">
+    <div style={{ width: '350px' }} className="rounded-md border border-gray-200 bg-white p-4">
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <div>
@@ -297,7 +297,7 @@ const TimerSettingsDemo = () => {
   const totalSeconds = hours * 3600 + minutes * 60 + seconds
 
   return (
-    <div style={{ width: '400px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '400px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Timer Configuration</h3>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
@@ -330,7 +330,7 @@ const TimerSettingsDemo = () => {
             unit="s"
           />
         </div>
-        <div className="mt-2 rounded-lg bg-blue-50 p-3">
+        <div className="mt-2 rounded-md bg-blue-50 p-3">
           <div className="text-sm text-gray-600">
             Total duration:
             {' '}
@@ -358,7 +358,7 @@ const AnimationSettingsDemo = () => {
   const [iterations, setIterations] = useState(1)
 
   return (
-    <div style={{ width: '400px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '400px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Animation Properties</h3>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
@@ -393,7 +393,7 @@ const AnimationSettingsDemo = () => {
             amount={1}
           />
         </div>
-        <div className="mt-2 rounded-lg bg-gray-50 p-4">
+        <div className="mt-2 rounded-md bg-gray-50 p-4">
           <div className="font-mono text-xs text-gray-700">
             animation:
             {' '}
@@ -422,7 +422,7 @@ const TemperatureControlDemo = () => {
   const fahrenheit = ((temperature * 9) / 5 + 32).toFixed(1)
 
   return (
-    <div style={{ width: '350px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '350px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Temperature Control</h3>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
@@ -437,7 +437,7 @@ const TemperatureControlDemo = () => {
             unit="°C"
           />
         </div>
-        <div className="grid grid-cols-2 gap-4 rounded-lg bg-gray-50 p-4">
+        <div className="grid grid-cols-2 gap-4 rounded-md bg-gray-50 p-4">
           <div>
             <div className="text-xs text-gray-500">Celsius</div>
             <div className="text-2xl font-semibold text-gray-900">

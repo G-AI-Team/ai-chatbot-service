@@ -33,7 +33,7 @@ const PromptLogModal: FC<PromptLogModalProps> = ({
 
   return (
     <div
-      className="relative z-10 flex flex-col rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl"
+      className="relative z-10 flex flex-col rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl"
       style={{
         width: 480,
         position: 'fixed',

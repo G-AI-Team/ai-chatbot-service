@@ -93,7 +93,7 @@ const ImageInput: FC<UploaderProps> = ({
   return (
     <div className={cn(className, 'w-full px-3 py-1.5')}>
       <div
-        className={cn(isDragActive && 'border-primary-600', 'relative flex aspect-square flex-col items-center justify-center rounded-lg border-[1.5px] border-dashed text-gray-500')}
+        className={cn(isDragActive && 'border-primary-600', 'relative flex aspect-square flex-col items-center justify-center rounded-md border-[1.5px] border-dashed text-gray-500')}
         onDragEnter={handleDragEnter}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
@@ -102,26 +102,26 @@ const ImageInput: FC<UploaderProps> = ({
         {
           !inputImage
             ? (
-                <>
-                  <ImagePlus className="pointer-events-none mb-3 h-[30px] w-[30px]" />
-                  <div className="mb-[2px] text-sm font-medium">
-                    <span className="pointer-events-none">
-                      {t('imageInput.dropImageHere', { ns: 'common' })}
-&nbsp;
-                    </span>
-                    <button type="button" className="text-components-button-primary-bg" onClick={() => inputRef.current?.click()}>{t('imageInput.browse', { ns: 'common' })}</button>
-                    <input
-                      ref={inputRef}
-                      type="file"
-                      className="hidden"
-                      onClick={e => ((e.target as HTMLInputElement).value = '')}
-                      accept={ALLOW_FILE_EXTENSIONS.map(ext => `.${ext}`).join(',')}
-                      onChange={handleLocalFileInput}
-                    />
-                  </div>
-                  <div className="pointer-events-none">{t('imageInput.supportedFormats', { ns: 'common' })}</div>
-                </>
-              )
+              <>
+                <ImagePlus className="pointer-events-none mb-3 h-[30px] w-[30px]" />
+                <div className="mb-[2px] text-sm font-medium">
+                  <span className="pointer-events-none">
+                    {t('imageInput.dropImageHere', { ns: 'common' })}
+                    &nbsp;
+                  </span>
+                  <button type="button" className="text-components-button-primary-bg" onClick={() => inputRef.current?.click()}>{t('imageInput.browse', { ns: 'common' })}</button>
+                  <input
+                    ref={inputRef}
+                    type="file"
+                    className="hidden"
+                    onClick={e => ((e.target as HTMLInputElement).value = '')}
+                    accept={ALLOW_FILE_EXTENSIONS.map(ext => `.${ext}`).join(',')}
+                    onChange={handleLocalFileInput}
+                  />
+                </div>
+                <div className="pointer-events-none">{t('imageInput.supportedFormats', { ns: 'common' })}</div>
+              </>
+            )
             : handleShowImage()
         }
       </div>

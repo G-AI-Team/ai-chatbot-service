@@ -58,7 +58,7 @@ const AppTypeSelector = ({ value, onChange }: AppSelectorProps) => {
           </div>
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[1002]">
-          <ul className="relative w-[240px] rounded-xl border border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]">
+          <ul className="relative w-[240px] rounded-md border border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]">
             {allTypes.map(mode => (
               <AppTypeSelectorItem
                 key={mode}
@@ -173,7 +173,7 @@ type AppTypeSelectorItemProps = {
 }
 function AppTypeSelectorItem({ checked, type, onClick }: AppTypeSelectorItemProps) {
   return (
-    <li className="flex cursor-pointer items-center space-x-2 rounded-lg py-1 pl-2 pr-1 hover:bg-state-base-hover" onClick={onClick}>
+    <li className="flex cursor-pointer items-center space-x-2 rounded-md py-1 pl-2 pr-1 hover:bg-state-base-hover" onClick={onClick}>
       <Checkbox checked={checked} />
       <AppTypeIcon type={type} />
       <div className="grow p-1 pl-0">

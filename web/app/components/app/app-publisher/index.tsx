@@ -297,199 +297,199 @@ const AppPublisher = ({
               </div>
               {publishedAt
                 ? (
-                    <div className="flex items-center justify-between">
-                      <div className="system-sm-medium flex items-center text-text-secondary">
-                        {t('common.publishedAt', { ns: 'workflow' })}
-                        {' '}
-                        {formatTimeFromNow(publishedAt)}
-                      </div>
-                      {isChatApp && (
-                        <Button
-                          variant="secondary-accent"
-                          size="small"
-                          onClick={handleRestore}
-                          disabled={published}
-                        >
-                          {t('common.restore', { ns: 'workflow' })}
-                        </Button>
-                      )}
-                    </div>
-                  )
-                : (
+                  <div className="flex items-center justify-between">
                     <div className="system-sm-medium flex items-center text-text-secondary">
-                      {t('common.autoSaved', { ns: 'workflow' })}
+                      {t('common.publishedAt', { ns: 'workflow' })}
                       {' '}
-                      ·
-                      {Boolean(draftUpdatedAt) && formatTimeFromNow(draftUpdatedAt!)}
+                      {formatTimeFromNow(publishedAt)}
                     </div>
-                  )}
+                    {isChatApp && (
+                      <Button
+                        variant="secondary-accent"
+                        size="small"
+                        onClick={handleRestore}
+                        disabled={published}
+                      >
+                        {t('common.restore', { ns: 'workflow' })}
+                      </Button>
+                    )}
+                  </div>
+                )
+                : (
+                  <div className="system-sm-medium flex items-center text-text-secondary">
+                    {t('common.autoSaved', { ns: 'workflow' })}
+                    {' '}
+                    ·
+                    {Boolean(draftUpdatedAt) && formatTimeFromNow(draftUpdatedAt!)}
+                  </div>
+                )}
               {debugWithMultipleModel
                 ? (
-                    <PublishWithMultipleModel
-                      multipleModelConfigs={multipleModelConfigs}
-                      onSelect={item => handlePublish(item)}
-                      // textGenerationModelList={textGenerationModelList}
-                    />
-                  )
+                  <PublishWithMultipleModel
+                    multipleModelConfigs={multipleModelConfigs}
+                    onSelect={item => handlePublish(item)}
+                  // textGenerationModelList={textGenerationModelList}
+                  />
+                )
                 : (
-                    <>
-                      <Button
-                        variant="primary"
-                        className="mt-3 w-full"
-                        onClick={() => handlePublish()}
-                        disabled={publishDisabled || published}
-                      >
-                        {
-                          published
-                            ? t('common.published', { ns: 'workflow' })
-                            : (
-                                <div className="flex gap-1">
-                                  <span>{t('common.publishUpdate', { ns: 'workflow' })}</span>
-                                  <div className="flex gap-0.5">
-                                    {PUBLISH_SHORTCUT.map(key => (
-                                      <span key={key} className="system-kbd h-4 w-4 rounded-[4px] bg-components-kbd-bg-white text-text-primary-on-surface">
-                                        {getKeyboardKeyNameBySystem(key)}
-                                      </span>
-                                    ))}
-                                  </div>
-                                </div>
-                              )
-                        }
-                      </Button>
-                      {showStartNodeLimitHint && (
-                        <div className="mt-3 flex flex-col items-stretch">
-                          <p
-                            className="text-sm font-semibold leading-5 text-transparent"
-                            style={upgradeHighlightStyle}
-                          >
-                            <span className="block">{t('publishLimit.startNodeTitlePrefix', { ns: 'workflow' })}</span>
-                            <span className="block">{t('publishLimit.startNodeTitleSuffix', { ns: 'workflow' })}</span>
-                          </p>
-                          <p className="mt-1 text-xs leading-4 text-text-secondary">
-                            {t('publishLimit.startNodeDesc', { ns: 'workflow' })}
-                          </p>
-                          <UpgradeBtn
-                            isShort
-                            className="mb-[12px] mt-[9px] h-[32px] w-[93px] self-start"
-                          />
-                        </div>
-                      )}
-                    </>
-                  )}
+                  <>
+                    <Button
+                      variant="primary"
+                      className="mt-3 w-full"
+                      onClick={() => handlePublish()}
+                      disabled={publishDisabled || published}
+                    >
+                      {
+                        published
+                          ? t('common.published', { ns: 'workflow' })
+                          : (
+                            <div className="flex gap-1">
+                              <span>{t('common.publishUpdate', { ns: 'workflow' })}</span>
+                              <div className="flex gap-0.5">
+                                {PUBLISH_SHORTCUT.map(key => (
+                                  <span key={key} className="system-kbd h-4 w-4 rounded-[4px] bg-components-kbd-bg-white text-text-primary-on-surface">
+                                    {getKeyboardKeyNameBySystem(key)}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )
+                      }
+                    </Button>
+                    {showStartNodeLimitHint && (
+                      <div className="mt-3 flex flex-col items-stretch">
+                        <p
+                          className="text-sm font-semibold leading-5 text-transparent"
+                          style={upgradeHighlightStyle}
+                        >
+                          <span className="block">{t('publishLimit.startNodeTitlePrefix', { ns: 'workflow' })}</span>
+                          <span className="block">{t('publishLimit.startNodeTitleSuffix', { ns: 'workflow' })}</span>
+                        </p>
+                        <p className="mt-1 text-xs leading-4 text-text-secondary">
+                          {t('publishLimit.startNodeDesc', { ns: 'workflow' })}
+                        </p>
+                        <UpgradeBtn
+                          isShort
+                          className="mb-[12px] mt-[9px] h-[32px] w-[93px] self-start"
+                        />
+                      </div>
+                    )}
+                  </>
+                )}
             </div>
             {(systemFeatures.webapp_auth.enabled && (isGettingUserCanAccessApp || isGettingAppWhiteListSubjects))
               ? <div className="py-2"><Loading /></div>
               : (
-                  <>
-                    <Divider className="my-0" />
-                    {systemFeatures.webapp_auth.enabled && (
-                      <div className="p-4 pt-3">
-                        <div className="flex h-6 items-center">
-                          <p className="system-xs-medium text-text-tertiary">{t('publishApp.title', { ns: 'app' })}</p>
-                        </div>
-                        <div
-                          className="flex h-8 cursor-pointer items-center gap-x-0.5  rounded-lg bg-components-input-bg-normal py-1 pl-2.5 pr-2 hover:bg-primary-50 hover:text-text-accent"
-                          onClick={() => {
-                            setShowAppAccessControl(true)
-                          }}
-                        >
-                          <div className="flex grow items-center gap-x-1.5 overflow-hidden pr-1">
-                            <AccessModeDisplay mode={appDetail?.access_mode} />
-                          </div>
-                          {!isAppAccessSet && <p className="system-xs-regular shrink-0 text-text-tertiary">{t('publishApp.notSet', { ns: 'app' })}</p>}
-                          <div className="flex h-4 w-4 shrink-0 items-center justify-center">
-                            <RiArrowRightSLine className="h-4 w-4 text-text-quaternary" />
-                          </div>
-                        </div>
-                        {!isAppAccessSet && <p className="system-xs-regular mt-1 text-text-warning">{t('publishApp.notSetDesc', { ns: 'app' })}</p>}
+                <>
+                  <Divider className="my-0" />
+                  {systemFeatures.webapp_auth.enabled && (
+                    <div className="p-4 pt-3">
+                      <div className="flex h-6 items-center">
+                        <p className="system-xs-medium text-text-tertiary">{t('publishApp.title', { ns: 'app' })}</p>
                       </div>
-                    )}
-                    {
-                      // Hide run/batch run app buttons when there is a trigger node.
-                      !hasTriggerNode && (
-                        <div className="flex flex-col gap-y-1 border-t-[0.5px] border-t-divider-regular p-4 pt-3">
-                          <Tooltip triggerClassName="flex" disabled={!disabledFunctionButton} popupContent={disabledFunctionTooltip} asChild={false}>
-                            <SuggestedAction
-                              className="flex-1"
-                              disabled={disabledFunctionButton}
-                              link={appURL}
-                              icon={<RiPlayCircleLine className="h-4 w-4" />}
-                            >
-                              {t('common.runApp', { ns: 'workflow' })}
-                            </SuggestedAction>
-                          </Tooltip>
-                          {appDetail?.mode === AppModeEnum.WORKFLOW || appDetail?.mode === AppModeEnum.COMPLETION
-                            ? (
-                                <Tooltip triggerClassName="flex" disabled={!disabledFunctionButton} popupContent={disabledFunctionTooltip} asChild={false}>
-                                  <SuggestedAction
-                                    className="flex-1"
-                                    disabled={disabledFunctionButton}
-                                    link={`${appURL}${appURL.includes('?') ? '&' : '?'}mode=batch`}
-                                    icon={<RiPlayList2Line className="h-4 w-4" />}
-                                  >
-                                    {t('common.batchRunApp', { ns: 'workflow' })}
-                                  </SuggestedAction>
-                                </Tooltip>
-                              )
-                            : (
-                                <SuggestedAction
-                                  onClick={() => {
-                                    setEmbeddingModalOpen(true)
-                                    handleTrigger()
-                                  }}
-                                  disabled={!publishedAt}
-                                  icon={<CodeBrowser className="h-4 w-4" />}
-                                >
-                                  {t('common.embedIntoSite', { ns: 'workflow' })}
-                                </SuggestedAction>
-                              )}
-                          <Tooltip triggerClassName="flex" disabled={!disabledFunctionButton} popupContent={disabledFunctionTooltip} asChild={false}>
-                            <SuggestedAction
-                              className="flex-1"
-                              onClick={() => {
-                                if (publishedAt)
-                                  handleOpenInExplore()
-                              }}
-                              disabled={disabledFunctionButton}
-                              icon={<RiPlanetLine className="h-4 w-4" />}
-                            >
-                              {t('common.openInExplore', { ns: 'workflow' })}
-                            </SuggestedAction>
-                          </Tooltip>
-                          <Tooltip triggerClassName="flex" disabled={!!publishedAt && !missingStartNode} popupContent={!publishedAt ? t('notPublishedYet', { ns: 'app' }) : t('noUserInputNode', { ns: 'app' })} asChild={false}>
-                            <SuggestedAction
-                              className="flex-1"
-                              disabled={!publishedAt || missingStartNode}
-                              link="./develop"
-                              icon={<RiTerminalBoxLine className="h-4 w-4" />}
-                            >
-                              {t('common.accessAPIReference', { ns: 'workflow' })}
-                            </SuggestedAction>
-                          </Tooltip>
-                          {appDetail?.mode === AppModeEnum.WORKFLOW && (
-                            <WorkflowToolConfigureButton
-                              disabled={workflowToolDisabled}
-                              published={!!toolPublished}
-                              detailNeedUpdate={!!toolPublished && published}
-                              workflowAppId={appDetail?.id}
-                              icon={{
-                                content: (appDetail.icon_type === 'image' ? '🤖' : appDetail?.icon) || '🤖',
-                                background: (appDetail.icon_type === 'image' ? appDefaultIconBackground : appDetail?.icon_background) || appDefaultIconBackground,
-                              }}
-                              name={appDetail?.name}
-                              description={appDetail?.description}
-                              inputs={inputs}
-                              outputs={outputs}
-                              handlePublish={handlePublish}
-                              onRefreshData={onRefreshData}
-                              disabledReason={workflowToolMessage}
-                            />
-                          )}
+                      <div
+                        className="flex h-8 cursor-pointer items-center gap-x-0.5  rounded-md bg-components-input-bg-normal py-1 pl-2.5 pr-2 hover:bg-primary-50 hover:text-text-accent"
+                        onClick={() => {
+                          setShowAppAccessControl(true)
+                        }}
+                      >
+                        <div className="flex grow items-center gap-x-1.5 overflow-hidden pr-1">
+                          <AccessModeDisplay mode={appDetail?.access_mode} />
                         </div>
-                      )
-                    }
-                  </>
-                )}
+                        {!isAppAccessSet && <p className="system-xs-regular shrink-0 text-text-tertiary">{t('publishApp.notSet', { ns: 'app' })}</p>}
+                        <div className="flex h-4 w-4 shrink-0 items-center justify-center">
+                          <RiArrowRightSLine className="h-4 w-4 text-text-quaternary" />
+                        </div>
+                      </div>
+                      {!isAppAccessSet && <p className="system-xs-regular mt-1 text-text-warning">{t('publishApp.notSetDesc', { ns: 'app' })}</p>}
+                    </div>
+                  )}
+                  {
+                    // Hide run/batch run app buttons when there is a trigger node.
+                    !hasTriggerNode && (
+                      <div className="flex flex-col gap-y-1 border-t-[0.5px] border-t-divider-regular p-4 pt-3">
+                        <Tooltip triggerClassName="flex" disabled={!disabledFunctionButton} popupContent={disabledFunctionTooltip} asChild={false}>
+                          <SuggestedAction
+                            className="flex-1"
+                            disabled={disabledFunctionButton}
+                            link={appURL}
+                            icon={<RiPlayCircleLine className="h-4 w-4" />}
+                          >
+                            {t('common.runApp', { ns: 'workflow' })}
+                          </SuggestedAction>
+                        </Tooltip>
+                        {appDetail?.mode === AppModeEnum.WORKFLOW || appDetail?.mode === AppModeEnum.COMPLETION
+                          ? (
+                            <Tooltip triggerClassName="flex" disabled={!disabledFunctionButton} popupContent={disabledFunctionTooltip} asChild={false}>
+                              <SuggestedAction
+                                className="flex-1"
+                                disabled={disabledFunctionButton}
+                                link={`${appURL}${appURL.includes('?') ? '&' : '?'}mode=batch`}
+                                icon={<RiPlayList2Line className="h-4 w-4" />}
+                              >
+                                {t('common.batchRunApp', { ns: 'workflow' })}
+                              </SuggestedAction>
+                            </Tooltip>
+                          )
+                          : (
+                            <SuggestedAction
+                              onClick={() => {
+                                setEmbeddingModalOpen(true)
+                                handleTrigger()
+                              }}
+                              disabled={!publishedAt}
+                              icon={<CodeBrowser className="h-4 w-4" />}
+                            >
+                              {t('common.embedIntoSite', { ns: 'workflow' })}
+                            </SuggestedAction>
+                          )}
+                        <Tooltip triggerClassName="flex" disabled={!disabledFunctionButton} popupContent={disabledFunctionTooltip} asChild={false}>
+                          <SuggestedAction
+                            className="flex-1"
+                            onClick={() => {
+                              if (publishedAt)
+                                handleOpenInExplore()
+                            }}
+                            disabled={disabledFunctionButton}
+                            icon={<RiPlanetLine className="h-4 w-4" />}
+                          >
+                            {t('common.openInExplore', { ns: 'workflow' })}
+                          </SuggestedAction>
+                        </Tooltip>
+                        <Tooltip triggerClassName="flex" disabled={!!publishedAt && !missingStartNode} popupContent={!publishedAt ? t('notPublishedYet', { ns: 'app' }) : t('noUserInputNode', { ns: 'app' })} asChild={false}>
+                          <SuggestedAction
+                            className="flex-1"
+                            disabled={!publishedAt || missingStartNode}
+                            link="./develop"
+                            icon={<RiTerminalBoxLine className="h-4 w-4" />}
+                          >
+                            {t('common.accessAPIReference', { ns: 'workflow' })}
+                          </SuggestedAction>
+                        </Tooltip>
+                        {appDetail?.mode === AppModeEnum.WORKFLOW && (
+                          <WorkflowToolConfigureButton
+                            disabled={workflowToolDisabled}
+                            published={!!toolPublished}
+                            detailNeedUpdate={!!toolPublished && published}
+                            workflowAppId={appDetail?.id}
+                            icon={{
+                              content: (appDetail.icon_type === 'image' ? '🤖' : appDetail?.icon) || '🤖',
+                              background: (appDetail.icon_type === 'image' ? appDefaultIconBackground : appDetail?.icon_background) || appDefaultIconBackground,
+                            }}
+                            name={appDetail?.name}
+                            description={appDetail?.description}
+                            inputs={inputs}
+                            outputs={outputs}
+                            handlePublish={handlePublish}
+                            onRefreshData={onRefreshData}
+                            disabledReason={workflowToolMessage}
+                          />
+                        )}
+                      </div>
+                    )
+                  }
+                </>
+              )}
           </div>
         </PortalToFollowElemContent>
         <EmbeddedModal

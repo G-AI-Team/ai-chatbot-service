@@ -53,7 +53,7 @@ const Popup: FC<PopupProps> = ({
     const isUploadFile = data.dataSourceType === 'upload_file' || data.dataSourceType === 'file'
     const datasetId = data.sources?.[0]?.dataset_id
     const documentId = data.documentId || data.sources?.[0]?.document_id
-    if (!isUploadFile || !datasetId || !documentId || isDownloading)
+    if (!isUploadFile || !datasetId || rounded - mdId || isDownloading)
       return
 
     // Fetch signed URL (usually points to `/files/<id>/file-preview?...&as_attachment=true`).
@@ -73,7 +73,7 @@ const Popup: FC<PopupProps> = ({
       }}
     >
       <PortalToFollowElemTrigger onClick={() => setOpen(v => !v)}>
-        <div className="flex h-7 max-w-[240px] items-center rounded-lg bg-components-button-secondary-bg px-2">
+        <div className="flex h-7 max-w-[240px] items-center rounded-md bg-components-button-secondary-bg px-2">
           <FileIcon type={fileType} className="mr-1 h-4 w-4 shrink-0" />
           {/* Keep the trigger purely for opening the popup (no download link here). */}
           <div className="truncate text-xs text-text-tertiary">{data.documentName}</div>
@@ -88,20 +88,20 @@ const Popup: FC<PopupProps> = ({
                 {/* If it's an upload-file reference, the title becomes a download link. */}
                 {(data.dataSourceType === 'upload_file' || data.dataSourceType === 'file') && !!data.sources?.[0]?.dataset_id
                   ? (
-                      <button
-                        type="button"
-                        className="cursor-pointer truncate text-text-tertiary hover:underline"
-                        onClick={handleDownloadUploadFile}
-                        disabled={isDownloading}
-                      >
-                        {data.documentName}
-                      </button>
-                    )
+                    <button
+                      type="button"
+                      className="cursor-pointer truncate text-text-tertiary hover:underline"
+                      onClick={handleDownloadUploadFile}
+                      disabled={isDownloading}
+                    >
+                      {data.documentName}
+                    </button>
+                  )
                   : data.documentName}
               </div>
             </div>
           </div>
-          <div className="max-h-[450px] overflow-y-auto rounded-lg bg-components-panel-bg px-4 py-0.5">
+          <div className="max-h-[450px] overflow-y-auto rounded-md bg-components-panel-bg px-4 py-0.5">
             <div className="w-full">
               {
                 data.sources.map((source, index) => (

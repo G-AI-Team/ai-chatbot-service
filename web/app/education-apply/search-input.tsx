@@ -93,14 +93,14 @@ const SearchInput = ({
         {
           !!schools.length && value && (
             <div
-              className="max-h-[330px] overflow-y-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1"
+              className="max-h-[330px] overflow-y-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1"
               onScroll={handleScroll as any}
             >
               {
                 schools.map((school, index) => (
                   <div
                     key={index}
-                    className="system-md-regular flex h-8 cursor-pointer items-center truncate rounded-lg px-2 py-1.5 text-text-secondary hover:bg-state-base-hover"
+                    className="system-md-regular flex h-8 cursor-pointer items-center truncate rounded-md px-2 py-1.5 text-text-secondary hover:bg-state-base-hover"
                     title={school}
                     onClick={() => {
                       onChange(school)

@@ -22,7 +22,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: args => (
-    <div className="flex items-center gap-2 rounded-lg border border-divider-subtle bg-components-panel-bg p-4 text-sm text-text-secondary">
+    <div className="flex items-center gap-2 rounded-md border border-divider-subtle bg-components-panel-bg p-4 text-sm text-text-secondary">
       <span>Hover or click to copy the app link:</span>
       <CopyIcon {...args} />
     </div>

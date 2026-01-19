@@ -25,7 +25,7 @@ const FormInputTypeSwitch: FC<Props> = ({
         popupContent={value === VarType.variable ? '' : t('nodes.common.typeSwitch.variable', { ns: 'workflow' })}
       >
         <div
-          className={cn('cursor-pointer rounded-lg px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover', value === VarType.variable && 'bg-components-segmented-control-item-active-bg text-text-secondary shadow-xs hover:bg-components-segmented-control-item-active-bg')}
+          className={cn('cursor-pointer rounded-md px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover', value === VarType.variable && 'bg-components-segmented-control-item-active-bg text-text-secondary shadow-xs hover:bg-components-segmented-control-item-active-bg')}
           onClick={() => onChange(VarType.variable)}
         >
           <Variable02 className="h-4 w-4" />
@@ -35,7 +35,7 @@ const FormInputTypeSwitch: FC<Props> = ({
         popupContent={value === VarType.constant ? '' : t('nodes.common.typeSwitch.input', { ns: 'workflow' })}
       >
         <div
-          className={cn('cursor-pointer rounded-lg px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover', value === VarType.constant && 'bg-components-segmented-control-item-active-bg text-text-secondary shadow-xs hover:bg-components-segmented-control-item-active-bg')}
+          className={cn('cursor-pointer rounded-md px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover', value === VarType.constant && 'bg-components-segmented-control-item-active-bg text-text-secondary shadow-xs hover:bg-components-segmented-control-item-active-bg')}
           onClick={() => onChange(VarType.constant)}
         >
           <RiEditLine className="h-4 w-4" />

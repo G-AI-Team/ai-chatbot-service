@@ -87,14 +87,14 @@ const QuotaPanel: FC<QuotaPanelProps> = ({
 
   if (isLoading) {
     return (
-      <div className="my-2 flex min-h-[72px] items-center justify-center rounded-xl border-[0.5px] border-components-panel-border bg-third-party-model-bg-default shadow-xs">
+      <div className="my-2 flex min-h-[72px] items-center justify-center rounded-md border-[0.5px] border-components-panel-border bg-third-party-model-bg-default shadow-xs">
         <Loading />
       </div>
     )
   }
 
   return (
-    <div className={cn('my-2 min-w-[72px] shrink-0 rounded-xl border-[0.5px] pb-2.5 pl-4 pr-2.5 pt-3 shadow-xs', credits <= 0 ? 'border-state-destructive-border hover:bg-state-destructive-hover' : 'border-components-panel-border bg-third-party-model-bg-default')}>
+    <div className={cn('my-2 min-w-[72px] shrink-0 rounded-md border-[0.5px] pb-2.5 pl-4 pr-2.5 pt-3 shadow-xs', credits <= 0 ? 'border-state-destructive-border hover:bg-state-destructive-hover' : 'border-components-panel-border bg-third-party-model-bg-default')}>
       <div className="system-xs-medium-uppercase mb-2 flex h-4 items-center text-text-tertiary">
         {t('modelProvider.quota', { ns: 'common' })}
         <Tooltip popupContent={t('modelProvider.card.tip', { ns: 'common' })} />
@@ -105,17 +105,17 @@ const QuotaPanel: FC<QuotaPanelProps> = ({
           <span>{t('modelProvider.credits', { ns: 'common' })}</span>
           {currentWorkspace.next_credit_reset_date
             ? (
-                <>
-                  <span>·</span>
-                  <span>
-                    {t('modelProvider.resetDate', {
-                      ns: 'common',
-                      date: formatTime(currentWorkspace.next_credit_reset_date, t('dateFormat', { ns: 'appLog' })),
-                      interpolation: { escapeValue: false },
-                    })}
-                  </span>
-                </>
-              )
+              <>
+                <span>·</span>
+                <span>
+                  {t('modelProvider.resetDate', {
+                    ns: 'common',
+                    date: formatTime(currentWorkspace.next_credit_reset_date, t('dateFormat', { ns: 'appLog' })),
+                    interpolation: { escapeValue: false },
+                  })}
+                </span>
+              </>
+            )
             : null}
         </div>
         <div className="flex items-center gap-1">
@@ -138,9 +138,9 @@ const QuotaPanel: FC<QuotaPanelProps> = ({
                   className={cn('relative h-6 w-6', !providerType && 'cursor-pointer hover:opacity-80')}
                   onClick={() => handleIconClick(key)}
                 >
-                  <Icon className="h-6 w-6 rounded-lg" />
+                  <Icon className="h-6 w-6 rounded-md" />
                   {!usingQuota && (
-                    <div className="absolute inset-0 rounded-lg border-[0.5px] border-components-panel-border-subtle bg-background-default-dodge opacity-30" />
+                    <div className="absolute inset-0 rounded-md border-[0.5px] border-components-panel-border-subtle bg-background-default-dodge opacity-30" />
                   )}
                 </div>
               </Tooltip>

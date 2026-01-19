@@ -32,7 +32,7 @@ const WeightedScore = ({
 
   return (
     <div>
-      <div className="space-x-3 rounded-lg border border-components-panel-border px-3 pb-2 pt-5">
+      <div className="space-x-3 rounded-md border border-components-panel-border px-3 pb-2 pt-5">
         <Slider
           className={cn('h-0.5 grow rounded-full !bg-util-colors-teal-teal-500')}
           max={1.0}

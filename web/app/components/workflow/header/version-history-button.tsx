@@ -56,12 +56,12 @@ const VersionHistoryButton: FC<VersionHistoryButtonProps> = ({
     <Tooltip
       popupContent={<PopupContent />}
       noDecoration
-      popupClassName="rounded-lg border-[0.5px] border-components-panel-border bg-components-tooltip-bg
+      popupClassName="rounded-md border-[0.5px] border-components-panel-border bg-components-tooltip-bg
     shadow-lg shadow-shadow-shadow-5 backdrop-blur-[5px] p-1.5"
     >
       <Button
         className={cn(
-          'rounded-lg border border-transparent p-2',
+          'rounded-md border border-transparent p-2',
           theme === 'dark' && 'border-black/5 bg-white/10 backdrop-blur-sm',
         )}
         onClick={handleViewVersionHistory}

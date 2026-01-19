@@ -127,7 +127,7 @@ const ConditionItem = ({
   return (
     <div className={cn('mb-1 flex last-of-type:mb-0', className)}>
       <div className={cn(
-        'grow rounded-lg bg-components-input-bg-normal',
+        'grow rounded-md bg-components-input-bg-normal',
         isHovered && 'bg-state-destructive-hover',
       )}
       >
@@ -191,7 +191,7 @@ const ConditionItem = ({
         </div>
       </div>
       <div
-        className="ml-1 mt-1 flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center rounded-lg text-text-tertiary hover:bg-state-destructive-hover hover:text-text-destructive"
+        className="ml-1 mt-1 flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center rounded-md text-text-tertiary hover:bg-state-destructive-hover hover:text-text-destructive"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={doRemoveCondition}

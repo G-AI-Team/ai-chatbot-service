@@ -46,7 +46,7 @@ const TaskStatusIndicator: FC<TaskStatusIndicatorProps> = ({
     >
       <div
         className={cn(
-          'relative flex h-8 w-8 items-center justify-center rounded-lg border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg shadow-xs hover:bg-components-button-secondary-bg-hover',
+          'relative flex h-8 w-8 items-center justify-center rounded-md border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg shadow-xs hover:bg-components-button-secondary-bg-hover',
           showErrorStyle && 'cursor-pointer border-components-button-destructive-secondary-border-hover bg-state-destructive-hover hover:bg-state-destructive-hover-alt',
           (isInstalling || isInstallingWithSuccess || isSuccess) && 'cursor-pointer hover:bg-components-button-secondary-bg-hover',
         )}
@@ -57,13 +57,13 @@ const TaskStatusIndicator: FC<TaskStatusIndicatorProps> = ({
         {showDownloadingIcon
           ? <DownloadingIcon />
           : (
-              <RiInstallLine
-                className={cn(
-                  'h-4 w-4 text-components-button-secondary-text',
-                  showErrorStyle && 'text-components-button-destructive-secondary-text',
-                )}
-              />
-            )}
+            <RiInstallLine
+              className={cn(
+                'h-4 w-4 text-components-button-secondary-text',
+                showErrorStyle && 'text-components-button-destructive-secondary-text',
+              )}
+            />
+          )}
 
         {/* Status Indicator Badge */}
         <div className="absolute -right-1 -top-1">

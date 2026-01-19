@@ -81,7 +81,7 @@ const OptionCard = memo(({
   return (
     <div
       className={cn(
-        'group overflow-hidden rounded-xl border border-components-option-card-option-border bg-components-option-card-option-bg',
+        'group overflow-hidden rounded-md border border-components-option-card-option-border bg-components-option-card-option-bg',
         isActive && enableHighlightBorder && 'border-[1.5px] border-components-option-card-option-selected-border',
         enableSelect && 'cursor-pointer hover:shadow-xs',
         readonly && 'cursor-not-allowed',

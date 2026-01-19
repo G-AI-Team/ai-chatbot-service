@@ -133,11 +133,11 @@ const WorkflowToolConfigureButton = ({
       privacy_policy: detail?.privacy_policy || '',
       ...(published
         ? {
-            workflow_tool_id: detail?.workflow_tool_id,
-          }
+          workflow_tool_id: detail?.workflow_tool_id,
+        }
         : {
-            workflow_app_id: workflowAppId,
-          }),
+          workflow_app_id: workflowAppId,
+        }),
     }
   }, [detail, published, workflowAppId, icon, name, description, inputs])
 
@@ -201,44 +201,44 @@ const WorkflowToolConfigureButton = ({
       <Divider type="horizontal" className="h-px bg-divider-subtle" />
       {(!published || !isLoading) && (
         <div className={cn(
-          'group rounded-lg bg-background-section-burn transition-colors',
+          'group rounded-md bg-background-section-burn transition-colors',
           disabled || !isCurrentWorkspaceManager ? 'cursor-not-allowed opacity-60 shadow-xs' : 'cursor-pointer',
           !disabled && !published && isCurrentWorkspaceManager && 'hover:bg-state-accent-hover',
         )}
         >
           {isCurrentWorkspaceManager
             ? (
+              <div
+                className="flex items-center justify-start gap-2 p-2 pl-2.5"
+                onClick={() => !disabled && !published && setShowModal(true)}
+              >
+                <RiHammerLine className={cn('relative h-4 w-4 text-text-secondary', !disabled && !published && 'group-hover:text-text-accent')} />
                 <div
-                  className="flex items-center justify-start gap-2 p-2 pl-2.5"
-                  onClick={() => !disabled && !published && setShowModal(true)}
+                  title={t('common.workflowAsTool', { ns: 'workflow' }) || ''}
+                  className={cn('system-sm-medium shrink grow basis-0 truncate text-text-secondary', !disabled && !published && 'group-hover:text-text-accent')}
                 >
-                  <RiHammerLine className={cn('relative h-4 w-4 text-text-secondary', !disabled && !published && 'group-hover:text-text-accent')} />
-                  <div
-                    title={t('common.workflowAsTool', { ns: 'workflow' }) || ''}
-                    className={cn('system-sm-medium shrink grow basis-0 truncate text-text-secondary', !disabled && !published && 'group-hover:text-text-accent')}
-                  >
-                    {t('common.workflowAsTool', { ns: 'workflow' })}
-                  </div>
-                  {!published && (
-                    <span className="system-2xs-medium-uppercase shrink-0 rounded-[5px] border border-divider-deep bg-components-badge-bg-dimm px-1 py-0.5 text-text-tertiary">
-                      {t('common.configureRequired', { ns: 'workflow' })}
-                    </span>
-                  )}
+                  {t('common.workflowAsTool', { ns: 'workflow' })}
                 </div>
-              )
+                {!published && (
+                  <span className="system-2xs-medium-uppercase shrink-0 rounded-[5px] border border-divider-deep bg-components-badge-bg-dimm px-1 py-0.5 text-text-tertiary">
+                    {t('common.configureRequired', { ns: 'workflow' })}
+                  </span>
+                )}
+              </div>
+            )
             : (
+              <div
+                className="flex items-center justify-start gap-2 p-2 pl-2.5"
+              >
+                <RiHammerLine className="h-4 w-4 text-text-tertiary" />
                 <div
-                  className="flex items-center justify-start gap-2 p-2 pl-2.5"
+                  title={t('common.workflowAsTool', { ns: 'workflow' }) || ''}
+                  className="system-sm-medium shrink grow basis-0 truncate text-text-tertiary"
                 >
-                  <RiHammerLine className="h-4 w-4 text-text-tertiary" />
-                  <div
-                    title={t('common.workflowAsTool', { ns: 'workflow' }) || ''}
-                    className="system-sm-medium shrink grow basis-0 truncate text-text-tertiary"
-                  >
-                    {t('common.workflowAsTool', { ns: 'workflow' })}
-                  </div>
+                  {t('common.workflowAsTool', { ns: 'workflow' })}
                 </div>
-              )}
+              </div>
+            )}
           {disabledReason && (
             <div className="mt-1 px-2.5 pb-2 text-xs leading-[18px] text-text-tertiary">
               {disabledReason}

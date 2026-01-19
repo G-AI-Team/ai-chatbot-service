@@ -118,7 +118,7 @@ const PureSelect = (props: PureSelectProps) => {
       >
         <div
           className={cn(
-            'system-sm-regular group flex h-8 items-center rounded-lg bg-components-input-bg-normal px-2 text-components-input-text-filled',
+            'system-sm-regular group flex h-8 items-center rounded-md bg-components-input-bg-normal px-2 text-components-input-text-filled',
             !disabled && 'cursor-pointer hover:bg-state-base-hover-alt',
             disabled && 'cursor-not-allowed opacity-50',
             mergedOpen && !disabled && 'bg-state-base-hover-alt',
@@ -146,7 +146,7 @@ const PureSelect = (props: PureSelectProps) => {
       >
         <div
           className={cn(
-            'max-h-80 overflow-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg',
+            'max-h-80 overflow-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg',
             popupClassName,
           )}
         >
@@ -166,7 +166,7 @@ const PureSelect = (props: PureSelectProps) => {
               <div
                 key={option.value}
                 className={cn(
-                  'system-sm-medium flex h-8 cursor-pointer items-center rounded-lg px-2 text-text-secondary hover:bg-state-base-hover',
+                  'system-sm-medium flex h-8 cursor-pointer items-center rounded-md px-2 text-text-secondary hover:bg-state-base-hover',
                   popupItemClassName,
                 )}
                 title={option.label}

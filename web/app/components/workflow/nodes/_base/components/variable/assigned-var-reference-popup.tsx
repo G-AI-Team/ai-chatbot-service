@@ -19,23 +19,23 @@ const AssignedVarReferencePopup: FC<Props> = ({
   const { t } = useTranslation()
   // max-h-[300px] overflow-y-auto todo: use portal to handle long list
   return (
-    <div className="bg-components-panel-bg-bur w-[352px] rounded-lg border-[0.5px] border-components-panel-border p-1 shadow-lg">
+    <div className="bg-components-panel-bg-bur w-[352px] rounded-md border-[0.5px] border-components-panel-border p-1 shadow-lg">
       {(!vars || vars.length === 0)
         ? (
-            <ListEmpty
-              title={t('nodes.assigner.noAssignedVars', { ns: 'workflow' }) || ''}
-              description={t('nodes.assigner.assignedVarsDescription', { ns: 'workflow' })}
-            />
-          )
+          <ListEmpty
+            title={t('nodes.assigner.noAssignedVars', { ns: 'workflow' }) || ''}
+            description={t('nodes.assigner.assignedVarsDescription', { ns: 'workflow' })}
+          />
+        )
         : (
-            <VarReferenceVars
-              searchBoxClassName="mt-1"
-              vars={vars}
-              onChange={onChange}
-              itemWidth={itemWidth}
-              isSupportFileVar
-            />
-          )}
+          <VarReferenceVars
+            searchBoxClassName="mt-1"
+            vars={vars}
+            onChange={onChange}
+            itemWidth={itemWidth}
+            isSupportFileVar
+          />
+        )}
     </div>
   )
 }

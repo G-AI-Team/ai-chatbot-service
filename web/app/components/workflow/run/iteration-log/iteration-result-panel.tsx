@@ -88,12 +88,12 @@ const IterationResultPanel: FC<Props> = ({
       {/* List */}
       <div className="bg-components-panel-bg p-2">
         {list.map((iteration, index) => (
-          <div key={index} className={cn('mb-1 overflow-hidden rounded-xl border-none bg-background-section-burn')}>
+          <div key={index} className={cn('mb-1 overflow-hidden rounded-md border-none bg-background-section-burn')}>
             <div
               className={cn(
                 'flex w-full cursor-pointer items-center justify-between px-3',
                 expandedIterations[index] ? 'pb-2 pt-3' : 'py-3',
-                'rounded-xl text-left',
+                'rounded-md text-left',
               )}
               onClick={() => toggleIteration(index)}
             >

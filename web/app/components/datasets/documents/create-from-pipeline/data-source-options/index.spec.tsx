@@ -205,7 +205,7 @@ describe('DatasourceIcon', () => {
         // Assert
         expect(container.firstChild).toHaveClass('w-6')
         expect(container.firstChild).toHaveClass('h-6')
-        expect(container.firstChild).toHaveClass('rounded-lg')
+        expect(container.firstChild).toHaveClass('rounded-md')
       })
     })
 
@@ -739,12 +739,12 @@ describe('OptionCard', () => {
       expect(container.firstChild).toHaveClass('gap-2')
     })
 
-    it('should have rounded-xl border', () => {
+    it('should have rounded-md border', () => {
       // Arrange & Act
       const { container } = renderWithProviders(<OptionCard {...defaultProps} />)
 
       // Assert
-      expect(container.firstChild).toHaveClass('rounded-xl')
+      expect(container.firstChild).toHaveClass('rounded-md')
       expect(container.firstChild).toHaveClass('border')
     })
 
@@ -906,7 +906,7 @@ describe('DataSourceOptions', () => {
         )
 
         // Assert - Check for selected styling on second card
-        const cards = container.querySelectorAll('.rounded-xl.border')
+        const cards = container.querySelectorAll('.rounded-md.border')
         expect(cards[1]).toHaveClass('border-components-option-card-option-selected-border')
       })
 
@@ -948,7 +948,7 @@ describe('DataSourceOptions', () => {
         )
 
         // Assert initial selection
-        let cards = container.querySelectorAll('.rounded-xl.border')
+        let cards = container.querySelectorAll('.rounded-md.border')
         expect(cards[0]).toHaveClass('border-components-option-card-option-selected-border')
 
         // Act - Change selection
@@ -962,7 +962,7 @@ describe('DataSourceOptions', () => {
         )
 
         // Assert new selection
-        cards = container.querySelectorAll('.rounded-xl.border')
+        cards = container.querySelectorAll('.rounded-md.border')
         expect(cards[0]).not.toHaveClass('border-components-option-card-option-selected-border')
         expect(cards[1]).toHaveClass('border-components-option-card-option-selected-border')
       })
@@ -1570,7 +1570,7 @@ describe('DataSourceOptions', () => {
       const { container } = renderWithProviders(<DataSourceOptions {...defaultProps} />)
 
       // Assert - Verify real OptionCard components are rendered
-      const cards = container.querySelectorAll('.rounded-xl.border')
+      const cards = container.querySelectorAll('.rounded-md.border')
       expect(cards).toHaveLength(3)
     })
 
@@ -1584,7 +1584,7 @@ describe('DataSourceOptions', () => {
       )
 
       // Assert
-      const cards = container.querySelectorAll('.rounded-xl.border')
+      const cards = container.querySelectorAll('.rounded-md.border')
       expect(cards[0]).not.toHaveClass('border-components-option-card-option-selected-border')
       expect(cards[1]).toHaveClass('border-components-option-card-option-selected-border')
       expect(cards[2]).not.toHaveClass('border-components-option-card-option-selected-border')

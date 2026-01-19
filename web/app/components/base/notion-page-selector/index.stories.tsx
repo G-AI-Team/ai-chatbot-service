@@ -167,7 +167,7 @@ const NotionSelectorPreview = () => {
         onSelectCredential={setCredentialId}
         canPreview
       />
-      <div className="rounded-xl border border-divider-subtle bg-background-default-subtle p-4 text-xs text-text-secondary">
+      <div className="rounded-md border border-divider-subtle bg-background-default-subtle p-4 text-xs text-text-secondary">
         <div className="mb-2 font-semibold uppercase tracking-[0.18em] text-text-tertiary">
           Debug state
         </div>
@@ -175,7 +175,7 @@ const NotionSelectorPreview = () => {
           Active credential:
           <span className="font-mono">{credentialId || 'None'}</span>
         </p>
-        <pre className="max-h-40 overflow-auto rounded-lg bg-background-default p-3 font-mono text-[11px] leading-relaxed text-text-tertiary">
+        <pre className="max-h-40 overflow-auto rounded-md bg-background-default p-3 font-mono text-[11px] leading-relaxed text-text-tertiary">
           {JSON.stringify(selectedPages, null, 2)}
         </pre>
       </div>

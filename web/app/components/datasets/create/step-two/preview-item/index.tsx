@@ -44,7 +44,7 @@ const PreviewItem: FC<IPreviewItemProps> = ({
   const formattedIndex = (() => String(index).padStart(3, '0'))()
 
   return (
-    <div className="rounded-xl bg-gray-50 p-4">
+    <div className="rounded-md bg-gray-50 p-4">
       <div className="flex h-5 items-center justify-between text-xs text-gray-500">
         <div className="box-border flex h-[18px] items-center space-x-1 rounded-md border border-gray-200 pl-1 pr-1.5 font-medium italic">
           {sharpIcon}

@@ -71,7 +71,7 @@ const NavSelector = ({ curNav, navigationItems, createText, isApp, onCreate, onL
           <MenuItems
             className="
               absolute -left-11 right-0 mt-1.5 w-60 max-w-80
-              origin-top-right divide-y divide-divider-regular rounded-lg bg-components-panel-bg-blur
+              origin-top-right divide-y divide-divider-regular rounded-md bg-components-panel-bg-blur
               shadow-lg
             "
           >
@@ -80,7 +80,7 @@ const NavSelector = ({ curNav, navigationItems, createText, isApp, onCreate, onL
                 navigationItems.map(nav => (
                   <MenuItem key={nav.id}>
                     <div
-                      className="flex w-full cursor-pointer items-center truncate rounded-lg px-3 py-[6px] text-[14px] font-normal text-text-secondary hover:bg-state-base-hover"
+                      className="flex w-full cursor-pointer items-center truncate rounded-md px-3 py-[6px] text-[14px] font-normal text-text-secondary hover:bg-state-base-hover"
                       onClick={() => {
                         if (curNav?.id === nav.id)
                           return
@@ -119,7 +119,7 @@ const NavSelector = ({ curNav, navigationItems, createText, isApp, onCreate, onL
                 <div
                   onClick={() => onCreate('')}
                   className={cn(
-                    'flex cursor-pointer items-center gap-2 rounded-lg px-3 py-[6px] hover:bg-state-base-hover ',
+                    'flex cursor-pointer items-center gap-2 rounded-md px-3 py-[6px] hover:bg-state-base-hover ',
                   )}
                 >
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-[6px] border-[0.5px] border-divider-regular bg-background-default">
@@ -135,7 +135,7 @@ const NavSelector = ({ curNav, navigationItems, createText, isApp, onCreate, onL
                   <>
                     <MenuButton className="w-full p-1">
                       <div className={cn(
-                        'flex cursor-pointer items-center gap-2 rounded-lg px-3 py-[6px] hover:bg-state-base-hover',
+                        'flex cursor-pointer items-center gap-2 rounded-md px-3 py-[6px] hover:bg-state-base-hover',
                         open && '!bg-state-base-hover',
                       )}
                       >
@@ -156,21 +156,21 @@ const NavSelector = ({ curNav, navigationItems, createText, isApp, onCreate, onL
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <MenuItems className={cn(
-                        'absolute right-[-198px] top-[3px] z-10 min-w-[200px] rounded-lg bg-components-panel-bg-blur shadow-lg',
+                        'absolute right-[-198px] top-[3px] z-10 min-w-[200px] rounded-md bg-components-panel-bg-blur shadow-lg',
                       )}
                       >
                         <div className="p-1">
-                          <div className={cn('flex cursor-pointer items-center rounded-lg px-3 py-[6px] font-normal text-text-secondary hover:bg-state-base-hover')} onClick={() => onCreate('blank')}>
+                          <div className={cn('flex cursor-pointer items-center rounded-md px-3 py-[6px] font-normal text-text-secondary hover:bg-state-base-hover')} onClick={() => onCreate('blank')}>
                             <FilePlus01 className="mr-2 h-4 w-4 shrink-0 text-text-secondary" />
                             {t('newApp.startFromBlank', { ns: 'app' })}
                           </div>
-                          <div className={cn('flex cursor-pointer items-center rounded-lg px-3 py-[6px] font-normal text-text-secondary hover:bg-state-base-hover')} onClick={() => onCreate('template')}>
+                          <div className={cn('flex cursor-pointer items-center rounded-md px-3 py-[6px] font-normal text-text-secondary hover:bg-state-base-hover')} onClick={() => onCreate('template')}>
                             <FilePlus02 className="mr-2 h-4 w-4 shrink-0 text-text-secondary" />
                             {t('newApp.startFromTemplate', { ns: 'app' })}
                           </div>
                         </div>
                         <div className="border-t border-divider-regular p-1">
-                          <div className={cn('flex cursor-pointer items-center rounded-lg px-3 py-[6px] font-normal text-text-secondary hover:bg-state-base-hover')} onClick={() => onCreate('dsl')}>
+                          <div className={cn('flex cursor-pointer items-center rounded-md px-3 py-[6px] font-normal text-text-secondary hover:bg-state-base-hover')} onClick={() => onCreate('dsl')}>
                             <FileArrow01 className="mr-2 h-4 w-4 shrink-0 text-text-secondary" />
                             {t('importDSL', { ns: 'app' })}
                           </div>

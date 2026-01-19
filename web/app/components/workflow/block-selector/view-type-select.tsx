@@ -28,10 +28,10 @@ const ViewTypeSelect: FC<Props> = ({
   }, [viewType, onChange])
 
   return (
-    <div className="flex items-center rounded-lg bg-components-segmented-control-bg-normal p-px">
+    <div className="flex items-center rounded-md bg-components-segmented-control-bg-normal p-px">
       <div
         className={
-          cn('rounded-lg p-[3px]', viewType === ViewType.flat
+          cn('rounded-md p-[3px]', viewType === ViewType.flat
             ? 'bg-components-segmented-control-item-active-bg text-text-accent-light-mode-only shadow-xs'
             : 'cursor-pointer text-text-tertiary')
         }
@@ -41,7 +41,7 @@ const ViewTypeSelect: FC<Props> = ({
       </div>
       <div
         className={
-          cn('rounded-lg p-[3px]', viewType === ViewType.tree
+          cn('rounded-md p-[3px]', viewType === ViewType.tree
             ? 'bg-components-segmented-control-item-active-bg text-text-accent-light-mode-only shadow-xs'
             : 'cursor-pointer text-text-tertiary')
         }

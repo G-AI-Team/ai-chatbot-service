@@ -55,7 +55,7 @@ const AddCondition = ({
         </Button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-10">
-        <div className="w-[320px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg">
+        <div className="w-[320px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg">
           <div className="p-2 pb-1">
             <Input
               showLeftIcon

@@ -7,8 +7,8 @@ const UpgradeBanner: FC = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="flex h-14 items-center rounded-xl border-[0.5px] border-black/5 bg-white p-3 shadow-md">
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FFF6ED]">
+    <div className="flex h-14 items-center rounded-md border-[0.5px] border-black/5 bg-white p-3 shadow-md">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-[#FFF6ED]">
         <ZapFast className="h-4 w-4 text-[#FB6514]" />
       </div>
       <div className="mx-3 grow text-[13px] font-medium text-gray-700">

@@ -56,21 +56,21 @@ export const Playground: Story = {
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
             <span className="text-xs uppercase tracking-[0.18em] text-text-tertiary">Primary logo</span>
-            <div className="flex items-center justify-between rounded-xl border border-divider-subtle bg-background-default p-4">
+            <div className="flex items-center justify-between rounded-md border border-divider-subtle bg-background-default p-4">
               <DifyLogo size={size} style={style} />
               <code className="text-[11px] text-text-tertiary">{`size="${size}" | style="${style}"`}</code>
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="flex flex-col gap-2 rounded-xl border border-divider-subtle bg-background-default p-4">
+            <div className="flex flex-col gap-2 rounded-md border border-divider-subtle bg-background-default p-4">
               <span className="text-[11px] font-medium uppercase tracking-[0.1em] text-text-tertiary">Site favicon</span>
               <LogoSite />
             </div>
-            <div className="flex flex-col gap-2 rounded-xl border border-divider-subtle bg-background-default p-4">
+            <div className="flex flex-col gap-2 rounded-md border border-divider-subtle bg-background-default p-4">
               <span className="text-[11px] font-medium uppercase tracking-[0.1em] text-text-tertiary">Embedded header</span>
               <LogoEmbeddedChatHeader />
             </div>
-            <div className="flex flex-col gap-2 rounded-xl border border-divider-subtle bg-background-default p-4 sm:col-span-2">
+            <div className="flex flex-col gap-2 rounded-md border border-divider-subtle bg-background-default p-4 sm:col-span-2">
               <span className="text-[11px] font-medium uppercase tracking-[0.1em] text-text-tertiary">Embedded avatar</span>
               <LogoEmbeddedChatAvatar className="border-divider-strong rounded-2xl border" />
             </div>

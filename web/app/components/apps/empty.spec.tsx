@@ -37,7 +37,7 @@ describe('Empty', () => {
     it('should have correct styling for placeholder cards', () => {
       const { container } = render(<Empty />)
       const card = container.querySelector('.bg-background-default-lighter')
-      expect(card).toHaveClass('inline-flex', 'h-[160px]', 'rounded-xl')
+      expect(card).toHaveClass('inline-flex', 'h-[160px]', 'rounded-md')
     })
   })
 

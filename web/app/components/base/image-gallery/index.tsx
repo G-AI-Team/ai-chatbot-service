@@ -41,16 +41,16 @@ const ImageGallery: FC<Props> = ({
         !src
           ? null
           : (
-              <img
-                key={index}
-                className={s.item}
-                style={imgStyle}
-                src={src}
-                alt=""
-                onClick={() => setImagePreviewUrl(src)}
-                onError={e => e.currentTarget.remove()}
-              />
-            )
+            <img
+              key={index}
+              className={s.item}
+              style={imgStyle}
+              src={src}
+              alt=""
+              onClick={() => setImagePreviewUrl(src)}
+              onError={e => e.currentTarget.remove()}
+            />
+          )
       ))}
       {
         imagePreviewUrl && (
@@ -80,7 +80,7 @@ export const ImageGalleryTest = () => {
   return (
     <div className="space-y-2">
       {imgGallerySrcs.map((_, index) => (
-        <div key={index} className="rounded-lg bg-[#D1E9FF80] p-4 pb-2">
+        <div key={index} className="rounded-md bg-[#D1E9FF80] p-4 pb-2">
           <ImageGallery srcs={imgGallerySrcs.slice(0, index + 1)} />
         </div>
       ))}

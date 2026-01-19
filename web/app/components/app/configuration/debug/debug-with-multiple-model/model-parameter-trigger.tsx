@@ -72,7 +72,7 @@ const ModelParameterTrigger: FC<ModelParameterTriggerProps> = ({
       }) => (
         <div
           className={`
-            flex h-8 max-w-[200px] cursor-pointer items-center rounded-lg px-2
+            flex h-8 max-w-[200px] cursor-pointer items-center rounded-md px-2
             ${open && 'bg-state-base-hover'}
             ${currentModel && currentModel.status !== ModelStatusEnum.active && '!bg-[#FFFAEB]'}
           `}

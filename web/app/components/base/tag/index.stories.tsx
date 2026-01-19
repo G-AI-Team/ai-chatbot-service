@@ -15,7 +15,7 @@ const TagGallery = ({
       <div className="text-xs uppercase tracking-[0.18em] text-text-tertiary">Tag variants</div>
       <div className="grid grid-cols-2 gap-3">
         {COLORS.map(color => (
-          <div key={color} className="flex flex-col items-start gap-2 rounded-xl border border-transparent px-3 py-2 hover:border-divider-subtle hover:bg-background-default-subtle">
+          <div key={color} className="flex flex-col items-start gap-2 rounded-md border border-transparent px-3 py-2 hover:border-divider-subtle hover:bg-background-default-subtle">
             <Tag color={color} bordered={bordered} hideBg={hideBg}>
               {color.charAt(0).toUpperCase() + color.slice(1)}
             </Tag>

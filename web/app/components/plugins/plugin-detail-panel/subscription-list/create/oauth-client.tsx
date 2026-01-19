@@ -238,8 +238,8 @@ export const OAuthClientSettingsModal = ({ oauthConfig, onClose, showOAuthCreate
         </div>
       )}
       {clientType === ClientTypeEnum.Custom && oauthConfig?.redirect_uri && (
-        <div className="mb-4 flex items-start gap-3 rounded-xl bg-background-section-burn p-4">
-          <div className="rounded-lg border-[0.5px] border-components-card-border bg-components-card-bg p-2 shadow-xs shadow-shadow-shadow-3">
+        <div className="mb-4 flex items-start gap-3 rounded-md bg-background-section-burn p-4">
+          <div className="rounded-md border-[0.5px] border-components-card-border bg-components-card-bg p-2 shadow-xs shadow-shadow-shadow-3">
             <RiInformation2Fill className="h-5 w-5 shrink-0 text-text-accent" />
           </div>
           <div className="flex-1 text-text-secondary">

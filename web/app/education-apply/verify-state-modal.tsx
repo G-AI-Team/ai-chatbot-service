@@ -94,7 +94,7 @@ function Confirm({
           {email && (
             <div className="w-full space-y-1 px-6 py-3">
               <div className="system-sm-semibold py-1 text-text-secondary">{t('emailLabel', { ns: 'education' })}</div>
-              <div className="system-sm-regular rounded-lg bg-components-input-bg-disabled px-3 py-2 text-components-input-text-filled-disabled">{email}</div>
+              <div className="system-sm-regular rounded-md bg-components-input-bg-disabled px-3 py-2 text-components-input-text-filled-disabled">{email}</div>
             </div>
           )}
           <div className="flex items-center justify-between gap-2 self-stretch p-6">

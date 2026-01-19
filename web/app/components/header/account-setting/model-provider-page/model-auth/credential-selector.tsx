@@ -53,7 +53,7 @@ const CredentialSelector = ({
       triggerPopupSameWidth
     >
       <PortalToFollowElemTrigger asChild onClick={() => !disabled && setOpen(v => !v)}>
-        <div className="system-sm-regular flex h-8 w-full items-center justify-between rounded-lg bg-components-input-bg-normal px-2">
+        <div className="system-sm-regular flex h-8 w-full items-center justify-between rounded-md bg-components-input-bg-normal px-2">
           {
             selectedCredential && (
               <div className="flex items-center">
@@ -78,7 +78,7 @@ const CredentialSelector = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[100]">
-        <div className="border-ccomponents-panel-border rounded-xl border-[0.5px] bg-components-panel-bg-blur shadow-lg">
+        <div className="border-ccomponents-panel-border rounded-md border-[0.5px] bg-components-panel-bg-blur shadow-lg">
           <div className="max-h-[320px] overflow-y-auto p-1">
             {
               credentials.map(credential => (

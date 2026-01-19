@@ -145,7 +145,7 @@ describe('Connect', () => {
 
       // Assert - Container should have expected classes
       const mainContainer = container.firstChild
-      expect(mainContainer).toHaveClass('flex', 'flex-col', 'items-start', 'gap-y-2', 'rounded-xl', 'p-6')
+      expect(mainContainer).toHaveClass('flex', 'flex-col', 'items-start', 'gap-y-2', 'rounded-md', 'p-6')
     })
   })
 

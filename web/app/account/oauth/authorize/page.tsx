@@ -149,7 +149,7 @@ export default function OAuthAuthorize() {
       </div>
 
       {isLoggedIn && userProfile && (
-        <div className="flex items-center justify-between rounded-xl bg-background-section-burn-inverted p-3">
+        <div className="flex items-center justify-between rounded-md bg-background-section-burn-inverted p-3">
           <div className="flex items-center gap-2.5">
             <Avatar avatar={userProfile.avatar_url} name={userProfile.name} size={36} />
             <div>
@@ -162,7 +162,7 @@ export default function OAuthAuthorize() {
       )}
 
       {isLoggedIn && Boolean(authAppInfo?.scope) && (
-        <div className="mt-2 flex flex-col gap-2.5 rounded-xl bg-background-section-burn-inverted px-[22px] py-5 text-text-secondary">
+        <div className="mt-2 flex flex-col gap-2.5 rounded-md bg-background-section-burn-inverted px-[22px] py-5 text-text-secondary">
           {authAppInfo!.scope.split(/\s+/).filter(Boolean).map((scope: string) => {
             const Icon = SCOPE_INFO_MAP[scope]
             return (
@@ -178,14 +178,14 @@ export default function OAuthAuthorize() {
       <div className="flex flex-col items-center gap-2 pt-4">
         {!isLoggedIn
           ? (
-              <Button variant="primary" size="large" className="w-full" onClick={onLoginSwitchClick}>{t('login', { ns: 'oauth' })}</Button>
-            )
+            <Button variant="primary" size="large" className="w-full" onClick={onLoginSwitchClick}>{t('login', { ns: 'oauth' })}</Button>
+          )
           : (
-              <>
-                <Button variant="primary" size="large" className="w-full" onClick={onAuthorize} disabled={!client_id || !redirect_uri || isError || authorizing} loading={authorizing}>{t('continue', { ns: 'oauth' })}</Button>
-                <Button size="large" className="w-full" onClick={() => router.push('/apps')}>{t('operation.cancel', { ns: 'common' })}</Button>
-              </>
-            )}
+            <>
+              <Button variant="primary" size="large" className="w-full" onClick={onAuthorize} disabled={!client_id || !redirect_uri || isError || authorizing} loading={authorizing}>{t('continue', { ns: 'oauth' })}</Button>
+              <Button size="large" className="w-full" onClick={() => router.push('/apps')}>{t('operation.cancel', { ns: 'common' })}</Button>
+            </>
+          )}
       </div>
       <div className="mt-4 py-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="400" height="1" viewBox="0 0 400 1" fill="none">

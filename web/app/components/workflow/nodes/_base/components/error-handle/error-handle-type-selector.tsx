@@ -62,12 +62,12 @@ const ErrorHandleTypeSelector = ({
         </Button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[11]">
-        <div className="w-[280px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
+        <div className="w-[280px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
           {
             options.map(option => (
               <div
                 key={option.value}
-                className="flex cursor-pointer rounded-lg p-2 pr-3 hover:bg-state-base-hover"
+                className="flex cursor-pointer rounded-md p-2 pr-3 hover:bg-state-base-hover"
                 onClick={(e) => {
                   e.stopPropagation()
                   e.nativeEvent.stopImmediatePropagation()

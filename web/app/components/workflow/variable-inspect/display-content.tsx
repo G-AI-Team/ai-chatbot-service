@@ -83,38 +83,38 @@ const DisplayContent = (props: DisplayContentProps) => {
         {viewMode === ViewMode.Code && (
           previewType === PreviewType.Markdown
             ? (
-                <Textarea
-                  readOnly={readonly}
-                  disabled={readonly}
-                  className="h-full border-none bg-transparent p-0 text-text-secondary hover:bg-transparent focus:bg-transparent focus:shadow-none"
-                  value={mdString as any}
-                  onChange={e => handleTextChange?.(e.target.value)}
-                  onFocus={() => setIsFocused(true)}
-                  onBlur={() => setIsFocused(false)}
-                />
-              )
+              <Textarea
+                readOnly={readonly}
+                disabled={readonly}
+                className="h-full border-none bg-transparent p-0 text-text-secondary hover:bg-transparent focus:bg-transparent focus:shadow-none"
+                value={mdString as any}
+                onChange={e => handleTextChange?.(e.target.value)}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+              />
+            )
             : (
-                <SchemaEditor
-                  readonly={readonly}
-                  className="overflow-y-auto bg-transparent"
-                  hideTopMenu
-                  schema={jsonString!}
-                  onUpdate={handleEditorChange!}
-                  onFocus={() => setIsFocused(true)}
-                  onBlur={() => setIsFocused(false)}
-                />
-              )
+              <SchemaEditor
+                readonly={readonly}
+                className="overflow-y-auto bg-transparent"
+                hideTopMenu
+                schema={jsonString!}
+                onUpdate={handleEditorChange!}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+              />
+            )
         )}
         {viewMode === ViewMode.Preview && (
           previewType === PreviewType.Markdown
-            ? <Markdown className="grow overflow-auto rounded-lg px-4 py-3" content={(mdString ?? '') as string} />
+            ? <Markdown className="grow overflow-auto rounded-md px-4 py-3" content={(mdString ?? '') as string} />
             : (
-                <ChunkCardList
-                  chunkType={chunkType!}
-                  parentMode={parentMode}
-                  chunkInfo={JSON.parse(jsonString!) as ChunkInfo}
-                />
-              )
+              <ChunkCardList
+                chunkType={chunkType!}
+                parentMode={parentMode}
+                chunkInfo={JSON.parse(jsonString!) as ChunkInfo}
+              />
+            )
         )}
       </div>
     </div>

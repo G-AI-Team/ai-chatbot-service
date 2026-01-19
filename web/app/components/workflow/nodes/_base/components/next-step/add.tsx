@@ -69,7 +69,7 @@ const Add = ({
     return (
       <div
         className={`
-          bg-dropzone-bg hover:bg-dropzone-bg-hover relative flex h-9 cursor-pointer items-center rounded-lg border border-dashed
+          bg-dropzone-bg hover:bg-dropzone-bg-hover relative flex h-9 cursor-pointer items-center rounded-md border border-dashed
           border-divider-regular px-2 text-xs text-text-placeholder
           ${open && '!bg-components-dropzone-bg-alt'}
           ${nodesReadOnly && '!cursor-not-allowed'}

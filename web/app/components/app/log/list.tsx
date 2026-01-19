@@ -149,12 +149,12 @@ const getFormattedChatList = (messages: ChatMessage[], conversationId: string, t
           ...(item.message ?? []),
           ...(item.message?.[item.message.length - 1]?.role !== 'assistant'
             ? [
-                {
-                  role: 'assistant',
-                  text: item.answer,
-                  files: item.message_files?.filter((file: any) => file.belongs_to === 'assistant') || [],
-                },
-              ]
+              {
+                role: 'assistant',
+                text: item.answer,
+                files: item.message_files?.filter((file: any) => file.belongs_to === 'assistant') || [],
+              },
+            ]
             : []),
         ] as IChatItem['log'],
         workflow_run_id: item.workflow_run_id,
@@ -586,7 +586,7 @@ function DetailPanel({ detail, onFeedback }: IDetailPanel) {
   }, [])
 
   return (
-    <div ref={ref} className="flex h-full flex-col rounded-xl border-[0.5px] border-components-panel-border">
+    <div ref={ref} className="flex h-full flex-col rounded-md border-[0.5px] border-components-panel-border">
       {/* Panel Header */}
       <div className="flex shrink-0 items-center gap-2 rounded-t-xl bg-components-panel-bg pb-2 pl-4 pr-3 pt-3">
         <div className="shrink-0">
@@ -626,32 +626,32 @@ function DetailPanel({ detail, onFeedback }: IDetailPanel) {
       <div className="mx-1 mb-1 grow overflow-auto rounded-b-xl bg-background-section-burn">
         {!isChatMode
           ? (
-              <div className="px-6 py-4">
-                <div className="flex h-[18px] items-center space-x-3">
-                  <div className="system-xs-semibold-uppercase text-text-tertiary">{t('table.header.output', { ns: 'appLog' })}</div>
-                  <div
-                    className="h-px grow"
-                    style={{
-                      background: 'linear-gradient(270deg, rgba(243, 244, 246, 0) 0%, rgb(243, 244, 246) 100%)',
-                    }}
-                  >
-                  </div>
+            <div className="px-6 py-4">
+              <div className="flex h-[18px] items-center space-x-3">
+                <div className="system-xs-semibold-uppercase text-text-tertiary">{t('table.header.output', { ns: 'appLog' })}</div>
+                <div
+                  className="h-px grow"
+                  style={{
+                    background: 'linear-gradient(270deg, rgba(243, 244, 246, 0) 0%, rgb(243, 244, 246) 100%)',
+                  }}
+                >
                 </div>
-                <TextGeneration
-                  className="mt-2"
-                  content={detail.message.answer}
-                  messageId={detail.message.id}
-                  isError={false}
-                  onRetry={noop}
-                  isInstalledApp={false}
-                  supportFeedback
-                  feedback={detail.message.feedbacks.find((item: any) => item.from_source === 'admin')}
-                  onFeedback={feedback => onFeedback(detail.message.id, feedback)}
-                  isShowTextToSpeech
-                  siteInfo={null}
-                />
               </div>
-            )
+              <TextGeneration
+                className="mt-2"
+                content={detail.message.answer}
+                messageId={detail.message.id}
+                isError={false}
+                onRetry={noop}
+                isInstalledApp={false}
+                supportFeedback
+                feedback={detail.message.feedbacks.find((item: any) => item.from_source === 'admin')}
+                onFeedback={feedback => onFeedback(detail.message.id, feedback)}
+                isShowTextToSpeech
+                siteInfo={null}
+              />
+            </div>
+          )
           : threadChatItems.length < MIN_ITEMS_FOR_SCROLL_LOADING ? (
             <div className="mb-4 pt-4">
               <Chat
@@ -1039,21 +1039,21 @@ const ConversationList: FC<IConversationList> = ({ logs, appDetail, onRefresh })
                   {(!log.user_feedback_stats.like && !log.user_feedback_stats.dislike)
                     ? renderTdValue(defaultValue, true)
                     : (
-                        <>
-                          {!!log.user_feedback_stats.like && <HandThumbIconWithCount iconType="up" count={log.user_feedback_stats.like} />}
-                          {!!log.user_feedback_stats.dislike && <HandThumbIconWithCount iconType="down" count={log.user_feedback_stats.dislike} />}
-                        </>
-                      )}
+                      <>
+                        {!!log.user_feedback_stats.like && <HandThumbIconWithCount iconType="up" count={log.user_feedback_stats.like} />}
+                        {!!log.user_feedback_stats.dislike && <HandThumbIconWithCount iconType="down" count={log.user_feedback_stats.dislike} />}
+                      </>
+                    )}
                 </td>
                 <td className="p-3 pr-2">
                   {(!log.admin_feedback_stats.like && !log.admin_feedback_stats.dislike)
                     ? renderTdValue(defaultValue, true)
                     : (
-                        <>
-                          {!!log.admin_feedback_stats.like && <HandThumbIconWithCount iconType="up" count={log.admin_feedback_stats.like} />}
-                          {!!log.admin_feedback_stats.dislike && <HandThumbIconWithCount iconType="down" count={log.admin_feedback_stats.dislike} />}
-                        </>
-                      )}
+                      <>
+                        {!!log.admin_feedback_stats.like && <HandThumbIconWithCount iconType="up" count={log.admin_feedback_stats.like} />}
+                        {!!log.admin_feedback_stats.dislike && <HandThumbIconWithCount iconType="down" count={log.admin_feedback_stats.dislike} />}
+                      </>
+                    )}
                 </td>
                 <td className="w-[160px] p-3 pr-2">{formatTime(log.updated_at, t('dateTimeFormat', { ns: 'appLog' }) as string)}</td>
                 <td className="w-[160px] p-3 pr-2">{formatTime(log.created_at, t('dateTimeFormat', { ns: 'appLog' }) as string)}</td>
@@ -1067,7 +1067,7 @@ const ConversationList: FC<IConversationList> = ({ logs, appDetail, onRefresh })
         onClose={onCloseDrawer}
         mask={isMobile}
         footer={null}
-        panelClassName="mt-16 mx-2 sm:mr-2 mb-4 !p-0 !max-w-[640px] rounded-xl bg-components-panel-bg"
+        panelClassName="mt-16 mx-2 sm:mr-2 mb-4 !p-0 !max-w-[640px] rounded-md bg-components-panel-bg"
       >
         <DrawerContext.Provider value={{
           onClose: onCloseDrawer,

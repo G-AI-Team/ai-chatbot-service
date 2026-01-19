@@ -278,7 +278,7 @@ const FormFieldDemo = () => {
   ]
 
   return (
-    <div style={{ width: '400px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '400px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">User Preferences</h3>
       <div className="space-y-4">
         <div>
@@ -306,7 +306,7 @@ const FormFieldDemo = () => {
           />
         </div>
       </div>
-      <div className="mt-6 rounded-lg bg-gray-50 p-3 text-xs text-gray-700">
+      <div className="mt-6 rounded-md bg-gray-50 p-3 text-xs text-gray-700">
         <div>
           <strong>Country:</strong>
           {' '}
@@ -353,7 +353,7 @@ const FilterSelectorDemo = () => {
   ]
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Task Filters</h3>
       <div className="mb-6 flex gap-4">
         <div className="flex-1">
@@ -375,7 +375,7 @@ const FilterSelectorDemo = () => {
           />
         </div>
       </div>
-      <div className="rounded-lg bg-blue-50 p-4 text-sm">
+      <div className="rounded-md bg-blue-50 p-4 text-sm">
         <div className="mb-2 font-medium text-gray-700">Active Filters:</div>
         <div className="flex gap-2">
           <span className="rounded bg-blue-200 px-2 py-1 text-xs text-blue-800">
@@ -412,7 +412,7 @@ const VersionSelectorDemo = () => {
   ]
 
   return (
-    <div style={{ width: '400px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '400px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Select Version</h3>
       <PortalSelect
         value={selectedVersion}
@@ -421,7 +421,7 @@ const VersionSelectorDemo = () => {
         installedValue="2.0.5"
         placeholder="Choose version..."
       />
-      <div className="mt-4 rounded-lg bg-gray-50 p-3 text-sm text-gray-700">
+      <div className="mt-4 rounded-md bg-gray-50 p-3 text-sm text-gray-700">
         {selectedVersion !== '2.0.5' && (
           <div className="mb-2 text-yellow-600">
             ⚠️ Version change detected
@@ -461,7 +461,7 @@ const SettingsDropdownDemo = () => {
   ]
 
   return (
-    <div style={{ width: '400px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '400px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Display Settings</h3>
       <div className="space-y-4">
         <div>
@@ -499,7 +499,7 @@ const VariantComparisonDemo = () => {
   const [portal, setPortal] = useState('banana')
 
   return (
-    <div style={{ width: '700px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '700px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-6 text-lg font-semibold">Select Variants Comparison</h3>
       <div className="space-y-6">
         <div>

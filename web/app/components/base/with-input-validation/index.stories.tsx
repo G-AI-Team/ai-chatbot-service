@@ -12,7 +12,7 @@ type UserCardProps = {
 
 const UserCard = ({ name, email, age, role }: UserCardProps) => {
   return (
-    <div className="rounded-lg border border-gray-200 bg-white p-4">
+    <div className="rounded-md border border-gray-200 bg-white p-4">
       <h3 className="mb-2 text-lg font-semibold">{name}</h3>
       <div className="space-y-1 text-sm text-gray-600">
         <div>
@@ -43,7 +43,7 @@ type ProductCardProps = {
 
 const ProductCard = ({ name, price, category, inStock }: ProductCardProps) => {
   return (
-    <div className="rounded-lg border border-gray-200 bg-white p-4">
+    <div className="rounded-md border border-gray-200 bg-white p-4">
       <h3 className="mb-2 text-lg font-semibold">{name}</h3>
       <div className="space-y-1 text-sm">
         <div className="text-xl font-bold text-green-600">
@@ -124,7 +124,7 @@ export const InvalidEmail: Story = {
         age={30}
         role="Developer"
       />
-      <div className="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-800">
+      <div className="mt-4 rounded-md bg-red-50 p-3 text-sm text-red-800">
         ⚠️ Validation failed: Invalid email format
       </div>
     </div>
@@ -145,7 +145,7 @@ export const InvalidAge: Story = {
         age={200}
         role="Developer"
       />
-      <div className="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-800">
+      <div className="mt-4 rounded-md bg-red-50 p-3 text-sm text-red-800">
         ⚠️ Validation failed: Age must be ≤ 150
       </div>
     </div>
@@ -181,7 +181,7 @@ export const InvalidPrice: Story = {
         category="Electronics"
         inStock={true}
       />
-      <div className="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-800">
+      <div className="mt-4 rounded-md bg-red-50 p-3 text-sm text-red-800">
         ⚠️ Validation failed: Price must be positive
       </div>
     </div>
@@ -247,7 +247,7 @@ export const FormSubmission: Story = {
     }
 
     return (
-      <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+      <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
         <h3 className="mb-4 text-lg font-semibold">Form Submission with Validation</h3>
 
         <div className="space-y-6">
@@ -255,7 +255,7 @@ export const FormSubmission: Story = {
             <h4 className="mb-2 text-sm font-medium text-gray-700">Valid Data</h4>
             <ValidatedUserCard {...validData} />
             <button
-              className="mt-3 w-full rounded-lg bg-green-600 px-4 py-2 text-white hover:bg-green-700"
+              className="mt-3 w-full rounded-md bg-green-600 px-4 py-2 text-white hover:bg-green-700"
               onClick={() => handleSubmit(validData)}
             >
               Submit Valid Data
@@ -266,7 +266,7 @@ export const FormSubmission: Story = {
             <h4 className="mb-2 text-sm font-medium text-gray-700">Invalid Data</h4>
             <ValidatedUserCard {...invalidData} />
             <button
-              className="mt-3 w-full rounded-lg bg-red-600 px-4 py-2 text-white hover:bg-red-700"
+              className="mt-3 w-full rounded-md bg-red-600 px-4 py-2 text-white hover:bg-red-700"
               onClick={() => handleSubmit(invalidData)}
             >
               Try to Submit Invalid Data
@@ -306,7 +306,7 @@ export const APIResponseValidation: Story = {
     ]
 
     return (
-      <div style={{ width: '700px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+      <div style={{ width: '700px' }} className="rounded-md border border-gray-200 bg-white p-6">
         <h3 className="mb-4 text-lg font-semibold">API Response Validation</h3>
         <p className="mb-4 text-sm text-gray-600">
           Only valid products render. Invalid ones return null (check console).
@@ -318,12 +318,12 @@ export const APIResponseValidation: Story = {
               <ValidatedProductCard {...product} />
               {!product.name || product.price <= 0
                 ? (
-                    <div className="mt-2 text-xs text-red-600">
-                      ⚠️ Validation failed for product
-                      {' '}
-                      {index + 1}
-                    </div>
-                  )
+                  <div className="mt-2 text-xs text-red-600">
+                    ⚠️ Validation failed for product
+                    {' '}
+                    {index + 1}
+                  </div>
+                )
                 : null}
             </div>
           ))}
@@ -344,7 +344,7 @@ export const ConfigurationValidation: Story = {
     }
 
     const ConfigPanel = ({ apiUrl, timeout, retries, debug }: ConfigPanelProps) => (
-      <div className="rounded-lg border border-gray-200 bg-white p-4">
+      <div className="rounded-md border border-gray-200 bg-white p-4">
         <h3 className="mb-3 text-base font-semibold">Configuration</h3>
         <div className="space-y-2 text-sm">
           <div className="flex justify-between">
@@ -415,7 +415,7 @@ export const ConfigurationValidation: Story = {
 // Usage documentation
 export const UsageDocumentation: Story = {
   render: () => (
-    <div style={{ width: '700px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '700px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-xl font-bold">withValidation HOC</h3>
 
       <div className="space-y-6">
@@ -429,7 +429,7 @@ export const UsageDocumentation: Story = {
 
         <div>
           <h4 className="mb-2 text-sm font-semibold text-gray-900">Usage Example</h4>
-          <pre className="overflow-x-auto rounded-lg bg-gray-900 p-4 text-xs text-gray-100">
+          <pre className="overflow-x-auto rounded-md bg-gray-900 p-4 text-xs text-gray-100">
             {`import { z } from 'zod'
 import withValidation from './withValidation'
 

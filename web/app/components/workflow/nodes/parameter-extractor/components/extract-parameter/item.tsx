@@ -25,7 +25,7 @@ const Item: FC<Props> = ({
   const { t } = useTranslation()
 
   return (
-    <div className="group relative rounded-lg bg-components-input-bg-normal px-2.5 py-2 hover:shadow-xs">
+    <div className="group relative rounded-md bg-components-input-bg-normal px-2.5 py-2 hover:shadow-xs">
       <div className="flex justify-between">
         <div className="flex items-center">
           <Variable02 className="h-3.5 w-3.5 text-text-accent-secondary" />
@@ -38,7 +38,7 @@ const Item: FC<Props> = ({
       </div>
       <div className="mt-0.5 text-xs font-normal leading-[18px] text-text-tertiary">{payload.description}</div>
       <div
-        className="absolute right-0 top-0 hidden h-full w-[119px] items-center justify-end space-x-1 rounded-lg bg-gradient-to-l from-components-panel-on-panel-item-bg to-background-gradient-mask-transparent pr-1 group-hover:flex"
+        className="absolute right-0 top-0 hidden h-full w-[119px] items-center justify-end space-x-1 rounded-md bg-gradient-to-l from-components-panel-on-panel-item-bg to-background-gradient-mask-transparent pr-1 group-hover:flex"
       >
         <div
           className="cursor-pointer rounded-md p-1 hover:bg-state-base-hover"

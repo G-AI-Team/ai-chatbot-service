@@ -140,28 +140,28 @@ const Question: FC<QuestionProps> = ({
           {!isEditing
             ? <Markdown content={content} />
             : (
-                <div className="
-                flex flex-col gap-2 rounded-xl
+              <div className="
+                flex flex-col gap-2 rounded-md
                 border border-components-chat-input-border bg-components-panel-bg-blur p-[9px] shadow-md
               "
-                >
-                  <div className="max-h-[158px] overflow-y-auto overflow-x-hidden">
-                    <Textarea
-                      className={cn(
-                        'body-lg-regular w-full p-1 leading-6 text-text-tertiary outline-none',
-                      )}
-                      autoFocus
-                      minRows={1}
-                      value={editedContent}
-                      onChange={e => setEditedContent(e.target.value)}
-                    />
-                  </div>
-                  <div className="flex justify-end gap-2">
-                    <Button variant="ghost" onClick={handleCancelEditing}>{t('operation.cancel', { ns: 'common' })}</Button>
-                    <Button variant="primary" onClick={handleResend}>{t('chat.resend', { ns: 'common' })}</Button>
-                  </div>
+              >
+                <div className="max-h-[158px] overflow-y-auto overflow-x-hidden">
+                  <Textarea
+                    className={cn(
+                      'body-lg-regular w-full p-1 leading-6 text-text-tertiary outline-none',
+                    )}
+                    autoFocus
+                    minRows={1}
+                    value={editedContent}
+                    onChange={e => setEditedContent(e.target.value)}
+                  />
                 </div>
-              )}
+                <div className="flex justify-end gap-2">
+                  <Button variant="ghost" onClick={handleCancelEditing}>{t('operation.cancel', { ns: 'common' })}</Button>
+                  <Button variant="primary" onClick={handleResend}>{t('chat.resend', { ns: 'common' })}</Button>
+                </div>
+              </div>
+            )}
           {!isEditing && (
             <ContentSwitch
               count={item.siblingCount}

@@ -83,7 +83,7 @@ const ProviderAddedCard: FC<ProviderAddedCardProps> = ({
   return (
     <div
       className={cn(
-        'mb-2 rounded-xl border-[0.5px] border-divider-regular bg-third-party-model-bg-default shadow-xs',
+        'mb-2 rounded-md border-[0.5px] border-divider-regular bg-third-party-model-bg-default shadow-xs',
         provider.provider === 'langgenius/openai/openai' && 'bg-third-party-model-bg-openai',
         provider.provider === 'langgenius/anthropic/anthropic' && 'bg-third-party-model-bg-anthropic',
       )}
@@ -126,7 +126,7 @@ const ProviderAddedCard: FC<ProviderAddedCardProps> = ({
                   {!loading && <RiArrowRightSLine className="h-4 w-4" />}
                 </div>
                 <div
-                  className="hidden h-6 cursor-pointer items-center rounded-lg pl-1 pr-1.5 hover:bg-components-button-ghost-bg-hover group-hover:flex"
+                  className="hidden h-6 cursor-pointer items-center rounded-md pl-1 pr-1.5 hover:bg-components-button-ghost-bg-hover group-hover:flex"
                   onClick={handleOpenModelList}
                 >
                   {

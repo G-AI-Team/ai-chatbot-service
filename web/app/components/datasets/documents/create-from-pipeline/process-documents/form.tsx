@@ -62,7 +62,7 @@ const Form = ({
 
   return (
     <form
-      className="flex w-full flex-col rounded-lg border border-components-panel-border bg-components-panel-bg"
+      className="flex w-full flex-col rounded-md border border-components-panel-border bg-components-panel-bg"
       onSubmit={(e) => {
         e.preventDefault()
         e.stopPropagation()

@@ -168,7 +168,7 @@ const AgentTools: FC = () => {
               {tools.filter(item => !!item.enabled).length}
               /
               {tools.length}
-&nbsp;
+              &nbsp;
               {t('agent.tools.enabled', { ns: 'appDebug' })}
             </div>
             {tools.length < MAX_TOOLS_NUM && (
@@ -194,7 +194,7 @@ const AgentTools: FC = () => {
             <div
               key={index}
               className={cn(
-                'cursor group relative flex w-full items-center justify-between rounded-lg border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg p-1.5 pr-2 shadow-xs last-of-type:mb-0 hover:bg-components-panel-on-panel-item-bg-hover hover:shadow-sm',
+                'cursor group relative flex w-full items-center justify-between rounded-md border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg p-1.5 pr-2 shadow-xs last-of-type:mb-0 hover:bg-components-panel-on-panel-item-bg-hover hover:shadow-sm',
                 isDeleting === index && 'border-state-destructive-border hover:bg-state-destructive-hover',
               )}
             >

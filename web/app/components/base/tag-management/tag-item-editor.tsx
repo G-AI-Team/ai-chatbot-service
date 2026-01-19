@@ -104,7 +104,7 @@ const TagItemEditor: FC<TagItemEditorProps> = ({
 
   return (
     <>
-      <div className={cn('flex shrink-0 items-center gap-0.5 rounded-lg border border-components-panel-border py-1 pl-2 pr-1 text-sm leading-5 text-text-secondary')}>
+      <div className={cn('flex shrink-0 items-center gap-0.5 rounded-md border border-components-panel-border py-1 pl-2 pr-1 text-sm leading-5 text-text-secondary')}>
         {!isEditing && (
           <>
             <div className="text-sm leading-5 text-text-secondary">

@@ -45,13 +45,13 @@ const NotionSvg = (
 const ICON_MAP = {
   app: <AppIcon className="border !border-[rgba(0,0,0,0.05)]" />,
   api: (
-    <div className="rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 p-1 shadow-md">
+    <div className="rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 p-1 shadow-md">
       <ApiAggregate className="h-4 w-4 text-text-primary-on-surface" />
     </div>
   ),
   dataset: <AppIcon innerIcon={DatasetSvg} className="!border-[0.5px] !border-indigo-100 !bg-indigo-25" />,
   webapp: (
-    <div className="rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 p-1 shadow-md">
+    <div className="rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 p-1 shadow-md">
       <WindowCursor className="h-4 w-4 text-text-primary-on-surface" />
     </div>
   ),

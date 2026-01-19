@@ -296,7 +296,7 @@ const FormExampleDemo = () => {
   }
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">User Profile</h3>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
@@ -387,7 +387,7 @@ const SearchExampleDemo = () => {
         placeholder="Search fruits..."
       />
       {searchQuery && (
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="rounded-md bg-gray-50 p-4">
           <div className="mb-2 text-xs text-gray-500">
             {filteredItems.length}
             {' '}

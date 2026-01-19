@@ -53,7 +53,7 @@ const DebugInfo: FC = () => {
         </>
       )}
       popupClassName="flex flex-col items-start w-[256px] px-4 py-3.5 gap-1 border border-components-panel-border
-        rounded-xl bg-components-tooltip-bg shadows-shadow-lg z-50"
+        rounded-md bg-components-tooltip-bg shadows-shadow-lg z-50"
       asChild={false}
       position="bottom"
     >

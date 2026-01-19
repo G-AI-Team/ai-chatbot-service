@@ -90,7 +90,7 @@ const NextStep = ({
 
   return (
     <div className="flex py-1">
-      <div className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border-[0.5px] border-divider-regular bg-background-default shadow-xs">
+      <div className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-md border-[0.5px] border-divider-regular bg-background-default shadow-xs">
         <BlockIcon
           type={selectedNode!.data.type}
           toolIcon={toolIcon}

@@ -79,7 +79,7 @@ const AnnotationReply = ({
     <>
       <FeatureCard
         icon={(
-          <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-indigo-indigo-600 p-1 shadow-xs">
+          <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-indigo-indigo-600 p-1 shadow-xs">
             <MessageFast className="h-4 w-4 text-text-primary-on-surface" />
           </div>
         )}

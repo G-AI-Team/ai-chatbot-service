@@ -220,7 +220,7 @@ function Form<
             }).map(option => (
               <div
                 className={`
-                    flex cursor-pointer items-center gap-2 rounded-lg border border-components-option-card-option-border bg-components-option-card-option-bg px-3 py-2
+                    flex cursor-pointer items-center gap-2 rounded-md border border-components-option-card-option-border bg-components-option-card-option-bg px-3 py-2
                     ${value[variable] === option.value && 'border-[1.5px] border-components-option-card-option-selected-border bg-components-option-card-option-selected-bg shadow-sm'}
                     ${disabled && '!cursor-not-allowed opacity-60'}
                   `}

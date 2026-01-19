@@ -158,7 +158,7 @@ const Listening: FC<ListeningProps> = ({
     : resolveListeningDescription(message, triggerNode, triggerType, t)
 
   return (
-    <div className="flex h-full flex-col gap-4 rounded-xl bg-background-section p-8">
+    <div className="flex h-full flex-col gap-4 rounded-md bg-background-section p-8">
       <div className="flex flex-row flex-wrap items-center gap-3">
         {iconsToRender.map(icon => (
           <BlockIcon
@@ -166,7 +166,7 @@ const Listening: FC<ListeningProps> = ({
             type={icon.type}
             toolIcon={icon.toolIcon}
             size="md"
-            className="!h-10 !w-10 !rounded-xl [&_svg]:!h-7 [&_svg]:!w-7"
+            className="!h-10 !w-10 !rounded-md [&_svg]:!h-7 [&_svg]:!w-7"
           />
         ))}
       </div>

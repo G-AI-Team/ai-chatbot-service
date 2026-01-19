@@ -192,22 +192,22 @@ function AppCard({
   return (
     <div
       className={
-        `${isInPanel ? 'border-l-[0.5px] border-t' : 'border-[0.5px] shadow-xs'} w-full max-w-full rounded-xl border-effects-highlight ${className ?? ''} ${isMinimalState ? 'h-12' : ''}`
+        `${isInPanel ? 'border-l-[0.5px] border-t' : 'border-[0.5px] shadow-xs'} w-full max-w-full rounded-md border-effects-highlight ${className ?? ''} ${isMinimalState ? 'h-12' : ''}`
       }
     >
-      <div className={`${customBgColor ?? 'bg-background-default'} relative rounded-xl ${triggerModeDisabled ? 'opacity-60' : ''}`}>
+      <div className={`${customBgColor ?? 'bg-background-default'} relative rounded-md ${triggerModeDisabled ? 'opacity-60' : ''}`}>
         {triggerModeDisabled && (
           triggerModeMessage
             ? (
-                <Tooltip
-                  popupContent={triggerModeMessage}
-                  popupClassName="max-w-64 rounded-xl bg-components-panel-bg px-3 py-2 text-xs text-text-secondary shadow-lg"
-                  position="right"
-                >
-                  <div className="absolute inset-0 z-10 cursor-not-allowed rounded-xl" aria-hidden="true"></div>
-                </Tooltip>
-              )
-            : <div className="absolute inset-0 z-10 cursor-not-allowed rounded-xl" aria-hidden="true"></div>
+              <Tooltip
+                popupContent={triggerModeMessage}
+                popupClassName="max-w-64 rounded-md bg-components-panel-bg px-3 py-2 text-xs text-text-secondary shadow-lg"
+                position="right"
+              >
+                <div className="absolute inset-0 z-10 cursor-not-allowed rounded-md" aria-hidden="true"></div>
+              </Tooltip>
+            )
+            : <div className="absolute inset-0 z-10 cursor-not-allowed rounded-md" aria-hidden="true"></div>
         )}
         <div className={`flex w-full flex-col items-start justify-center gap-3 self-stretch p-3 ${isMinimalState ? 'border-0' : 'border-b-[0.5px] border-divider-subtle'}`}>
           <div className="flex w-full items-center gap-3 self-stretch">
@@ -235,28 +235,28 @@ function AppCard({
               popupContent={
                 toggleDisabled
                   ? (
-                      triggerModeDisabled && triggerModeMessage
-                        ? triggerModeMessage
-                        : (appUnpublished || missingStartNode)
-                            ? (
-                                <>
-                                  <div className="mb-1 text-xs font-normal text-text-secondary">
-                                    {t('overview.appInfo.enableTooltip.description', { ns: 'appOverview' })}
-                                  </div>
-                                  <div
-                                    className="cursor-pointer text-xs font-normal text-text-accent hover:underline"
-                                    onClick={() => window.open(docLink('/guides/workflow/node/user-input'), '_blank')}
-                                  >
-                                    {t('overview.appInfo.enableTooltip.learnMore', { ns: 'appOverview' })}
-                                  </div>
-                                </>
-                              )
-                            : ''
-                    )
+                    triggerModeDisabled && triggerModeMessage
+                      ? triggerModeMessage
+                      : (appUnpublished || missingStartNode)
+                        ? (
+                          <>
+                            <div className="mb-1 text-xs font-normal text-text-secondary">
+                              {t('overview.appInfo.enableTooltip.description', { ns: 'appOverview' })}
+                            </div>
+                            <div
+                              className="cursor-pointer text-xs font-normal text-text-accent hover:underline"
+                              onClick={() => window.open(docLink('/guides/workflow/node/user-input'), '_blank')}
+                            >
+                              {t('overview.appInfo.enableTooltip.learnMore', { ns: 'appOverview' })}
+                            </div>
+                          </>
+                        )
+                        : ''
+                  )
                   : ''
               }
               position="right"
-              popupClassName="w-58 max-w-60 rounded-xl bg-components-panel-bg px-3.5 py-3 shadow-lg"
+              popupClassName="w-58 max-w-60 rounded-md bg-components-panel-bg px-3.5 py-3 shadow-lg"
               offset={24}
             >
               <div>
@@ -271,7 +271,7 @@ function AppCard({
                   ? t('overview.appInfo.accessibleAddress', { ns: 'appOverview' })
                   : t('overview.apiInfo.accessibleAddress', { ns: 'appOverview' })}
               </div>
-              <div className="inline-flex h-9 w-full items-center gap-0.5 rounded-lg bg-components-input-bg-normal p-1 pl-2">
+              <div className="inline-flex h-9 w-full items-center gap-0.5 rounded-md bg-components-input-bg-normal p-1 pl-2">
                 <div className="flex h-4 min-w-0 flex-1 items-start justify-start gap-2 px-1">
                   <div className="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-medium text-text-secondary">
                     {isApp ? appUrl : apiUrl}
@@ -321,7 +321,7 @@ function AppCard({
             <div className="flex flex-col items-start justify-center self-stretch">
               <div className="system-xs-medium pb-1 text-text-tertiary">{t('publishApp.title', { ns: 'app' })}</div>
               <div
-                className="flex h-9 w-full cursor-pointer items-center gap-x-0.5  rounded-lg bg-components-input-bg-normal py-1 pl-2.5 pr-2"
+                className="flex h-9 w-full cursor-pointer items-center gap-x-0.5  rounded-md bg-components-input-bg-normal py-1 pl-2.5 pr-2"
                 onClick={handleClickAccessControl}
               >
                 <div className="flex grow items-center gap-x-1.5 pr-1">
@@ -400,39 +400,39 @@ function AppCard({
       </div>
       {isApp
         ? (
-            <>
-              <SettingsModal
-                isChat={appMode === AppModeEnum.CHAT}
-                appInfo={appInfo}
-                isShow={showSettingsModal}
-                onClose={() => setShowSettingsModal(false)}
-                onSave={onSaveSiteConfig}
-              />
-              <EmbeddedModal
-                siteInfo={appInfo.site}
-                isShow={showEmbedded}
-                onClose={() => setShowEmbedded(false)}
-                appBaseUrl={app_base_url}
-                accessToken={access_token}
-              />
-              <CustomizeModal
-                isShow={showCustomizeModal}
-                onClose={() => setShowCustomizeModal(false)}
-                appId={appInfo.id}
-                api_base_url={appInfo.api_base_url}
-                mode={appInfo.mode}
-              />
-              {
-                showAccessControl && (
-                  <AccessControl
-                    app={appDetail!}
-                    onConfirm={handleAccessControlUpdate}
-                    onClose={() => { setShowAccessControl(false) }}
-                  />
-                )
-              }
-            </>
-          )
+          <>
+            <SettingsModal
+              isChat={appMode === AppModeEnum.CHAT}
+              appInfo={appInfo}
+              isShow={showSettingsModal}
+              onClose={() => setShowSettingsModal(false)}
+              onSave={onSaveSiteConfig}
+            />
+            <EmbeddedModal
+              siteInfo={appInfo.site}
+              isShow={showEmbedded}
+              onClose={() => setShowEmbedded(false)}
+              appBaseUrl={app_base_url}
+              accessToken={access_token}
+            />
+            <CustomizeModal
+              isShow={showCustomizeModal}
+              onClose={() => setShowCustomizeModal(false)}
+              appId={appInfo.id}
+              api_base_url={appInfo.api_base_url}
+              mode={appInfo.mode}
+            />
+            {
+              showAccessControl && (
+                <AccessControl
+                  app={appDetail!}
+                  onConfirm={handleAccessControlUpdate}
+                  onClose={() => { setShowAccessControl(false) }}
+                />
+              )
+            }
+          </>
+        )
         : null}
     </div>
   )

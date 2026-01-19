@@ -64,7 +64,7 @@ const ItemOperation: FC<IItemOperationProps> = ({
       >
         <div
           ref={ref}
-          className="min-w-[120px] rounded-lg border border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]"
+          className="min-w-[120px] rounded-md border border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]"
           onMouseEnter={setIsHovering}
           onMouseLeave={setNotHovering}
           onClick={(e) => {

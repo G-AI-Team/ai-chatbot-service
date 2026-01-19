@@ -54,7 +54,7 @@ const ApiInput: FC<Props> = ({
         onChange={onMethodChange}
         options={MethodOptions}
         trigger={(
-          <div className={cn(readonly && 'cursor-pointer', 'flex h-8 shrink-0 items-center rounded-lg border border-components-button-secondary-border bg-components-button-secondary-bg px-2.5')}>
+          <div className={cn(readonly && 'cursor-pointer', 'flex h-8 shrink-0 items-center rounded-md border border-components-button-secondary-border bg-components-button-secondary-bg px-2.5')}>
             <div className="w-12 pl-0.5 text-xs font-medium uppercase leading-[18px] text-text-primary">{method}</div>
             {!readonly && <RiArrowDownSLine className="ml-1 h-3.5 w-3.5 text-text-secondary" />}
           </div>
@@ -66,7 +66,7 @@ const ApiInput: FC<Props> = ({
 
       <Input
         instanceId="http-api-url"
-        className={cn(isFocus ? 'border-components-input-border-active bg-components-input-bg-active shadow-xs' : 'border-components-input-border-hover bg-components-input-bg-normal', 'w-0 grow rounded-lg border px-3 py-[6px]')}
+        className={cn(isFocus ? 'border-components-input-border-active bg-components-input-bg-active shadow-xs' : 'border-components-input-border-hover bg-components-input-bg-normal', 'w-0 grow rounded-md border px-3 py-[6px]')}
         value={url}
         onChange={onUrlChange}
         readOnly={readonly}

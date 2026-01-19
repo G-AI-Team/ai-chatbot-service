@@ -272,10 +272,10 @@ const MCPModal = ({
                 coverElement={
                   isHovering
                     ? (
-                        <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-2xl bg-background-overlay-alt">
-                          <RiEditLine className="size-6 text-text-primary-on-surface" />
-                        </div>
-                      )
+                      <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-2xl bg-background-overlay-alt">
+                        <RiEditLine className="size-6 text-text-primary-on-surface" />
+                      </div>
+                    )
                     : null
                 }
                 onClick={() => { setShowAppIconPicker(true) }}
@@ -320,7 +320,7 @@ const MCPModal = ({
                     <span className="system-sm-medium text-text-secondary">{t('mcp.modal.useDynamicClientRegistration', { ns: 'tools' })}</span>
                   </div>
                   {!isDynamicRegistration && (
-                    <div className="mt-2 flex gap-2 rounded-lg bg-state-warning-hover p-3">
+                    <div className="mt-2 flex gap-2 rounded-md bg-state-warning-hover p-3">
                       <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-text-warning" />
                       <div className="system-xs-regular text-text-secondary">
                         <div className="mb-1">{t('mcp.modal.redirectUrlWarning', { ns: 'tools' })}</div>

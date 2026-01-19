@@ -29,7 +29,7 @@ const CSVDownload: FC<ICSVDownloadProps> = ({
     <div className="mt-6">
       <div className="system-sm-medium text-text-primary">{t('generation.csvStructureTitle', { ns: 'share' })}</div>
       <div className="mt-2 max-h-[500px] overflow-auto">
-        <table className="w-full table-fixed border-separate border-spacing-0 rounded-lg border border-divider-regular text-xs">
+        <table className="w-full table-fixed border-separate border-spacing-0 rounded-md border border-divider-regular text-xs">
           <thead className="text-text-tertiary">
             <tr>
               {addQueryContentVars.map((item, i) => (

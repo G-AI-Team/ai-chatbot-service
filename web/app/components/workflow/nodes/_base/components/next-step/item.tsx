@@ -39,7 +39,7 @@ const Item = ({
 
   return (
     <div
-      className="group relative flex h-9 cursor-pointer items-center rounded-lg border-[0.5px] border-divider-regular bg-background-default px-2 text-xs text-text-secondary shadow-xs last-of-type:mb-0 hover:bg-background-default-hover"
+      className="group relative flex h-9 cursor-pointer items-center rounded-md border-[0.5px] border-divider-regular bg-background-default px-2 text-xs text-text-secondary shadow-xs last-of-type:mb-0 hover:bg-background-default-hover"
     >
       <BlockIcon
         type={data.type}

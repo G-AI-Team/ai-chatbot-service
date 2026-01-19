@@ -199,7 +199,7 @@ const SettingsPanelDemo = () => {
   const [language, setLanguage] = useState('en')
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-6 text-lg font-semibold">Application Settings</h3>
 
       <div className="space-y-6">
@@ -223,7 +223,7 @@ const SettingsPanelDemo = () => {
         </div>
       </div>
 
-      <div className="mt-6 rounded-lg bg-blue-50 p-3">
+      <div className="mt-6 rounded-md bg-blue-50 p-3">
         <div className="text-xs text-gray-600">
           <strong>Current settings:</strong>
           {' '}
@@ -246,7 +246,7 @@ const PaymentMethodSelectorDemo = () => {
   const [paymentMethod, setPaymentMethod] = useState('credit_card')
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Payment Method</h3>
       <Radio.Group value={paymentMethod} onChange={setPaymentMethod} className="flex-col gap-3">
         <Radio value="credit_card">
@@ -278,7 +278,7 @@ const PaymentMethodSelectorDemo = () => {
         </Radio>
       </Radio.Group>
 
-      <button className="mt-6 w-full rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
+      <button className="mt-6 w-full rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
         Continue with
         {' '}
         {paymentMethod.replace('_', ' ')}
@@ -302,7 +302,7 @@ const ShippingOptionsDemo = () => {
   }
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Shipping Method</h3>
       <Radio.Group value={shipping} onChange={setShipping} className="flex-col gap-3">
         <Radio value="standard">
@@ -365,7 +365,7 @@ const SurveyQuestionDemo = () => {
   const [satisfaction, setSatisfaction] = useState('')
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-2 text-base font-semibold">Customer Satisfaction Survey</h3>
       <p className="mb-4 text-sm text-gray-600">How satisfied are you with our service?</p>
 
@@ -403,7 +403,7 @@ const SurveyQuestionDemo = () => {
       </Radio.Group>
 
       <button
-        className="mt-6 w-full rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-50"
+        className="mt-6 w-full rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-50"
         disabled={!satisfaction}
       >
         Submit Feedback

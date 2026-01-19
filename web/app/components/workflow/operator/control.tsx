@@ -50,12 +50,12 @@ const Control = () => {
   }
 
   return (
-    <div className="pointer-events-auto flex flex-col items-center rounded-lg border-[0.5px] border-components-actionbar-border bg-components-actionbar-bg p-0.5 text-text-tertiary shadow-lg">
+    <div className="pointer-events-auto flex flex-col items-center rounded-md border-[0.5px] border-components-actionbar-border bg-components-actionbar-bg p-0.5 text-text-tertiary shadow-lg">
       <AddBlock />
       <TipPopup title={t('nodes.note.addNote', { ns: 'workflow' })}>
         <div
           className={cn(
-            'ml-[1px] flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg hover:bg-state-base-hover hover:text-text-secondary',
+            'ml-[1px] flex h-8 w-8 cursor-pointer items-center justify-center rounded-md hover:bg-state-base-hover hover:text-text-secondary',
             `${nodesReadOnly && 'cursor-not-allowed text-text-disabled hover:bg-transparent hover:text-text-disabled'}`,
           )}
           onClick={addNote}
@@ -67,7 +67,7 @@ const Control = () => {
       <TipPopup title={t('common.pointerMode', { ns: 'workflow' })} shortcuts={['v']}>
         <div
           className={cn(
-            'mr-[1px] flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg',
+            'mr-[1px] flex h-8 w-8 cursor-pointer items-center justify-center rounded-md',
             controlMode === ControlMode.Pointer ? 'bg-state-accent-active text-text-accent' : 'hover:bg-state-base-hover hover:text-text-secondary',
             `${nodesReadOnly && 'cursor-not-allowed text-text-disabled hover:bg-transparent hover:text-text-disabled'}`,
           )}
@@ -79,7 +79,7 @@ const Control = () => {
       <TipPopup title={t('common.handMode', { ns: 'workflow' })} shortcuts={['h']}>
         <div
           className={cn(
-            'flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg',
+            'flex h-8 w-8 cursor-pointer items-center justify-center rounded-md',
             controlMode === ControlMode.Hand ? 'bg-state-accent-active text-text-accent' : 'hover:bg-state-base-hover hover:text-text-secondary',
             `${nodesReadOnly && 'cursor-not-allowed text-text-disabled hover:bg-transparent hover:text-text-disabled'}`,
           )}
@@ -92,7 +92,7 @@ const Control = () => {
       <TipPopup title={t('panel.organizeBlocks', { ns: 'workflow' })} shortcuts={['ctrl', 'o']}>
         <div
           className={cn(
-            'flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg hover:bg-state-base-hover hover:text-text-secondary',
+            'flex h-8 w-8 cursor-pointer items-center justify-center rounded-md hover:bg-state-base-hover hover:text-text-secondary',
             `${nodesReadOnly && 'cursor-not-allowed text-text-disabled hover:bg-transparent hover:text-text-disabled'}`,
           )}
           onClick={handleLayout}
@@ -103,7 +103,7 @@ const Control = () => {
       <TipPopup title={maximizeCanvas ? t('panel.minimize', { ns: 'workflow' }) : t('panel.maximize', { ns: 'workflow' })} shortcuts={['f']}>
         <div
           className={cn(
-            'flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg hover:bg-state-base-hover hover:text-text-secondary',
+            'flex h-8 w-8 cursor-pointer items-center justify-center rounded-md hover:bg-state-base-hover hover:text-text-secondary',
             maximizeCanvas ? 'bg-state-accent-active text-text-accent hover:text-text-accent' : 'hover:bg-state-base-hover hover:text-text-secondary',
             `${nodesReadOnly && 'cursor-not-allowed text-text-disabled hover:bg-transparent hover:text-text-disabled'}`,
           )}

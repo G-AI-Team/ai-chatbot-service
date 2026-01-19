@@ -59,7 +59,7 @@ const VarPanel: FC<Props> = ({
                 {message_files.map((url, index) => (
                   <div
                     key={index}
-                    className="ml-2.5 h-16 w-16 cursor-pointer rounded-lg bg-cover bg-center bg-no-repeat"
+                    className="ml-2.5 h-16 w-16 cursor-pointer rounded-md bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: `url(${url})` }}
                     onClick={() => setImagePreviewUrl(url)}
                   />

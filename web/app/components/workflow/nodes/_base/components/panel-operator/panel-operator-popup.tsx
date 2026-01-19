@@ -60,7 +60,7 @@ const PanelOperatorPopup = ({
   }, [isWorkflowTool, workflowTools, data.provider_id])
 
   return (
-    <div className="w-[240px] rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl">
+    <div className="w-[240px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl">
       {
         (showChangeBlock || canRunBySingle(data.type, isChildNode)) && (
           <>
@@ -69,7 +69,7 @@ const PanelOperatorPopup = ({
                 canRunBySingle(data.type, isChildNode) && (
                   <div
                     className={`
-                      flex h-8 cursor-pointer items-center rounded-lg px-3 text-sm text-text-secondary
+                      flex h-8 cursor-pointer items-center rounded-md px-3 text-sm text-text-secondary
                       hover:bg-state-base-hover
                     `}
                     onClick={() => {
@@ -105,7 +105,7 @@ const PanelOperatorPopup = ({
                 <>
                   <div className="p-1">
                     <div
-                      className="flex h-8 cursor-pointer items-center justify-between rounded-lg px-3 text-sm text-text-secondary hover:bg-state-base-hover"
+                      className="flex h-8 cursor-pointer items-center justify-between rounded-md px-3 text-sm text-text-secondary hover:bg-state-base-hover"
                       onClick={() => {
                         onClosePopup()
                         handleNodesCopy(id)
@@ -115,7 +115,7 @@ const PanelOperatorPopup = ({
                       <ShortcutsName keys={['ctrl', 'c']} />
                     </div>
                     <div
-                      className="flex h-8 cursor-pointer items-center justify-between rounded-lg px-3 text-sm text-text-secondary hover:bg-state-base-hover"
+                      className="flex h-8 cursor-pointer items-center justify-between rounded-md px-3 text-sm text-text-secondary hover:bg-state-base-hover"
                       onClick={() => {
                         onClosePopup()
                         handleNodesDuplicate(id)
@@ -135,7 +135,7 @@ const PanelOperatorPopup = ({
                   <div className="p-1">
                     <div
                       className={`
-                      flex h-8 cursor-pointer items-center justify-between rounded-lg px-3 text-sm text-text-secondary
+                      flex h-8 cursor-pointer items-center justify-between rounded-md px-3 text-sm text-text-secondary
                       hover:bg-state-destructive-hover hover:text-text-destructive
                       `}
                       onClick={() => handleNodeDelete(id)}
@@ -158,7 +158,7 @@ const PanelOperatorPopup = ({
               <a
                 href={`/app/${workflowAppId}/workflow`}
                 target="_blank"
-                className="flex h-8 cursor-pointer items-center rounded-lg px-3 text-sm text-text-secondary hover:bg-state-base-hover"
+                className="flex h-8 cursor-pointer items-center rounded-md px-3 text-sm text-text-secondary hover:bg-state-base-hover"
               >
                 {t('panel.openWorkflow', { ns: 'workflow' })}
               </a>
@@ -174,7 +174,7 @@ const PanelOperatorPopup = ({
               <a
                 href={nodeMetaData.helpLinkUri}
                 target="_blank"
-                className="flex h-8 cursor-pointer items-center rounded-lg px-3 text-sm text-text-secondary hover:bg-state-base-hover"
+                className="flex h-8 cursor-pointer items-center rounded-md px-3 text-sm text-text-secondary hover:bg-state-base-hover"
               >
                 {t('panel.helpLink', { ns: 'workflow' })}
               </a>

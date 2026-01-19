@@ -556,7 +556,7 @@ describe('AppCard', () => {
 
     it('should have rounded corners', () => {
       const { container } = render(<AppCard app={mockApp} />)
-      const card = container.querySelector('[class*="rounded-xl"]')
+      const card = container.querySelector('[class*="rounded-md"]')
       expect(card).toBeInTheDocument()
     })
   })

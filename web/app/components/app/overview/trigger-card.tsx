@@ -141,8 +141,8 @@ function TriggerCard({ appInfo, onToggleResult }: ITriggerCardProps) {
 
   if (isLoading) {
     return (
-      <div className="w-full max-w-full rounded-xl border-l-[0.5px] border-t border-effects-highlight">
-        <div className="rounded-xl bg-background-default">
+      <div className="w-full max-w-full rounded-md border-l-[0.5px] border-t border-effects-highlight">
+        <div className="rounded-md bg-background-default">
           <div className="flex w-full flex-col items-start justify-center gap-3 self-stretch border-b-[0.5px] border-divider-subtle p-3">
             <div className="h-6 w-full animate-pulse rounded bg-components-input-bg-normal"></div>
           </div>
@@ -152,12 +152,12 @@ function TriggerCard({ appInfo, onToggleResult }: ITriggerCardProps) {
   }
 
   return (
-    <div className="w-full max-w-full rounded-xl border-l-[0.5px] border-t border-effects-highlight">
-      <div className="rounded-xl bg-background-default">
+    <div className="w-full max-w-full rounded-md border-l-[0.5px] border-t border-effects-highlight">
+      <div className="rounded-md bg-background-default">
         <div className="flex w-full flex-col items-start justify-center gap-3 self-stretch border-b-[0.5px] border-divider-subtle p-3">
           <div className="flex w-full items-center gap-3 self-stretch">
             <div className="flex grow items-center">
-              <div className="mr-2 shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-purple-purple-500 p-1 shadow-md">
+              <div className="mr-2 shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-purple-purple-500 p-1 shadow-md">
                 <TriggerAll className="h-4 w-4 text-text-primary-on-surface" />
               </div>
               <div className="group w-full">

@@ -28,7 +28,7 @@ const DocumentList: FC<Props> = ({
         return (
           <div
             key={id}
-            className="flex h-8 cursor-pointer items-center space-x-2 rounded-lg px-2 hover:bg-state-base-hover"
+            className="flex h-8 cursor-pointer items-center space-x-2 rounded-md px-2 hover:bg-state-base-hover"
             onClick={handleChange(item)}
           >
             <FileIcon name={item.name} extension={extension} size="lg" />

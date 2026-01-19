@@ -31,7 +31,7 @@ const CrawledResultItem: FC<Props> = ({
     onCheckChange(!isChecked)
   }, [isChecked, onCheckChange])
   return (
-    <div className={cn(isPreview ? 'bg-state-base-active' : 'group hover:bg-state-base-hover', 'cursor-pointer rounded-lg p-2')}>
+    <div className={cn(isPreview ? 'bg-state-base-active' : 'group hover:bg-state-base-hover', 'cursor-pointer rounded-md p-2')}>
       <div className="relative flex">
         <div className="flex h-5 items-center">
           <Checkbox className="mr-2 shrink-0" checked={isChecked} onCheck={handleCheckChange} id={testId} />

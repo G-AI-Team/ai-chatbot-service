@@ -194,7 +194,7 @@ const MoreActions: FC = () => {
           <TipPopup title={t('common.moreActions', { ns: 'workflow' })}>
             <div
               className={cn(
-                'flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg hover:bg-state-base-hover hover:text-text-secondary',
+                'flex h-8 w-8 cursor-pointer items-center justify-center rounded-md hover:bg-state-base-hover hover:text-text-secondary',
                 `${getNodesReadOnly() && 'cursor-not-allowed text-text-disabled hover:bg-transparent hover:text-text-disabled'}`,
               )}
               onClick={handleTrigger}
@@ -204,7 +204,7 @@ const MoreActions: FC = () => {
           </TipPopup>
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-10">
-          <div className="min-w-[180px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur text-text-secondary shadow-lg">
+          <div className="min-w-[180px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur text-text-secondary shadow-lg">
             <div className="p-1">
               <div className="flex items-center gap-2 px-2 py-1 text-xs font-medium text-text-tertiary">
                 <RiExportLine className="h-3 w-3" />
@@ -214,19 +214,19 @@ const MoreActions: FC = () => {
                 {t('common.currentView', { ns: 'workflow' })}
               </div>
               <div
-                className="system-md-regular flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover"
+                className="system-md-regular flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover"
                 onClick={() => handleExportImage('png')}
               >
                 {t('common.exportPNG', { ns: 'workflow' })}
               </div>
               <div
-                className="system-md-regular flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover"
+                className="system-md-regular flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover"
                 onClick={() => handleExportImage('jpeg')}
               >
                 {t('common.exportJPEG', { ns: 'workflow' })}
               </div>
               <div
-                className="system-md-regular flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover"
+                className="system-md-regular flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover"
                 onClick={() => handleExportImage('svg')}
               >
                 {t('common.exportSVG', { ns: 'workflow' })}
@@ -238,19 +238,19 @@ const MoreActions: FC = () => {
                 {t('common.currentWorkflow', { ns: 'workflow' })}
               </div>
               <div
-                className="system-md-regular flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover"
+                className="system-md-regular flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover"
                 onClick={() => handleExportImage('png', true)}
               >
                 {t('common.exportPNG', { ns: 'workflow' })}
               </div>
               <div
-                className="system-md-regular flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover"
+                className="system-md-regular flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover"
                 onClick={() => handleExportImage('jpeg', true)}
               >
                 {t('common.exportJPEG', { ns: 'workflow' })}
               </div>
               <div
-                className="system-md-regular flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover"
+                className="system-md-regular flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover"
                 onClick={() => handleExportImage('svg', true)}
               >
                 {t('common.exportSVG', { ns: 'workflow' })}

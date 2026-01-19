@@ -68,7 +68,7 @@ const MockAppInfo = ({ expand }: { expand: boolean }) => {
     <div data-testid="app-info" data-expand={expand}>
       <button type="button" className="block w-full">
         {/* Container with layout mode switching - reproduces issue #3 */}
-        <div className={`flex rounded-lg ${expand ? 'flex-col gap-2 p-2 pb-2.5' : 'items-start justify-center gap-1 p-1'}`}>
+        <div className={`flex rounded-md ${expand ? 'flex-col gap-2 p-2 pb-2.5' : 'items-start justify-center gap-1 p-1'}`}>
           {/* Icon container with justify-between to flex-col switch - reproduces issue #3 */}
           <div className={`flex items-center self-stretch ${expand ? 'justify-between' : 'flex-col gap-1'}`} data-testid="icon-container">
             {/* Icon with size changes - reproduces issue #3 */}

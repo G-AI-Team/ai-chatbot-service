@@ -228,7 +228,7 @@ describe('CreateAppCard', () => {
       const { container } = render(<CreateAppCard ref={defaultRef} />)
       const card = container.firstChild as HTMLElement
 
-      expect(card).toHaveClass('h-[160px]', 'rounded-xl')
+      expect(card).toHaveClass('h-[160px]', 'rounded-md')
     })
 
     it('should have proper button styling', () => {

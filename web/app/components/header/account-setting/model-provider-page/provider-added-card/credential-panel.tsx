@@ -97,7 +97,7 @@ const CredentialPanel = ({
       {
         provider.provider_credential_schema && (
           <div className={cn(
-            'relative ml-1 w-[120px] shrink-0 rounded-lg border-[0.5px] border-components-panel-border bg-white/[0.18] p-1',
+            'relative ml-1 w-[120px] shrink-0 rounded-md border-[0.5px] border-components-panel-border bg-white/[0.18] p-1',
             authRemoved && 'border-state-destructive-border bg-state-destructive-hover',
           )}
           >

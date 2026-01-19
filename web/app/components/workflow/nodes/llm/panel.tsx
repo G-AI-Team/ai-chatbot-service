@@ -177,7 +177,7 @@ const Panel: FC<NodePanelProps<LLMNodeType>> = ({
         {/* Memory put place examples. */}
         {isChatMode && isChatModel && !!inputs.memory && (
           <div className="mt-4">
-            <div className="flex h-8 items-center justify-between rounded-lg bg-components-input-bg-normal pl-3 pr-2">
+            <div className="flex h-8 items-center justify-between rounded-md bg-components-input-bg-normal pl-3 pr-2">
               <div className="flex items-center space-x-1">
                 <div className="text-xs font-semibold uppercase text-text-secondary">{t('nodes.common.memories.title', { ns: 'workflow' })}</div>
                 <Tooltip
@@ -262,7 +262,7 @@ const Panel: FC<NodePanelProps<LLMNodeType>> = ({
               <Tooltip
                 noDecoration
                 popupContent={(
-                  <div className="w-[232px] rounded-xl border-[0.5px] border-components-panel-border bg-components-tooltip-bg px-4 py-3.5 shadow-lg backdrop-blur-[5px]">
+                  <div className="w-[232px] rounded-md border-[0.5px] border-components-panel-border bg-components-tooltip-bg px-4 py-3.5 shadow-lg backdrop-blur-[5px]">
                     <div className="title-xs-semi-bold text-text-primary">{t('structOutput.modelNotSupported', { ns: 'app' })}</div>
                     <div className="body-xs-regular mt-1 text-text-secondary">{t('structOutput.modelNotSupportedTip', { ns: 'app' })}</div>
                   </div>

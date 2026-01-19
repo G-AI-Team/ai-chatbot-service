@@ -54,7 +54,7 @@ const ResultItem = ({
   }, [files])
 
   return (
-    <div className={cn('cursor-pointer rounded-xl bg-chat-bubble-bg pt-3 hover:shadow-lg')} onClick={showDetailModal}>
+    <div className={cn('cursor-pointer rounded-md bg-chat-bubble-bg pt-3 hover:shadow-lg')} onClick={showDetailModal}>
       {/* Meta info */}
       <ResultItemMeta className="px-3" labelPrefix={`${isParentChildRetrieval ? 'Parent-' : ''}Chunk`} positionId={position} wordCount={word_count} score={score} />
 
@@ -71,7 +71,7 @@ const ResultItem = ({
         {isParentChildRetrieval && (
           <div className="mt-1">
             <div
-              className={cn('inline-flex h-6 cursor-pointer select-none items-center space-x-0.5 rounded-lg text-text-secondary', isFold && 'bg-workflow-process-bg pl-1')}
+              className={cn('inline-flex h-6 cursor-pointer select-none items-center space-x-0.5 rounded-md text-text-secondary', isFold && 'bg-workflow-process-bg pl-1')}
               onClick={(e) => {
                 e.stopPropagation()
                 toggleFold()

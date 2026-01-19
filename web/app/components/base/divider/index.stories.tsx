@@ -27,7 +27,7 @@ export const Horizontal: Story = {}
 
 export const Vertical: Story = {
   render: args => (
-    <div className="flex h-20 items-center gap-4 rounded-lg border border-divider-subtle bg-components-panel-bg p-4">
+    <div className="flex h-20 items-center gap-4 rounded-md border border-divider-subtle bg-components-panel-bg p-4">
       <span className="text-sm text-text-secondary">Filters</span>
       <Divider {...args} type="vertical" />
       <span className="text-sm text-text-secondary">Tags</span>

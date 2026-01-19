@@ -20,7 +20,7 @@ const AppTrigger = ({
   const { t } = useTranslation()
   return (
     <div className={cn(
-      'group flex cursor-pointer items-center rounded-lg bg-components-input-bg-normal p-2 pl-3 hover:bg-state-base-hover-alt',
+      'group flex cursor-pointer items-center rounded-md bg-components-input-bg-normal p-2 pl-3 hover:bg-state-base-hover-alt',
       open && 'bg-state-base-hover-alt',
       appDetail && 'py-1.5 pl-1.5',
     )}

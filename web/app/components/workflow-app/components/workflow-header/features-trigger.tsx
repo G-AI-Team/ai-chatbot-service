@@ -188,7 +188,7 @@ const FeaturesTrigger = () => {
       {isChatMode && (
         <Button
           className={cn(
-            'rounded-lg border border-transparent text-components-button-secondary-text',
+            'rounded-md border border-transparent text-components-button-secondary-text',
             theme === 'dark' && 'border-black/5 bg-white/10 backdrop-blur-sm',
           )}
           onClick={handleShowFeatures}

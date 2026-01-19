@@ -53,13 +53,13 @@ const Actions = ({
               />
             )}
             className="z-20 min-w-[160px]"
-            popupClassName="rounded-xl bg-none shadow-none ring-0 min-w-[160px]"
+            popupClassName="rounded-md bg-none shadow-none ring-0 min-w-[160px]"
             position="br"
             trigger="click"
             btnElement={
               <RiMoreFill className="size-4 text-text-tertiary" />
             }
-            btnClassName="size-8 cursor-pointer justify-center rounded-lg p-0 shadow-xs shadow-shadow-shadow-3"
+            btnClassName="size-8 cursor-pointer justify-center rounded-md p-0 shadow-xs shadow-shadow-shadow-3"
           />
         )
       }

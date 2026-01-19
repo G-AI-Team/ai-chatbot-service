@@ -222,7 +222,7 @@ const DetailHeader = ({
   return (
     <div className={cn('shrink-0 border-b border-divider-subtle bg-components-panel-bg p-4 pb-3', isReadmeView && 'border-b-0 bg-transparent p-0')}>
       <div className="flex">
-        <div className={cn('overflow-hidden rounded-xl border border-components-panel-border-subtle', isReadmeView && 'bg-components-panel-bg')}>
+        <div className={cn('overflow-hidden rounded-md border border-components-panel-border-subtle', isReadmeView && 'bg-components-panel-bg')}>
           <Icon src={iconSrc} />
         </div>
         <div className="ml-3 w-0 grow">

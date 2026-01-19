@@ -71,7 +71,7 @@ const CrawledResult = ({
           time: usedTime.toFixed(1),
         })}
       </div>
-      <div className="overflow-hidden rounded-xl border border-components-panel-border bg-components-panel-bg">
+      <div className="overflow-hidden rounded-md border border-components-panel-border bg-components-panel-bg">
         {isMultipleChoice && (
           <div className="flex items-center px-4 py-2">
             <CheckboxWithLabel

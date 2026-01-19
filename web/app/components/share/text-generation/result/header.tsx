@@ -75,7 +75,7 @@ const Header: FC<IResultHeaderProps> = ({
         )}
 
         {showFeedback && !feedback.rating && (
-          <div className="flex space-x-1 rounded-lg border border-gray-200 p-[1px]">
+          <div className="flex space-x-1 rounded-md border border-gray-200 p-[1px]">
             <Tooltip
               popupContent="Great Rating"
               needsDelay={false}

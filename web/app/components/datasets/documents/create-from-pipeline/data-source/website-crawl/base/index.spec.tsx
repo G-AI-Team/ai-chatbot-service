@@ -452,7 +452,7 @@ describe('CrawledResult', () => {
       )
 
       // Assert - Second item should have active state
-      const items = container.querySelectorAll('[class*="rounded-lg"][class*="cursor-pointer"]')
+      const items = container.querySelectorAll('[class*="rounded-md"][class*="cursor-pointer"]')
       expect(items[1]).toHaveClass('bg-state-base-active')
     })
 
@@ -864,7 +864,7 @@ describe('ErrorMessage', () => {
       const { container } = render(<ErrorMessage {...defaultProps} />)
 
       // Assert
-      expect(container.firstChild).toHaveClass('rounded-xl')
+      expect(container.firstChild).toHaveClass('rounded-md')
     })
   })
 })

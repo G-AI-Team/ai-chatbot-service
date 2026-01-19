@@ -27,7 +27,7 @@ const LikedItem = ({
   isMobile,
 }: ILikedItemProps) => {
   return (
-    <Link className={cn('group/link-item flex h-8 w-full cursor-pointer items-center justify-between rounded-lg px-2 hover:bg-state-base-hover', isMobile && 'justify-center')} href={`/app/${detail?.id}/overview`}>
+    <Link className={cn('group/link-item flex h-8 w-full cursor-pointer items-center justify-between rounded-md px-2 hover:bg-state-base-hover', isMobile && 'justify-center')} href={`/app/${detail?.id}/overview`}>
       <div className="flex items-center">
         <div className={cn('relative h-6 w-6 rounded-md')}>
           <AppIcon size="tiny" iconType={detail.icon_type} icon={detail.icon} background={detail.icon_background} imageUrl={detail.icon_url} />
@@ -50,7 +50,7 @@ const LinkedAppsPanel: FC<Props> = ({
   isMobile,
 }) => {
   return (
-    <div className="w-[320px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]">
+    <div className="w-[320px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]">
       {relatedApps.map((item, index) => (
         <LikedItem key={index} detail={item} isMobile={isMobile} />
       ))}

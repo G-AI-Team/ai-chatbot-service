@@ -34,7 +34,7 @@ const ModelTrigger: FC<ModelTriggerProps> = ({
   return (
     <div
       className={cn(
-        'group flex h-8 items-center gap-0.5 rounded-lg bg-components-input-bg-normal p-1',
+        'group flex h-8 items-center gap-0.5 rounded-md bg-components-input-bg-normal p-1',
         !readonly && 'cursor-pointer hover:bg-components-input-bg-hover',
         open && 'bg-components-input-bg-hover',
         model.status !== ModelStatusEnum.active && 'bg-components-input-bg-disabled hover:bg-components-input-bg-disabled',
@@ -58,15 +58,15 @@ const ModelTrigger: FC<ModelTriggerProps> = ({
             {
               model.status !== ModelStatusEnum.active
                 ? (
-                    <Tooltip popupContent={MODEL_STATUS_TEXT[model.status][language]}>
-                      <AlertTriangle className="h-4 w-4 text-text-warning-secondary" />
-                    </Tooltip>
-                  )
+                  <Tooltip popupContent={MODEL_STATUS_TEXT[model.status][language]}>
+                    <AlertTriangle className="h-4 w-4 text-text-warning-secondary" />
+                  </Tooltip>
+                )
                 : (
-                    <RiArrowDownSLine
-                      className="h-3.5 w-3.5 text-text-tertiary"
-                    />
-                  )
+                  <RiArrowDownSLine
+                    className="h-3.5 w-3.5 text-text-tertiary"
+                  />
+                )
             }
           </div>
         )}

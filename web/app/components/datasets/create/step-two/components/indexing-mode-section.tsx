@@ -128,7 +128,7 @@ export const IndexingModeSection: FC<IndexingModeSectionProps> = ({
             </CustomDialog>
             <Tooltip
               popupContent={(
-                <div className="rounded-lg border-components-panel-border bg-components-tooltip-bg p-3 text-xs font-medium text-text-secondary shadow-lg">
+                <div className="rounded-md border-components-panel-border bg-components-tooltip-bg p-3 text-xs font-medium text-text-secondary shadow-lg">
                   {docForm === ChunkingMode.qa
                     ? t('stepTwo.notAvailableForQA', { ns: 'datasetCreation' })
                     : t('stepTwo.notAvailableForParentChild', { ns: 'datasetCreation' })}
@@ -155,7 +155,7 @@ export const IndexingModeSection: FC<IndexingModeSectionProps> = ({
 
       {/* High quality tip */}
       {!hasSetIndexType && indexType === IndexingType.QUALIFIED && (
-        <div className="mt-2 flex h-10 items-center gap-x-0.5 overflow-hidden rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 shadow-xs backdrop-blur-[5px]">
+        <div className="mt-2 flex h-10 items-center gap-x-0.5 overflow-hidden rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 shadow-xs backdrop-blur-[5px]">
           <div className="absolute bottom-0 left-0 right-0 top-0 bg-dataset-warning-message-bg opacity-40"></div>
           <div className="p-1">
             <AlertTriangle className="size-4 text-text-warning-secondary" />
@@ -206,46 +206,46 @@ export const IndexingModeSection: FC<IndexingModeSectionProps> = ({
       <div>
         {!isModelAndRetrievalConfigDisabled
           ? (
-              <div className="mb-1">
-                <div className="system-md-semibold mb-0.5 text-text-secondary">
-                  {t('form.retrievalSetting.title', { ns: 'datasetSettings' })}
-                </div>
-                <div className="body-xs-regular text-text-tertiary">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={docLink('/guides/knowledge-base/create-knowledge-and-upload-documents')}
-                    className="text-text-accent"
-                  >
-                    {t('form.retrievalSetting.learnMore', { ns: 'datasetSettings' })}
-                  </a>
-                  {t('form.retrievalSetting.longDescription', { ns: 'datasetSettings' })}
-                </div>
+            <div className="mb-1">
+              <div className="system-md-semibold mb-0.5 text-text-secondary">
+                {t('form.retrievalSetting.title', { ns: 'datasetSettings' })}
               </div>
-            )
+              <div className="body-xs-regular text-text-tertiary">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={docLink('/guides/knowledge-base/create-knowledge-and-upload-documents')}
+                  className="text-text-accent"
+                >
+                  {t('form.retrievalSetting.learnMore', { ns: 'datasetSettings' })}
+                </a>
+                {t('form.retrievalSetting.longDescription', { ns: 'datasetSettings' })}
+              </div>
+            </div>
+          )
           : (
-              <div className={cn('system-md-semibold mb-0.5 text-text-secondary', 'flex items-center justify-between')}>
-                <div>{t('form.retrievalSetting.title', { ns: 'datasetSettings' })}</div>
-              </div>
-            )}
+            <div className={cn('system-md-semibold mb-0.5 text-text-secondary', 'flex items-center justify-between')}>
+              <div>{t('form.retrievalSetting.title', { ns: 'datasetSettings' })}</div>
+            </div>
+          )}
 
         <div>
           {getIndexingTechnique() === IndexingType.QUALIFIED
             ? (
-                <RetrievalMethodConfig
-                  disabled={isModelAndRetrievalConfigDisabled}
-                  value={retrievalConfig}
-                  onChange={onRetrievalConfigChange}
-                  showMultiModalTip={showMultiModalTip}
-                />
-              )
+              <RetrievalMethodConfig
+                disabled={isModelAndRetrievalConfigDisabled}
+                value={retrievalConfig}
+                onChange={onRetrievalConfigChange}
+                showMultiModalTip={showMultiModalTip}
+              />
+            )
             : (
-                <EconomicalRetrievalMethodConfig
-                  disabled={isModelAndRetrievalConfigDisabled}
-                  value={retrievalConfig}
-                  onChange={onRetrievalConfigChange}
-                />
-              )}
+              <EconomicalRetrievalMethodConfig
+                disabled={isModelAndRetrievalConfigDisabled}
+                value={retrievalConfig}
+                onChange={onRetrievalConfigChange}
+              />
+            )}
         </div>
       </div>
     </>

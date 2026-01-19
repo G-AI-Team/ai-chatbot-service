@@ -82,7 +82,7 @@ const IndexMethod = ({
           </OptionCard>
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent style={{ zIndex: 60 }}>
-          <div className="rounded-lg border-components-panel-border bg-components-tooltip-bg p-3 text-xs font-medium text-text-secondary shadow-lg">
+          <div className="rounded-md border-components-panel-border bg-components-tooltip-bg p-3 text-xs font-medium text-text-secondary shadow-lg">
             {t('form.indexMethodChangeToEconomyDisabledTip', { ns: 'datasetSettings' })}
           </div>
         </PortalToFollowElemContent>

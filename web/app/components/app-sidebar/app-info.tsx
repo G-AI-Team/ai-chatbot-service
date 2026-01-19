@@ -245,15 +245,15 @@ const AppInfo = ({ expand, onlyShowDetail = false, openState = false, onDetailEx
     // Import DSL (conditional)
     ...(appDetail.mode === AppModeEnum.ADVANCED_CHAT || appDetail.mode === AppModeEnum.WORKFLOW)
       ? [{
-          id: 'import',
-          title: t('common.importDSL', { ns: 'workflow' }),
-          icon: <RiFileUploadLine />,
-          onClick: () => {
-            setOpen(false)
-            onDetailExpand?.(false)
-            setShowImportDSLModal(true)
-          },
-        }]
+        id: 'import',
+        title: t('common.importDSL', { ns: 'workflow' }),
+        icon: <RiFileUploadLine />,
+        onClick: () => {
+          setOpen(false)
+          onDetailExpand?.(false)
+          setShowImportDSLModal(true)
+        },
+      }]
       : [],
     // Divider
     {
@@ -279,15 +279,15 @@ const AppInfo = ({ expand, onlyShowDetail = false, openState = false, onDetailEx
   // Keep the switch operation separate as it's not part of the main operations
   const switchOperation = (appDetail.mode === AppModeEnum.COMPLETION || appDetail.mode === AppModeEnum.CHAT)
     ? {
-        id: 'switch',
-        title: t('switch', { ns: 'app' }),
-        icon: <RiExchange2Line />,
-        onClick: () => {
-          setOpen(false)
-          onDetailExpand?.(false)
-          setShowSwitchModal(true)
-        },
-      }
+      id: 'switch',
+      title: t('switch', { ns: 'app' }),
+      icon: <RiExchange2Line />,
+      onClick: () => {
+        setOpen(false)
+        onDetailExpand?.(false)
+        setShowSwitchModal(true)
+      },
+    }
     : null
 
   return (
@@ -301,7 +301,7 @@ const AppInfo = ({ expand, onlyShowDetail = false, openState = false, onDetailEx
           }}
           className="block w-full"
         >
-          <div className="flex flex-col gap-2 rounded-lg p-1 hover:bg-state-base-hover">
+          <div className="flex flex-col gap-2 rounded-md p-1 hover:bg-state-base-hover">
             <div className="flex items-center gap-1">
               <div className={cn(!expand && 'ml-1')}>
                 <AppIcon

@@ -62,7 +62,7 @@ const TryLabel: FC<{
 }> = ({ Icon, text, onClick }) => {
   return (
     <div
-      className="mr-1 mt-2 flex h-7 shrink-0 cursor-pointer items-center rounded-lg bg-components-button-secondary-bg px-2"
+      className="mr-1 mt-2 flex h-7 shrink-0 cursor-pointer items-center rounded-md bg-components-button-secondary-bg px-2"
       onClick={onClick}
     >
       <Icon className="h-4 w-4 text-text-tertiary"></Icon>
@@ -340,27 +340,27 @@ const GetAutomaticRes: FC<IGetAutomaticResProps> = ({
               <div className="system-sm-semibold-uppercase mb-1.5 text-text-secondary">{t('generate.instruction', { ns: 'appDebug' })}</div>
               {isBasicMode
                 ? (
-                    <InstructionEditorInBasic
-                      editorKey={editorKey}
-                      generatorType={GeneratorType.prompt}
-                      value={instruction}
-                      onChange={setInstruction}
-                      availableVars={[]}
-                      availableNodes={[]}
-                      isShowCurrentBlock={!!currentPrompt}
-                      isShowLastRunBlock={false}
-                    />
-                  )
+                  <InstructionEditorInBasic
+                    editorKey={editorKey}
+                    generatorType={GeneratorType.prompt}
+                    value={instruction}
+                    onChange={setInstruction}
+                    availableVars={[]}
+                    availableNodes={[]}
+                    isShowCurrentBlock={!!currentPrompt}
+                    isShowLastRunBlock={false}
+                  />
+                )
                 : (
-                    <InstructionEditorInWorkflow
-                      editorKey={editorKey}
-                      generatorType={GeneratorType.prompt}
-                      value={instruction}
-                      onChange={setInstruction}
-                      nodeId={nodeId || ''}
-                      isShowCurrentBlock={!!currentPrompt}
-                    />
-                  )}
+                  <InstructionEditorInWorkflow
+                    editorKey={editorKey}
+                    generatorType={GeneratorType.prompt}
+                    value={instruction}
+                    onChange={setInstruction}
+                    nodeId={nodeId || ''}
+                    isShowCurrentBlock={!!currentPrompt}
+                  />
+                )}
             </div>
             <IdeaOutput
               value={ideaOutput}

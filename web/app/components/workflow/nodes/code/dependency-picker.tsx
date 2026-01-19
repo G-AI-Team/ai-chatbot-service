@@ -39,7 +39,7 @@ const DependencyPicker: FC<Props> = ({
       offset={4}
     >
       <PortalToFollowElemTrigger onClick={() => setOpen(!open)} className="grow cursor-pointer">
-        <div className="flex h-8 items-center justify-between rounded-lg border-0 bg-gray-100 px-2.5 text-[13px] text-gray-900">
+        <div className="flex h-8 items-center justify-between rounded-md border-0 bg-gray-100 px-2.5 text-[13px] text-gray-900">
           <div className="w-0 grow truncate" title={value.name}>{value.name}</div>
           <RiArrowDownSLine className="h-3.5 w-3.5 shrink-0 text-gray-700" />
         </div>
@@ -49,7 +49,7 @@ const DependencyPicker: FC<Props> = ({
       }}
       >
         <div
-          className="rounded-lg bg-white p-1 shadow-sm"
+          className="rounded-md bg-white p-1 shadow-sm"
           style={{
             width: 350,
           }}
@@ -73,7 +73,7 @@ const DependencyPicker: FC<Props> = ({
             }).map(dependency => (
               <div
                 key={dependency.name}
-                className="flex h-[30px] cursor-pointer items-center justify-between rounded-lg pl-3 pr-2 text-[13px] text-gray-900 hover:bg-gray-100"
+                className="flex h-[30px] cursor-pointer items-center justify-between rounded-md pl-3 pr-2 text-[13px] text-gray-900 hover:bg-gray-100"
                 onClick={handleChange(dependency)}
               >
                 <div className="w-0 grow truncate">{dependency.name}</div>

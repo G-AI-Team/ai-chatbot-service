@@ -145,7 +145,7 @@ const OnlineDocuments = ({
         onCredentialChange={onCredentialChange}
         credentials={dataSourceAuth?.result || []}
       />
-      <div className="rounded-xl border border-components-panel-border bg-background-default-subtle">
+      <div className="rounded-md border border-components-panel-border bg-background-default-subtle">
         <div className="flex items-center gap-x-2 rounded-t-xl border-b border-b-divider-regular bg-components-panel-bg p-1 pl-3">
           <div className="flex grow items-center">
             <Title name={nodeData.datasource_label} />
@@ -158,24 +158,24 @@ const OnlineDocuments = ({
         <div className="overflow-hidden rounded-b-xl">
           {documentsData?.length
             ? (
-                <PageSelector
-                  checkedIds={selectedPagesId}
-                  disabledValue={new Set()}
-                  searchValue={searchValue}
-                  list={documentsData[0].pages || []}
-                  pagesMap={PagesMapAndSelectedPagesId}
-                  onSelect={handleSelectPages}
-                  canPreview={!isInPipeline}
-                  onPreview={handlePreviewPage}
-                  isMultipleChoice={supportBatchUpload}
-                  currentCredentialId={currentCredentialId}
-                />
-              )
+              <PageSelector
+                checkedIds={selectedPagesId}
+                disabledValue={new Set()}
+                searchValue={searchValue}
+                list={documentsData[0].pages || []}
+                pagesMap={PagesMapAndSelectedPagesId}
+                onSelect={handleSelectPages}
+                canPreview={!isInPipeline}
+                onPreview={handlePreviewPage}
+                isMultipleChoice={supportBatchUpload}
+                currentCredentialId={currentCredentialId}
+              />
+            )
             : (
-                <div className="flex h-[296px] items-center justify-center">
-                  <Loading type="app" />
-                </div>
-              )}
+              <div className="flex h-[296px] items-center justify-center">
+                <Loading type="app" />
+              </div>
+            )}
         </div>
       </div>
     </div>

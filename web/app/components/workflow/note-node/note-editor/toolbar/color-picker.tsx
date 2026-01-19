@@ -77,7 +77,7 @@ const ColorPicker = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent>
-        <div className="grid grid-cols-3 grid-rows-2 gap-0.5 rounded-lg border-[0.5px] border-components-actionbar-border bg-components-actionbar-bg p-0.5 shadow-lg">
+        <div className="grid grid-cols-3 grid-rows-2 gap-0.5 rounded-md border-[0.5px] border-components-actionbar-border bg-components-actionbar-bg p-0.5 shadow-lg">
           {
             COLOR_LIST.map(color => (
               <div

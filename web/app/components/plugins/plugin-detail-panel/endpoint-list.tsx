@@ -69,10 +69,10 @@ const EndpointList = ({ detail }: Props) => {
           {t('detailPanel.endpoints', { ns: 'plugin' })}
           <Tooltip
             position="right"
-            popupClassName="w-[240px] p-4 rounded-xl bg-components-panel-bg-blur border-[0.5px] border-components-panel-border"
+            popupClassName="w-[240px] p-4 rounded-md bg-components-panel-bg-blur border-[0.5px] border-components-panel-border"
             popupContent={(
               <div className="flex flex-col gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg border-[0.5px] border-components-panel-border-subtle bg-background-default-subtle">
+                <div className="flex h-8 w-8 items-center justify-center rounded-md border-[0.5px] border-components-panel-border-subtle bg-background-default-subtle">
                   <RiApps2AddLine className="h-4 w-4 text-text-tertiary" />
                 </div>
                 <div className="system-xs-regular text-text-tertiary">{t('detailPanel.endpointsTip', { ns: 'plugin' })}</div>

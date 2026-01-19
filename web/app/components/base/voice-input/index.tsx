@@ -166,7 +166,7 @@ const VoiceInput = ({
   const seconds = Number.parseInt(`${originDuration}`) % 60
 
   return (
-    <div className={cn(s.wrapper, 'absolute inset-0 rounded-xl')}>
+    <div className={cn(s.wrapper, 'absolute inset-0 rounded-md')}>
       <div className="absolute inset-[1.5px] flex items-center overflow-hidden rounded-[10.5px] bg-primary-25 py-[14px] pl-[14.5px] pr-[6.5px]">
         <canvas id="voice-input-record" className="absolute bottom-0 left-0 h-4 w-full" />
         {
@@ -191,7 +191,7 @@ const VoiceInput = ({
         {
           startRecord && (
             <div
-              className="mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg  hover:bg-primary-100"
+              className="mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-md  hover:bg-primary-100"
               onClick={handleStopRecorder}
             >
               <StopCircle className="h-5 w-5 text-primary-600" />
@@ -201,7 +201,7 @@ const VoiceInput = ({
         {
           startConvert && (
             <div
-              className="mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg  hover:bg-gray-200"
+              className="mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-md  hover:bg-gray-200"
               onClick={onCancel}
             >
               <RiCloseLine className="h-4 w-4 text-gray-500" />

@@ -35,7 +35,7 @@ const CSVDownload: FC = () => {
     <div className="mt-6">
       <div className="system-sm-medium text-text-primary">{t('generation.csvStructureTitle', { ns: 'share' })}</div>
       <div className="mt-2 max-h-[500px] overflow-auto">
-        <table className="w-full table-fixed border-separate border-spacing-0 rounded-lg border border-divider-regular text-xs">
+        <table className="w-full table-fixed border-separate border-spacing-0 rounded-md border border-divider-regular text-xs">
           <thead className="text-text-tertiary">
             <tr>
               <td className="h-9 border-b border-divider-regular pl-3 pr-2">{t('batchModal.question', { ns: 'appAnnotation' })}</td>

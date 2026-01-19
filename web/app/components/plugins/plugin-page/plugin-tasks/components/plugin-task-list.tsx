@@ -56,7 +56,7 @@ const PluginItem: FC<PluginItemProps> = ({
   action,
 }) => {
   return (
-    <div className="flex items-center rounded-lg p-2 hover:bg-state-base-hover">
+    <div className="flex items-center rounded-md p-2 hover:bg-state-base-hover">
       <div className="relative mr-2 flex h-6 w-6 items-center justify-center rounded-md border-[0.5px] border-components-panel-border-subtle bg-background-default-dodge">
         {statusIcon}
         <CardIcon
@@ -135,7 +135,7 @@ const PluginTaskList: FC<PluginTaskListProps> = ({
   const language = useGetLanguage()
 
   return (
-    <div className="w-[360px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
+    <div className="w-[360px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
       {/* Running Plugins Section */}
       {runningPlugins.length > 0 && (
         <PluginSection

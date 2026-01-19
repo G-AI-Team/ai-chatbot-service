@@ -28,7 +28,7 @@ type ItemProps = {
 const SelectItem: FC<ItemProps> = ({ text, type, value, Icon, onClick }) => {
   return (
     <div
-      className="flex h-8 cursor-pointer items-center rounded-lg px-3 hover:bg-state-base-hover"
+      className="flex h-8 cursor-pointer items-center rounded-md px-3 hover:bg-state-base-hover"
       onClick={() => onClick(value)}
     >
       {Icon ? <Icon className="h-4 w-4 text-text-secondary" /> : <InputVarTypeIcon type={type!} className="h-4 w-4 text-text-secondary" />}
@@ -60,7 +60,7 @@ const SelectVarType: FC<Props> = ({
         <OperationBtn type="add" />
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent style={{ zIndex: 1000 }}>
-        <div className="min-w-[192px] rounded-lg border border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
+        <div className="min-w-[192px] rounded-md border border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
           <div className="p-1">
             <SelectItem type={InputVarType.textInput} value="string" text={t('variableConfig.string', { ns: 'appDebug' })} onClick={handleChange}></SelectItem>
             <SelectItem type={InputVarType.paragraph} value="paragraph" text={t('variableConfig.paragraph', { ns: 'appDebug' })} onClick={handleChange}></SelectItem>

@@ -145,7 +145,7 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
         </Button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[60]">
-        <div className="w-[360px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg pt-4 shadow-xl">
+        <div className="w-[360px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg pt-4 shadow-xl">
           <div className="px-6 py-1">
             <div className="flex h-8 items-center text-[13px] font-medium text-text-primary">
               {t('modelProvider.systemReasoningModel.key', { ns: 'common' })}

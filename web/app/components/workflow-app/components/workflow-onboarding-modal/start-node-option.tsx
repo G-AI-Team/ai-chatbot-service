@@ -21,7 +21,7 @@ const StartNodeOption: FC<StartNodeOptionProps> = ({
     <div
       onClick={onClick}
       className={cn(
-        'hover:border-components-panel-border-active flex h-40 w-[280px] cursor-pointer flex-col gap-2 rounded-xl border-[0.5px] border-components-option-card-option-border bg-components-panel-on-panel-item-bg p-4 shadow-sm transition-all hover:shadow-md',
+        'hover:border-components-panel-border-active flex h-40 w-[280px] cursor-pointer flex-col gap-2 rounded-md border-[0.5px] border-components-option-card-option-border bg-components-panel-on-panel-item-bg p-4 shadow-sm transition-all hover:shadow-md',
       )}
     >
       {/* Icon */}

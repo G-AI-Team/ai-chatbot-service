@@ -71,12 +71,12 @@ const ConditionOperator = ({
         </Button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-10">
-        <div className="rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
+        <div className="rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
           {
             options.map(option => (
               <div
                 key={option.value}
-                className="flex h-7 cursor-pointer items-center rounded-lg px-3 py-1.5 text-[13px] font-medium text-text-secondary hover:bg-state-base-hover"
+                className="flex h-7 cursor-pointer items-center rounded-md px-3 py-1.5 text-[13px] font-medium text-text-secondary hover:bg-state-base-hover"
                 onClick={() => {
                   onSelect(option.value)
                   setOpen(false)

@@ -61,12 +61,12 @@ const Sort: FC<Props> = ({
             </div>
           </PortalToFollowElemTrigger>
           <PortalToFollowElemContent className="z-[1002]">
-            <div className="relative w-[240px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg">
+            <div className="relative w-[240px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg">
               <div className="max-h-72 overflow-auto p-1">
                 {items.map(item => (
                   <div
                     key={item.value}
-                    className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-[6px] pl-3 hover:bg-state-base-hover"
+                    className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-[6px] pl-3 hover:bg-state-base-hover"
                     onClick={() => {
                       onSelect(`${order}${item.value}`)
                       setOpen(false)

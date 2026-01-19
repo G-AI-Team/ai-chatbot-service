@@ -81,7 +81,7 @@ const PopupItem: FC<PopupItemProps> = ({
           <Tooltip
             key={modelItem.model}
             position="right"
-            popupClassName="p-3 !w-[206px] bg-components-panel-bg-blur backdrop-blur-sm border-[0.5px] border-components-panel-border rounded-xl"
+            popupClassName="p-3 !w-[206px] bg-components-panel-bg-blur backdrop-blur-sm border-[0.5px] border-components-panel-border rounded-md"
             popupContent={(
               <div className="flex flex-col gap-1">
                 <div className="flex flex-col items-start gap-2">
@@ -133,7 +133,7 @@ const PopupItem: FC<PopupItemProps> = ({
           >
             <div
               key={modelItem.model}
-              className={cn('group relative flex h-8 items-center gap-1 rounded-lg px-3 py-1.5', modelItem.status === ModelStatusEnum.active ? 'cursor-pointer hover:bg-state-base-hover' : 'cursor-not-allowed hover:bg-state-base-hover-alt')}
+              className={cn('group relative flex h-8 items-center gap-1 rounded-md px-3 py-1.5', modelItem.status === ModelStatusEnum.active ? 'cursor-pointer hover:bg-state-base-hover' : 'cursor-not-allowed hover:bg-state-base-hover-alt')}
               onClick={() => handleSelect(model.provider, modelItem)}
             >
               <div className="flex items-center gap-2">

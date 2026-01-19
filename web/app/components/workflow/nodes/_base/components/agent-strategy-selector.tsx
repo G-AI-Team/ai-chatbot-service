@@ -155,7 +155,7 @@ export const AgentStrategySelector = memo((props: AgentStrategySelectorProps) =>
     <PortalToFollowElem open={open} onOpenChange={setOpen} placement="bottom">
       <PortalToFollowElemTrigger className="w-full">
         <div
-          className="flex h-8 w-full select-none items-center gap-0.5 rounded-lg bg-components-input-bg-normal p-1 hover:bg-state-base-hover-alt"
+          className="flex h-8 w-full select-none items-center gap-0.5 rounded-md bg-components-input-bg-normal p-1 hover:bg-state-base-hover-alt"
           onClick={() => setOpen(o => !o)}
         >
           { }
@@ -185,18 +185,18 @@ export const AgentStrategySelector = memo((props: AgentStrategySelectorProps) =>
             )}
             {showPluginNotInstalledWarn
               ? (
-                  <NotFoundWarn
-                    title={t('nodes.agent.pluginNotInstalled', { ns: 'workflow' })}
-                    description={t('nodes.agent.pluginNotInstalledDesc', { ns: 'workflow' })}
-                  />
-                )
+                <NotFoundWarn
+                  title={t('nodes.agent.pluginNotInstalled', { ns: 'workflow' })}
+                  description={t('nodes.agent.pluginNotInstalledDesc', { ns: 'workflow' })}
+                />
+              )
               : showUnsupportedStrategy
                 ? (
-                    <NotFoundWarn
-                      title={t('nodes.agent.unsupportedStrategy', { ns: 'workflow' })}
-                      description={t('nodes.agent.strategyNotFoundDesc', { ns: 'workflow' })}
-                    />
-                  )
+                  <NotFoundWarn
+                    title={t('nodes.agent.unsupportedStrategy', { ns: 'workflow' })}
+                    description={t('nodes.agent.strategyNotFoundDesc', { ns: 'workflow' })}
+                  />
+                )
                 : <RiArrowDownSLine className="size-4 text-text-tertiary" />}
             {showSwitchVersion && (
               <SwitchPluginVersion

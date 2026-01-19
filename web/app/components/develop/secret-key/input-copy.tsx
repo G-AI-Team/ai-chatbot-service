@@ -32,7 +32,7 @@ const InputCopy = ({
   }, [isCopied])
 
   return (
-    <div className={`flex items-center rounded-lg bg-components-input-bg-normal py-2 hover:bg-state-base-hover ${className}`}>
+    <div className={`flex items-center rounded-md bg-components-input-bg-normal py-2 hover:bg-state-base-hover ${className}`}>
       <div className="flex h-5 grow items-center">
         {children}
         <div className="relative h-full grow text-[13px]">

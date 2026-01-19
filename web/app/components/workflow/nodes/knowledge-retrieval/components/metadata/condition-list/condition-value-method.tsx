@@ -41,7 +41,7 @@ const ConditionValueMethod = ({
         </Button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[1000]">
-        <div className="w-[112px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
+        <div className="w-[112px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
           {
             options.map(option => (
               <div

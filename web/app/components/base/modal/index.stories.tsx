@@ -91,7 +91,7 @@ const ModalDemo = (props: React.ComponentProps<typeof Modal>) => {
           <p>
             Provide a descriptive name for this key so collaborators know its purpose. Restrict usage with scopes to limit access.
           </p>
-          <div className="rounded-lg border border-dashed border-gray-200 bg-gray-50 p-4 text-xs text-gray-500">
+          <div className="rounded-md border border-dashed border-gray-200 bg-gray-50 p-4 text-xs text-gray-500">
             Form fields and validation messaging would appear here. This placeholder keeps the story lightweight.
           </div>
         </div>

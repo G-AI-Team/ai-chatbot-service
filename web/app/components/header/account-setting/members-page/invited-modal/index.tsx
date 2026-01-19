@@ -33,7 +33,7 @@ const InvitedModal = ({
       <Modal isShow onClose={noop} className={s.modal}>
         <div className="mb-3 flex justify-between">
           <div className="
-            flex h-12 w-12 items-center justify-center rounded-xl
+            flex h-12 w-12 items-center justify-center rounded-md
             border-[0.5px] border-components-panel-border bg-background-section-burn
             shadow-xl
           "

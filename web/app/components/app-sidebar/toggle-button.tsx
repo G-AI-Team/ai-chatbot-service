@@ -50,7 +50,7 @@ const ToggleButton = ({
   return (
     <Tooltip
       popupContent={<TooltipContent expand={expand} />}
-      popupClassName="p-1.5 rounded-lg"
+      popupClassName="p-1.5 rounded-md"
       position="right"
     >
       <Button

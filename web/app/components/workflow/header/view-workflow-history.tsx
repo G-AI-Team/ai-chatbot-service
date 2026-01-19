@@ -98,9 +98,9 @@ const ViewWorkflowHistory = () => {
           ...state,
           workflowHistoryEventMeta: state.workflowHistoryEventMeta
             ? {
-                ...state.workflowHistoryEventMeta,
-                nodeTitle: state.workflowHistoryEventMeta.nodeTitle || targetTitle,
-              }
+              ...state.workflowHistoryEventMeta,
+              nodeTitle: state.workflowHistoryEventMeta.nodeTitle || targetTitle,
+            }
             : undefined,
         },
       }
@@ -158,7 +158,7 @@ const ViewWorkflowHistory = () => {
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[12]">
           <div
-            className="ml-2 flex min-w-[240px] max-w-[360px] flex-col overflow-y-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-xl backdrop-blur-[5px]"
+            className="ml-2 flex min-w-[240px] max-w-[360px] flex-col overflow-y-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-xl backdrop-blur-[5px]"
           >
             <div className="sticky top-0 flex items-center justify-between px-4 pt-3">
               <div className="system-mg-regular grow text-text-secondary">{t('changeHistory.title', { ns: 'workflow' })}</div>
@@ -195,7 +195,7 @@ const ViewWorkflowHistory = () => {
                     <div
                       key={item?.index}
                       className={cn(
-                        'mb-0.5 flex cursor-pointer rounded-lg px-2 py-[7px] text-text-secondary hover:bg-state-base-hover',
+                        'mb-0.5 flex cursor-pointer rounded-md px-2 py-[7px] text-text-secondary hover:bg-state-base-hover',
                         item?.index === currentHistoryStateIndex && 'bg-state-base-hover',
                       )}
                       onClick={() => {
@@ -228,7 +228,7 @@ const ViewWorkflowHistory = () => {
                     <div
                       key={item?.index}
                       className={cn(
-                        'mb-0.5 flex cursor-pointer rounded-lg px-2 py-[7px] hover:bg-state-base-hover',
+                        'mb-0.5 flex cursor-pointer rounded-md px-2 py-[7px] hover:bg-state-base-hover',
                         item?.index === calculateChangeList.statesCount - 1 && 'bg-state-base-hover',
                       )}
                       onClick={() => {
@@ -263,7 +263,7 @@ const ViewWorkflowHistory = () => {
                   <Divider className="m-0" />
                   <div
                     className={cn(
-                      'my-0.5 flex cursor-pointer rounded-lg px-2 py-[7px] text-text-secondary',
+                      'my-0.5 flex cursor-pointer rounded-md px-2 py-[7px] text-text-secondary',
                       'hover:bg-state-base-hover',
                     )}
                     onClick={() => {

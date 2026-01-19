@@ -181,7 +181,7 @@ export const GeneralChunkingOptions: FC<GeneralChunkingOptionsProps> = ({
                     style={{
                       background: 'linear-gradient(92deg, rgba(247, 144, 9, 0.1) 0%, rgba(255, 255, 255, 0.00) 100%)',
                     }}
-                    className="mt-2 flex h-10 items-center gap-2 rounded-xl border border-components-panel-border px-3 text-xs shadow-xs backdrop-blur-[5px]"
+                    className="mt-2 flex h-10 items-center gap-2 rounded-md border border-components-panel-border px-3 text-xs shadow-xs backdrop-blur-[5px]"
                   >
                     <RiAlertFill className="size-4 text-text-warning-secondary" />
                     <span className="system-xs-medium text-text-primary">

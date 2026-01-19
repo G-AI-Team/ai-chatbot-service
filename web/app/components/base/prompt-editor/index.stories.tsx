@@ -73,7 +73,7 @@ const PromptEditorDemo = (args: any) => {
 
   return (
     <div style={{ width: '600px' }}>
-      <div className="min-h-[120px] rounded-lg border border-gray-300 p-4">
+      <div className="min-h-[120px] rounded-md border border-gray-300 p-4">
         <PromptEditorMock
           {...args}
           value={value}
@@ -84,7 +84,7 @@ const PromptEditorDemo = (args: any) => {
         />
       </div>
       {value && (
-        <div className="mt-4 rounded-lg bg-gray-50 p-3">
+        <div className="mt-4 rounded-md bg-gray-50 p-3">
           <div className="mb-2 text-xs font-medium text-gray-600">Current Value:</div>
           <div className="whitespace-pre-wrap font-mono text-sm text-gray-800">
             {value}
@@ -181,7 +181,7 @@ const MultipleEditorsDemo = () => {
     <div style={{ width: '700px' }} className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
         <label className="text-sm font-medium text-gray-700">System Prompt</label>
-        <div className="min-h-[100px] rounded-lg border border-gray-300 bg-blue-50 p-4">
+        <div className="min-h-[100px] rounded-md border border-gray-300 bg-blue-50 p-4">
           <PromptEditorMock
             value={systemPrompt}
             onChange={setSystemPrompt}
@@ -192,7 +192,7 @@ const MultipleEditorsDemo = () => {
       </div>
       <div className="flex flex-col gap-2">
         <label className="text-sm font-medium text-gray-700">User Prompt</label>
-        <div className="min-h-[100px] rounded-lg border border-gray-300 p-4">
+        <div className="min-h-[100px] rounded-md border border-gray-300 p-4">
           <PromptEditorMock
             value={userPrompt}
             onChange={setUserPrompt}
@@ -202,7 +202,7 @@ const MultipleEditorsDemo = () => {
         </div>
       </div>
       {(systemPrompt || userPrompt) && (
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="rounded-md bg-gray-50 p-4">
           <div className="mb-2 text-xs font-medium text-gray-600">Combined Output:</div>
           <div className="whitespace-pre-wrap text-sm text-gray-800">
             {systemPrompt && (
@@ -244,12 +244,12 @@ Best regards,
 The Team`)
 
   return (
-    <div style={{ width: '700px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '700px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Email Template Editor</h3>
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-gray-700">Subject Line</label>
-          <div className="rounded-lg border border-gray-300 p-3">
+          <div className="rounded-md border border-gray-300 p-3">
             <PromptEditorMock
               value={subject}
               onChange={setSubject}
@@ -260,7 +260,7 @@ The Team`)
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium text-gray-700">Email Body</label>
-          <div className="min-h-[200px] rounded-lg border border-gray-300 p-4">
+          <div className="min-h-[200px] rounded-md border border-gray-300 p-4">
             <PromptEditorMock
               value={body}
               onChange={setBody}
@@ -294,7 +294,7 @@ const ChatPromptBuilderDemo = () => {
   }
 
   return (
-    <div style={{ width: '700px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '700px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-semibold">Chat Prompt Builder</h3>
         <span className="text-xs text-gray-500">
@@ -303,14 +303,14 @@ const ChatPromptBuilderDemo = () => {
           characters
         </span>
       </div>
-      <div className="min-h-[200px] rounded-lg border border-gray-300 bg-gray-50 p-4">
+      <div className="min-h-[200px] rounded-md border border-gray-300 bg-gray-50 p-4">
         <PromptEditorMock
           value={prompt}
           onChange={handleChange}
           placeholder="Design your chat prompt... Use / for templates"
         />
       </div>
-      <div className="mt-4 rounded-lg bg-blue-50 p-3 text-sm text-blue-800">
+      <div className="mt-4 rounded-md bg-blue-50 p-3 text-sm text-blue-800">
         💡
         {' '}
         <strong>Tip:</strong>
@@ -339,9 +339,9 @@ const APIInstructionEditorDemo = () => {
 4. Return the formatted response`)
 
   return (
-    <div style={{ width: '700px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '700px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">API Processing Instructions</h3>
-      <div className="min-h-[180px] rounded-lg border-2 border-indigo-300 bg-indigo-50 p-4">
+      <div className="min-h-[180px] rounded-md border-2 border-indigo-300 bg-indigo-50 p-4">
         <PromptEditorMock
           value={instructions}
           onChange={setInstructions}
@@ -349,10 +349,10 @@ const APIInstructionEditorDemo = () => {
         />
       </div>
       <div className="mt-4 flex items-center gap-2">
-        <button className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700">
+        <button className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700">
           Save Instructions
         </button>
-        <button className="rounded-lg bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-300">
+        <button className="rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-300">
           Test
         </button>
       </div>

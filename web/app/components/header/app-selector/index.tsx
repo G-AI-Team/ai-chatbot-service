@@ -24,7 +24,7 @@ export default function AppSelector({ appItems, curApp }: IAppSelectorProps) {
 
   const itemClassName = `
     flex items-center w-full h-10 px-3 text-gray-700 text-[14px]
-    rounded-lg font-normal hover:bg-gray-100 cursor-pointer
+    rounded-md font-normal hover:bg-gray-100 cursor-pointer
   `
 
   return (
@@ -57,7 +57,7 @@ export default function AppSelector({ appItems, curApp }: IAppSelectorProps) {
           <MenuItems
             className="
               absolute -left-11 right-0 mt-1.5 w-60 max-w-80
-              origin-top-right divide-y divide-gray-100 rounded-lg bg-white
+              origin-top-right divide-y divide-gray-100 rounded-md bg-white
               shadow-lg
             "
           >
@@ -88,7 +88,7 @@ export default function AppSelector({ appItems, curApp }: IAppSelectorProps) {
               <MenuItem>
                 <div className="p-1" onClick={() => setShowNewAppDialog(true)}>
                   <div
-                    className="flex h-12 cursor-pointer items-center rounded-lg hover:bg-gray-100"
+                    className="flex h-12 cursor-pointer items-center rounded-md hover:bg-gray-100"
                   >
                     <div
                       className="

@@ -116,7 +116,7 @@ const Panel = (props: PanelProps) => {
   })
 
   return (
-    <div className="relative w-full rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg-blur">
+    <div className="relative w-full rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur">
       <div className="p-2 pb-1">
         <Input
           showLeftIcon
@@ -130,7 +130,7 @@ const Panel = (props: PanelProps) => {
       {keywords && notExisted && (
         <div className="p-1">
           <div
-            className="flex cursor-pointer items-center gap-x-1 rounded-lg px-2 py-1.5 hover:bg-state-base-hover"
+            className="flex cursor-pointer items-center gap-x-1 rounded-md px-2 py-1.5 hover:bg-state-base-hover"
             onClick={createNewTag}
           >
             <RiAddLine className="h-4 w-4 text-text-tertiary" />
@@ -149,7 +149,7 @@ const Panel = (props: PanelProps) => {
           {filteredSelectedTagList.map(tag => (
             <div
               key={tag.id}
-              className="flex cursor-pointer items-center gap-x-1 rounded-lg px-2 py-1.5 hover:bg-state-base-hover"
+              className="flex cursor-pointer items-center gap-x-1 rounded-md px-2 py-1.5 hover:bg-state-base-hover"
               onClick={() => selectTag(tag)}
             >
               <Checkbox
@@ -168,7 +168,7 @@ const Panel = (props: PanelProps) => {
           {filteredTagList.map(tag => (
             <div
               key={tag.id}
-              className="flex cursor-pointer items-center gap-x-1 rounded-lg px-2 py-1.5 hover:bg-state-base-hover"
+              className="flex cursor-pointer items-center gap-x-1 rounded-md px-2 py-1.5 hover:bg-state-base-hover"
               onClick={() => selectTag(tag)}
             >
               <Checkbox
@@ -197,7 +197,7 @@ const Panel = (props: PanelProps) => {
       <Divider type="horizontal" className="my-0 h-px bg-divider-subtle" />
       <div className="p-1">
         <div
-          className="flex cursor-pointer items-center gap-x-1 rounded-lg px-2 py-1.5 hover:bg-state-base-hover"
+          className="flex cursor-pointer items-center gap-x-1 rounded-md px-2 py-1.5 hover:bg-state-base-hover"
           onClick={() => setShowTagManagementModal(true)}
         >
           <RiPriceTag3Line className="h-4 w-4 text-text-tertiary" />

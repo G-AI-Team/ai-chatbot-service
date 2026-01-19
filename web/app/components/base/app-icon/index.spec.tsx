@@ -72,7 +72,7 @@ describe('AppIcon', () => {
     expect(tinyContainer.firstChild).toHaveClass('w-6 h-6 rounded-md')
 
     const { container: smallContainer } = render(<AppIcon size="small" />)
-    expect(smallContainer.firstChild).toHaveClass('w-8 h-8 rounded-lg')
+    expect(smallContainer.firstChild).toHaveClass('w-8 h-8 rounded-md')
 
     const { container: mediumContainer } = render(<AppIcon size="medium" />)
     expect(mediumContainer.firstChild).toHaveClass('w-9 h-9 rounded-[10px]')
@@ -81,7 +81,7 @@ describe('AppIcon', () => {
     expect(largeContainer.firstChild).toHaveClass('w-10 h-10 rounded-[10px]')
 
     const { container: xlContainer } = render(<AppIcon size="xl" />)
-    expect(xlContainer.firstChild).toHaveClass('w-12 h-12 rounded-xl')
+    expect(xlContainer.firstChild).toHaveClass('w-12 h-12 rounded-md')
 
     const { container: xxlContainer } = render(<AppIcon size="xxl" />)
     expect(xxlContainer.firstChild).toHaveClass('w-14 h-14 rounded-2xl')

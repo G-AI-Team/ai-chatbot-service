@@ -24,7 +24,7 @@ const AudioPreview: FC<AudioPreviewProps> = ({
         </audio>
       </div>
       <div
-        className="absolute right-6 top-6 flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg bg-white/[0.08] backdrop-blur-[2px]"
+        className="absolute right-6 top-6 flex h-8 w-8 cursor-pointer items-center justify-center rounded-md bg-white/[0.08] backdrop-blur-[2px]"
         onClick={onCancel}
       >
         <RiCloseLine className="h-4 w-4 text-gray-500" />

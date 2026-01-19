@@ -85,7 +85,7 @@ const Configure = ({
           </Button>
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[61]">
-          <div className="w-[240px] space-y-1.5 rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 shadow-lg">
+          <div className="w-[240px] space-y-1.5 rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 shadow-lg">
             {
               !!canOAuth && (
                 <AddOAuthButton

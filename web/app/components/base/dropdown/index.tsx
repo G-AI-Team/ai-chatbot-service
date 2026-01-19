@@ -54,20 +54,20 @@ const Dropdown: FC<DropdownProps> = ({
           renderTrigger
             ? renderTrigger(open)
             : (
-                <ActionButton
-                  {...triggerProps}
-                  className={cn(
-                    open && 'bg-divider-regular',
-                    triggerProps?.className,
-                  )}
-                >
-                  <RiMoreFill className="h-4 w-4 text-text-tertiary" />
-                </ActionButton>
-              )
+              <ActionButton
+                {...triggerProps}
+                className={cn(
+                  open && 'bg-divider-regular',
+                  triggerProps?.className,
+                )}
+              >
+                <RiMoreFill className="h-4 w-4 text-text-tertiary" />
+              </ActionButton>
+            )
         }
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className={popupClassName}>
-        <div className="rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg text-sm text-text-secondary shadow-lg">
+        <div className="rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg text-sm text-text-secondary shadow-lg">
           {
             !!items.length && (
               <div className="p-1">
@@ -76,7 +76,7 @@ const Dropdown: FC<DropdownProps> = ({
                     <div
                       key={item.value}
                       className={cn(
-                        'flex h-8 cursor-pointer items-center rounded-lg px-3 hover:bg-components-panel-on-panel-item-bg-hover',
+                        'flex h-8 cursor-pointer items-center rounded-md px-3 hover:bg-components-panel-on-panel-item-bg-hover',
                         itemClassName,
                       )}
                       onClick={() => handleSelect(item)}
@@ -101,7 +101,7 @@ const Dropdown: FC<DropdownProps> = ({
                     <div
                       key={item.value}
                       className={cn(
-                        'flex h-8 cursor-pointer items-center rounded-lg px-3 hover:bg-components-panel-on-panel-item-bg-hover',
+                        'flex h-8 cursor-pointer items-center rounded-md px-3 hover:bg-components-panel-on-panel-item-bg-hover',
                         secondItemClassName,
                       )}
                       onClick={() => handleSelect(item)}

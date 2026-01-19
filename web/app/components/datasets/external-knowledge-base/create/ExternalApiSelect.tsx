@@ -60,33 +60,33 @@ const ExternalApiSelect: React.FC<ExternalApiSelectProps> = ({ items, value, onS
   return (
     <div className="relative w-full">
       <div
-        className={`flex cursor-pointer items-center justify-between gap-0.5 self-stretch rounded-lg bg-components-input-bg-normal px-2
+        className={`flex cursor-pointer items-center justify-between gap-0.5 self-stretch rounded-md bg-components-input-bg-normal px-2
         py-1 hover:bg-state-base-hover-alt ${isOpen && 'bg-state-base-hover-alt'}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {selectedItem
           ? (
-              <div className="flex items-center gap-2 self-stretch rounded-lg p-1">
-                <ApiConnectionMod className="h-4 w-4 text-text-secondary" />
-                <div className="flex grow items-center">
-                  <span className="system-sm-regular overflow-hidden text-ellipsis text-components-input-text-filled">{selectedItem.name}</span>
-                </div>
+            <div className="flex items-center gap-2 self-stretch rounded-md p-1">
+              <ApiConnectionMod className="h-4 w-4 text-text-secondary" />
+              <div className="flex grow items-center">
+                <span className="system-sm-regular overflow-hidden text-ellipsis text-components-input-text-filled">{selectedItem.name}</span>
               </div>
-            )
+            </div>
+          )
           : (
-              <span className="system-sm-regular text-components-input-text-placeholder">{t('selectExternalKnowledgeAPI.placeholder', { ns: 'dataset' })}</span>
-            )}
+            <span className="system-sm-regular text-components-input-text-placeholder">{t('selectExternalKnowledgeAPI.placeholder', { ns: 'dataset' })}</span>
+          )}
         <RiArrowDownSLine className={`h-4 w-4 text-text-quaternary transition-transform ${isOpen ? 'text-text-secondary' : ''}`} />
       </div>
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full rounded-xl border bg-components-panel-bg-blur shadow-lg">
+        <div className="absolute z-10 mt-1 w-full rounded-md border bg-components-panel-bg-blur shadow-lg">
           {items.map(item => (
             <div
               key={item.value}
               className="flex cursor-pointer items-center p-1"
               onClick={() => handleSelect(item)}
             >
-              <div className="flex w-full items-center gap-2 self-stretch rounded-lg p-2 hover:bg-state-base-hover">
+              <div className="flex w-full items-center gap-2 self-stretch rounded-md p-2 hover:bg-state-base-hover">
                 <ApiConnectionMod className="h-4 w-4 text-text-secondary" />
                 <span className="system-sm-medium grow overflow-hidden text-ellipsis text-text-secondary">{item.name}</span>
                 <span className="system-xs-regular overflow-hidden text-ellipsis text-right text-text-tertiary">{item.url}</span>
@@ -95,7 +95,7 @@ const ExternalApiSelect: React.FC<ExternalApiSelectProps> = ({ items, value, onS
           ))}
           <div className="flex flex-col items-start self-stretch p-1">
             <div
-              className="flex cursor-pointer items-center gap-2 self-stretch rounded-lg p-2 hover:bg-state-base-hover"
+              className="flex cursor-pointer items-center gap-2 self-stretch rounded-md p-2 hover:bg-state-base-hover"
               onClick={handleAddNewAPI}
             >
               <RiAddLine className="h-4 w-4 text-text-secondary" />

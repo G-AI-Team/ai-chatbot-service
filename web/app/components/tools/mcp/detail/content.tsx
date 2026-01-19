@@ -151,7 +151,7 @@ const MCPDetailContent: FC<Props> = ({
     <>
       <div className={cn('shrink-0 border-b border-divider-subtle bg-components-panel-bg p-4 pb-3')}>
         <div className="flex">
-          <div className="shrink-0 overflow-hidden rounded-xl border border-components-panel-border-subtle">
+          <div className="shrink-0 overflow-hidden rounded-md border border-components-panel-border-subtle">
             <Icon src={detail.icon} />
           </div>
           <div className="ml-3 w-0 grow">

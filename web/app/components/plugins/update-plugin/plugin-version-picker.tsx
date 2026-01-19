@@ -90,7 +90,7 @@ const PluginVersionPicker: FC<Props> = ({
       </PortalToFollowElemTrigger>
 
       <PortalToFollowElemContent className="z-[1000]">
-        <div className="relative w-[209px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-sm">
+        <div className="relative w-[209px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-sm">
           <div className="system-xs-medium-uppercase px-3 pb-0.5 pt-1 text-text-tertiary">
             {t('detailPanel.switchVersion', { ns: 'plugin' })}
           </div>
@@ -99,7 +99,7 @@ const PluginVersionPicker: FC<Props> = ({
               <div
                 key={version.unique_identifier}
                 className={cn(
-                  'flex h-7 cursor-pointer items-center gap-1 rounded-lg px-3 py-1 hover:bg-state-base-hover',
+                  'flex h-7 cursor-pointer items-center gap-1 rounded-md px-3 py-1 hover:bg-state-base-hover',
                   currentVersion === version.version && 'cursor-default opacity-30 hover:bg-transparent',
                 )}
                 onClick={() => handleSelect({

@@ -27,7 +27,7 @@ const storyBodyElement: React.JSX.Element = (
     <p>
       DrawerPlus allows rich content with sticky header/footer and responsive masking on mobile. Great for editing flows or showing execution logs.
     </p>
-    <div className="rounded-lg border border-divider-subtle bg-components-panel-bg p-3 text-xs">
+    <div className="rounded-md border border-divider-subtle bg-components-panel-bg p-3 text-xs">
       Body content scrolls if it exceeds the allotted height.
     </div>
   </div>

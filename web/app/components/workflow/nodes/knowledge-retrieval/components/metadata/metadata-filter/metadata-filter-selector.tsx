@@ -68,12 +68,12 @@ const MetadataFilterSelector = ({
         </Button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-10">
-        <div className="w-[280px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
+        <div className="w-[280px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
           {
             options.map(option => (
               <div
                 key={option.key}
-                className="flex cursor-pointer rounded-lg p-2 pr-3 hover:bg-state-base-hover"
+                className="flex cursor-pointer rounded-md p-2 pr-3 hover:bg-state-base-hover"
                 onClick={() => {
                   onSelect(option.key)
                   setOpen(false)

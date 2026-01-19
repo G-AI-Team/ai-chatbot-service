@@ -92,7 +92,7 @@ const DatasetSidebarDropdown = ({
             </div>
           </PortalToFollowElemTrigger>
           <PortalToFollowElemContent className="z-50">
-            <div className="relative w-[216px] rounded-xl border-[0.5px] border-components-panel-border bg-background-default-subtle shadow-lg">
+            <div className="relative w-[216px] rounded-md border-[0.5px] border-components-panel-border bg-background-default-subtle shadow-lg">
               <Effect className="-left-5 top-[-22px] opacity-15" />
               <div className="flex flex-col gap-y-2 p-4">
                 <div className="flex items-center justify-between">

@@ -51,26 +51,26 @@ const ApiBasedExtensionSelector: FC<ApiBasedExtensionSelectorProps> = ({
         {
           currentItem
             ? (
-                <div className="flex h-9 cursor-pointer items-center justify-between rounded-lg bg-components-input-bg-normal pl-3 pr-2.5">
-                  <div className="text-sm text-text-primary">{currentItem.name}</div>
-                  <div className="flex items-center">
-                    <div className="mr-1.5 w-[270px] truncate text-right text-xs text-text-quaternary">
-                      {currentItem.api_endpoint}
-                    </div>
-                    <RiArrowDownSLine className={`h-4 w-4 text-text-secondary ${!open && 'opacity-60'}`} />
+              <div className="flex h-9 cursor-pointer items-center justify-between rounded-md bg-components-input-bg-normal pl-3 pr-2.5">
+                <div className="text-sm text-text-primary">{currentItem.name}</div>
+                <div className="flex items-center">
+                  <div className="mr-1.5 w-[270px] truncate text-right text-xs text-text-quaternary">
+                    {currentItem.api_endpoint}
                   </div>
-                </div>
-              )
-            : (
-                <div className="flex h-9 cursor-pointer items-center justify-between rounded-lg bg-components-input-bg-normal pl-3 pr-2.5 text-sm text-text-quaternary">
-                  {t('apiBasedExtension.selector.placeholder', { ns: 'common' })}
                   <RiArrowDownSLine className={`h-4 w-4 text-text-secondary ${!open && 'opacity-60'}`} />
                 </div>
-              )
+              </div>
+            )
+            : (
+              <div className="flex h-9 cursor-pointer items-center justify-between rounded-md bg-components-input-bg-normal pl-3 pr-2.5 text-sm text-text-quaternary">
+                {t('apiBasedExtension.selector.placeholder', { ns: 'common' })}
+                <RiArrowDownSLine className={`h-4 w-4 text-text-secondary ${!open && 'opacity-60'}`} />
+              </div>
+            )
         }
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[102] w-[calc(100%-32px)] max-w-[576px]">
-        <div className="z-10 w-full rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg">
+        <div className="z-10 w-full rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg">
           <div className="p-1">
             <div className="flex items-center justify-between px-3 pb-1 pt-2">
               <div className="text-xs font-medium text-text-tertiary">

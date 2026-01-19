@@ -23,7 +23,7 @@ const DisplayToggle: FC<DisplayToggleProps> = ({
     >
       <button
         type="button"
-        className="flex items-center justify-center rounded-lg border-[0.5px] border-components-button-secondary-border
+        className="flex items-center justify-center rounded-md border-[0.5px] border-components-button-secondary-border
         bg-components-button-secondary-bg p-2 shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]"
         onClick={toggleCollapsed}
       >

@@ -12,7 +12,7 @@ const VectorSpaceFull: FC = () => {
   const { t } = useTranslation()
 
   return (
-    <GridMask wrapperClassName="border border-gray-200 rounded-xl" canvasClassName="rounded-xl" gradientClassName="rounded-xl">
+    <GridMask wrapperClassName="border border-gray-200 rounded-md" canvasClassName="rounded-md" gradientClassName="rounded-md">
       <div className="px-6 py-5">
         <div className="flex items-center justify-between">
           <div className={cn(s.textGradient, 'text-base font-semibold leading-[24px]')}>

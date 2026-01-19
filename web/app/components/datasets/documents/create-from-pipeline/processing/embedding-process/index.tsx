@@ -147,8 +147,8 @@ const EmbeddingProcess = ({
         </div>
         {
           enableBilling && plan.type !== Plan.team && (
-            <div className="flex h-[52px] items-center gap-x-2 rounded-xl border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg p-2.5 pl-3 shadow-xs shadow-shadow-shadow-3">
-              <div className="flex shrink-0 items-center justify-center rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 shadow-md shadow-shadow-shadow-5">
+            <div className="flex h-[52px] items-center gap-x-2 rounded-md border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg p-2.5 pl-3 shadow-xs shadow-shadow-shadow-3">
+              <div className="flex shrink-0 items-center justify-center rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 shadow-md shadow-shadow-shadow-5">
                 <RiAedFill className="size-4 text-text-primary-on-surface" />
               </div>
               <div className="system-md-medium grow text-text-primary">
@@ -204,7 +204,7 @@ const EmbeddingProcess = ({
                 )}
                 {indexingStatusDetail.indexing_status === 'error' && (
                   <Tooltip
-                    popupClassName="px-4 py-[14px] max-w-60 body-xs-regular text-text-secondary border-[0.5px] border-components-panel-border rounded-xl"
+                    popupClassName="px-4 py-[14px] max-w-60 body-xs-regular text-text-secondary border-[0.5px] border-components-panel-border rounded-md"
                     offset={4}
                     popupContent={indexingStatusDetail.error}
                   >

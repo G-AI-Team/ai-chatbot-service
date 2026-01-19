@@ -51,7 +51,7 @@ const SortDropdown = () => {
       onOpenChange={setOpen}
     >
       <PortalToFollowElemTrigger onClick={() => setOpen(v => !v)}>
-        <div className="flex h-8 cursor-pointer items-center rounded-lg bg-state-base-hover-alt px-2 pr-3">
+        <div className="flex h-8 cursor-pointer items-center rounded-md bg-state-base-hover-alt px-2 pr-3">
           <span className="system-sm-regular mr-1 text-text-secondary">
             {t('marketplace.sortBy', { ns: 'plugin' })}
           </span>
@@ -62,12 +62,12 @@ const SortDropdown = () => {
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent>
-        <div className="rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-sm">
+        <div className="rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-sm">
           {
             options.map(option => (
               <div
                 key={`${option.value}-${option.order}`}
-                className="system-md-regular flex h-8 cursor-pointer items-center justify-between rounded-lg px-3 pr-2 text-text-primary hover:bg-components-panel-on-panel-item-bg-hover"
+                className="system-md-regular flex h-8 cursor-pointer items-center justify-between rounded-md px-3 pr-2 text-text-primary hover:bg-components-panel-on-panel-item-bg-hover"
                 onClick={() => handleSortChange({ sortBy: option.value, sortOrder: option.order })}
               >
                 {option.text}

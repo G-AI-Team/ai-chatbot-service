@@ -35,21 +35,21 @@ const ConfirmAddVar: FC<IConfirmAddVarProps> = ({
   // }, mainContentRef)
   return (
     <div
-      className="absolute inset-0  flex items-center justify-center rounded-xl"
+      className="absolute inset-0  flex items-center justify-center rounded-md"
       style={{
         backgroundColor: 'rgba(35, 56, 118, 0.2)',
       }}
     >
       <div
         ref={mainContentRef}
-        className="w-[420px] rounded-xl bg-components-panel-bg p-6"
+        className="w-[420px] rounded-md bg-components-panel-bg p-6"
         style={{
           boxShadow: '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
         }}
       >
         <div className="flex items-start space-x-3">
           <div
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-components-card-border bg-components-card-bg-alt shadow-lg"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-components-card-border bg-components-card-bg-alt shadow-lg"
           >
             {VarIcon}
           </div>

@@ -493,7 +493,7 @@ const TextGeneration: FC<IMainProps> = ({
         )}
       </div>
       {isCallBatchAPI && allFailedTaskList.length > 0 && (
-        <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-xl border border-components-panel-border bg-components-panel-bg-blur p-3 shadow-lg backdrop-blur-sm">
+        <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-md border border-components-panel-border bg-components-panel-bg-blur p-3 shadow-lg backdrop-blur-sm">
           <RiErrorWarningFill className="h-4 w-4 text-text-destructive" />
           <div className="system-sm-medium text-text-secondary">{t('generation.batchFailed.info', { ns: 'share', num: allFailedTaskList.length })}</div>
           <div className="h-3.5 w-px bg-divider-regular"></div>
@@ -547,18 +547,18 @@ const TextGeneration: FC<IMainProps> = ({
               { id: 'batch', name: t('generation.tabs.batch', { ns: 'share' }) },
               ...(!isWorkflow
                 ? [{
-                    id: 'saved',
-                    name: t('generation.tabs.saved', { ns: 'share' }),
-                    isRight: true,
-                    icon: <RiBookmark3Line className="h-4 w-4" />,
-                    extra: savedMessages.length > 0
-                      ? (
-                          <Badge className="ml-1">
-                            {savedMessages.length}
-                          </Badge>
-                        )
-                      : null,
-                  }]
+                  id: 'saved',
+                  name: t('generation.tabs.saved', { ns: 'share' }),
+                  isRight: true,
+                  icon: <RiBookmark3Line className="h-4 w-4" />,
+                  extra: savedMessages.length > 0
+                    ? (
+                      <Badge className="ml-1">
+                        {savedMessages.length}
+                      </Badge>
+                    )
+                    : null,
+                }]
                 : []),
             ]}
             value={currentTab}

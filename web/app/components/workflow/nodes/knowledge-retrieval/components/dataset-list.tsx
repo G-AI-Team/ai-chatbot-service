@@ -59,22 +59,22 @@ const DatasetList: FC<Props> = ({
     <div className="space-y-1">
       {formattedList.length
         ? formattedList.map((item, index) => {
-            return (
-              <Item
-                key={index}
-                payload={item}
-                onRemove={handleRemove(index)}
-                onChange={handleChange(index)}
-                readonly={readonly}
-                editable={item.editable}
-              />
-            )
-          })
+          return (
+            <Item
+              key={index}
+              payload={item}
+              onRemove={handleRemove(index)}
+              onChange={handleChange(index)}
+              readonly={readonly}
+              editable={item.editable}
+            />
+          )
+        })
         : (
-            <div className="cursor-default select-none rounded-lg bg-background-section p-3 text-center text-xs text-text-tertiary">
-              {t('datasetConfig.knowledgeTip', { ns: 'appDebug' })}
-            </div>
-          )}
+          <div className="cursor-default select-none rounded-md bg-background-section p-3 text-center text-xs text-text-tertiary">
+            {t('datasetConfig.knowledgeTip', { ns: 'appDebug' })}
+          </div>
+        )}
 
     </div>
   )

@@ -264,104 +264,104 @@ const ModelLoadBalancingModal = ({
         {!draftConfig
           ? <Loading type="area" />
           : (
-              <>
-                <div className="py-2">
-                  <div
-                    className={cn('min-h-16 rounded-xl border bg-components-panel-bg transition-colors', draftConfig.enabled ? 'cursor-pointer border-components-panel-border' : 'cursor-default border-util-colors-blue-blue-600')}
-                    onClick={draftConfig.enabled ? () => toggleModalBalancing(false) : undefined}
-                  >
-                    <div className="flex select-none items-center gap-2 px-[15px] py-3">
-                      <div className="flex h-8 w-8 shrink-0 grow-0 items-center justify-center rounded-lg border border-components-card-border bg-components-card-bg">
-                        {Boolean(model) && (
-                          <ModelIcon className="shrink-0" provider={provider} modelName={model!.model} />
-                        )}
-                      </div>
-                      <div className="grow">
-                        <div className="text-sm text-text-secondary">
-                          {
-                            providerFormSchemaPredefined
-                              ? t('modelProvider.auth.providerManaged', { ns: 'common' })
-                              : t('modelProvider.auth.specifyModelCredential', { ns: 'common' })
-                          }
-                        </div>
-                        <div className="text-xs text-text-tertiary">
-                          {
-                            providerFormSchemaPredefined
-                              ? t('modelProvider.auth.providerManagedTip', { ns: 'common' })
-                              : t('modelProvider.auth.specifyModelCredentialTip', { ns: 'common' })
-                          }
-                        </div>
-                      </div>
-                      {
-                        !providerFormSchemaPredefined && (
-                          <SwitchCredentialInLoadBalancing
-                            provider={provider}
-                            customModelCredential={customModelCredential ?? initialCustomModelCredential}
-                            setCustomModelCredential={setCustomModelCredential}
-                            model={model}
-                            credentials={available_credentials}
-                            onUpdate={handleUpdateWhenSwitchCredential}
-                            onRemove={handleUpdateWhenSwitchCredential}
-                          />
-                        )
-                      }
+            <>
+              <div className="py-2">
+                <div
+                  className={cn('min-h-16 rounded-md border bg-components-panel-bg transition-colors', draftConfig.enabled ? 'cursor-pointer border-components-panel-border' : 'cursor-default border-util-colors-blue-blue-600')}
+                  onClick={draftConfig.enabled ? () => toggleModalBalancing(false) : undefined}
+                >
+                  <div className="flex select-none items-center gap-2 px-[15px] py-3">
+                    <div className="flex h-8 w-8 shrink-0 grow-0 items-center justify-center rounded-md border border-components-card-border bg-components-card-bg">
+                      {Boolean(model) && (
+                        <ModelIcon className="shrink-0" provider={provider} modelName={model!.model} />
+                      )}
                     </div>
-                  </div>
-                  {
-                    modelCredential && (
-                      <ModelLoadBalancingConfigs {...{
-                        draftConfig,
-                        setDraftConfig,
-                        provider,
-                        currentCustomConfigurationModelFixedFields: {
-                          __model_name: model.model,
-                          __model_type: model.model_type,
-                        },
-                        configurationMethod: model.fetch_from,
-                        className: 'mt-2',
-                        modelCredential,
-                        onUpdate: handleUpdate,
-                        onRemove: handleUpdateWhenSwitchCredential,
-                        model: {
-                          model: model.model,
-                          model_type: model.model_type,
-                        },
-                      }}
-                      />
-                    )
-                  }
-                </div>
-
-                <div className="mt-6 flex items-center justify-between gap-2">
-                  <div>
+                    <div className="grow">
+                      <div className="text-sm text-text-secondary">
+                        {
+                          providerFormSchemaPredefined
+                            ? t('modelProvider.auth.providerManaged', { ns: 'common' })
+                            : t('modelProvider.auth.specifyModelCredential', { ns: 'common' })
+                        }
+                      </div>
+                      <div className="text-xs text-text-tertiary">
+                        {
+                          providerFormSchemaPredefined
+                            ? t('modelProvider.auth.providerManagedTip', { ns: 'common' })
+                            : t('modelProvider.auth.specifyModelCredentialTip', { ns: 'common' })
+                        }
+                      </div>
+                    </div>
                     {
                       !providerFormSchemaPredefined && (
-                        <Button
-                          onClick={() => openConfirmDelete(undefined, { model: model.model, model_type: model.model_type })}
-                          className="text-components-button-destructive-secondary-text"
-                        >
-                          {t('modelProvider.auth.removeModel', { ns: 'common' })}
-                        </Button>
+                        <SwitchCredentialInLoadBalancing
+                          provider={provider}
+                          customModelCredential={customModelCredential ?? initialCustomModelCredential}
+                          setCustomModelCredential={setCustomModelCredential}
+                          model={model}
+                          credentials={available_credentials}
+                          onUpdate={handleUpdateWhenSwitchCredential}
+                          onRemove={handleUpdateWhenSwitchCredential}
+                        />
                       )
                     }
                   </div>
-                  <div className="space-x-2">
-                    <Button onClick={onClose}>{t('operation.cancel', { ns: 'common' })}</Button>
-                    <Button
-                      variant="primary"
-                      onClick={handleSave}
-                      disabled={
-                        loading
-                        || (draftConfig?.enabled && (draftConfig?.configs.filter(config => config.enabled).length ?? 0) < 2)
-                        || isLoading
-                      }
-                    >
-                      {t('operation.save', { ns: 'common' })}
-                    </Button>
-                  </div>
                 </div>
-              </>
-            )}
+                {
+                  modelCredential && (
+                    <ModelLoadBalancingConfigs {...{
+                      draftConfig,
+                      setDraftConfig,
+                      provider,
+                      currentCustomConfigurationModelFixedFields: {
+                        __model_name: model.model,
+                        __model_type: model.model_type,
+                      },
+                      configurationMethod: model.fetch_from,
+                      className: 'mt-2',
+                      modelCredential,
+                      onUpdate: handleUpdate,
+                      onRemove: handleUpdateWhenSwitchCredential,
+                      model: {
+                        model: model.model,
+                        model_type: model.model_type,
+                      },
+                    }}
+                    />
+                  )
+                }
+              </div>
+
+              <div className="mt-6 flex items-center justify-between gap-2">
+                <div>
+                  {
+                    !providerFormSchemaPredefined && (
+                      <Button
+                        onClick={() => openConfirmDelete(undefined, { model: model.model, model_type: model.model_type })}
+                        className="text-components-button-destructive-secondary-text"
+                      >
+                        {t('modelProvider.auth.removeModel', { ns: 'common' })}
+                      </Button>
+                    )
+                  }
+                </div>
+                <div className="space-x-2">
+                  <Button onClick={onClose}>{t('operation.cancel', { ns: 'common' })}</Button>
+                  <Button
+                    variant="primary"
+                    onClick={handleSave}
+                    disabled={
+                      loading
+                      || (draftConfig?.enabled && (draftConfig?.configs.filter(config => config.enabled).length ?? 0) < 2)
+                      || isLoading
+                    }
+                  >
+                    {t('operation.save', { ns: 'common' })}
+                  </Button>
+                </div>
+              </div>
+            </>
+          )}
       </Modal>
       {
         deleteModel && (

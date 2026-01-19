@@ -48,7 +48,7 @@ const TagsFilter = ({
     >
       <PortalToFollowElemTrigger onClick={() => setOpen(v => !v)}>
         <div className={cn(
-          'flex h-8 cursor-pointer select-none items-center rounded-lg bg-components-input-bg-normal px-2 py-1 text-text-tertiary hover:bg-state-base-hover-alt',
+          'flex h-8 cursor-pointer select-none items-center rounded-md bg-components-input-bg-normal px-2 py-1 text-text-tertiary hover:bg-state-base-hover-alt',
           selectedTagsLength && 'text-text-secondary',
           open && 'bg-state-base-hover',
         )}
@@ -88,7 +88,7 @@ const TagsFilter = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-10">
-        <div className="w-[240px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
+        <div className="w-[240px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
           <div className="p-2 pb-1">
             <Input
               showLeftIcon
@@ -102,7 +102,7 @@ const TagsFilter = ({
               filteredOptions.map(option => (
                 <div
                   key={option.name}
-                  className="flex h-7 cursor-pointer select-none items-center rounded-lg px-2 py-1.5 hover:bg-state-base-hover"
+                  className="flex h-7 cursor-pointer select-none items-center rounded-md px-2 py-1.5 hover:bg-state-base-hover"
                   onClick={() => handleCheck(option.name)}
                 >
                   <Checkbox

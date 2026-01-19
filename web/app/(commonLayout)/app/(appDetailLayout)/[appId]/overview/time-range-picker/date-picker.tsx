@@ -30,7 +30,7 @@ const DatePicker: FC<Props> = ({
 
   const renderDate = useCallback(({ value, handleClickTrigger, isOpen }: TriggerProps) => {
     return (
-      <div className={cn('system-sm-regular flex h-7 cursor-pointer items-center rounded-lg px-1 text-components-input-text-filled hover:bg-state-base-hover', isOpen && 'bg-state-base-hover')} onClick={handleClickTrigger}>
+      <div className={cn('system-sm-regular flex h-7 cursor-pointer items-center rounded-md px-1 text-components-input-text-filled hover:bg-state-base-hover', isOpen && 'bg-state-base-hover')} onClick={handleClickTrigger}>
         {value ? formatToLocalTime(value, locale, 'MMM D') : ''}
       </div>
     )
@@ -51,7 +51,7 @@ const DatePicker: FC<Props> = ({
   }, [availableEndDate, start])
 
   return (
-    <div className="flex h-8 items-center space-x-0.5 rounded-lg bg-components-input-bg-normal px-2">
+    <div className="flex h-8 items-center space-x-0.5 rounded-md bg-components-input-bg-normal px-2">
       <div className="p-px">
         <RiCalendarLine className="size-3.5 text-text-tertiary" />
       </div>

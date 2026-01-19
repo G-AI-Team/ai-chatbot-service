@@ -68,14 +68,14 @@ const Empty = () => {
       {/* skeleton */}
       <div className="absolute top-0 z-10 grid h-full w-full grid-cols-2 gap-2 overflow-hidden px-12">
         {Array.from({ length: 20 }).fill(0).map((_, i) => (
-          <div key={i} className="h-24 rounded-xl bg-components-card-bg" />
+          <div key={i} className="h-24 rounded-md bg-components-card-bg" />
         ))}
       </div>
       {/* mask */}
       <div className="absolute z-20 h-full w-full bg-gradient-to-b from-components-panel-bg-transparent to-components-panel-bg" />
       <div className="relative z-30 flex h-full items-center justify-center">
         <div className="flex flex-col items-center gap-y-3">
-          <div className="relative -z-10 flex size-14 items-center justify-center rounded-xl
+          <div className="relative -z-10 flex size-14 items-center justify-center rounded-md
           border-[1px] border-dashed border-divider-deep bg-components-card-bg shadow-xl shadow-shadow-shadow-5"
           >
             <Group className="h-5 w-5 text-text-tertiary" />

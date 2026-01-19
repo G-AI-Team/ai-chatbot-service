@@ -58,7 +58,7 @@ const DeprecationNotice: FC<DeprecationNoticeProps> = ({
   return (
     <div className={cn('w-full', className)}>
       <div className={cn(
-        'relative flex items-start gap-x-0.5 overflow-hidden rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]',
+        'relative flex items-start gap-x-0.5 overflow-hidden rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]',
         innerWrapperClassName,
       )}
       >

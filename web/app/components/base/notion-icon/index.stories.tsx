@@ -24,7 +24,7 @@ type Story = StoryObj<typeof meta>
 
 export const WorkspaceIcon: Story = {
   render: args => (
-    <div className="flex items-center gap-3 rounded-lg border border-divider-subtle bg-components-panel-bg p-4">
+    <div className="flex items-center gap-3 rounded-md border border-divider-subtle bg-components-panel-bg p-4">
       <NotionIcon {...args} />
       <span className="text-sm text-text-secondary">Workspace icon pulled from a remote URL.</span>
     </div>
@@ -47,7 +47,7 @@ export const WorkspaceIcon: Story = {
 
 export const WorkspaceInitials: Story = {
   render: args => (
-    <div className="flex items-center gap-3 rounded-lg border border-divider-subtle bg-components-panel-bg p-4">
+    <div className="flex items-center gap-3 rounded-md border border-divider-subtle bg-components-panel-bg p-4">
       <NotionIcon {...args} src={null} name="Operations" />
       <span className="text-sm text-text-secondary">Fallback initial rendered when no icon URL is available.</span>
     </div>
@@ -66,7 +66,7 @@ export const WorkspaceInitials: Story = {
 
 export const PageEmoji: Story = {
   render: args => (
-    <div className="flex items-center gap-3 rounded-lg border border-divider-subtle bg-components-panel-bg p-4">
+    <div className="flex items-center gap-3 rounded-md border border-divider-subtle bg-components-panel-bg p-4">
       <NotionIcon {...args} type="page" src={{ type: 'emoji', emoji: '🧠', url: '' }} />
       <span className="text-sm text-text-secondary">Page-level emoji icon returned by the API.</span>
     </div>
@@ -85,7 +85,7 @@ export const PageEmoji: Story = {
 
 export const PageImage: Story = {
   render: args => (
-    <div className="flex items-center gap-3 rounded-lg border border-divider-subtle bg-components-panel-bg p-4">
+    <div className="flex items-center gap-3 rounded-md border border-divider-subtle bg-components-panel-bg p-4">
       <NotionIcon
         {...args}
         type="page"
@@ -111,7 +111,7 @@ export const PageImage: Story = {
 
 export const DefaultIcon: Story = {
   render: args => (
-    <div className="flex items-center gap-3 rounded-lg border border-divider-subtle bg-components-panel-bg p-4">
+    <div className="flex items-center gap-3 rounded-md border border-divider-subtle bg-components-panel-bg p-4">
       <NotionIcon {...args} type="page" src={undefined} />
       <span className="text-sm text-text-secondary">When neither emoji nor URL is provided, the generic document icon is shown.</span>
     </div>

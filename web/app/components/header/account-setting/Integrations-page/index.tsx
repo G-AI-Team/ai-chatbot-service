@@ -37,8 +37,8 @@ export default function IntegrationsPage() {
             if (!info)
               return null
             return (
-              <div key={integrate.provider} className="mb-2 flex items-center rounded-lg border-[0.5px] border-gray-200 bg-gray-50 px-3 py-2">
-                <div className={cn('mr-3 h-8 w-8 rounded-lg border border-gray-100 bg-white', s[`${integrate.provider}-icon`])} />
+              <div key={integrate.provider} className="mb-2 flex items-center rounded-md border-[0.5px] border-gray-200 bg-gray-50 px-3 py-2">
+                <div className={cn('mr-3 h-8 w-8 rounded-md border border-gray-100 bg-white', s[`${integrate.provider}-icon`])} />
                 <div className="grow">
                   <div className="text-sm font-medium leading-[21px] text-gray-800">{info.name}</div>
                   <div className="text-xs font-normal leading-[18px] text-gray-500">{info.description}</div>
@@ -46,7 +46,7 @@ export default function IntegrationsPage() {
                 {
                   !integrate.is_bound && (
                     <Link
-                      className="flex h-8 cursor-pointer items-center rounded-lg border border-gray-200 bg-white px-[7px] text-xs font-medium text-gray-700"
+                      className="flex h-8 cursor-pointer items-center rounded-md border border-gray-200 bg-white px-[7px] text-xs font-medium text-gray-700"
                       href={integrate.link}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -64,8 +64,8 @@ export default function IntegrationsPage() {
         <div className={titleClassName}>Add a service </div>
         {
           services.map(service => (
-            <div key={service.key} className='mb-2 flex items-center px-3 py-2 bg-gray-50 border-[0.5px] border-gray-200 rounded-lg'>
-              <div className={classNames('w-8 h-8 mr-3 bg-white rounded-lg border border-gray-100', s[`${service.key}-icon`])} />
+            <div key={service.key} className='mb-2 flex items-center px-3 py-2 bg-gray-50 border-[0.5px] border-gray-200 rounded-md'>
+              <div className={classNames('w-8 h-8 mr-3 bg-white rounded-md border border-gray-100', s[`${service.key}-icon`])} />
               <div className='grow'>
                 <div className='leading-[21px] text-sm font-medium text-gray-800'>{service.name}</div>
                 <div className='leading-[18px] text-xs font-normal text-gray-500'>{service.description}</div>

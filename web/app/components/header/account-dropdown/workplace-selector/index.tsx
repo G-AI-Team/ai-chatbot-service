@@ -64,17 +64,17 @@ const WorkplaceSelector = () => {
                 className={cn(
                   `
                     shadows-shadow-lg absolute left-[-15px] z-[1000] mt-1 flex max-h-[400px] w-[280px] flex-col items-start overflow-y-auto
-                    rounded-xl bg-components-panel-bg-blur backdrop-blur-[5px]
+                    rounded-md bg-components-panel-bg-blur backdrop-blur-[5px]
                   `,
                 )}
               >
-                <div className="flex w-full flex-col items-start self-stretch rounded-xl border-[0.5px] border-components-panel-border p-1 pb-2 shadow-lg ">
+                <div className="flex w-full flex-col items-start self-stretch rounded-md border-[0.5px] border-components-panel-border p-1 pb-2 shadow-lg ">
                   <div className="flex items-start self-stretch px-3 pb-0.5 pt-1">
                     <span className="system-xs-medium-uppercase flex-1 text-text-tertiary">{t('userProfile.workspace', { ns: 'common' })}</span>
                   </div>
                   {
                     workspaces.map(workspace => (
-                      <div className="flex items-center gap-2 self-stretch rounded-lg py-1 pl-3 pr-2 hover:bg-state-base-hover" key={workspace.id} onClick={() => handleSwitchWorkspace(workspace.id)}>
+                      <div className="flex items-center gap-2 self-stretch rounded-md py-1 pl-3 pr-2 hover:bg-state-base-hover" key={workspace.id} onClick={() => handleSwitchWorkspace(workspace.id)}>
                         <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-components-icon-bg-blue-solid text-[13px]">
                           <span className="h-6 bg-gradient-to-r from-components-avatar-shape-fill-stop-0 to-components-avatar-shape-fill-stop-100 bg-clip-text align-middle font-semibold uppercase leading-6 text-shadow-shadow-1 opacity-90">{workspace?.name[0]?.toLocaleUpperCase()}</span>
                         </div>

@@ -117,13 +117,13 @@ const AddCustomModel = ({
         {renderTrigger(open)}
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[100]">
-        <div className="w-[320px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg">
+        <div className="w-[320px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg">
           <div className="max-h-[304px] overflow-y-auto p-1">
             {
               canAddedModels.map(model => (
                 <div
                   key={model.model}
-                  className="flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover"
+                  className="flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover"
                   onClick={() => {
                     handleOpenModalForAddCustomModelToModelList(undefined, model)
                     setOpen(false)

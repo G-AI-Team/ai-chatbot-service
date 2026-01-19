@@ -202,7 +202,7 @@ const CloudProviderSelectionDemo = () => {
   const [region, setRegion] = useState('us-east-1')
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Select Cloud Provider</h3>
       <div className="space-y-3">
         <RadioCard
@@ -216,7 +216,7 @@ const CloudProviderSelectionDemo = () => {
             <div className="space-y-2">
               <label className="text-xs font-medium text-gray-700">Region</label>
               <select
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+                className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm"
                 value={region}
                 onChange={e => setRegion(e.target.value)}
               >
@@ -259,7 +259,7 @@ const DeploymentStrategyDemo = () => {
   const [strategy, setStrategy] = useState('rolling')
 
   return (
-    <div style={{ width: '550px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '550px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-2 text-lg font-semibold">Deployment Strategy</h3>
       <p className="mb-4 text-sm text-gray-600">Choose how you want to deploy your application</p>
       <div className="space-y-3">
@@ -271,7 +271,7 @@ const DeploymentStrategyDemo = () => {
           isChosen={strategy === 'rolling'}
           onChosen={() => setStrategy('rolling')}
           chosenConfig={(
-            <div className="rounded-lg bg-green-50 p-3 text-xs text-gray-700">
+            <div className="rounded-md bg-green-50 p-3 text-xs text-gray-700">
               ✓ Recommended for production environments
               <br />
               ✓ Minimal risk with automatic rollback
@@ -288,7 +288,7 @@ const DeploymentStrategyDemo = () => {
           isChosen={strategy === 'blue-green'}
           onChosen={() => setStrategy('blue-green')}
           chosenConfig={(
-            <div className="rounded-lg bg-blue-50 p-3 text-xs text-gray-700">
+            <div className="rounded-md bg-blue-50 p-3 text-xs text-gray-700">
               ✓ Instant rollback capability
               <br />
               ✓ Requires double the resources
@@ -305,7 +305,7 @@ const DeploymentStrategyDemo = () => {
           isChosen={strategy === 'canary'}
           onChosen={() => setStrategy('canary')}
           chosenConfig={(
-            <div className="rounded-lg bg-yellow-50 p-3 text-xs text-gray-700">
+            <div className="rounded-md bg-yellow-50 p-3 text-xs text-gray-700">
               ✓ Test changes with real traffic
               <br />
               ✓ Gradual rollout reduces risk
@@ -315,7 +315,7 @@ const DeploymentStrategyDemo = () => {
           )}
         />
       </div>
-      <button className="mt-6 w-full rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
+      <button className="mt-6 w-full rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
         Deploy with
         {' '}
         {strategy}
@@ -368,7 +368,7 @@ const StorageOptionsDemo = () => {
   const selectedOption = storageOptions.find(opt => opt.value === storage)
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Storage Type</h3>
       <div className="space-y-3">
         {storageOptions.map(option => (
@@ -389,7 +389,7 @@ const StorageOptionsDemo = () => {
         ))}
       </div>
       {selectedOption && (
-        <div className="mt-4 rounded-lg bg-gray-50 p-4">
+        <div className="mt-4 rounded-md bg-gray-50 p-4">
           <div className="text-sm text-gray-700">
             <strong>Selected:</strong>
             {' '}
@@ -418,7 +418,7 @@ const APIAuthMethodDemo = () => {
   const [apiKey, setApiKey] = useState('')
 
   return (
-    <div style={{ width: '550px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '550px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">API Authentication</h3>
       <div className="space-y-3">
         <RadioCard
@@ -433,7 +433,7 @@ const APIAuthMethodDemo = () => {
               <label className="text-xs font-medium text-gray-700">Your API Key</label>
               <input
                 type="password"
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+                className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm"
                 placeholder="sk-..."
                 value={apiKey}
                 onChange={e => setApiKey(e.target.value)}
@@ -450,7 +450,7 @@ const APIAuthMethodDemo = () => {
           isChosen={authMethod === 'oauth'}
           onChosen={() => setAuthMethod('oauth')}
           chosenConfig={(
-            <div className="rounded-lg bg-green-50 p-3">
+            <div className="rounded-md bg-green-50 p-3">
               <p className="mb-2 text-xs text-gray-700">
                 Configure OAuth 2.0 authentication for secure access
               </p>
@@ -468,7 +468,7 @@ const APIAuthMethodDemo = () => {
           isChosen={authMethod === 'jwt'}
           onChosen={() => setAuthMethod('jwt')}
           chosenConfig={(
-            <div className="rounded-lg bg-purple-50 p-3 text-xs text-gray-700">
+            <div className="rounded-md bg-purple-50 p-3 text-xs text-gray-700">
               JWT tokens provide stateless authentication with expiration and refresh capabilities
             </div>
           )}

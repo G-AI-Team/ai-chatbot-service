@@ -33,7 +33,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: args => (
-    <div className="flex items-center gap-4 rounded-lg border border-divider-subtle bg-components-panel-bg p-4">
+    <div className="flex items-center gap-4 rounded-md border border-divider-subtle bg-components-panel-bg p-4">
       <FileIcon {...args} />
       <span className="text-sm text-text-secondary">
         Extension:
@@ -57,7 +57,7 @@ export const Gallery: Story = {
   render: () => {
     const examples = ['pdf', 'docx', 'xlsx', 'csv', 'json', 'md', 'txt', 'html', 'notion', 'unknown']
     return (
-      <div className="grid grid-cols-5 gap-4 rounded-lg border border-divider-subtle bg-components-panel-bg p-4">
+      <div className="grid grid-cols-5 gap-4 rounded-md border border-divider-subtle bg-components-panel-bg p-4">
         {examples.map(type => (
           <div key={type} className="flex flex-col items-center gap-1">
             <FileIcon type={type} className="h-9 w-9" />

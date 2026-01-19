@@ -16,7 +16,7 @@ const UserInput = () => {
   return (
     <div
       className={`
-        rounded-xl border
+        rounded-md border
         ${!expanded ? 'border-components-panel-border-subtle bg-components-panel-on-panel-item-bg shadow-none' : 'border-transparent bg-white shadow-xs'}
       `}
     >

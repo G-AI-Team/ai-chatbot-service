@@ -35,7 +35,7 @@ const Card = ({
       <div className="flex flex-col gap-y-3 p-4">
         <div className="flex items-center gap-x-3">
           <div className="flex grow items-center gap-x-2">
-            <div className="flex size-6 shrink-0 items-center justify-center rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 shadow-md shadow-shadow-shadow-5">
+            <div className="flex size-6 shrink-0 items-center justify-center rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 shadow-md shadow-shadow-shadow-5">
               <ApiAggregate className="size-4 text-text-primary-on-surface" />
             </div>
             <div className="system-sm-semibold grow truncate text-text-secondary">
@@ -54,13 +54,13 @@ const Card = ({
             >
               {t('serviceApi.enabled', { ns: 'dataset' })}
             </div>
-          </div>
+          </div>rounded-md
         </div>
         <div className="flex flex-col">
           <div className="system-xs-regular leading-6 text-text-tertiary">
             {t('serviceApi.card.endpoint', { ns: 'dataset' })}
           </div>
-          <div className="flex h-8 items-center gap-0.5 rounded-lg bg-components-input-bg-normal p-1 pl-2">
+          <div className="flex h-8 items-center gap-0.5 rounded-md bg-components-input-bg-normal p-1 pl-2">
             <div className="flex h-4 min-w-0 flex-1 items-start justify-start gap-2 px-1">
               <div className="system-xs-medium truncate text-text-secondary">
                 {apiBaseUrl}

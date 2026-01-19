@@ -39,7 +39,7 @@ const ApiAccess = ({
           onClick={handleToggle}
         >
           <div className={cn(
-            'relative flex h-8 cursor-pointer items-center gap-2 rounded-lg border border-components-panel-border px-3',
+            'relative flex h-8 cursor-pointer items-center gap-2 rounded-md border border-components-panel-border px-3',
             !expand && 'w-8 justify-center',
             open ? 'bg-state-base-hover' : 'hover:bg-state-base-hover',
           )}

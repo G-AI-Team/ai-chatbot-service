@@ -34,7 +34,7 @@ const SelectMetadata: FC<Props> = ({
     })
   }, [query, notFilteredList])
   return (
-    <div className="w-[320px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur pb-0 pt-2 shadow-lg backdrop-blur-[5px]">
+    <div className="w-[320px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur pb-0 pt-2 shadow-lg backdrop-blur-[5px]">
       <SearchInput
         className="mx-2"
         value={query}

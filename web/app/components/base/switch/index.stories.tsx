@@ -153,7 +153,7 @@ const WithLabelsDemo = () => {
 
   return (
     <div style={{ width: '400px' }}>
-      <div className="flex items-center justify-between rounded-lg border border-gray-200 bg-white p-4">
+      <div className="flex items-center justify-between rounded-md border border-gray-200 bg-white p-4">
         <div>
           <div className="text-sm font-medium text-gray-900">Email Notifications</div>
           <div className="text-xs text-gray-500">Receive email updates about your account</div>
@@ -187,7 +187,7 @@ const SettingsPanelDemo = () => {
   }
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Application Settings</h3>
       <div className="space-y-4">
         <div className="flex items-center justify-between">
@@ -268,11 +268,11 @@ const PrivacyControlsDemo = () => {
   })
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-2 text-lg font-semibold">Privacy Settings</h3>
       <p className="mb-4 text-sm text-gray-600">Control who can see your information</p>
       <div className="space-y-4">
-        <div className="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+        <div className="flex items-center justify-between rounded-md bg-gray-50 p-3">
           <div className="flex-1">
             <div className="text-sm font-medium text-gray-900">Public Profile</div>
             <div className="text-xs text-gray-500">Make your profile visible to everyone</div>
@@ -284,7 +284,7 @@ const PrivacyControlsDemo = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+        <div className="flex items-center justify-between rounded-md bg-gray-50 p-3">
           <div className="flex-1">
             <div className="text-sm font-medium text-gray-900">Show Email Address</div>
             <div className="text-xs text-gray-500">Display your email on your profile</div>
@@ -296,7 +296,7 @@ const PrivacyControlsDemo = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+        <div className="flex items-center justify-between rounded-md bg-gray-50 p-3">
           <div className="flex-1">
             <div className="text-sm font-medium text-gray-900">Allow Direct Messages</div>
             <div className="text-xs text-gray-500">Let others send you private messages</div>
@@ -308,7 +308,7 @@ const PrivacyControlsDemo = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+        <div className="flex items-center justify-between rounded-md bg-gray-50 p-3">
           <div className="flex-1">
             <div className="text-sm font-medium text-gray-900">Share Activity</div>
             <div className="text-xs text-gray-500">Show your recent activity to connections</div>
@@ -338,10 +338,10 @@ const FeatureTogglesDemo = () => {
   })
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Feature Flags</h3>
       <div className="space-y-3">
-        <div className="flex items-center justify-between rounded-lg border border-gray-200 p-3 hover:bg-gray-50">
+        <div className="flex items-center justify-between rounded-md border border-gray-200 p-3 hover:bg-gray-50">
           <div className="flex items-center gap-3">
             <span className="text-xl">🧪</span>
             <div>
@@ -356,7 +356,7 @@ const FeatureTogglesDemo = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between rounded-lg border border-gray-200 p-3 hover:bg-gray-50">
+        <div className="flex items-center justify-between rounded-md border border-gray-200 p-3 hover:bg-gray-50">
           <div className="flex items-center gap-3">
             <span className="text-xl">🎨</span>
             <div>
@@ -371,7 +371,7 @@ const FeatureTogglesDemo = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between rounded-lg border border-gray-200 p-3 hover:bg-gray-50">
+        <div className="flex items-center justify-between rounded-md border border-gray-200 p-3 hover:bg-gray-50">
           <div className="flex items-center gap-3">
             <span className="text-xl">⚡</span>
             <div>
@@ -386,7 +386,7 @@ const FeatureTogglesDemo = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between rounded-lg border border-gray-200 p-3 hover:bg-gray-50">
+        <div className="flex items-center justify-between rounded-md border border-gray-200 p-3 hover:bg-gray-50">
           <div className="flex items-center gap-3">
             <span className="text-xl">🔧</span>
             <div>
@@ -422,7 +422,7 @@ const NotificationPreferencesDemo = () => {
   const someEnabled = Object.values(notifications).some(v => v)
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-semibold">Notification Channels</h3>
         <div className="text-xs text-gray-500">
@@ -508,11 +508,11 @@ const APIAccessControlDemo = () => {
   })
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-2 text-lg font-semibold">API Permissions</h3>
       <p className="mb-4 text-sm text-gray-600">Configure access levels for API key</p>
       <div className="space-y-3">
-        <div className="flex items-center justify-between rounded-lg bg-green-50 p-3">
+        <div className="flex items-center justify-between rounded-md bg-green-50 p-3">
           <div>
             <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
               <span className="text-green-600">✓</span>
@@ -528,7 +528,7 @@ const APIAccessControlDemo = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between rounded-lg bg-blue-50 p-3">
+        <div className="flex items-center justify-between rounded-md bg-blue-50 p-3">
           <div>
             <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
               <span className="text-blue-600">✎</span>
@@ -544,7 +544,7 @@ const APIAccessControlDemo = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between rounded-lg bg-red-50 p-3">
+        <div className="flex items-center justify-between rounded-md bg-red-50 p-3">
           <div>
             <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
               <span className="text-red-600">🗑</span>
@@ -560,7 +560,7 @@ const APIAccessControlDemo = () => {
           />
         </div>
 
-        <div className="flex items-center justify-between rounded-lg bg-purple-50 p-3">
+        <div className="flex items-center justify-between rounded-md bg-purple-50 p-3">
           <div>
             <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
               <span className="text-purple-600">⚡</span>
@@ -601,7 +601,7 @@ const CompactListDemo = () => {
   }
 
   return (
-    <div style={{ width: '400px' }} className="rounded-lg border border-gray-200 bg-white p-4">
+    <div style={{ width: '400px' }} className="rounded-md border border-gray-200 bg-white p-4">
       <h3 className="mb-3 text-sm font-semibold">Quick Toggles</h3>
       <div className="space-y-2">
         {items.map(item => (

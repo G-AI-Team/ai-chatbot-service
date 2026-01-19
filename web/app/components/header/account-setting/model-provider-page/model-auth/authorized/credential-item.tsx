@@ -55,7 +55,7 @@ const CredentialItem = ({
     <div
       key={credential.credential_id}
       className={cn(
-        'group flex h-8 items-center rounded-lg p-1 hover:bg-state-base-hover',
+        'group flex h-8 items-center rounded-md p-1 hover:bg-state-base-hover',
         (disabled || credential.not_allowed_to_use) && 'cursor-not-allowed opacity-50',
       )}
       onClick={() => {

@@ -43,7 +43,7 @@ type CategoryItemProps = {
 function CategoryItem({ category, active, onClick }: CategoryItemProps) {
   return (
     <li
-      className={cn('group flex h-8 cursor-pointer items-center gap-2 rounded-lg p-1 pl-3 hover:bg-state-base-hover [&.active]:bg-state-base-active', active && 'active')}
+      className={cn('group flex h-8 cursor-pointer items-center gap-2 rounded-md p-1 pl-3 hover:bg-state-base-hover [&.active]:bg-state-base-active', active && 'active')}
       onClick={() => { onClick?.(category) }}
     >
       {category === AppCategories.RECOMMENDED && (

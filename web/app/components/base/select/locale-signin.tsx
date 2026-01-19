@@ -21,7 +21,7 @@ export default function LocaleSigninSelect({
     <div className="w-56 text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <MenuButton className="h-[44px]justify-center inline-flex w-full items-center rounded-lg border border-components-button-secondary-border px-[10px] py-[6px] text-[13px] font-medium text-text-primary hover:bg-state-base-hover">
+          <MenuButton className="h-[44px]justify-center inline-flex w-full items-center rounded-md border border-components-button-secondary-border px-[10px] py-[6px] text-[13px] font-medium text-text-primary hover:bg-state-base-hover">
             <GlobeAltIcon className="mr-1 h-5 w-5" aria-hidden="true" />
             {item?.name}
           </MenuButton>
@@ -35,14 +35,14 @@ export default function LocaleSigninSelect({
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <MenuItems className="absolute right-0 z-10 mt-2 w-[200px] origin-top-right divide-y divide-divider-regular rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg focus:outline-none">
+          <MenuItems className="absolute right-0 z-10 mt-2 w-[200px] origin-top-right divide-y divide-divider-regular rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg focus:outline-none">
             <div className="max-h-96 overflow-y-auto px-1 py-1 [mask-image:linear-gradient(to_bottom,transparent_0px,black_8px,black_calc(100%-8px),transparent_100%)]">
               {items.map((item) => {
                 return (
                   <MenuItem key={item.value}>
                     <button
                       type="button"
-                      className="group flex w-full items-center rounded-lg px-3 py-2 text-sm text-text-secondary data-[active]:bg-state-base-hover"
+                      className="group flex w-full items-center rounded-md px-3 py-2 text-sm text-text-secondary data-[active]:bg-state-base-hover"
                       onClick={(evt) => {
                         evt.preventDefault()
                         onChange?.(item.value)

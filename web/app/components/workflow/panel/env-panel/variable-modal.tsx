@@ -165,21 +165,21 @@ const VariableModal = ({
             {
               type !== 'number'
                 ? (
-                    <textarea
-                      className="system-sm-regular placeholder:system-sm-regular block h-20 w-full resize-none appearance-none rounded-lg border border-transparent bg-components-input-bg-normal p-2 text-components-input-text-filled caret-primary-600 outline-none placeholder:text-components-input-text-placeholder hover:border-components-input-border-hover hover:bg-components-input-bg-hover focus:border-components-input-border-active focus:bg-components-input-bg-active focus:shadow-xs"
-                      value={value}
-                      placeholder={t('env.modal.valuePlaceholder', { ns: 'workflow' }) || ''}
-                      onChange={e => setValue(e.target.value)}
-                    />
-                  )
+                  <textarea
+                    className="system-sm-regular placeholder:system-sm-regular block h-20 w-full resize-none appearance-none rounded-md border border-transparent bg-components-input-bg-normal p-2 text-components-input-text-filled caret-primary-600 outline-none placeholder:text-components-input-text-placeholder hover:border-components-input-border-hover hover:bg-components-input-bg-hover focus:border-components-input-border-active focus:bg-components-input-bg-active focus:shadow-xs"
+                    value={value}
+                    placeholder={t('env.modal.valuePlaceholder', { ns: 'workflow' }) || ''}
+                    onChange={e => setValue(e.target.value)}
+                  />
+                )
                 : (
-                    <Input
-                      placeholder={t('env.modal.valuePlaceholder', { ns: 'workflow' }) || ''}
-                      value={value}
-                      onChange={e => setValue(e.target.value)}
-                      type="number"
-                    />
-                  )
+                  <Input
+                    placeholder={t('env.modal.valuePlaceholder', { ns: 'workflow' }) || ''}
+                    value={value}
+                    onChange={e => setValue(e.target.value)}
+                    type="number"
+                  />
+                )
             }
           </div>
         </div>
@@ -188,7 +188,7 @@ const VariableModal = ({
           <div className="system-sm-semibold mb-1 flex h-6 items-center text-text-secondary">{t('env.modal.description', { ns: 'workflow' })}</div>
           <div className="flex">
             <textarea
-              className="system-sm-regular placeholder:system-sm-regular block h-20 w-full resize-none appearance-none rounded-lg border border-transparent bg-components-input-bg-normal p-2 text-components-input-text-filled caret-primary-600 outline-none placeholder:text-components-input-text-placeholder hover:border-components-input-border-hover hover:bg-components-input-bg-hover focus:border-components-input-border-active focus:bg-components-input-bg-active focus:shadow-xs"
+              className="system-sm-regular placeholder:system-sm-regular block h-20 w-full resize-none appearance-none rounded-md border border-transparent bg-components-input-bg-normal p-2 text-components-input-text-filled caret-primary-600 outline-none placeholder:text-components-input-text-placeholder hover:border-components-input-border-hover hover:bg-components-input-bg-hover focus:border-components-input-border-active focus:bg-components-input-bg-active focus:shadow-xs"
               value={description}
               placeholder={t('env.modal.descriptionPlaceholder', { ns: 'workflow' }) || ''}
               onChange={e => setDescription(e.target.value)}

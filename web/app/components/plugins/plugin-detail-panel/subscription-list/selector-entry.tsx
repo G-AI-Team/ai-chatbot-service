@@ -68,7 +68,7 @@ const SubscriptionTriggerButton: React.FC<SubscriptionTriggerButtonProps> = ({
   return (
     <button
       className={cn(
-        'flex h-8 items-center gap-1 rounded-lg px-2 transition-colors',
+        'flex h-8 items-center gap-1 rounded-md px-2 transition-colors',
         'hover:bg-state-base-hover-alt',
         isOpen && 'bg-state-base-hover-alt',
         className,
@@ -113,7 +113,7 @@ export const SubscriptionSelectorEntry = ({ selectedId, onSelect }: {
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[11]">
-        <div className="rounded-xl border border-components-panel-border bg-components-panel-bg shadow-lg">
+        <div className="rounded-md border border-components-panel-border bg-components-panel-bg shadow-lg">
           <SubscriptionList
             mode={SubscriptionListMode.SELECTOR}
             selectedId={selectedId}

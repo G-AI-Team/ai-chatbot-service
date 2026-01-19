@@ -164,51 +164,51 @@ const AdvancedPromptInput: FC<Props> = ({
     </div>
   )
   return (
-    <div className={`rounded-xl bg-gradient-to-r from-components-input-border-active-prompt-1 to-components-input-border-active-prompt-2 p-0.5 shadow-xs ${!isContextMissing ? '' : s.warningBorder}`}>
-      <div className="rounded-xl bg-background-default">
+    <div className={`rounded-md bg-gradient-to-r from-components-input-border-active-prompt-1 to-components-input-border-active-prompt-2 p-0.5 shadow-xs ${!isContextMissing ? '' : s.warningBorder}`}>
+      <div className="rounded-md bg-background-default">
         {isContextMissing
           ? contextMissing
           : (
-              <div className={cn(s.boxHeader, 'flex h-11 items-center justify-between rounded-tl-xl rounded-tr-xl bg-background-default pb-1 pl-4 pr-3 pt-2 hover:shadow-xs')}>
-                {isChatMode
-                  ? (
-                      <MessageTypeSelector value={type} onChange={onTypeChange} />
-                    )
-                  : (
-                      <div className="flex items-center space-x-1">
+            <div className={cn(s.boxHeader, 'flex h-11 items-center justify-between rounded-tl-xl rounded-tr-xl bg-background-default pb-1 pl-4 pr-3 pt-2 hover:shadow-xs')}>
+              {isChatMode
+                ? (
+                  <MessageTypeSelector value={type} onChange={onTypeChange} />
+                )
+                : (
+                  <div className="flex items-center space-x-1">
 
-                        <div className="text-sm font-semibold uppercase text-indigo-800">
-                          {t('pageTitle.line1', { ns: 'appDebug' })}
+                    <div className="text-sm font-semibold uppercase text-indigo-800">
+                      {t('pageTitle.line1', { ns: 'appDebug' })}
+                    </div>
+                    <Tooltip
+                      popupContent={(
+                        <div className="w-[180px]">
+                          {t('promptTip', { ns: 'appDebug' })}
                         </div>
-                        <Tooltip
-                          popupContent={(
-                            <div className="w-[180px]">
-                              {t('promptTip', { ns: 'appDebug' })}
-                            </div>
-                          )}
-                        />
-                      </div>
-                    )}
-                <div className={cn(s.optionWrap, 'items-center space-x-1')}>
-                  {canDelete && (
-                    <RiDeleteBinLine onClick={onDelete} className="h-6 w-6 cursor-pointer p-1 text-text-tertiary" />
-                  )}
-                  {!isCopied
-                    ? (
-                        <Copy
-                          className="h-6 w-6 cursor-pointer p-1 text-text-tertiary"
-                          onClick={() => {
-                            copy(value)
-                            setIsCopied(true)
-                          }}
-                        />
-                      )
-                    : (
-                        <CopyCheck className="h-6 w-6 p-1 text-text-tertiary" />
                       )}
-                </div>
+                    />
+                  </div>
+                )}
+              <div className={cn(s.optionWrap, 'items-center space-x-1')}>
+                {canDelete && (
+                  <RiDeleteBinLine onClick={onDelete} className="h-6 w-6 cursor-pointer p-1 text-text-tertiary" />
+                )}
+                {!isCopied
+                  ? (
+                    <Copy
+                      className="h-6 w-6 cursor-pointer p-1 text-text-tertiary"
+                      onClick={() => {
+                        copy(value)
+                        setIsCopied(true)
+                      }}
+                    />
+                  )
+                  : (
+                    <CopyCheck className="h-6 w-6 p-1 text-text-tertiary" />
+                  )}
               </div>
-            )}
+            </div>
+          )}
 
         <PromptEditorHeightResizeWrap
           className="min-h-[102px] overflow-y-auto px-4 text-sm text-text-secondary"

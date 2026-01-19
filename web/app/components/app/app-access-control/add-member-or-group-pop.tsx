@@ -54,7 +54,7 @@ export default function AddMemberOrGroupDialog() {
       </PortalToFollowElemTrigger>
       {open && <FloatingOverlay />}
       <PortalToFollowElemContent className="z-[100]">
-        <div className="relative flex max-h-[400px] w-[400px] flex-col overflow-y-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px]">
+        <div className="relative flex max-h-[400px] w-[400px] flex-col overflow-y-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px]">
           <div className="sticky top-0 z-10 bg-components-panel-bg-blur p-2 pb-0.5 backdrop-blur-[5px]">
             <Input value={keyword} onChange={handleKeywordChange} showLeftIcon placeholder={t('accessControlDialog.operateGroupAndMember.searchPlaceholder', { ns: 'app' }) as string} />
           </div>
@@ -62,23 +62,23 @@ export default function AddMemberOrGroupDialog() {
             isLoading
               ? <div className="p-1"><Loading /></div>
               : (data?.pages?.length ?? 0) > 0
-                  ? (
-                      <>
-                        <div className="flex h-7 items-center px-2 py-0.5">
-                          <SelectedGroupsBreadCrumb />
-                        </div>
-                        <div className="p-1">
-                          {renderGroupOrMember(data?.pages ?? [])}
-                          {isFetchingNextPage && <Loading />}
-                        </div>
-                        <div ref={anchorRef} className="h-0"> </div>
-                      </>
-                    )
-                  : (
-                      <div className="flex h-7 items-center justify-center px-2 py-0.5">
-                        <span className="system-xs-regular text-text-tertiary">{t('accessControlDialog.operateGroupAndMember.noResult', { ns: 'app' })}</span>
-                      </div>
-                    )
+                ? (
+                  <>
+                    <div className="flex h-7 items-center px-2 py-0.5">
+                      <SelectedGroupsBreadCrumb />
+                    </div>
+                    <div className="p-1">
+                      {renderGroupOrMember(data?.pages ?? [])}
+                      {isFetchingNextPage && <Loading />}
+                    </div>
+                    <div ref={anchorRef} className="h-0"> </div>
+                  </>
+                )
+                : (
+                  <div className="flex h-7 items-center justify-center px-2 py-0.5">
+                    <span className="system-xs-regular text-text-tertiary">{t('accessControlDialog.operateGroupAndMember.noResult', { ns: 'app' })}</span>
+                  </div>
+                )
           }
         </div>
       </PortalToFollowElemContent>
@@ -226,7 +226,7 @@ type BaseItemProps = {
 }
 function BaseItem({ children, className }: BaseItemProps) {
   return (
-    <div className={cn('flex cursor-pointer items-center space-x-2 p-1 pl-2 hover:rounded-lg hover:bg-state-base-hover', className)}>
+    <div className={cn('flex cursor-pointer items-center space-x-2 p-1 pl-2 hover:rounded-md hover:bg-state-base-hover', className)}>
       {children}
     </div>
   )

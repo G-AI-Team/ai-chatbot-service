@@ -114,7 +114,7 @@ const CustomizedPagination: FC<Props> = ({
         {!showInput && (
           <div
             ref={inputRef}
-            className="flex items-center gap-0.5 rounded-lg px-2 py-1.5 hover:cursor-text hover:bg-state-base-hover-alt"
+            className="flex items-center gap-0.5 rounded-md px-2 py-1.5 hover:cursor-text hover:bg-state-base-hover-alt"
             onClick={() => setShowInput(true)}
           >
             <div className="system-xs-medium text-text-secondary">{current + 1}</div>
@@ -151,7 +151,7 @@ const CustomizedPagination: FC<Props> = ({
       </div>
       <div className={cn('flex grow list-none items-center justify-center gap-1')}>
         <Pagination.PageButton
-          className="system-sm-medium flex min-w-8 cursor-pointer items-center justify-center rounded-lg px-1 py-2 hover:bg-components-button-ghost-bg-hover"
+          className="system-sm-medium flex min-w-8 cursor-pointer items-center justify-center rounded-md px-1 py-2 hover:bg-components-button-ghost-bg-hover"
           activeClassName="bg-components-button-tertiary-bg text-components-button-tertiary-text hover:bg-components-button-ghost-bg-hover"
           inactiveClassName="text-text-tertiary"
         />
@@ -166,7 +166,7 @@ const CustomizedPagination: FC<Props> = ({
           >
             <div
               className={cn(
-                'system-sm-medium cursor-pointer rounded-lg border-[0.5px] border-transparent px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
+                'system-sm-medium cursor-pointer rounded-md border-[0.5px] border-transparent px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
                 limit === 10 && 'border-components-segmented-control-item-active-border bg-components-segmented-control-item-active-bg text-text-secondary shadow-xs hover:bg-components-segmented-control-item-active-bg',
               )}
               onClick={() => onLimitChange?.(10)}
@@ -175,7 +175,7 @@ const CustomizedPagination: FC<Props> = ({
             </div>
             <div
               className={cn(
-                'system-sm-medium cursor-pointer rounded-lg border-[0.5px] border-transparent px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
+                'system-sm-medium cursor-pointer rounded-md border-[0.5px] border-transparent px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
                 limit === 25 && 'border-components-segmented-control-item-active-border bg-components-segmented-control-item-active-bg text-text-secondary shadow-xs hover:bg-components-segmented-control-item-active-bg',
               )}
               onClick={() => onLimitChange?.(25)}
@@ -184,7 +184,7 @@ const CustomizedPagination: FC<Props> = ({
             </div>
             <div
               className={cn(
-                'system-sm-medium cursor-pointer rounded-lg border-[0.5px] border-transparent px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
+                'system-sm-medium cursor-pointer rounded-md border-[0.5px] border-transparent px-2.5 py-1.5 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
                 limit === 50 && 'border-components-segmented-control-item-active-border bg-components-segmented-control-item-active-bg text-text-secondary shadow-xs hover:bg-components-segmented-control-item-active-bg',
               )}
               onClick={() => onLimitChange?.(50)}

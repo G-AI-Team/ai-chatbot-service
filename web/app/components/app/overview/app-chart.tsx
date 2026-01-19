@@ -242,8 +242,8 @@ const Chart: React.FC<IChartProps> = ({
             return `<div style='color:#6B7280;font-size:12px'>${params.name}</div>
                           <div style='font-size:14px;color:#1F2A37'>${valueFormatter((params.data as any)[yField])}
                               ${!CHART_TYPE_CONFIG[chartType].showTokens
-                                ? ''
-                                : `<span style='font-size:12px'>
+                ? ''
+                : `<span style='font-size:12px'>
                                   <span style='margin-left:4px;color:#6B7280'>(</span>
                                   <span style='color:#FF8A4C'>~$${get(params.data, 'total_price', 0)}</span>
                                   <span style='color:#6B7280'>)</span>
@@ -257,7 +257,7 @@ const Chart: React.FC<IChartProps> = ({
   const sumData = isAvg ? (sum(yData) / yData.length) : sum(yData)
 
   return (
-    <div className={`flex w-full flex-col rounded-xl bg-components-chart-bg px-6 py-4 shadow-xs ${className ?? ''}`}>
+    <div className={`flex w-full flex-col rounded-md bg-components-chart-bg px-6 py-4 shadow-xs ${className ?? ''}`}>
       <div className="mb-3">
         <Basic name={title} type={timePeriod} hoverTip={explanation} />
       </div>
@@ -268,20 +268,20 @@ const Chart: React.FC<IChartProps> = ({
           type={!CHART_TYPE_CONFIG[chartType].showTokens
             ? ''
             : (
-                <span>
-                  {t('analysis.tokenUsage.consumed', { ns: 'appOverview' })}
-                  {' '}
-                  Tokens
-                  <span className="text-sm">
-                    <span className="ml-1 text-text-tertiary">(</span>
-                    <span className="text-orange-400">
-                      ~
-                      {sum(statistics.map(item => Number.parseFloat(String(get(item, 'total_price', '0'))))).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 4 })}
-                    </span>
-                    <span className="text-text-tertiary">)</span>
+              <span>
+                {t('analysis.tokenUsage.consumed', { ns: 'appOverview' })}
+                {' '}
+                Tokens
+                <span className="text-sm">
+                  <span className="ml-1 text-text-tertiary">(</span>
+                  <span className="text-orange-400">
+                    ~
+                    {sum(statistics.map(item => Number.parseFloat(String(get(item, 'total_price', '0'))))).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 4 })}
                   </span>
+                  <span className="text-text-tertiary">)</span>
                 </span>
-              )}
+              </span>
+            )}
           textStyle={{ main: `!text-3xl !font-normal ${sumData === 0 ? '!text-text-quaternary' : ''}` }}
         />
       </div>

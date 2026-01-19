@@ -35,7 +35,7 @@ const ImageUploader = () => {
             size: fileUploadConfig.imageFileSizeLimit,
             batchCount: fileUploadConfig.imageFileBatchLimit,
           })}
-          popupClassName="system-xs-medium p-1.5 rounded-lg text-text-secondary"
+          popupClassName="system-xs-medium p-1.5 rounded-md text-text-secondary"
           position="top"
           offset={4}
           disabled={files.length === 0}
@@ -44,7 +44,7 @@ const ImageUploader = () => {
             className="group flex cursor-pointer items-center gap-x-2"
             onClick={selectHandle}
           >
-            <div className="flex size-8 items-center justify-center rounded-lg border-[1px] border-dashed border-components-dropzone-border bg-components-button-tertiary-bg group-hover:bg-components-button-tertiary-bg-hover">
+            <div className="flex size-8 items-center justify-center rounded-md border-[1px] border-dashed border-components-dropzone-border bg-components-button-tertiary-bg group-hover:bg-components-button-tertiary-bg-hover">
               <RiImageAddLine className="size-4 text-text-tertiary" />
             </div>
             {files.length === 0 && (

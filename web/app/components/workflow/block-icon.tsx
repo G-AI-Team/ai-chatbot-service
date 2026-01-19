@@ -38,7 +38,7 @@ type BlockIconProps = {
 const ICON_CONTAINER_CLASSNAME_SIZE_MAP: Record<string, string> = {
   xs: 'w-4 h-4 rounded-[5px] shadow-xs',
   sm: 'w-5 h-5 rounded-md shadow-xs',
-  md: 'w-6 h-6 rounded-lg shadow-md',
+  md: 'w-6 h-6 rounded-md shadow-md',
 }
 
 const DEFAULT_ICON_MAP: Record<BlockEnum, React.ComponentType<{ className: string }>> = {
@@ -141,22 +141,22 @@ const BlockIcon: FC<BlockIconProps> = ({
             {
               typeof toolIcon === 'string'
                 ? (
-                    <div
-                      className="h-full w-full shrink-0 rounded-md bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url(${toolIcon})`,
-                      }}
-                    >
-                    </div>
-                  )
+                  <div
+                    className="h-full w-full shrink-0 rounded-md bg-cover bg-center"
+                    style={{
+                      backgroundImage: `url(${toolIcon})`,
+                    }}
+                  >
+                  </div>
+                )
                 : (
-                    <AppIcon
-                      className="!h-full !w-full shrink-0"
-                      size="tiny"
-                      icon={toolIcon?.content}
-                      background={toolIcon?.background}
-                    />
-                  )
+                  <AppIcon
+                    className="!h-full !w-full shrink-0"
+                    size="tiny"
+                    icon={toolIcon?.content}
+                    background={toolIcon?.background}
+                  />
+                )
             }
           </>
         )

@@ -89,8 +89,8 @@ const AddOAuthButton = ({
   const renderCustomLabel = useCallback((item: FormSchema) => {
     return (
       <div className="w-full">
-        <div className="mb-4 flex rounded-xl bg-background-section-burn p-4">
-          <div className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border-[0.5px] border-components-card-border bg-components-card-bg shadow-lg">
+        <div className="mb-4 flex rounded-md bg-background-section-burn p-4">
+          <div className="mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-md border-[0.5px] border-components-card-border bg-components-card-bg shadow-lg">
             <RiInformation2Fill className="h-5 w-5 text-text-accent" />
           </div>
           <div className="w-0 grow">

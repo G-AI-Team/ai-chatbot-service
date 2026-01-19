@@ -6,6 +6,6 @@
 }
 .layoutRightIcon {
   @apply p-2 ml-2 border-[0.5px] border-components-button-secondary-border hover:border-components-button-secondary-border-hover
-  rounded-lg bg-components-button-secondary-bg hover:bg-components-button-secondary-bg-hover cursor-pointer
+  rounded-md bg-components-button-secondary-bg hover:bg-components-button-secondary-bg-hover cursor-pointer
   shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px];
 }

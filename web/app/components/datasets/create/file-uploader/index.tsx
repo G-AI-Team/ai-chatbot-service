@@ -316,7 +316,7 @@ const FileUploader = ({
       <div className={cn('mb-1 text-sm font-semibold leading-6 text-text-secondary', titleClassName)}>{t('stepOne.uploader.title', { ns: 'datasetCreation' })}</div>
 
       {!hideUpload && (
-        <div ref={dropRef} className={cn('relative mb-2 box-border flex min-h-20 max-w-[640px] flex-col items-center justify-center gap-1 rounded-xl border border-dashed border-components-dropzone-border bg-components-dropzone-bg px-4 py-3 text-xs leading-4 text-text-tertiary', dragging && 'border-components-dropzone-border-accent bg-components-dropzone-bg-accent')}>
+        <div ref={dropRef} className={cn('relative mb-2 box-border flex min-h-20 max-w-[640px] flex-col items-center justify-center gap-1 rounded-md border border-dashed border-components-dropzone-border bg-components-dropzone-bg px-4 py-3 text-xs leading-4 text-text-tertiary', dragging && 'border-components-dropzone-border-accent bg-components-dropzone-bg-accent')}>
           <div className="flex min-h-5 items-center justify-center text-sm leading-4 text-text-secondary">
             <RiUploadCloud2Line className="mr-2 size-5" />
 
@@ -346,7 +346,7 @@ const FileUploader = ({
             key={`${fileItem.fileID}-${index}`}
             onClick={() => fileItem.file?.id && onPreview(fileItem.file)}
             className={cn(
-              'flex h-12 max-w-[640px] items-center rounded-lg border border-components-panel-border bg-components-panel-on-panel-item-bg text-xs leading-3 text-text-tertiary shadow-xs',
+              'flex h-12 max-w-[640px] items-center rounded-md border border-components-panel-border bg-components-panel-on-panel-item-bg text-xs leading-3 text-text-tertiary shadow-xs',
               // 'border-state-destructive-border bg-state-destructive-hover',
             )}
           >

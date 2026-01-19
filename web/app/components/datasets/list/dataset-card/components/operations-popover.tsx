@@ -32,7 +32,7 @@ const OperationsPopover = ({
         />
       )}
       className="z-20 min-w-[186px]"
-      popupClassName="rounded-xl bg-none shadow-none ring-0 min-w-[186px]"
+      popupClassName="rounded-md bg-none shadow-none ring-0 min-w-[186px]"
       position="br"
       trigger="click"
       btnElement={(

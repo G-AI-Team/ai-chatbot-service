@@ -202,7 +202,7 @@ const JinaReader: FC<Props> = ({
         docTitle={t(`${I18N_PREFIX}.jinaReaderDoc`, { ns: 'datasetCreation' })}
         docLink="https://jina.ai/reader"
       />
-      <div className="mt-2 rounded-xl border border-components-panel-border bg-background-default-subtle p-4 pb-0">
+      <div className="mt-2 rounded-md border border-components-panel-border bg-background-default-subtle p-4 pb-0">
         <UrlInput onRun={handleRun} isRunning={isRunning} />
         <OptionsWrap
           className="mt-4"

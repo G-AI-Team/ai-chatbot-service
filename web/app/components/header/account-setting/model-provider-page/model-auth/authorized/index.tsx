@@ -166,7 +166,7 @@ const Authorized = ({
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[100]">
           <div className={cn(
-            'w-[360px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px]',
+            'w-[360px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px]',
             popupClassName,
           )}
           >
@@ -213,9 +213,9 @@ const Authorized = ({
                     undefined,
                     currentCustomConfigurationModelFixedFields
                       ? {
-                          model: currentCustomConfigurationModelFixedFields.__model_name,
-                          model_type: currentCustomConfigurationModelFixedFields.__model_type,
-                        }
+                        model: currentCustomConfigurationModelFixedFields.__model_name,
+                        model_type: currentCustomConfigurationModelFixedFields.__model_type,
+                      }
                       : undefined,
                   )}
                   className="system-xs-medium flex h-[40px] cursor-pointer items-center px-3 text-text-accent-light-mode-only"

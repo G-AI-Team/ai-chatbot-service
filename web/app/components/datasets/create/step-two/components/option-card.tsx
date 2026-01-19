@@ -25,7 +25,7 @@ export const OptionCardHeader: FC<OptionCardHeaderProps> = (props) => {
       <div className="relative flex size-14 items-center justify-center overflow-hidden">
         {isActive && effectImg && <Image src={effectImg} className="absolute left-0 top-0 h-full w-full" alt="" width={56} height={56} />}
         <div className="p-1">
-          <div className="flex size-8 justify-center rounded-lg border border-components-panel-border-subtle bg-background-default-dodge p-1.5 shadow-md">
+          <div className="flex size-8 justify-center rounded-md border border-components-panel-border-subtle bg-background-default-dodge p-1.5 shadow-md">
             {icon}
           </div>
         </div>
@@ -64,7 +64,7 @@ export const OptionCard: FC<OptionCardProps> = (
   const { icon, className, title, description, isActive, children, actions, activeHeaderClassName, style, effectImg, onSwitched, noHighlight, disabled, ...rest } = props
   return (
     <div
-      className={cn('rounded-xl bg-components-option-card-option-bg shadow-xs', (isActive && !noHighlight)
+      className={cn('rounded-md bg-components-option-card-option-bg shadow-xs', (isActive && !noHighlight)
         ? 'border-[1.5px] border-components-option-card-option-selected-border'
         : 'border border-components-option-card-option-border', disabled && 'pointer-events-none opacity-50', className)}
       style={{

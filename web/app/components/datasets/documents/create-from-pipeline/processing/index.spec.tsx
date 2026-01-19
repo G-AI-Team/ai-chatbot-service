@@ -616,7 +616,7 @@ describe('Processing', () => {
       const { container } = render(<Processing {...props} />)
 
       // Assert - Check for card container with rounded corners and background
-      const sideTipCard = container.querySelector('.rounded-xl.bg-background-section')
+      const sideTipCard = container.querySelector('.rounded-md.bg-background-section')
       expect(sideTipCard).toBeInTheDocument()
     })
 

@@ -731,7 +731,7 @@ describe('PreviewItem', () => {
 
       // Assert
       const rootDiv = container.firstChild as HTMLElement
-      expect(rootDiv).toHaveClass('rounded-xl', 'bg-gray-50', 'p-4')
+      expect(rootDiv).toHaveClass('rounded-md', 'bg-gray-50', 'p-4')
     })
 
     it('should have proper header styling', () => {

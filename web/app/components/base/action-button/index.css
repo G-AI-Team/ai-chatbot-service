@@ -14,16 +14,16 @@
     }
 
     .action-btn-xl {
-        @apply p-2 w-9 h-9 rounded-lg
+        @apply p-2 w-9 h-9 rounded-md
     }
 
     .action-btn-l {
-        @apply p-1.5 w-8 h-8 rounded-lg
+        @apply p-1.5 w-8 h-8 rounded-md
     }
 
     /* m is for the regular button */
     .action-btn-m {
-        @apply p-0.5 w-6 h-6 rounded-lg
+        @apply p-0.5 w-6 h-6 rounded-md
     }
 
     .action-btn-xs {

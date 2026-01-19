@@ -55,7 +55,7 @@ const FileThumb = ({
   return (
     <Tooltip
       popupContent={name}
-      popupClassName="p-1.5 rounded-lg system-xs-medium text-text-secondary"
+      popupClassName="p-1.5 rounded-md system-xs-medium text-text-secondary"
       position="top"
     >
       <div
@@ -70,17 +70,17 @@ const FileThumb = ({
         {
           isImage
             ? (
-                <ImageRender
-                  sourceUrl={sourceUrl}
-                  name={name}
-                />
-              )
+              <ImageRender
+                sourceUrl={sourceUrl}
+                name={name}
+              />
+            )
             : (
-                <FileTypeIcon
-                  type={getFileAppearanceType(name, mimeType)}
-                  size="sm"
-                />
-              )
+              <FileTypeIcon
+                type={getFileAppearanceType(name, mimeType)}
+                size="sm"
+              />
+            )
         }
       </div>
     </Tooltip>

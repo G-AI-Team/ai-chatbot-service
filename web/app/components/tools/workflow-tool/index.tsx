@@ -213,7 +213,7 @@ const WorkflowToolAsModal: FC<Props> = ({
               {/* Tool Input  */}
               <div>
                 <div className="system-sm-medium py-2 text-text-primary">{t('createTool.toolInput.title', { ns: 'tools' })}</div>
-                <div className="w-full overflow-x-auto rounded-lg border border-divider-regular">
+                <div className="w-full overflow-x-auto rounded-md border border-divider-regular">
                   <table className="w-full text-xs font-normal leading-[18px] text-text-secondary">
                     <thead className="uppercase text-text-tertiary">
                       <tr className="border-b border-divider-regular">
@@ -267,7 +267,7 @@ const WorkflowToolAsModal: FC<Props> = ({
               {/* Tool Output  */}
               <div>
                 <div className="system-sm-medium py-2 text-text-primary">{t('createTool.toolOutput.title', { ns: 'tools' })}</div>
-                <div className="w-full overflow-x-auto rounded-lg border border-divider-regular">
+                <div className="w-full overflow-x-auto rounded-md border border-divider-regular">
                   <table className="w-full text-xs font-normal leading-[18px] text-text-secondary">
                     <thead className="uppercase text-text-tertiary">
                       <tr className="border-b border-divider-regular">
@@ -286,16 +286,16 @@ const WorkflowToolAsModal: FC<Props> = ({
                                 {
                                   !item.reserved && isOutputParameterReserved(item.name)
                                     ? (
-                                        <Tooltip
-                                          popupContent={(
-                                            <div className="w-[180px]">
-                                              {t('createTool.toolOutput.reservedParameterDuplicateTip', { ns: 'tools' })}
-                                            </div>
-                                          )}
-                                        >
-                                          <RiErrorWarningLine className="h-3 w-3 text-text-warning-secondary" />
-                                        </Tooltip>
-                                      )
+                                      <Tooltip
+                                        popupContent={(
+                                          <div className="w-[180px]">
+                                            {t('createTool.toolOutput.reservedParameterDuplicateTip', { ns: 'tools' })}
+                                          </div>
+                                        )}
+                                      >
+                                        <RiErrorWarningLine className="h-3 w-3 text-text-warning-secondary" />
+                                      </Tooltip>
+                                    )
                                     : null
                                 }
                               </div>

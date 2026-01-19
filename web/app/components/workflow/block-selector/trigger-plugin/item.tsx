@@ -94,7 +94,7 @@ const TriggerPluginItem: FC<Props> = ({
     >
       <div className={cn(className)}>
         <div
-          className="group/item flex w-full cursor-pointer select-none items-center justify-between rounded-lg pl-3 pr-1 hover:bg-state-base-hover"
+          className="group/item flex w-full cursor-pointer select-none items-center justify-between rounded-md pl-3 pr-1 hover:bg-state-base-hover"
           onClick={() => {
             if (hasAction) {
               setFold(!isFold)

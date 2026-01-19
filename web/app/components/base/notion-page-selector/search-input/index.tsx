@@ -19,7 +19,7 @@ const SearchInput = ({
   }, [onChange])
 
   return (
-    <div className={cn('flex h-8 w-[200px] items-center rounded-lg bg-components-input-bg-normal p-2')}>
+    <div className={cn('flex h-8 w-[200px] items-center rounded-md bg-components-input-bg-normal p-2')}>
       <RiSearchLine className="mr-0.5 h-4 w-4 shrink-0 text-components-input-text-placeholder" />
       <input
         className="min-w-0 grow appearance-none border-0 bg-transparent px-1 text-[13px] leading-[16px] text-components-input-text-filled outline-0 placeholder:text-components-input-text-placeholder"

@@ -90,7 +90,7 @@ export const EditSlice: FC<EditSliceProps> = (props) => {
               ref={refs.setFloating}
               style={floatingStyles}
               {...getFloatingProps()}
-              className="inline-flex items-center justify-center rounded-lg bg-components-actionbar-bg p-1 shadow"
+              className="inline-flex items-center justify-center rounded-md bg-components-actionbar-bg p-1 shadow"
               onMouseEnter={() => setDelBtnHover(true)}
               onMouseLeave={() => setDelBtnHover(false)}
             >

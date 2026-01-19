@@ -8,8 +8,8 @@ const NoLinkedAppsPanel = () => {
   const docLink = useDocLink()
 
   return (
-    <div className="w-[240px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-4">
-      <div className="inline-flex rounded-lg border-[0.5px] border-components-panel-border-subtle bg-background-default-subtle p-2">
+    <div className="w-[240px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-4">
+      <div className="inline-flex rounded-md border-[0.5px] border-components-panel-border-subtle bg-background-default-subtle p-2">
         <RiApps2AddLine className="size-4 text-text-tertiary" />
       </div>
       <div className="my-2 text-xs text-text-tertiary">{t('datasetMenus.emptyTip', { ns: 'common' })}</div>

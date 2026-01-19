@@ -20,7 +20,7 @@ export default function ThemeSwitcher() {
     <div className="flex items-center rounded-[10px] bg-components-segmented-control-bg-normal p-0.5">
       <div
         className={cn(
-          'rounded-lg px-2 py-1 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
+          'rounded-md px-2 py-1 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
           theme === 'system' && 'bg-components-segmented-control-item-active-bg text-text-accent-light-mode-only shadow-sm hover:bg-components-segmented-control-item-active-bg hover:text-text-accent-light-mode-only',
         )}
         onClick={() => handleThemeChange('system')}
@@ -32,7 +32,7 @@ export default function ThemeSwitcher() {
       <div className={cn('h-[14px] w-px bg-transparent', theme === 'dark' && 'bg-divider-regular')}></div>
       <div
         className={cn(
-          'rounded-lg px-2 py-1 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
+          'rounded-md px-2 py-1 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
           theme === 'light' && 'bg-components-segmented-control-item-active-bg text-text-accent-light-mode-only shadow-sm hover:bg-components-segmented-control-item-active-bg hover:text-text-accent-light-mode-only',
         )}
         onClick={() => handleThemeChange('light')}
@@ -44,7 +44,7 @@ export default function ThemeSwitcher() {
       <div className={cn('h-[14px] w-px bg-transparent', theme === 'system' && 'bg-divider-regular')}></div>
       <div
         className={cn(
-          'rounded-lg px-2 py-1 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
+          'rounded-md px-2 py-1 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
           theme === 'dark' && 'bg-components-segmented-control-item-active-bg text-text-accent-light-mode-only shadow-sm hover:bg-components-segmented-control-item-active-bg hover:text-text-accent-light-mode-only',
         )}
         onClick={() => handleThemeChange('dark')}

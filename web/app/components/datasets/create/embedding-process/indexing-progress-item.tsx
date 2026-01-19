@@ -28,7 +28,7 @@ const StatusIcon: FC<{ status: string, error?: string }> = ({ status, error }) =
   if (status === 'error') {
     return (
       <Tooltip
-        popupClassName="px-4 py-[14px] max-w-60 body-xs-regular text-text-secondary border-[0.5px] border-components-panel-border rounded-xl"
+        popupClassName="px-4 py-[14px] max-w-60 body-xs-regular text-text-secondary border-[0.5px] border-components-panel-border rounded-md"
         offset={4}
         popupContent={error}
       >

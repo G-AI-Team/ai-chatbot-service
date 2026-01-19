@@ -28,7 +28,7 @@ const LanguageSelect: FC<ILanguageSelectProps> = ({
           {languages.filter(language => language.supported).map(({ prompt_name }) => (
             <div
               key={prompt_name}
-              className="inline-flex w-full cursor-pointer items-center justify-between rounded-lg px-3 py-2 hover:bg-state-base-hover"
+              className="inline-flex w-full cursor-pointer items-center justify-between rounded-md px-3 py-2 hover:bg-state-base-hover"
               onClick={() => onSelect(prompt_name)}
             >
               <span className="system-sm-medium text-text-secondary">{prompt_name}</span>

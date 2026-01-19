@@ -62,10 +62,10 @@ const DrawerPlus: FC<Props> = ({
       positionCenter={positionCenter}
       dialogClassName={dialogClassName}
       dialogBackdropClassName={dialogBackdropClassName}
-      panelClassName={cn('mx-2 mb-3 mt-16 rounded-xl !p-0 sm:mr-2', panelClassName, maxWidthClassName)}
+      panelClassName={cn('mx-2 mb-3 mt-16 rounded-md !p-0 sm:mr-2', panelClassName, maxWidthClassName)}
     >
       <div
-        className={cn(contentClassName, 'flex w-full flex-col rounded-xl border-[0.5px] border-divider-subtle bg-components-panel-bg shadow-xl')}
+        className={cn(contentClassName, 'flex w-full flex-col rounded-md border-[0.5px] border-divider-subtle bg-components-panel-bg shadow-xl')}
         style={{
           height,
         }}

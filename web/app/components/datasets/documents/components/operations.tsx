@@ -190,15 +190,15 @@ const Operations = ({
         <>
           {archived
             ? (
-                <Tooltip
-                  popupContent={t('list.action.enableWarning', { ns: 'datasetDocuments' })}
-                  popupClassName="!font-semibold"
-                >
-                  <div>
-                    <Switch defaultValue={false} onChange={noop} disabled={true} size="md" />
-                  </div>
-                </Tooltip>
-              )
+              <Tooltip
+                popupContent={t('list.action.enableWarning', { ns: 'datasetDocuments' })}
+                popupClassName="!font-semibold"
+              >
+                <div>
+                  <Switch defaultValue={false} onChange={noop} disabled={true} size="md" />
+                </div>
+              </Tooltip>
+            )
             : <Switch defaultValue={enabled} onChange={v => handleSwitch(v ? 'enable' : 'disable')} size="md" />}
           <Divider className="!ml-4 !mr-2 !h-3" type="vertical" />
         </>
@@ -212,7 +212,7 @@ const Operations = ({
           >
             <button
               type="button"
-              className={cn('mr-2 cursor-pointer rounded-lg', !isListScene
+              className={cn('mr-2 cursor-pointer rounded-md', !isListScene
                 ? 'border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg p-2 shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px] hover:border-components-button-secondary-border-hover hover:bg-components-button-secondary-bg-hover'
                 : 'p-0.5 hover:bg-state-base-hover')}
               onClick={() => router.push(`/datasets/${datasetId}/documents/${detail.id}/settings`)}

@@ -30,47 +30,47 @@ const PluginTypeSwitch = ({
     text: string
     icon: React.ReactNode | null
   }> = [
-    {
-      value: PLUGIN_TYPE_SEARCH_MAP.all,
-      text: t('category.all', { ns: 'plugin' }),
-      icon: null,
-    },
-    {
-      value: PLUGIN_TYPE_SEARCH_MAP.model,
-      text: t('category.models', { ns: 'plugin' }),
-      icon: <RiBrain2Line className="mr-1.5 h-4 w-4" />,
-    },
-    {
-      value: PLUGIN_TYPE_SEARCH_MAP.tool,
-      text: t('category.tools', { ns: 'plugin' }),
-      icon: <RiHammerLine className="mr-1.5 h-4 w-4" />,
-    },
-    {
-      value: PLUGIN_TYPE_SEARCH_MAP.datasource,
-      text: t('category.datasources', { ns: 'plugin' }),
-      icon: <RiDatabase2Line className="mr-1.5 h-4 w-4" />,
-    },
-    {
-      value: PLUGIN_TYPE_SEARCH_MAP.trigger,
-      text: t('category.triggers', { ns: 'plugin' }),
-      icon: <TriggerIcon className="mr-1.5 h-4 w-4" />,
-    },
-    {
-      value: PLUGIN_TYPE_SEARCH_MAP.agent,
-      text: t('category.agents', { ns: 'plugin' }),
-      icon: <RiSpeakAiLine className="mr-1.5 h-4 w-4" />,
-    },
-    {
-      value: PLUGIN_TYPE_SEARCH_MAP.extension,
-      text: t('category.extensions', { ns: 'plugin' }),
-      icon: <RiPuzzle2Line className="mr-1.5 h-4 w-4" />,
-    },
-    {
-      value: PLUGIN_TYPE_SEARCH_MAP.bundle,
-      text: t('category.bundles', { ns: 'plugin' }),
-      icon: <RiArchive2Line className="mr-1.5 h-4 w-4" />,
-    },
-  ]
+      {
+        value: PLUGIN_TYPE_SEARCH_MAP.all,
+        text: t('category.all', { ns: 'plugin' }),
+        icon: null,
+      },
+      {
+        value: PLUGIN_TYPE_SEARCH_MAP.model,
+        text: t('category.models', { ns: 'plugin' }),
+        icon: <RiBrain2Line className="mr-1.5 h-4 w-4" />,
+      },
+      {
+        value: PLUGIN_TYPE_SEARCH_MAP.tool,
+        text: t('category.tools', { ns: 'plugin' }),
+        icon: <RiHammerLine className="mr-1.5 h-4 w-4" />,
+      },
+      {
+        value: PLUGIN_TYPE_SEARCH_MAP.datasource,
+        text: t('category.datasources', { ns: 'plugin' }),
+        icon: <RiDatabase2Line className="mr-1.5 h-4 w-4" />,
+      },
+      {
+        value: PLUGIN_TYPE_SEARCH_MAP.trigger,
+        text: t('category.triggers', { ns: 'plugin' }),
+        icon: <TriggerIcon className="mr-1.5 h-4 w-4" />,
+      },
+      {
+        value: PLUGIN_TYPE_SEARCH_MAP.agent,
+        text: t('category.agents', { ns: 'plugin' }),
+        icon: <RiSpeakAiLine className="mr-1.5 h-4 w-4" />,
+      },
+      {
+        value: PLUGIN_TYPE_SEARCH_MAP.extension,
+        text: t('category.extensions', { ns: 'plugin' }),
+        icon: <RiPuzzle2Line className="mr-1.5 h-4 w-4" />,
+      },
+      {
+        value: PLUGIN_TYPE_SEARCH_MAP.bundle,
+        text: t('category.bundles', { ns: 'plugin' }),
+        icon: <RiArchive2Line className="mr-1.5 h-4 w-4" />,
+      },
+    ]
 
   return (
     <div className={cn(
@@ -83,7 +83,7 @@ const PluginTypeSwitch = ({
           <div
             key={option.value}
             className={cn(
-              'system-md-medium flex h-8 cursor-pointer items-center rounded-xl border border-transparent px-3 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
+              'system-md-medium flex h-8 cursor-pointer items-center rounded-md border border-transparent px-3 text-text-tertiary hover:bg-state-base-hover hover:text-text-secondary',
               activePluginType === option.value && 'border-components-main-nav-nav-button-border !bg-components-main-nav-nav-button-bg-active !text-components-main-nav-nav-button-text-active shadow-xs',
             )}
             onClick={() => {

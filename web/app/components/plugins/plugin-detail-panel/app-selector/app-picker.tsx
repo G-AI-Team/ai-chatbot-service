@@ -155,7 +155,7 @@ const AppPicker: FC<Props> = ({
       </PortalToFollowElemTrigger>
 
       <PortalToFollowElemContent className="z-[1000]">
-        <div className="relative flex max-h-[400px] min-h-20 w-[356px] flex-col rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
+        <div className="relative flex max-h-[400px] min-h-20 w-[356px] flex-col rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
           <div className="p-2 pb-1">
             <Input
               showLeftIcon
@@ -169,7 +169,7 @@ const AppPicker: FC<Props> = ({
             {apps.map(app => (
               <div
                 key={app.id}
-                className="flex cursor-pointer items-center gap-3 rounded-lg py-1 pl-2 pr-3 hover:bg-state-base-hover"
+                className="flex cursor-pointer items-center gap-3 rounded-md py-1 pl-2 pr-3 hover:bg-state-base-hover"
                 onClick={() => onSelect(app)}
               >
                 <AppIcon

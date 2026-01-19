@@ -45,10 +45,10 @@ const Contribute = ({ onRefreshData }: Props) => {
   return (
     <>
       {isCurrentWorkspaceManager && (
-        <div className="col-span-1 flex min-h-[135px] cursor-pointer flex-col rounded-xl bg-background-default-dimmed transition-all duration-200 ease-in-out">
+        <div className="col-span-1 flex min-h-[135px] cursor-pointer flex-col rounded-md bg-background-default-dimmed transition-all duration-200 ease-in-out">
           <div className="group grow rounded-t-xl" onClick={() => setIsShowEditCustomCollectionModal(true)}>
             <div className="flex shrink-0 items-center p-4 pb-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-dashed border-divider-deep group-hover:border-solid group-hover:border-state-accent-hover-alt group-hover:bg-state-accent-hover">
+              <div className="flex h-10 w-10 items-center justify-center rounded-md border border-dashed border-divider-deep group-hover:border-solid group-hover:border-state-accent-hover-alt group-hover:bg-state-accent-hover">
                 <RiAddCircleFill className="h-4 w-4 text-text-quaternary group-hover:text-text-accent" />
               </div>
               <div className="system-md-semibold ml-3 text-text-secondary group-hover:text-text-accent">{t('createCustomTool', { ns: 'tools' })}</div>

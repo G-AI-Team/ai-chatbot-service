@@ -51,7 +51,7 @@ const FileItem = ({
     <>
       <div
         className={cn(
-          'group/file-item relative h-[68px] w-[144px] rounded-lg border-[0.5px] border-components-panel-border bg-components-card-bg p-2 shadow-xs',
+          'group/file-item relative h-[68px] w-[144px] rounded-md border-[0.5px] border-components-panel-border bg-components-card-bg p-2 shadow-xs',
           !uploadError && 'hover:bg-components-card-bg-alt',
           uploadError && 'border border-state-destructive-border bg-state-destructive-hover',
           uploadError && 'bg-state-destructive-hover-alt hover:border-[0.5px] hover:border-state-destructive-border',

@@ -24,7 +24,7 @@ const MarketplaceTrigger = ({
   return (
     <div
       className={cn(
-        'flex h-8 cursor-pointer select-none items-center rounded-lg px-2 py-1 text-text-tertiary',
+        'flex h-8 cursor-pointer select-none items-center rounded-md px-2 py-1 text-text-tertiary',
         !!selectedTagsLength && 'border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg shadow-xs shadow-shadow-shadow-3',
         open && !selectedTagsLength && 'bg-state-base-hover',
       )}

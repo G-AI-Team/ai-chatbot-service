@@ -55,7 +55,7 @@ const StepThree = ({ datasetId, datasetName, indexingType, creationCache, retrie
                   <div className="system-sm-semibold flex h-6 items-center text-text-secondary">
                     {t('stepThree.label', { ns: 'datasetCreation' })}
                   </div>
-                  <div className="system-sm-regular w-full truncate rounded-lg bg-components-input-bg-normal p-2 text-components-input-text-filled">
+                  <div className="system-sm-regular w-full truncate rounded-md bg-components-input-bg-normal p-2 text-components-input-text-filled">
                     <span className="px-1">{datasetName || creationCache?.dataset?.name}</span>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ const StepThree = ({ datasetId, datasetName, indexingType, creationCache, retrie
       </div>
       {!isMobile && (
         <div className="shrink-0 pr-8 pt-[88px] text-xs">
-          <div className="flex w-[328px] flex-col gap-3 rounded-xl bg-background-section p-6 text-text-tertiary">
+          <div className="flex w-[328px] flex-col gap-3 rounded-md bg-background-section p-6 text-text-tertiary">
             <div className="flex size-10 items-center justify-center rounded-[10px] bg-components-card-bg shadow-lg">
               <RiBookOpenLine className="size-5 text-text-accent" />
             </div>

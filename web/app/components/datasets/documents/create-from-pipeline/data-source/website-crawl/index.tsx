@@ -165,7 +165,7 @@ const WebsiteCrawl = ({
         onCredentialChange={handleCredentialChange}
         credentials={dataSourceAuth?.result || []}
       />
-      <div className="mt-2 rounded-xl border border-components-panel-border bg-background-default-subtle">
+      <div className="mt-2 rounded-md border border-components-panel-border bg-background-default-subtle">
         <Options
           variables={paramsConfig?.variables || []}
           step={step}

@@ -64,7 +64,7 @@ const CredentialSelector = ({
             >
               <MenuItems
                 className="absolute left-0 top-8 z-10 w-80
-                  origin-top-right rounded-lg border-[0.5px]
+                  origin-top-right rounded-md border-[0.5px]
                   border-components-panel-border bg-components-panel-bg-blur shadow-lg shadow-shadow-shadow-5"
               >
                 <div className="max-h-50 overflow-auto p-1">
@@ -74,7 +74,7 @@ const CredentialSelector = ({
                       return (
                         <MenuItem key={item.credentialId}>
                           <div
-                            className="flex h-9 cursor-pointer items-center rounded-lg px-3 hover:bg-state-base-hover"
+                            className="flex h-9 cursor-pointer items-center rounded-md px-3 hover:bg-state-base-hover"
                             onClick={() => onSelect(item.credentialId)}
                           >
                             <CredentialIcon

@@ -35,57 +35,57 @@ const VarReferencePopup: FC<Props> = ({
   // max-h-[300px] overflow-y-auto todo: use portal to handle long list
   return (
     <div
-      className="space-y-1 rounded-lg border border-components-panel-border bg-components-panel-bg p-1 shadow-lg"
+      className="space-y-1 rounded-md border border-components-panel-border bg-components-panel-bg p-1 shadow-lg"
       style={{
         width: itemWidth || 228,
       }}
     >
       {((!vars || vars.length === 0) && popupFor)
         ? (popupFor === 'toAssigned'
-            ? (
-                <ListEmpty
-                  title={t('variableReference.noAvailableVars', { ns: 'workflow' }) || ''}
-                  description={(
-                    <div className="system-xs-regular text-text-tertiary">
-                      {t('variableReference.noVarsForOperation', { ns: 'workflow' })}
-                    </div>
-                  )}
-                />
-              )
-            : (
-                <ListEmpty
-                  title={t('variableReference.noAssignedVars', { ns: 'workflow' }) || ''}
-                  description={(
-                    <div className="system-xs-regular text-text-tertiary">
-                      {t('variableReference.assignedVarsDescription', { ns: 'workflow' })}
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-text-accent-secondary"
-                        href={docLink('/guides/workflow/variables#conversation-variables', {
-                          'zh-Hans': '/guides/workflow/variables#会话变量',
-                          'ja-JP': '/guides/workflow/variables#会話変数',
-                        })}
-                      >
-                        {t('variableReference.conversationVars', { ns: 'workflow' })}
-                      </a>
-                    </div>
-                  )}
-                />
-              ))
-        : (
-            <VarReferenceVars
-              searchBoxClassName="mt-1"
-              vars={vars}
-              onChange={onChange}
-              itemWidth={itemWidth}
-              isSupportFileVar={isSupportFileVar}
-              zIndex={zIndex}
-              showManageInputField={showManageRagInputFields}
-              onManageInputField={() => setShowInputFieldPanel?.(true)}
-              preferSchemaType={preferSchemaType}
+          ? (
+            <ListEmpty
+              title={t('variableReference.noAvailableVars', { ns: 'workflow' }) || ''}
+              description={(
+                <div className="system-xs-regular text-text-tertiary">
+                  {t('variableReference.noVarsForOperation', { ns: 'workflow' })}
+                </div>
+              )}
             />
-          )}
+          )
+          : (
+            <ListEmpty
+              title={t('variableReference.noAssignedVars', { ns: 'workflow' }) || ''}
+              description={(
+                <div className="system-xs-regular text-text-tertiary">
+                  {t('variableReference.assignedVarsDescription', { ns: 'workflow' })}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-accent-secondary"
+                    href={docLink('/guides/workflow/variables#conversation-variables', {
+                      'zh-Hans': '/guides/workflow/variables#会话变量',
+                      'ja-JP': '/guides/workflow/variables#会話変数',
+                    })}
+                  >
+                    {t('variableReference.conversationVars', { ns: 'workflow' })}
+                  </a>
+                </div>
+              )}
+            />
+          ))
+        : (
+          <VarReferenceVars
+            searchBoxClassName="mt-1"
+            vars={vars}
+            onChange={onChange}
+            itemWidth={itemWidth}
+            isSupportFileVar={isSupportFileVar}
+            zIndex={zIndex}
+            showManageInputField={showManageRagInputFields}
+            onManageInputField={() => setShowInputFieldPanel?.(true)}
+            preferSchemaType={preferSchemaType}
+          />
+        )}
     </div>
   )
 }

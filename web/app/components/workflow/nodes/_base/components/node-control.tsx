@@ -46,7 +46,7 @@ const NodeControl: FC<NodeControlProps> = ({
       `}
     >
       <div
-        className="flex h-6 items-center rounded-lg border-[0.5px] border-components-actionbar-border bg-components-actionbar-bg px-0.5 text-text-tertiary shadow-md backdrop-blur-[5px]"
+        className="flex h-6 items-center rounded-md border-[0.5px] border-components-actionbar-border bg-components-actionbar-bg px-0.5 text-text-tertiary shadow-md backdrop-blur-[5px]"
         onClick={e => e.stopPropagation()}
       >
         {
@@ -69,13 +69,13 @@ const NodeControl: FC<NodeControlProps> = ({
                 isSingleRunning
                   ? <Stop className="h-3 w-3" />
                   : (
-                      <Tooltip
-                        popupContent={t('panel.runThisStep', { ns: 'workflow' })}
-                        asChild={false}
-                      >
-                        <RiPlayLargeLine className="h-3 w-3" />
-                      </Tooltip>
-                    )
+                    <Tooltip
+                      popupContent={t('panel.runThisStep', { ns: 'workflow' })}
+                      asChild={false}
+                    >
+                      <RiPlayLargeLine className="h-3 w-3" />
+                    </Tooltip>
+                  )
               }
             </div>
           )

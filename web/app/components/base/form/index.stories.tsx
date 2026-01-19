@@ -269,7 +269,7 @@ const ConditionalFieldsStory = () => {
 
   return (
     <div className="flex flex-col gap-6 px-6 md:flex-row md:px-10">
-      <div className="flex-1 rounded-xl border border-divider-subtle bg-components-panel-bg p-5 shadow-sm">
+      <div className="flex-1 rounded-md border border-divider-subtle bg-components-panel-bg p-5 shadow-sm">
         <BaseForm
           formSchemas={conditionalSchemas}
           defaultValues={values}
@@ -282,7 +282,7 @@ const ConditionalFieldsStory = () => {
           }}
         />
       </div>
-      <aside className="w-full max-w-sm rounded-xl border border-divider-subtle bg-components-panel-bg p-4 text-xs text-text-secondary shadow-sm">
+      <aside className="w-full max-w-sm rounded-md border border-divider-subtle bg-components-panel-bg p-4 text-xs text-text-secondary shadow-sm">
         <h3 className="text-sm font-semibold text-text-primary">Live values</h3>
         <p className="mb-2 text-[11px] text-text-tertiary">`show_on` rules hide or reveal inputs without losing track of the form state.</p>
         <pre className="max-h-48 overflow-auto rounded-md bg-background-default-subtle p-3 font-mono text-[11px] leading-tight text-text-primary">

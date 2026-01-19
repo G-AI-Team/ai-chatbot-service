@@ -110,7 +110,7 @@ class ErrorBoundaryInner extends React.Component<
       return (
         <div
           className={cn(
-            'border-state-critical-border bg-state-critical-hover-alt flex flex-col items-center justify-center rounded-lg border p-8',
+            'border-state-critical-border bg-state-critical-hover-alt flex flex-col items-center justify-center rounded-md border p-8',
             isolate && 'min-h-[200px]',
             className,
           )}
@@ -134,7 +134,7 @@ class ErrorBoundaryInner extends React.Component<
                   Error Details (Development Only)
                 </span>
               </summary>
-              <div className="rounded-lg bg-gray-100 p-4">
+              <div className="rounded-md bg-gray-100 p-4">
                 <div className="mb-2">
                   <span className="font-mono text-xs font-semibold text-gray-600">Error:</span>
                   <pre className="mt-1 overflow-auto whitespace-pre-wrap font-mono text-xs text-gray-800">
@@ -266,7 +266,7 @@ export const ErrorFallback: React.FC<{
   resetErrorBoundaryAction: () => void
 }> = ({ error, resetErrorBoundaryAction }) => {
   return (
-    <div className="flex min-h-[200px] flex-col items-center justify-center rounded-lg border border-red-200 bg-red-50 p-8">
+    <div className="flex min-h-[200px] flex-col items-center justify-center rounded-md border border-red-200 bg-red-50 p-8">
       <h2 className="mb-2 text-lg font-semibold text-red-800">Oops! Something went wrong</h2>
       <p className="mb-4 text-center text-red-600">{error.message}</p>
       <Button onClick={resetErrorBoundaryAction} size="small">

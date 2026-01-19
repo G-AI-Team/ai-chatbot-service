@@ -8,8 +8,8 @@ const InfoPanel = () => {
 
   return (
     <div className="flex w-[360px] flex-col items-start pb-2 pr-8 pt-[108px]">
-      <div className="flex w-full min-w-[240px] flex-col items-start gap-3 self-stretch rounded-xl bg-background-section p-6">
-        <div className="flex h-10 w-10 grow items-center justify-center gap-2 self-stretch rounded-lg border-[0.5px] border-components-card-border bg-components-card-bg p-1">
+      <div className="flex w-full min-w-[240px] flex-col items-start gap-3 self-stretch rounded-md bg-background-section p-6">
+        <div className="flex h-10 w-10 grow items-center justify-center gap-2 self-stretch rounded-md border-[0.5px] border-components-card-border bg-components-card-bg p-1">
           <RiBookOpenLine className="h-5 w-5 text-text-accent" />
         </div>
         <p className="flex flex-col items-start gap-2 self-stretch">

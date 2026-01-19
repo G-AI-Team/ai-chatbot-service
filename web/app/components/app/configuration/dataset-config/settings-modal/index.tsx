@@ -187,7 +187,7 @@ const SettingsModal: FC<SettingsModalProps> = ({
 
   return (
     <div
-      className="flex w-full flex-col overflow-hidden rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl"
+      className="flex w-full flex-col overflow-hidden rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl"
       style={{
         height: 'calc(100vh - 72px)',
       }}
@@ -270,7 +270,7 @@ const SettingsModal: FC<SettingsModalProps> = ({
               <div className="system-sm-semibold text-text-secondary">{t('form.embeddingModel', { ns: 'datasetSettings' })}</div>
             </div>
             <div className="w-full">
-              <div className="h-8 w-full rounded-lg bg-components-input-bg-normal opacity-60">
+              <div className="h-8 w-full rounded-md bg-components-input-bg-normal opacity-60">
                 <ModelSelector
                   readonly
                   defaultModel={{
@@ -291,31 +291,31 @@ const SettingsModal: FC<SettingsModalProps> = ({
         {/* Retrieval Method Config */}
         {isExternal
           ? (
-              <RetrievalSection
-                isExternal
-                rowClass={rowClass}
-                labelClass={labelClass}
-                t={t as any}
-                topK={topK}
-                scoreThreshold={scoreThreshold}
-                scoreThresholdEnabled={scoreThresholdEnabled}
-                onExternalSettingChange={handleSettingsChange}
-                currentDataset={currentDataset}
-              />
-            )
+            <RetrievalSection
+              isExternal
+              rowClass={rowClass}
+              labelClass={labelClass}
+              t={t as any}
+              topK={topK}
+              scoreThreshold={scoreThreshold}
+              scoreThresholdEnabled={scoreThresholdEnabled}
+              onExternalSettingChange={handleSettingsChange}
+              currentDataset={currentDataset}
+            />
+          )
           : (
-              <RetrievalSection
-                isExternal={false}
-                rowClass={rowClass}
-                labelClass={labelClass}
-                t={t as any}
-                indexMethod={indexMethod}
-                retrievalConfig={retrievalConfig}
-                showMultiModalTip={showMultiModalTip}
-                onRetrievalConfigChange={setRetrievalConfig}
-                docLink={docLink}
-              />
-            )}
+            <RetrievalSection
+              isExternal={false}
+              rowClass={rowClass}
+              labelClass={labelClass}
+              t={t as any}
+              indexMethod={indexMethod}
+              retrievalConfig={retrievalConfig}
+              showMultiModalTip={showMultiModalTip}
+              onRetrievalConfigChange={setRetrievalConfig}
+              docLink={docLink}
+            />
+          )}
       </div>
       <RetrievalChangeTip
         visible={isRetrievalChanged && !isHideChangedTip}

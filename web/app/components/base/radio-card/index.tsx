@@ -32,13 +32,13 @@ const RadioCard: FC<Props> = ({
   return (
     <div
       className={cn(
-        'relative cursor-pointer rounded-xl border-[0.5px] border-components-option-card-option-border bg-components-option-card-option-bg p-3',
+        'relative cursor-pointer rounded-md border-[0.5px] border-components-option-card-option-border bg-components-option-card-option-bg p-3',
         isChosen && 'border-[1.5px] bg-components-option-card-option-selected-bg',
         className,
       )}
     >
       <div className="flex gap-x-2" onClick={onChosen}>
-        <div className={cn(iconBgClassName, 'flex size-8 shrink-0 items-center justify-center rounded-lg shadow-md')}>
+        <div className={cn(iconBgClassName, 'flex size-8 shrink-0 items-center justify-center rounded-md shadow-md')}>
           {icon}
         </div>
         <div className="grow">

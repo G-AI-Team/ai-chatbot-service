@@ -45,7 +45,7 @@ const ConfigItem: FC<Props> = ({
   const onChangeAuthorizedPage = notionActions?.onChangeAuthorizedPage || noop
 
   return (
-    <div className={cn(s['workspace-item'], 'mb-1 flex items-center rounded-lg bg-components-panel-on-panel-item-bg py-1 pr-1')} key={payload.id}>
+    <div className={cn(s['workspace-item'], 'mb-1 flex items-center rounded-md bg-components-panel-on-panel-item-bg py-1 pr-1')} key={payload.id}>
       <payload.logo className="ml-3 mr-1.5" />
       <div className="system-sm-medium grow truncate py-[7px] text-text-secondary" title={payload.name}>{payload.name}</div>
       {

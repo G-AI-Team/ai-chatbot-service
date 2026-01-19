@@ -133,7 +133,7 @@ describe('SearchBox', () => {
       )
 
       // In marketplace mode, TagsFilter comes before input
-      expect(container.querySelector('.rounded-xl')).toBeInTheDocument()
+      expect(container.querySelector('.rounded-md')).toBeInTheDocument()
     })
 
     it('should render with non-marketplace mode styling', () => {
@@ -445,7 +445,7 @@ describe('SearchBoxWrapper', () => {
     it('should render in marketplace mode', () => {
       const { container } = render(<SearchBoxWrapper />)
 
-      expect(container.querySelector('.rounded-xl')).toBeInTheDocument()
+      expect(container.querySelector('.rounded-md')).toBeInTheDocument()
     })
 
     it('should apply correct wrapper classes', () => {

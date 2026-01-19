@@ -15,7 +15,7 @@ const OnMinuteSelector = ({ value = 0, onChange }: OnMinuteSelectorProps) => {
       <label className="mb-2 block text-xs font-medium text-gray-500">
         {t('nodes.triggerSchedule.onMinute', { ns: 'workflow' })}
       </label>
-      <div className="relative flex h-8 items-center rounded-lg bg-components-input-bg-normal">
+      <div className="relative flex h-8 items-center rounded-md bg-components-input-bg-normal">
         <div className="flex h-full w-12 shrink-0 items-center justify-center text-[13px] text-components-input-text-filled">
           {value}
         </div>

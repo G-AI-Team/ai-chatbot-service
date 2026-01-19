@@ -107,10 +107,10 @@ const SelfHostedPlanItem: FC<SelfHostedPlanItemProps> = ({
       {isPremiumPlan && (
         <div className="flex grow flex-col justify-end gap-y-2 p-6 pt-0">
           <div className="flex items-center gap-x-1">
-            <div className="flex size-8 items-center justify-center rounded-lg border-[0.5px] border-components-panel-border-subtle bg-background-default shadow-xs shadow-shadow-shadow-3">
+            <div className="flex size-8 items-center justify-center rounded-md border-[0.5px] border-components-panel-border-subtle bg-background-default shadow-xs shadow-shadow-shadow-3">
               <Azure />
             </div>
-            <div className="flex size-8 items-center justify-center rounded-lg border-[0.5px] border-components-panel-border-subtle bg-background-default shadow-xs shadow-shadow-shadow-3">
+            <div className="flex size-8 items-center justify-center rounded-md border-[0.5px] border-components-panel-border-subtle bg-background-default shadow-xs shadow-shadow-shadow-3">
               <GoogleCloud />
             </div>
           </div>

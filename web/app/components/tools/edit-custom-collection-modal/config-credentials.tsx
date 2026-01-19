@@ -28,7 +28,7 @@ type ItemProps = {
 const SelectItem: FC<ItemProps> = ({ text, value, isChecked, onClick }) => {
   return (
     <div
-      className={cn(isChecked ? 'border-[2px] border-util-colors-indigo-indigo-600 bg-components-panel-on-panel-item-bg shadow-sm' : 'border border-components-card-border', 'mb-2 flex h-9 w-[150px] cursor-pointer items-center space-x-2 rounded-xl bg-components-panel-on-panel-item-bg pl-3 hover:bg-components-panel-on-panel-item-bg-hover')}
+      className={cn(isChecked ? 'border-[2px] border-util-colors-indigo-indigo-600 bg-components-panel-on-panel-item-bg shadow-sm' : 'border border-components-card-border', 'mb-2 flex h-9 w-[150px] cursor-pointer items-center space-x-2 rounded-md bg-components-panel-on-panel-item-bg pl-3 hover:bg-components-panel-on-panel-item-bg-hover')}
       onClick={() => onClick(value)}
     >
       <Radio isChecked={isChecked} />

@@ -24,7 +24,7 @@ const MaintenanceNotice = () => {
 
   return (
     <div className="z-20 flex h-[38px] shrink-0 items-center border-[0.5px] border-b border-b-[#FEF0C7] bg-[#FFFAEB] px-4">
-      <div className="mr-2 flex h-[22px] shrink-0 items-center rounded-xl bg-[#F79009] px-2 text-[11px] font-medium text-white">{titleByLocale[locale]}</div>
+      <div className="mr-2 flex h-[22px] shrink-0 items-center rounded-md bg-[#F79009] px-2 text-[11px] font-medium text-white">{titleByLocale[locale]}</div>
       {
         (NOTICE_I18N.href && NOTICE_I18N.href !== '#')
           ? <div className="grow cursor-pointer text-xs font-medium text-gray-700" onClick={handleJumpNotice}>{descByLocale[locale]}</div>

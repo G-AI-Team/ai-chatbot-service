@@ -52,7 +52,7 @@ const Chip: FC<Props> = ({
           className="block"
         >
           <div className={cn(
-            'flex min-h-8 cursor-pointer items-center rounded-lg border-[0.5px] border-transparent bg-components-input-bg-normal px-2 py-1 hover:bg-state-base-hover-alt',
+            'flex min-h-8 cursor-pointer items-center rounded-md border-[0.5px] border-transparent bg-components-input-bg-normal px-2 py-1 hover:bg-state-base-hover-alt',
             open && !value && '!bg-state-base-hover-alt hover:bg-state-base-hover-alt',
             !open && !!value && '!border-components-button-secondary-border !bg-components-button-secondary-bg shadow-xs hover:border-components-button-secondary-border-hover hover:!bg-components-button-secondary-bg-hover',
             open && !!value && '!border-components-button-secondary-border-hover !bg-components-button-secondary-bg-hover shadow-xs hover:border-components-button-secondary-border-hover hover:!bg-components-button-secondary-bg-hover',
@@ -86,12 +86,12 @@ const Chip: FC<Props> = ({
           </div>
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[1002]">
-          <div className={cn('relative w-[240px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg', panelClassName)}>
+          <div className={cn('relative w-[240px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg', panelClassName)}>
             <div className="max-h-72 overflow-auto p-1">
               {items.map(item => (
                 <div
                   key={item.value}
-                  className="flex cursor-pointer items-center gap-2 rounded-lg px-2 py-[6px] pl-3 hover:bg-state-base-hover"
+                  className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-[6px] pl-3 hover:bg-state-base-hover"
                   onClick={() => {
                     onSelect(item)
                     setOpen(false)

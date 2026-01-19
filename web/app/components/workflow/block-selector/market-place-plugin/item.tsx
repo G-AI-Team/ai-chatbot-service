@@ -35,7 +35,7 @@ const Item: FC<Props> = ({
   }] = useBoolean(false)
 
   return (
-    <div className="group/plugin flex rounded-lg py-1 pl-3 pr-1 hover:bg-state-base-hover">
+    <div className="group/plugin flex rounded-md py-1 pl-3 pr-1 hover:bg-state-base-hover">
       <div
         className="relative h-6 w-6 shrink-0 rounded-md border-[0.5px] border-components-panel-border-subtle bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${payload.icon})` }}

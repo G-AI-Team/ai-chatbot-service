@@ -49,7 +49,7 @@ const ContextMenu: FC<ContextMenuProps> = (props: ContextMenuProps) => {
         </Button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-10">
-        <div className="flex w-[184px] flex-col rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg shadow-shadow-shadow-5 backdrop-blur-[5px]">
+        <div className="flex w-[184px] flex-col rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg shadow-shadow-shadow-5 backdrop-blur-[5px]">
           <div className="flex flex-col p-1">
             {
               options.map((option) => {

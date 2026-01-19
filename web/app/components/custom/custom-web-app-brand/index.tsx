@@ -116,7 +116,7 @@ const CustomWebAppBrand = () => {
 
   return (
     <div className="py-4">
-      <div className="system-md-medium mb-2 flex items-center justify-between rounded-xl bg-background-section-burn p-4 text-text-primary">
+      <div className="system-md-medium mb-2 flex items-center justify-between rounded-md bg-background-section-burn p-4 text-text-primary">
         {t('webapp.removeBrand', { ns: 'custom' })}
         <Switch
           size="l"
@@ -125,7 +125,7 @@ const CustomWebAppBrand = () => {
           onChange={handleSwitch}
         />
       </div>
-      <div className={cn('flex h-14 items-center justify-between rounded-xl bg-background-section-burn px-4', webappBrandRemoved && 'opacity-30')}>
+      <div className={cn('flex h-14 items-center justify-between rounded-md bg-background-section-burn px-4', webappBrandRemoved && 'opacity-30')}>
         <div>
           <div className="system-md-medium text-text-primary">{t('webapp.changeLogo', { ns: 'custom' })}</div>
           <div className="system-xs-regular text-text-tertiary">{t('webapp.changeLogoTip', { ns: 'custom' })}</div>
@@ -212,7 +212,7 @@ const CustomWebAppBrand = () => {
         <div className="flex h-[320px] grow basis-1/2 overflow-hidden rounded-2xl border-[0.5px] border-components-panel-border-subtle bg-background-default-burn">
           <div className="flex h-full w-[232px] shrink-0 flex-col p-1 pr-0">
             <div className="flex items-center gap-3 p-3 pr-2">
-              <div className={cn('inline-flex h-8 w-8 items-center justify-center rounded-lg border border-divider-regular', 'bg-components-icon-bg-blue-light-solid')}>
+              <div className={cn('inline-flex h-8 w-8 items-center justify-center rounded-md border border-divider-regular', 'bg-components-icon-bg-blue-light-solid')}>
                 <BubbleTextMod className="h-4 w-4 text-components-avatar-shape-fill-stop-100" />
               </div>
               <div className="system-md-semibold grow text-text-secondary">Chatflow App</div>
@@ -267,7 +267,7 @@ const CustomWebAppBrand = () => {
                   <div className="h-2 w-[144px] rounded-sm bg-text-quaternary opacity-20"></div>
                 </Button>
               </div>
-              <div className="body-lg-regular flex h-[52px] w-[578px] items-center rounded-xl border border-components-chat-input-border bg-components-panel-bg-blur pl-3.5 text-text-placeholder shadow-md backdrop-blur-sm">Talk to Dify</div>
+              <div className="body-lg-regular flex h-[52px] w-[578px] items-center rounded-md border border-components-chat-input-border bg-components-panel-bg-blur pl-3.5 text-text-placeholder shadow-md backdrop-blur-sm">Talk to Dify</div>
             </div>
           </div>
         </div>
@@ -275,7 +275,7 @@ const CustomWebAppBrand = () => {
         <div className="flex h-[320px] grow basis-1/2 flex-col overflow-hidden rounded-2xl border-[0.5px] border-components-panel-border-subtle bg-background-default-burn">
           <div className="w-full border-b-[0.5px] border-divider-subtle p-4 pb-0">
             <div className="mb-2 flex items-center gap-3">
-              <div className={cn('inline-flex h-8 w-8 items-center justify-center rounded-lg border border-divider-regular', 'bg-components-icon-bg-indigo-solid')}>
+              <div className={cn('inline-flex h-8 w-8 items-center justify-center rounded-md border border-divider-regular', 'bg-components-icon-bg-indigo-solid')}>
                 <RiExchange2Fill className="h-4 w-4 text-components-avatar-shape-fill-stop-100" />
               </div>
               <div className="system-md-semibold grow text-text-secondary">Workflow App</div>
@@ -293,7 +293,7 @@ const CustomWebAppBrand = () => {
               <div className="mb-1 py-2">
                 <div className="h-2 w-20 rounded-sm bg-text-quaternary opacity-20"></div>
               </div>
-              <div className="h-16 w-full rounded-lg bg-components-input-bg-normal "></div>
+              <div className="h-16 w-full rounded-md bg-components-input-bg-normal "></div>
             </div>
             <div className="flex items-center justify-between px-4 py-3">
               <Button size="small">

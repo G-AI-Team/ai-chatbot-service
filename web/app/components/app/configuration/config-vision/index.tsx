@@ -58,9 +58,9 @@ const ConfigVision: FC = () => {
     return null
 
   return (
-    <div className="mt-2 flex items-center gap-2 rounded-xl border-l-[0.5px] border-t-[0.5px] border-effects-highlight bg-background-section-burn p-2">
+    <div className="mt-2 flex items-center gap-2 rounded-md border-l-[0.5px] border-t-[0.5px] border-effects-highlight bg-background-section-burn p-2">
       <div className="shrink-0 p-1">
-        <div className="rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-indigo-indigo-600 p-1 shadow-xs">
+        <div className="rounded-md border-[0.5px] border-divider-subtle bg-util-colors-indigo-indigo-600 p-1 shadow-xs">
           <Vision className="h-4 w-4 text-text-primary-on-surface" />
         </div>
       </div>

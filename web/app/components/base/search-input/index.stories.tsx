@@ -133,7 +133,7 @@ const UserListSearchDemo = () => {
   )
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Team Members</h3>
       <SearchInput
         value={searchQuery}
@@ -143,30 +143,30 @@ const UserListSearchDemo = () => {
       <div className="mt-4 space-y-2">
         {filteredUsers.length > 0
           ? (
-              filteredUsers.map(user => (
-                <div
-                  key={user.id}
-                  className="rounded-lg border border-gray-200 p-3 hover:bg-gray-50"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-sm font-medium">{user.name}</div>
-                      <div className="text-xs text-gray-500">{user.email}</div>
-                    </div>
-                    <span className="rounded bg-blue-100 px-2 py-1 text-xs text-blue-700">
-                      {user.role}
-                    </span>
+            filteredUsers.map(user => (
+              <div
+                key={user.id}
+                className="rounded-md border border-gray-200 p-3 hover:bg-gray-50"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-sm font-medium">{user.name}</div>
+                    <div className="text-xs text-gray-500">{user.email}</div>
                   </div>
+                  <span className="rounded bg-blue-100 px-2 py-1 text-xs text-blue-700">
+                    {user.role}
+                  </span>
                 </div>
-              ))
-            )
-          : (
-              <div className="py-8 text-center text-sm text-gray-500">
-                No users found matching "
-                {searchQuery}
-                "
               </div>
-            )}
+            ))
+          )
+          : (
+            <div className="py-8 text-center text-sm text-gray-500">
+              No users found matching "
+              {searchQuery}
+              "
+            </div>
+          )}
       </div>
       <div className="mt-4 text-xs text-gray-500">
         Showing
@@ -207,7 +207,7 @@ const ProductSearchDemo = () => {
   )
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Product Catalog</h3>
       <SearchInput
         value={searchQuery}
@@ -218,25 +218,25 @@ const ProductSearchDemo = () => {
       <div className="mt-4 grid grid-cols-2 gap-3">
         {filteredProducts.length > 0
           ? (
-              filteredProducts.map(product => (
-                <div
-                  key={product.id}
-                  className="rounded-lg border border-gray-200 p-4 transition-shadow hover:shadow-md"
-                >
-                  <div className="mb-1 text-sm font-medium">{product.name}</div>
-                  <div className="mb-2 text-xs text-gray-500">{product.category}</div>
-                  <div className="text-lg font-semibold text-blue-600">
-                    $
-                    {product.price}
-                  </div>
+            filteredProducts.map(product => (
+              <div
+                key={product.id}
+                className="rounded-md border border-gray-200 p-4 transition-shadow hover:shadow-md"
+              >
+                <div className="mb-1 text-sm font-medium">{product.name}</div>
+                <div className="mb-2 text-xs text-gray-500">{product.category}</div>
+                <div className="text-lg font-semibold text-blue-600">
+                  $
+                  {product.price}
                 </div>
-              ))
-            )
-          : (
-              <div className="col-span-2 py-8 text-center text-sm text-gray-500">
-                No products found
               </div>
-            )}
+            ))
+          )
+          : (
+            <div className="col-span-2 py-8 text-center text-sm text-gray-500">
+              No products found
+            </div>
+          )}
       </div>
     </div>
   )
@@ -266,7 +266,7 @@ const DocumentationSearchDemo = () => {
   )
 
   return (
-    <div style={{ width: '700px' }} className="rounded-lg bg-gray-50 p-6">
+    <div style={{ width: '700px' }} className="rounded-md bg-gray-50 p-6">
       <h3 className="mb-2 text-xl font-bold">Documentation</h3>
       <p className="mb-4 text-sm text-gray-600">Search our comprehensive guides and API references</p>
       <SearchInput
@@ -279,31 +279,31 @@ const DocumentationSearchDemo = () => {
       <div className="mt-4 space-y-3">
         {filteredDocs.length > 0
           ? (
-              filteredDocs.map(doc => (
-                <div
-                  key={doc.id}
-                  className="cursor-pointer rounded-lg border border-gray-200 bg-white p-4 transition-colors hover:border-blue-300"
-                >
-                  <div className="mb-2 flex items-start justify-between">
-                    <h4 className="text-base font-semibold">{doc.title}</h4>
-                    <span className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-600">
-                      {doc.category}
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-600">{doc.excerpt}</p>
+            filteredDocs.map(doc => (
+              <div
+                key={doc.id}
+                className="cursor-pointer rounded-md border border-gray-200 bg-white p-4 transition-colors hover:border-blue-300"
+              >
+                <div className="mb-2 flex items-start justify-between">
+                  <h4 className="text-base font-semibold">{doc.title}</h4>
+                  <span className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-600">
+                    {doc.category}
+                  </span>
                 </div>
-              ))
-            )
-          : (
-              <div className="py-12 text-center">
-                <div className="mb-2 text-4xl">🔍</div>
-                <div className="text-sm text-gray-500">
-                  No documentation found for "
-                  {searchQuery}
-                  "
-                </div>
+                <p className="text-sm text-gray-600">{doc.excerpt}</p>
               </div>
-            )}
+            ))
+          )
+          : (
+            <div className="py-12 text-center">
+              <div className="mb-2 text-4xl">🔍</div>
+              <div className="text-sm text-gray-500">
+                No documentation found for "
+                {searchQuery}
+                "
+              </div>
+            </div>
+          )}
       </div>
     </div>
   )
@@ -333,7 +333,7 @@ const CommandPaletteDemo = () => {
   )
 
   return (
-    <div style={{ width: '600px' }} className="overflow-hidden rounded-lg border border-gray-300 bg-white shadow-lg">
+    <div style={{ width: '600px' }} className="overflow-hidden rounded-md border border-gray-300 bg-white shadow-lg">
       <div className="border-b border-gray-200 p-4">
         <SearchInput
           value={searchQuery}
@@ -346,26 +346,26 @@ const CommandPaletteDemo = () => {
       <div className="max-h-[400px] overflow-y-auto">
         {filteredCommands.length > 0
           ? (
-              filteredCommands.map(cmd => (
-                <div
-                  key={cmd.id}
-                  className="flex cursor-pointer items-center justify-between border-b border-gray-100 px-4 py-3 last:border-b-0 hover:bg-gray-100"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">{cmd.icon}</span>
-                    <span className="text-sm">{cmd.name}</span>
-                  </div>
-                  <kbd className="rounded bg-gray-200 px-2 py-1 font-mono text-xs">
-                    {cmd.shortcut}
-                  </kbd>
+            filteredCommands.map(cmd => (
+              <div
+                key={cmd.id}
+                className="flex cursor-pointer items-center justify-between border-b border-gray-100 px-4 py-3 last:border-b-0 hover:bg-gray-100"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">{cmd.icon}</span>
+                  <span className="text-sm">{cmd.name}</span>
                 </div>
-              ))
-            )
-          : (
-              <div className="py-8 text-center text-sm text-gray-500">
-                No commands found
+                <kbd className="rounded bg-gray-200 px-2 py-1 font-mono text-xs">
+                  {cmd.shortcut}
+                </kbd>
               </div>
-            )}
+            ))
+          )
+          : (
+            <div className="py-8 text-center text-sm text-gray-500">
+              No commands found
+            </div>
+          )}
       </div>
     </div>
   )
@@ -398,7 +398,7 @@ const LiveSearchWithCountDemo = () => {
   )
 
   return (
-    <div style={{ width: '500px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '500px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-lg font-semibold">Learning Resources</h3>
         {searchQuery && (
@@ -419,7 +419,7 @@ const LiveSearchWithCountDemo = () => {
         {filteredItems.map((item, index) => (
           <div
             key={index}
-            className="cursor-pointer rounded-lg border border-gray-200 p-3 transition-colors hover:border-blue-300 hover:bg-blue-50"
+            className="cursor-pointer rounded-md border border-gray-200 p-3 transition-colors hover:border-blue-300 hover:bg-blue-50"
           >
             <div className="text-sm font-medium">{item}</div>
           </div>

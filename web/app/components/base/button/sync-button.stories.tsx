@@ -44,7 +44,7 @@ export const Default: Story = {
 
 export const InHeader: Story = {
   render: args => (
-    <div className="flex items-center gap-2 rounded-lg border border-divider-subtle bg-components-panel-bg p-3">
+    <div className="flex items-center gap-2 rounded-md border border-divider-subtle bg-components-panel-bg p-3">
       <span className="text-xs text-text-tertiary">Logs</span>
       <div className="ml-auto flex items-center gap-2">
         <SyncButton {...args} />

@@ -45,13 +45,13 @@ const TypeSelector: FC<TypeSelectorProps> = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className={popupClassName}>
-        <div className="w-40 rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg p-1 shadow-lg shadow-shadow-shadow-5">
+        <div className="w-40 rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg p-1 shadow-lg shadow-shadow-shadow-5">
           {items.map((item) => {
             const isSelected = item.value === currentValue
             return (
               <div
                 key={item.value}
-                className="flex items-center gap-x-1 rounded-lg px-2 py-1 hover:bg-state-base-hover"
+                className="flex items-center gap-x-1 rounded-md px-2 py-1 hover:bg-state-base-hover"
                 onClick={() => {
                   onSelect(item)
                   setOpen(false)

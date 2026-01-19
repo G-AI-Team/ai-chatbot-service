@@ -45,7 +45,7 @@ const DrawerDemo = (props: React.ComponentProps<typeof Drawer>) => {
           <p>
             This example renders arbitrary content inside the drawer body. Use it for contextual forms, settings, or informational panels.
           </p>
-          <div className="rounded-lg border border-divider-subtle bg-components-panel-bg p-3 text-xs">
+          <div className="rounded-md border border-divider-subtle bg-components-panel-bg p-3 text-xs">
             Content area
           </div>
         </div>

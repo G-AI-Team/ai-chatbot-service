@@ -25,9 +25,9 @@ const meta = {
     items: ITEMS,
     value: 'all',
 
-    onSelect: () => {},
+    onSelect: () => { },
 
-    onClear: () => {},
+    onClear: () => { },
   },
 } satisfies Meta<typeof Chip>
 
@@ -45,7 +45,7 @@ const ChipDemo = (props: React.ComponentProps<typeof Chip>) => {
         onSelect={item => setSelection(item.value)}
         onClear={() => setSelection('all')}
       />
-      <div className="rounded-lg border border-divider-subtle bg-components-panel-bg p-3 text-xs text-text-secondary">
+      <div className="rounded-md border border-divider-subtle bg-components-panel-bg p-3 text-xs text-text-secondary">
         Current value:
         {' '}
         <span className="font-mono text-text-primary">{selection}</span>
@@ -79,9 +79,9 @@ export const WithoutLeftIcon: Story = {
   args: {
     showLeftIcon: false,
 
-    onSelect: () => {},
+    onSelect: () => { },
 
-    onClear: () => {},
+    onClear: () => { },
   },
   render: args => (
     <ChipDemo

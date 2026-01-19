@@ -95,7 +95,7 @@ const VoiceParamConfig = ({
         >
           <div className="relative h-8">
             <ListboxButton
-              className="h-full w-full cursor-pointer rounded-lg border-0 bg-components-input-bg-normal py-1.5 pl-3 pr-10 focus-visible:bg-state-base-hover focus-visible:outline-none group-hover:bg-state-base-hover sm:text-sm sm:leading-6"
+              className="h-full w-full cursor-pointer rounded-md border-0 bg-components-input-bg-normal py-1.5 pl-3 pr-10 focus-visible:bg-state-base-hover focus-visible:outline-none group-hover:bg-state-base-hover sm:text-sm sm:leading-6"
             >
               <span className={cn('block truncate text-left text-text-secondary', !languageItem?.name && 'text-text-tertiary')}>
                 {languageItem?.name ? t(`voice.language.${replace(languageItem?.value, '-', '')}`, { ns: 'common' }) : localLanguagePlaceholder}
@@ -120,7 +120,7 @@ const VoiceParamConfig = ({
                 {languages.map(item => (
                   <ListboxOption
                     key={item.value}
-                    className="relative cursor-pointer select-none rounded-lg py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover data-[active]:bg-state-base-active"
+                    className="relative cursor-pointer select-none rounded-md py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover data-[active]:bg-state-base-active"
                     value={item}
                     disabled={false}
                   >
@@ -163,7 +163,7 @@ const VoiceParamConfig = ({
           >
             <div className="relative h-8 grow">
               <ListboxButton
-                className="h-full w-full cursor-pointer rounded-lg border-0 bg-components-input-bg-normal py-1.5 pl-3 pr-10 focus-visible:bg-state-base-hover focus-visible:outline-none group-hover:bg-state-base-hover sm:text-sm sm:leading-6"
+                className="h-full w-full cursor-pointer rounded-md border-0 bg-components-input-bg-normal py-1.5 pl-3 pr-10 focus-visible:bg-state-base-hover focus-visible:outline-none group-hover:bg-state-base-hover sm:text-sm sm:leading-6"
               >
                 <span
                   className={cn('block truncate text-left text-text-secondary', !voiceItem?.name && 'text-text-tertiary')}
@@ -190,7 +190,7 @@ const VoiceParamConfig = ({
                   {voiceItems?.map((item: Item) => (
                     <ListboxOption
                       key={item.value}
-                      className="relative cursor-pointer select-none rounded-lg py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover data-[active]:bg-state-base-active"
+                      className="relative cursor-pointer select-none rounded-md py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover data-[active]:bg-state-base-active"
                       value={item}
                       disabled={false}
                     >
@@ -213,7 +213,7 @@ const VoiceParamConfig = ({
             </div>
           </Listbox>
           {languageItem?.example && (
-            <div className="h-8 shrink-0 rounded-lg bg-components-button-tertiary-bg p-1">
+            <div className="h-8 shrink-0 rounded-md bg-components-button-tertiary-bg p-1">
               <AudioBtn
                 value={languageItem?.example}
                 isAudition

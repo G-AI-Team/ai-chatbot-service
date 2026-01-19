@@ -70,7 +70,7 @@ const TagInputDemo = (args: any) => {
         }}
       />
       {items.length > 0 && (
-        <div className="mt-4 rounded-lg bg-gray-50 p-3">
+        <div className="mt-4 rounded-md bg-gray-50 p-3">
           <div className="mb-2 text-xs font-medium text-gray-600">
             Current Tags (
             {items.length}
@@ -150,7 +150,7 @@ const SkillTagsDemo = () => {
   const [skills, setSkills] = useState(['JavaScript', 'React', 'Node.js'])
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-2 text-lg font-semibold">Your Skills</h3>
       <p className="mb-4 text-sm text-gray-600">Add skills to your profile</p>
       <TagInput
@@ -176,7 +176,7 @@ const EmailTagsDemo = () => {
   const [recipients, setRecipients] = useState(['john@example.com', 'jane@example.com'])
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Send Email</h3>
       <div className="space-y-4">
         <div>
@@ -192,11 +192,11 @@ const EmailTagsDemo = () => {
           <label className="mb-2 block text-sm font-medium text-gray-700">Subject:</label>
           <input
             type="text"
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm"
             placeholder="Enter subject..."
           />
         </div>
-        <div className="mt-4 rounded-lg bg-blue-50 p-3 text-sm text-gray-700">
+        <div className="mt-4 rounded-md bg-blue-50 p-3 text-sm text-gray-700">
           <strong>
             Recipients (
             {recipients.length}
@@ -231,7 +231,7 @@ const SearchFiltersDemo = () => {
     : mockResults
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Filter Tasks</h3>
       <div className="mb-4">
         <label className="mb-2 block text-sm font-medium text-gray-700">Active Filters:</label>
@@ -254,7 +254,7 @@ const SearchFiltersDemo = () => {
         </div>
         <div className="space-y-2">
           {filteredResults.map(item => (
-            <div key={item.id} className="rounded-lg bg-gray-50 p-3">
+            <div key={item.id} className="rounded-md bg-gray-50 p-3">
               <div className="text-sm font-medium">{item.title}</div>
               <div className="mt-1 flex gap-1">
                 {item.tags.map(tag => (
@@ -281,14 +281,14 @@ const ProductCategoriesDemo = () => {
   const [categories, setCategories] = useState(['Electronics', 'Computers'])
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Product Details</h3>
       <div className="space-y-4">
         <div>
           <label className="mb-2 block text-sm font-medium text-gray-700">Product Name</label>
           <input
             type="text"
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm"
             placeholder="Enter product name..."
             defaultValue="Laptop Pro 15"
           />
@@ -308,7 +308,7 @@ const ProductCategoriesDemo = () => {
         <div>
           <label className="mb-2 block text-sm font-medium text-gray-700">Description</label>
           <textarea
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm"
             rows={3}
             placeholder="Enter product description..."
           />
@@ -328,7 +328,7 @@ const KeywordExtractionDemo = () => {
   const [keywords, setKeywords] = useState(['AI', 'machine learning', 'automation'])
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">SEO Keywords</h3>
       <div>
         <label className="mb-2 block text-sm font-medium text-gray-700">
@@ -345,7 +345,7 @@ const KeywordExtractionDemo = () => {
           Add relevant keywords for search engine optimization (max 20 characters each)
         </div>
       </div>
-      <div className="mt-6 rounded-lg bg-gray-50 p-4">
+      <div className="mt-6 rounded-md bg-gray-50 p-4">
         <div className="mb-2 text-xs font-medium text-gray-600">Meta Tag Preview:</div>
         <code className="text-xs text-gray-700">
           &lt;meta name="keywords" content="
@@ -368,7 +368,7 @@ const TagsWithSuggestionsDemo = () => {
   const suggestions = ['backend', 'devops', 'mobile', 'testing', 'security']
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Project Tags</h3>
       <div>
         <label className="mb-2 block text-sm font-medium text-gray-700">
@@ -413,7 +413,7 @@ const StopSequencesDemo = () => {
   const [stopSequences, setStopSequences] = useState(['Human:', 'AI:'])
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">AI Model Configuration</h3>
       <div className="space-y-4">
         <div>
@@ -450,7 +450,7 @@ const StopSequencesDemo = () => {
           <input
             type="number"
             defaultValue="2000"
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm"
+            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm"
           />
         </div>
       </div>
@@ -468,7 +468,7 @@ const MultiLanguageTagsDemo = () => {
   const [tags, setTags] = useState(['Hello', '你好', 'Bonjour', 'Hola'])
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Internationalization</h3>
       <div>
         <label className="mb-2 block text-sm font-medium text-gray-700">
@@ -505,7 +505,7 @@ const ValidationShowcaseDemo = () => {
   const [tags, setTags] = useState(['valid-tag'])
 
   return (
-    <div style={{ width: '600px' }} className="rounded-lg border border-gray-200 bg-white p-6">
+    <div style={{ width: '600px' }} className="rounded-md border border-gray-200 bg-white p-6">
       <h3 className="mb-4 text-lg font-semibold">Validation Rules</h3>
       <TagInput
         items={tags}
@@ -514,7 +514,7 @@ const ValidationShowcaseDemo = () => {
         customizedConfirmKey="Enter"
         required
       />
-      <div className="mt-4 rounded-lg bg-blue-50 p-4">
+      <div className="mt-4 rounded-md bg-blue-50 p-4">
         <div className="mb-2 text-sm font-medium text-blue-900">Validation Rules:</div>
         <ul className="space-y-1 text-xs text-blue-800">
           <li>✓ Maximum 20 characters per tag</li>
@@ -523,7 +523,7 @@ const ValidationShowcaseDemo = () => {
           <li>✓ Whitespace is automatically trimmed</li>
         </ul>
       </div>
-      <div className="mt-4 rounded-lg bg-yellow-50 p-4">
+      <div className="mt-4 rounded-md bg-yellow-50 p-4">
         <div className="mb-2 text-sm font-medium text-yellow-900">Try these:</div>
         <ul className="space-y-1 text-xs text-yellow-800">
           <li>• Add "valid-tag" → Shows duplicate error</li>

@@ -66,20 +66,20 @@ const PreviewDocumentPicker: FC<Props> = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[11]">
-        <div className="w-[392px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]">
+        <div className="w-[392px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg backdrop-blur-[5px]">
           {files?.length > 1 && <div className="system-xs-medium-uppercase flex h-8 items-center pl-2 text-text-tertiary">{t('preprocessDocument', { ns: 'dataset', num: files.length })}</div>}
           {files?.length > 0
             ? (
-                <DocumentList
-                  list={files}
-                  onChange={handleChange}
-                />
-              )
+              <DocumentList
+                list={files}
+                onChange={handleChange}
+              />
+            )
             : (
-                <div className="mt-2 flex h-[100px] w-[360px] items-center justify-center">
-                  <Loading />
-                </div>
-              )}
+              <div className="mt-2 flex h-[100px] w-[360px] items-center justify-center">
+                <Loading />
+              </div>
+            )}
         </div>
 
       </PortalToFollowElemContent>

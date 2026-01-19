@@ -54,7 +54,7 @@ const Item: FC<ItemProps> = ({
 
   return (
     <div className={cn(
-      'group relative mb-1 flex h-10 w-full cursor-pointer items-center justify-between rounded-lg border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg px-2 last-of-type:mb-0 hover:bg-components-panel-on-panel-item-bg-hover',
+      'group relative mb-1 flex h-10 w-full cursor-pointer items-center justify-between rounded-md border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg px-2 last-of-type:mb-0 hover:bg-components-panel-on-panel-item-bg-hover',
       isDeleting && 'border-state-destructive-border hover:bg-state-destructive-hover',
     )}
     >
@@ -106,7 +106,7 @@ const Item: FC<ItemProps> = ({
           />
         )
       }
-      <Drawer isOpen={showSettingsModal} onClose={() => setShowSettingsModal(false)} footer={null} mask={isMobile} panelClassName="mt-16 mx-2 sm:mr-2 mb-3 !p-0 !max-w-[640px] rounded-xl">
+      <Drawer isOpen={showSettingsModal} onClose={() => setShowSettingsModal(false)} footer={null} mask={isMobile} panelClassName="mt-16 mx-2 sm:mr-2 mb-3 !p-0 !max-w-[640px] rounded-md">
         <SettingsModal
           currentDataset={config}
           onCancel={() => setShowSettingsModal(false)}

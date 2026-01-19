@@ -155,7 +155,7 @@ const ImageUploaderPlayground = ({ readonly }: Story['args']) => {
         onImageLinkLoadError={handleImageLinkLoadError}
       />
 
-      <div className="rounded-lg border border-divider-subtle bg-background-default p-2">
+      <div className="rounded-md border border-divider-subtle bg-background-default p-2">
         <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.1em] text-text-tertiary">
           Files state
         </span>

@@ -167,7 +167,7 @@ const Apps = ({
         <div className="min-w-[180px] pl-5">
           <span className="title-xl-semi-bold text-text-primary">{t('newApp.startFromTemplate', { ns: 'app' })}</span>
         </div>
-        <div className="flex max-w-[548px] flex-1 items-center rounded-xl border border-components-panel-border bg-components-panel-bg-blur p-1.5 shadow-md">
+        <div className="flex max-w-[548px] flex-1 items-center rounded-md border border-components-panel-border bg-components-panel-bg-blur p-1.5 shadow-md">
           <AppTypeSelector value={currentType} onChange={setCurrentType} />
           <div className="h-[14px]">
             <Divider type="vertical" />
@@ -197,10 +197,10 @@ const Apps = ({
                 {searchKeywords
                   ? <p className="title-md-semi-bold text-text-tertiary">{searchFilteredList.length > 1 ? t('newApp.foundResults', { ns: 'app', count: searchFilteredList.length }) : t('newApp.foundResult', { ns: 'app', count: searchFilteredList.length })}</p>
                   : (
-                      <div className="flex h-[22px] items-center">
-                        <AppCategoryLabel category={currCategory as AppCategories} className="title-md-semi-bold text-text-primary" />
-                      </div>
-                    )}
+                    <div className="flex h-[22px] items-center">
+                      <AppCategoryLabel category={currCategory as AppCategories} className="title-md-semi-bold text-text-primary" />
+                    </div>
+                  )}
               </div>
               <div
                 className={cn(
@@ -246,8 +246,8 @@ export default React.memo(Apps)
 function NoTemplateFound() {
   const { t } = useTranslation()
   return (
-    <div className="w-full rounded-lg bg-workflow-process-bg p-4">
-      <div className="mb-2 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-components-card-bg shadow-lg">
+    <div className="w-full rounded-md bg-workflow-process-bg p-4">
+      <div className="mb-2 inline-flex h-8 w-8 items-center justify-center rounded-md bg-components-card-bg shadow-lg">
         <RiRobot2Line className="h-5 w-5 text-text-tertiary" />
       </div>
       <p className="title-md-semi-bold text-text-primary">{t('newApp.noTemplateFound', { ns: 'app' })}</p>

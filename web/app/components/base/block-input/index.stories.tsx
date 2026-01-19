@@ -55,7 +55,7 @@ const BlockInputDemo = (args: any) => {
         }}
       />
       {keys.length > 0 && (
-        <div className="mt-4 rounded-lg bg-blue-50 p-3">
+        <div className="mt-4 rounded-md bg-blue-50 p-3">
           <div className="mb-2 text-sm font-medium text-gray-700">Detected Variables:</div>
           <div className="flex flex-wrap gap-2">
             {keys.map(key => (

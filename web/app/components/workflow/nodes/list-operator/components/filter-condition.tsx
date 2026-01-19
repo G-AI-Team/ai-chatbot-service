@@ -131,7 +131,7 @@ const FilterCondition: FC<Props> = ({
             isFocus
               ? 'border-components-input-border-active bg-components-input-bg-active shadow-xs'
               : 'border-components-input-border-hover bg-components-input-bg-normal',
-            'w-0 grow rounded-lg border px-3 py-[6px]',
+            'w-0 grow rounded-md border px-3 py-[6px]',
           )}
           value={
             getConditionValueAsString(condition)
@@ -150,7 +150,7 @@ const FilterCondition: FC<Props> = ({
       inputElement = (
         <input
           type={((hasSubVariable && condition.key === 'size') || (!hasSubVariable && varType === VarType.number)) ? 'number' : 'text'}
-          className="grow rounded-lg border border-components-input-border-hover bg-components-input-bg-normal px-3 py-[6px]"
+          className="grow rounded-md border border-components-input-border-hover bg-components-input-bg-normal px-3 py-[6px]"
           value={
             getConditionValueAsString(condition)
           }

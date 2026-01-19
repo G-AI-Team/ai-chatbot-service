@@ -217,7 +217,7 @@ const EditCard: FC<EditCardProps> = ({
   })
 
   return (
-    <div className="flex flex-col rounded-lg bg-components-panel-bg py-0.5 shadow-sm shadow-shadow-shadow-4">
+    <div className="flex flex-col rounded-md bg-components-panel-bg py-0.5 shadow-sm shadow-shadow-shadow-4">
       <div className="flex h-6 items-center pl-1 pr-0.5">
         <div className="flex grow items-center gap-x-1">
           <AutoWidthInput
@@ -249,20 +249,20 @@ const EditCard: FC<EditCardProps> = ({
         <Divider type="vertical" className="h-3" />
         {isAdvancedEditing
           ? (
-              <AdvancedActions
-                isConfirmDisabled={currentFields.name === ''}
-                onCancel={handleCancel}
-                onConfirm={handleConfirm}
-              />
-            )
+            <AdvancedActions
+              isConfirmDisabled={currentFields.name === ''}
+              onCancel={handleCancel}
+              onConfirm={handleConfirm}
+            />
+          )
           : (
-              <Actions
-                disableAddBtn={disableAddBtn}
-                onAddChildField={handleAddChildField}
-                onDelete={handleDelete}
-                onEdit={handleAdvancedEdit}
-              />
-            )}
+            <Actions
+              disableAddBtn={disableAddBtn}
+              onAddChildField={handleAddChildField}
+              onDelete={handleDelete}
+              onEdit={handleAdvancedEdit}
+            />
+          )}
       </div>
 
       {(fields.description || isAdvancedEditing) && (

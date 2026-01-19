@@ -114,7 +114,7 @@ const Panel: FC<NodePanelProps<WebhookTriggerNodeType>> = ({
                   needsDelay={true}
                 >
                   <div
-                    className="flex cursor-pointer gap-1.5 rounded-lg px-1 py-1.5 transition-colors"
+                    className="flex cursor-pointer gap-1.5 rounded-md px-1 py-1.5 transition-colors"
                     style={{ width: '368px', height: '38px' }}
                     onClick={() => {
                       copy(inputs.webhook_debug_url || '')

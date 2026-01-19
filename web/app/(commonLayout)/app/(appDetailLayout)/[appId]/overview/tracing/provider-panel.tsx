@@ -73,7 +73,7 @@ const ProviderPanel: FC<Props> = ({
   return (
     <div
       className={cn(
-        'rounded-xl border-[1.5px] bg-background-section-burn px-4 py-3',
+        'rounded-md border-[1.5px] bg-background-section-burn px-4 py-3',
         isChosen ? 'border-components-option-card-option-selected-border bg-background-section' : 'border-transparent',
         !isChosen && hasConfigured && !readOnly && 'cursor-pointer',
       )}

@@ -36,7 +36,7 @@ const ServiceApi = ({
           onClick={handleToggle}
         >
           <div className={cn(
-            'relative flex h-8 cursor-pointer items-center gap-2 rounded-lg border-[0.5px] border-components-button-secondary-border-hover bg-components-button-secondary-bg px-3',
+            'relative flex h-8 cursor-pointer items-center gap-2 rounded-md border-[0.5px] border-components-button-secondary-border-hover bg-components-button-secondary-bg px-3',
             open ? 'bg-components-button-secondary-bg-hover' : 'hover:bg-components-button-secondary-bg-hover',
           )}
           >

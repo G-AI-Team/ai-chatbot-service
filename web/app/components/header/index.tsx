@@ -22,7 +22,7 @@ import PluginsNav from './plugins-nav'
 import ToolsNav from './tools-nav'
 
 const navClassName = `
-  flex items-center relative px-3 h-8 rounded-xl
+  flex items-center relative px-3 h-8 rounded-md
   font-medium text-sm
   cursor-pointer
 `

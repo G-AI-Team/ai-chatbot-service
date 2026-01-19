@@ -32,7 +32,7 @@ const EditModal: FC<Props> = ({
     >
       <div className="mt-6 text-sm font-medium leading-[21px] text-text-primary">{t('feature.conversationHistory.editModal.userPrefix', { ns: 'appDebug' })}</div>
       <input
-        className="mt-2 box-border h-10 w-full rounded-lg bg-components-input-bg-normal px-3 text-sm leading-10"
+        className="mt-2 box-border h-10 w-full rounded-md bg-components-input-bg-normal px-3 text-sm leading-10"
         value={tempData.user_prefix}
         onChange={e => setTempData({
           ...tempData,
@@ -42,7 +42,7 @@ const EditModal: FC<Props> = ({
 
       <div className="mt-6 text-sm font-medium leading-[21px] text-text-primary">{t('feature.conversationHistory.editModal.assistantPrefix', { ns: 'appDebug' })}</div>
       <input
-        className="mt-2 box-border h-10 w-full rounded-lg bg-components-input-bg-normal px-3 text-sm leading-10"
+        className="mt-2 box-border h-10 w-full rounded-md bg-components-input-bg-normal px-3 text-sm leading-10"
         value={tempData.assistant_prefix}
         onChange={e => setTempData({
           ...tempData,

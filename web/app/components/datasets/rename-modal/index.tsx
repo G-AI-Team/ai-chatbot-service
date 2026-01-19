@@ -98,7 +98,7 @@ const RenameDatasetModal = ({ show, dataset, onSuccess, onClose }: RenameDataset
 
   return (
     <Modal
-      className="w-[520px] max-w-[520px] rounded-xl px-8 py-6"
+      className="w-[520px] max-w-[520px] rounded-md px-8 py-6"
       isShow={show}
       onClose={noop}
     >

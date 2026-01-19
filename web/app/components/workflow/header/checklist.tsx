@@ -124,7 +124,7 @@ const WorkflowChecklist = ({
                         <div
                           key={node.id}
                           className={cn(
-                            'group mb-2 rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xs last-of-type:mb-0',
+                            'group mb-2 rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xs last-of-type:mb-0',
                             showGoTo && node.canNavigate && !node.disableGoTo ? 'cursor-pointer' : 'cursor-default opacity-80',
                           )}
                           onClick={() => handleChecklistItemClick(node)}
@@ -185,7 +185,7 @@ const WorkflowChecklist = ({
             }
             {
               !needWarningNodes.length && (
-                <div className="mx-4 mb-3 rounded-lg bg-components-panel-bg py-4 text-center text-xs text-text-tertiary">
+                <div className="mx-4 mb-3 rounded-md bg-components-panel-bg py-4 text-center text-xs text-text-tertiary">
                   <ChecklistSquare className="mx-auto mb-[5px] h-8 w-8 text-text-quaternary" />
                   {t('panel.checklistResolved', { ns: 'workflow' })}
                 </div>

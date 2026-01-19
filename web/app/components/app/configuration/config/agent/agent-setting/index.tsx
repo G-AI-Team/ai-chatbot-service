@@ -57,7 +57,7 @@ const AgentSetting: FC<Props> = ({
     >
       <div
         ref={ref}
-        className="flex h-full w-[640px] flex-col overflow-hidden rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl"
+        className="flex h-full w-[640px] flex-col overflow-hidden rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xl"
       >
         <div className="flex h-14 shrink-0 items-center justify-between border-b border-divider-regular pl-6 pr-5">
           <div className="flex flex-col text-base font-semibold text-text-primary">
@@ -118,7 +118,7 @@ const AgentSetting: FC<Props> = ({
                 min={maxIterationsMin}
                 max={MAX_ITERATIONS_NUM}
                 step={1}
-                className="block h-7 w-11 rounded-lg border-0 bg-components-input-bg-normal px-1.5 pl-1 leading-7 text-text-primary placeholder:text-text-tertiary focus:ring-1 focus:ring-inset focus:ring-primary-600"
+                className="block h-7 w-11 rounded-md border-0 bg-components-input-bg-normal px-1.5 pl-1 leading-7 text-text-primary placeholder:text-text-tertiary focus:ring-1 focus:ring-inset focus:ring-primary-600"
                 value={tempPayload.max_iteration}
                 onChange={(e) => {
                   let value = Number.parseInt(e.target.value, 10)
@@ -137,7 +137,7 @@ const AgentSetting: FC<Props> = ({
           </ItemPanel>
 
           {!isFunctionCall && (
-            <div className="rounded-xl bg-background-section-burn py-2 shadow-xs">
+            <div className="rounded-md bg-background-section-burn py-2 shadow-xs">
               <div className="flex h-8 items-center px-4 text-sm font-semibold leading-6 text-text-secondary">{t('builtInPromptTitle', { ns: 'tools' })}</div>
               <div className="h-[396px] overflow-y-auto whitespace-pre-line px-4 text-sm font-normal leading-5 text-text-secondary">
                 {isChatModel ? DEFAULT_AGENT_PROMPT.chat : DEFAULT_AGENT_PROMPT.completion}

@@ -68,8 +68,8 @@ const NewFeaturePanel = ({
         {/* list */}
         <div className="grow basis-0 overflow-y-auto px-4 pb-4">
           {showFileUpload && (
-            <div className="relative mb-1 rounded-xl border border-components-panel-border p-2 shadow-xs">
-              <div className="absolute left-0 top-0 h-full w-full rounded-xl opacity-40" style={{ background: 'linear-gradient(92deg, rgba(11, 165, 236, 0.25) 18.12%, rgba(255, 255, 255, 0.00) 167.31%)' }}></div>
+            <div className="relative mb-1 rounded-md border border-components-panel-border p-2 shadow-xs">
+              <div className="absolute left-0 top-0 h-full w-full rounded-md opacity-40" style={{ background: 'linear-gradient(92deg, rgba(11, 165, 236, 0.25) 18.12%, rgba(255, 255, 255, 0.00) 167.31%)' }}></div>
               <div className="relative flex h-full w-full items-start">
                 <div className="mr-0.5 shrink-0 p-0.5">
                   <RiInformation2Fill className="h-5 w-5 text-text-accent" />

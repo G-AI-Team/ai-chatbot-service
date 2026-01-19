@@ -28,7 +28,7 @@ const TagRemoveModal = ({ show, tag, onConfirm, onClose }: TagRemoveModalProps) 
       <div className="absolute right-4 top-4 cursor-pointer p-2" onClick={onClose}>
         <RiCloseLine className="h-4 w-4 text-text-tertiary" />
       </div>
-      <div className="h-12 w-12 rounded-xl border-[0.5px] border-divider-regular bg-background-default-burn p-3 shadow-xl">
+      <div className="h-12 w-12 rounded-md border-[0.5px] border-divider-regular bg-background-default-burn p-3 shadow-xl">
         <AlertTriangle className="h-6 w-6 text-[rgb(247,144,9)]" />
       </div>
       <div className="mt-3 text-xl font-semibold leading-[30px] text-text-primary">

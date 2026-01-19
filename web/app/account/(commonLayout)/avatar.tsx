@@ -65,7 +65,7 @@ export default function AppSelector() {
               <MenuItems
                 className="
                     absolute -right-2 -top-1 w-60 max-w-80
-                    origin-top-right divide-y divide-divider-subtle rounded-lg bg-components-panel-bg-blur
+                    origin-top-right divide-y divide-divider-subtle rounded-md bg-components-panel-bg-blur
                     shadow-lg
                   "
               >
@@ -91,7 +91,7 @@ export default function AppSelector() {
                 <MenuItem>
                   <div className="p-1" onClick={() => handleLogout()}>
                     <div
-                      className="group flex h-9 cursor-pointer items-center justify-start rounded-lg px-3 hover:bg-state-base-hover"
+                      className="group flex h-9 cursor-pointer items-center justify-start rounded-md px-3 hover:bg-state-base-hover"
                     >
                       <LogOut01 className="mr-1 flex h-4 w-4 text-text-tertiary" />
                       <div className="text-[14px] font-normal text-text-secondary">{t('userProfile.logout', { ns: 'common' })}</div>

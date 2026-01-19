@@ -72,10 +72,10 @@ const AppSidebarDropdown = ({ navigation }: Props) => {
             </div>
           </PortalToFollowElemTrigger>
           <PortalToFollowElemContent className="z-[1000]">
-            <div className={cn('w-[305px] rounded-xl border-[0.5px] border-components-panel-border bg-background-default-subtle shadow-lg')}>
+            <div className={cn('w-[305px] rounded-md border-[0.5px] border-components-panel-border bg-background-default-subtle shadow-lg')}>
               <div className="p-2">
                 <div
-                  className={cn('flex flex-col gap-2 rounded-lg p-2 pb-2.5', isCurrentWorkspaceEditor && 'cursor-pointer hover:bg-state-base-hover')}
+                  className={cn('flex flex-col gap-2 rounded-md p-2 pb-2.5', isCurrentWorkspaceEditor && 'cursor-pointer hover:bg-state-base-hover')}
                   onClick={() => {
                     setDetailExpand(true)
                     setOpen(false)

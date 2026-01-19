@@ -55,8 +55,8 @@ const NormalForm = () => {
     return (
       <div className="mx-auto mt-8 w-full">
         <div className="relative">
-          <div className="rounded-lg bg-gradient-to-r from-workflow-workflow-progress-bg-1 to-workflow-workflow-progress-bg-2 p-4">
-            <div className="shadows-shadow-lg relative mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-components-card-bg shadow">
+          <div className="rounded-md bg-gradient-to-r from-workflow-workflow-progress-bg-1 to-workflow-workflow-progress-bg-2 p-4">
+            <div className="shadows-shadow-lg relative mb-2 flex h-10 w-10 items-center justify-center rounded-md bg-components-card-bg shadow">
               <RiContractLine className="h-5 w-5" />
               <RiErrorWarningFill className="absolute -right-1 -top-1 h-4 w-4 text-text-warning-secondary" />
             </div>
@@ -71,8 +71,8 @@ const NormalForm = () => {
     return (
       <div className="mx-auto mt-8 w-full">
         <div className="relative">
-          <div className="rounded-lg bg-gradient-to-r from-workflow-workflow-progress-bg-1 to-workflow-workflow-progress-bg-2 p-4">
-            <div className="shadows-shadow-lg relative mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-components-card-bg shadow">
+          <div className="rounded-md bg-gradient-to-r from-workflow-workflow-progress-bg-1 to-workflow-workflow-progress-bg-2 p-4">
+            <div className="shadows-shadow-lg relative mb-2 flex h-10 w-10 items-center justify-center rounded-md bg-components-card-bg shadow">
               <RiContractLine className="h-5 w-5" />
               <RiErrorWarningFill className="absolute -right-1 -top-1 h-4 w-4 text-text-warning-secondary" />
             </div>
@@ -87,8 +87,8 @@ const NormalForm = () => {
     return (
       <div className="mx-auto mt-8 w-full">
         <div className="relative">
-          <div className="rounded-lg bg-gradient-to-r from-workflow-workflow-progress-bg-1 to-workflow-workflow-progress-bg-2 p-4">
-            <div className="shadows-shadow-lg relative mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-components-card-bg shadow">
+          <div className="rounded-md bg-gradient-to-r from-workflow-workflow-progress-bg-1 to-workflow-workflow-progress-bg-2 p-4">
+            <div className="shadows-shadow-lg relative mb-2 flex h-10 w-10 items-center justify-center rounded-md bg-components-card-bg shadow">
               <RiContractLine className="h-5 w-5" />
               <RiErrorWarningFill className="absolute -right-1 -top-1 h-4 w-4 text-text-warning-secondary" />
             </div>
@@ -154,8 +154,8 @@ const NormalForm = () => {
           }
           {allMethodsAreDisabled && (
             <>
-              <div className="rounded-lg bg-gradient-to-r from-workflow-workflow-progress-bg-1 to-workflow-workflow-progress-bg-2 p-4">
-                <div className="shadows-shadow-lg mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-components-card-bg shadow">
+              <div className="rounded-md bg-gradient-to-r from-workflow-workflow-progress-bg-1 to-workflow-workflow-progress-bg-2 p-4">
+                <div className="shadows-shadow-lg mb-2 flex h-10 w-10 items-center justify-center rounded-md bg-components-card-bg shadow">
                   <RiDoorLockLine className="h-5 w-5" />
                 </div>
                 <p className="system-sm-medium text-text-primary">{t('noLoginMethod', { ns: 'login' })}</p>
@@ -172,7 +172,7 @@ const NormalForm = () => {
             <>
               <div className="system-xs-regular mt-2 block w-full text-text-tertiary">
                 {t('tosDesc', { ns: 'login' })}
-              &nbsp;
+                &nbsp;
                 <Link
                   className="system-xs-medium text-text-secondary hover:underline"
                   target="_blank"
@@ -181,7 +181,7 @@ const NormalForm = () => {
                 >
                   {t('tos', { ns: 'login' })}
                 </Link>
-              &nbsp;&&nbsp;
+                &nbsp;&&nbsp;
                 <Link
                   className="system-xs-medium text-text-secondary hover:underline"
                   target="_blank"
@@ -194,7 +194,7 @@ const NormalForm = () => {
               {IS_CE_EDITION && (
                 <div className="w-hull system-xs-regular mt-2 block text-text-tertiary">
                   {t('goToInit', { ns: 'login' })}
-              &nbsp;
+                  &nbsp;
                   <Link
                     className="system-xs-medium text-text-secondary hover:underline"
                     href="/install"

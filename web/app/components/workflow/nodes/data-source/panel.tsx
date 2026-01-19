@@ -94,7 +94,7 @@ const Panel: FC<NodePanelProps<DataSourceNodeType>> = ({ id, data }) => {
               },
             }}
           >
-            <div className="rounded-lg bg-components-input-bg-normal p-1 pt-0">
+            <div className="rounded-md bg-components-input-bg-normal p-1 pt-0">
               <TagInput
                 items={fileExtensions}
                 onChange={handleFileExtensionsChange}

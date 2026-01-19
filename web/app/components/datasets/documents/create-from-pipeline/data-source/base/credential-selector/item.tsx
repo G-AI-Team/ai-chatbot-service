@@ -23,7 +23,7 @@ const Item = ({
 
   return (
     <div
-      className="flex cursor-pointer items-center gap-x-2 rounded-lg p-2 hover:bg-state-base-hover"
+      className="flex cursor-pointer items-center gap-x-2 rounded-md p-2 hover:bg-state-base-hover"
       onClick={handleCredentialChange}
     >
       <CredentialIcon

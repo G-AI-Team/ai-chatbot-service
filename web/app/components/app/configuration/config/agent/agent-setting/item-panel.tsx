@@ -20,7 +20,7 @@ const ItemPanel: FC<Props> = ({
   children,
 }) => {
   return (
-    <div className={cn(className, 'flex h-12 items-center justify-between rounded-lg bg-background-section-burn px-3')}>
+    <div className={cn(className, 'flex h-12 items-center justify-between rounded-md bg-background-section-burn px-3')}>
       <div className="flex items-center">
         {icon}
         <div className="ml-3 mr-1 text-sm font-semibold leading-6 text-text-secondary">{name}</div>

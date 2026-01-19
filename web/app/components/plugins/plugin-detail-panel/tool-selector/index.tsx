@@ -269,7 +269,7 @@ const ToolSelector: FC<Props> = ({
           )}
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-10">
-          <div className={cn('relative max-h-[642px] min-h-20 w-[361px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur pb-4 shadow-lg backdrop-blur-sm', 'overflow-y-auto pb-2')}>
+          <div className={cn('relative max-h-[642px] min-h-20 w-[361px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur pb-4 shadow-lg backdrop-blur-sm', 'overflow-y-auto pb-2')}>
             <>
               <div className="system-xl-semibold px-4 pb-1 pt-3.5 text-text-primary">{t(`detailPanel.toolSelector.${isEdit ? 'toolSetting' : 'title'}`, { ns: 'plugin' })}</div>
               {/* base form */}

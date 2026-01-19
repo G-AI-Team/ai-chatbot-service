@@ -113,7 +113,7 @@ const Card = ({
   ])
 
   return (
-    <div className="rounded-xl bg-background-section-burn">
+    <div className="rounded-md bg-background-section-burn">
       <div className="flex items-center p-3 pb-2">
         <img
           src={icon}

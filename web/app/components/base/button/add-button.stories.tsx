@@ -39,7 +39,7 @@ export const Default: Story = {
 
 export const InToolbar: Story = {
   render: args => (
-    <div className="flex items-center gap-2 rounded-lg border border-divider-subtle bg-components-panel-bg p-3">
+    <div className="flex items-center gap-2 rounded-md border border-divider-subtle bg-components-panel-bg p-3">
       <span className="text-xs text-text-tertiary">Attachments</span>
       <div className="ml-auto flex items-center gap-2">
         <AddButton {...args} />

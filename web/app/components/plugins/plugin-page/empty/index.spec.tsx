@@ -142,7 +142,7 @@ const createMockFile = (name: string, type = 'application/octet-stream'): File =
 
 // Helper to wait for useEffect to complete (single tick)
 const flushEffects = async () => {
-  await act(async () => {})
+  await act(async () => { })
 }
 
 // ==================== Tests ====================
@@ -167,7 +167,7 @@ describe('Empty Component', () => {
       expect(fileInput.accept).toBe('.difypkg,.difybndl')
 
       // Assert - skeleton cards (20 in the grid + 1 icon container)
-      const skeletonCards = container.querySelectorAll('.rounded-xl.bg-components-card-bg')
+      const skeletonCards = container.querySelectorAll('.rounded-md.bg-components-card-bg')
       expect(skeletonCards.length).toBeGreaterThanOrEqual(20)
 
       // Assert - group icon container

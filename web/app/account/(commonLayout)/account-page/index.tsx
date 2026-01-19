@@ -148,7 +148,7 @@ export default function AccountPage() {
       <div className="pb-3 pt-2">
         <h4 className="title-2xl-semi-bold text-text-primary">{t('account.myAccount', { ns: 'common' })}</h4>
       </div>
-      <div className="mb-8 flex items-center rounded-xl bg-gradient-to-r from-background-gradient-bg-fill-chat-bg-2 to-background-gradient-bg-fill-chat-bg-1 p-6">
+      <div className="mb-8 flex items-center rounded-md bg-gradient-to-r from-background-gradient-bg-fill-chat-bg-2 to-background-gradient-bg-fill-chat-bg-1 p-6">
         <AvatarWithEdit avatar={userProfile.avatar_url} name={userProfile.name} onSave={mutateUserProfile} size={64} />
         <div className="ml-4">
           <p className="system-xl-semibold text-text-primary">
@@ -166,10 +166,10 @@ export default function AccountPage() {
       <div className="mb-8">
         <div className={titleClassName}>{t('account.name', { ns: 'common' })}</div>
         <div className="mt-2 flex w-full items-center justify-between gap-2">
-          <div className="system-sm-regular flex-1 rounded-lg bg-components-input-bg-normal p-2 text-components-input-text-filled ">
+          <div className="system-sm-regular flex-1 rounded-md bg-components-input-bg-normal p-2 text-components-input-text-filled ">
             <span className="pl-1">{userProfile.name}</span>
           </div>
-          <div className="system-sm-medium cursor-pointer rounded-lg bg-components-button-tertiary-bg px-3 py-2 text-components-button-tertiary-text" onClick={handleEditName}>
+          <div className="system-sm-medium cursor-pointer rounded-md bg-components-button-tertiary-bg px-3 py-2 text-components-button-tertiary-text" onClick={handleEditName}>
             {t('operation.edit', { ns: 'common' })}
           </div>
         </div>
@@ -177,11 +177,11 @@ export default function AccountPage() {
       <div className="mb-8">
         <div className={titleClassName}>{t('account.email', { ns: 'common' })}</div>
         <div className="mt-2 flex w-full items-center justify-between gap-2">
-          <div className="system-sm-regular flex-1 rounded-lg bg-components-input-bg-normal p-2 text-components-input-text-filled ">
+          <div className="system-sm-regular flex-1 rounded-md bg-components-input-bg-normal p-2 text-components-input-text-filled ">
             <span className="pl-1">{userProfile.email}</span>
           </div>
           {systemFeatures.enable_change_email && (
-            <div className="system-sm-medium cursor-pointer rounded-lg bg-components-button-tertiary-bg px-3 py-2 text-components-button-tertiary-text" onClick={() => setShowUpdateEmail(true)}>
+            <div className="system-sm-medium cursor-pointer rounded-md bg-components-button-tertiary-bg px-3 py-2 text-components-button-tertiary-text" onClick={() => setShowUpdateEmail(true)}>
               {t('operation.change', { ns: 'common' })}
             </div>
           )}

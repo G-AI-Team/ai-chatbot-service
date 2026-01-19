@@ -37,8 +37,8 @@ type Props = {
   onSingleRetrievalModelParamsChange?: ModelParameterModalProps['onCompletionParamsChange']
 }
 
-const noopModelChange: ModelParameterModalProps['setModel'] = () => {}
-const noopParamsChange: ModelParameterModalProps['onCompletionParamsChange'] = () => {}
+const noopModelChange: ModelParameterModalProps['setModel'] = () => { }
+const noopParamsChange: ModelParameterModalProps['onCompletionParamsChange'] = () => { }
 
 const ConfigContent: FC<Props> = ({
   datasetConfigs,
@@ -238,7 +238,7 @@ const ConfigContent: FC<Props> = ({
                     <div
                       key={option.value}
                       className={cn(
-                        'system-sm-medium flex h-8 w-[calc((100%-8px)/2)] cursor-pointer items-center justify-center rounded-lg border border-components-option-card-option-border bg-components-option-card-option-bg text-text-secondary',
+                        'system-sm-medium flex h-8 w-[calc((100%-8px)/2)] cursor-pointer items-center justify-center rounded-md border border-components-option-card-option-border bg-components-option-card-option-bg text-text-secondary',
                         selectedRerankMode === option.value && 'border-[1.5px] border-components-option-card-option-selected-border bg-components-option-card-option-selected-bg text-text-primary',
                       )}
                       onClick={() => handleRerankModeChange(option.value)}

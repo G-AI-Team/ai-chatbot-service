@@ -55,7 +55,7 @@ const VarItem: FC<Props> = ({
     hideEditVarModal()
   }, [onChange, hideEditVarModal])
   return (
-    <div ref={ref} className={cn('flex h-8 cursor-pointer items-center justify-between rounded-lg border border-components-panel-border-subtle bg-components-panel-on-panel-item-bg px-2.5 shadow-xs hover:shadow-md', className)}>
+    <div ref={ref} className={cn('flex h-8 cursor-pointer items-center justify-between rounded-md border border-components-panel-border-subtle bg-components-panel-on-panel-item-bg px-2.5 shadow-xs hover:shadow-md', className)}>
       <div className="flex w-0 grow items-center space-x-1">
         <Variable02 className={cn('h-3.5 w-3.5 text-text-accent', canDrag && 'group-hover:opacity-0')} />
         <div title={payload.variable} className="max-w-[130px] shrink-0 truncate text-[13px] font-medium text-text-secondary">{payload.variable}</div>
@@ -77,23 +77,23 @@ const VarItem: FC<Props> = ({
           <>
             {(!isHovering || readonly)
               ? (
-                  <>
-                    {payload.required && (
-                      <div className="mr-2 text-xs font-normal text-text-tertiary">{t('nodes.start.required', { ns: 'workflow' })}</div>
-                    )}
-                    <InputVarTypeIcon type={payload.type} className="h-3.5 w-3.5 text-text-tertiary" />
-                  </>
-                )
+                <>
+                  {payload.required && (
+                    <div className="mr-2 text-xs font-normal text-text-tertiary">{t('nodes.start.required', { ns: 'workflow' })}</div>
+                  )}
+                  <InputVarTypeIcon type={payload.type} className="h-3.5 w-3.5 text-text-tertiary" />
+                </>
+              )
               : (!readonly && (
-                  <>
-                    <div onClick={showEditVarModal} className="mr-1 cursor-pointer rounded-md p-1 hover:bg-state-base-hover">
-                      <Edit03 className="h-4 w-4 text-text-tertiary" />
-                    </div>
-                    <div onClick={onRemove} className="group cursor-pointer rounded-md p-1 hover:bg-state-destructive-hover">
-                      <RiDeleteBinLine className="h-4 w-4 text-text-tertiary group-hover:text-text-destructive" />
-                    </div>
-                  </>
-                ))}
+                <>
+                  <div onClick={showEditVarModal} className="mr-1 cursor-pointer rounded-md p-1 hover:bg-state-base-hover">
+                    <Edit03 className="h-4 w-4 text-text-tertiary" />
+                  </div>
+                  <div onClick={onRemove} className="group cursor-pointer rounded-md p-1 hover:bg-state-destructive-hover">
+                    <RiDeleteBinLine className="h-4 w-4 text-text-tertiary group-hover:text-text-destructive" />
+                  </div>
+                </>
+              ))}
           </>
         )}
 

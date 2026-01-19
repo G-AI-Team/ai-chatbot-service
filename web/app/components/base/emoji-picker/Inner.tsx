@@ -103,12 +103,12 @@ const EmojiPickerInner: FC<IEmojiPickerInnerProps> = ({
                   return (
                     <div
                       key={`emoji-search-${index}`}
-                      className="inline-flex h-10 w-10 items-center justify-center rounded-lg"
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-md"
                       onClick={() => {
                         setSelectedEmoji(emoji)
                       }}
                     >
-                      <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg p-1 ring-components-input-border-hover ring-offset-1 hover:ring-1">
+                      <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-md p-1 ring-components-input-border-hover ring-offset-1 hover:ring-1">
                         <em-emoji id={emoji} />
                       </div>
                     </div>
@@ -128,12 +128,12 @@ const EmojiPickerInner: FC<IEmojiPickerInnerProps> = ({
                   return (
                     <div
                       key={`emoji-${index}`}
-                      className="inline-flex h-10 w-10 items-center justify-center rounded-lg"
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-md"
                       onClick={() => {
                         setSelectedEmoji(emoji)
                       }}
                     >
-                      <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg p-1 ring-components-input-border-hover ring-offset-1 hover:ring-1">
+                      <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-md p-1 ring-components-input-border-hover ring-offset-1 hover:ring-1">
                         <em-emoji id={emoji} />
                       </div>
                     </div>
@@ -163,7 +163,7 @@ const EmojiPickerInner: FC<IEmojiPickerInnerProps> = ({
                   cn(
                     'cursor-pointer',
                     'ring-offset-1 hover:ring-1',
-                    'inline-flex h-10 w-10 items-center justify-center rounded-lg',
+                    'inline-flex h-10 w-10 items-center justify-center rounded-md',
                     color === selectedBackground ? 'ring-1 ring-components-input-border-hover' : '',
                   )
                 }
@@ -173,7 +173,7 @@ const EmojiPickerInner: FC<IEmojiPickerInnerProps> = ({
               >
                 <div
                   className={cn(
-                    'flex h-8 w-8 items-center justify-center rounded-lg p-1',
+                    'flex h-8 w-8 items-center justify-center rounded-md p-1',
                   )}
                   style={{ background: color }}
                 >

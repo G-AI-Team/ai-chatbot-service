@@ -415,12 +415,12 @@ export const CommonCreateModal = ({ onClose, createType, builder }: Props) => {
                   type: normalizedType,
                   dynamicSelectParams: normalizedType === FormTypeEnum.dynamicSelect
                     ? {
-                        plugin_id: detail?.plugin_id || '',
-                        provider: detail?.provider || '',
-                        action: 'provider',
-                        parameter: schema.name,
-                        credential_id: subscriptionBuilder?.id || '',
-                      }
+                      plugin_id: detail?.plugin_id || '',
+                      provider: detail?.provider || '',
+                      action: 'provider',
+                      parameter: schema.name,
+                      credential_id: subscriptionBuilder?.id || '',
+                    }
                     : undefined,
                   fieldClassName: schema.type === FormTypeEnum.boolean ? 'flex items-center justify-between' : undefined,
                   labelClassName: schema.type === FormTypeEnum.boolean ? 'mb-0' : undefined,
@@ -455,7 +455,7 @@ export const CommonCreateModal = ({ onClose, createType, builder }: Props) => {
                   <div className="h-px flex-1 bg-gradient-to-r from-divider-regular to-transparent" />
                 </div>
 
-                <div className="mb-1 flex items-center justify-center gap-1 rounded-lg bg-background-section p-3">
+                <div className="mb-1 flex items-center justify-center gap-1 rounded-md bg-background-section p-3">
                   <div className="h-3.5 w-3.5">
                     <RiLoader2Line className="h-full w-full animate-spin" />
                   </div>

@@ -24,10 +24,10 @@ const ErrorHandleTip = ({
 
   return (
     <div
-      className="relative flex rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 pr-[52px] shadow-xs"
+      className="relative flex rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-2 pr-[52px] shadow-xs"
     >
       <div
-        className="absolute inset-0 rounded-lg opacity-40"
+        className="absolute inset-0 rounded-md opacity-40"
         style={{
           background: 'linear-gradient(92deg, rgba(247, 144, 9, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%)',
         }}

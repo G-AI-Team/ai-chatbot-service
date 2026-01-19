@@ -47,7 +47,7 @@ const TypeSelector: FC<Props> = ({
     >
       <PortalToFollowElemTrigger onClick={() => !readonly && setOpen(v => !v)} className="w-full">
         <div
-          className={cn(`group flex h-9 items-center justify-between rounded-lg border-0 bg-components-input-bg-normal px-2 text-sm hover:bg-state-base-hover-alt ${readonly ? 'cursor-not-allowed' : 'cursor-pointer'}`)}
+          className={cn(`group flex h-9 items-center justify-between rounded-md border-0 bg-components-input-bg-normal px-2 text-sm hover:bg-state-base-hover-alt ${readonly ? 'cursor-not-allowed' : 'cursor-pointer'}`)}
           title={selectedItem?.name}
         >
           <div className="flex items-center">
@@ -74,7 +74,7 @@ const TypeSelector: FC<Props> = ({
           {items.map((item: Item) => (
             <div
               key={item.value}
-              className="flex h-9 cursor-pointer items-center justify-between rounded-lg px-2 text-text-secondary hover:bg-state-base-hover"
+              className="flex h-9 cursor-pointer items-center justify-between rounded-md px-2 text-text-secondary hover:bg-state-base-hover"
               title={item.name}
               onClick={() => {
                 onSelect(item)

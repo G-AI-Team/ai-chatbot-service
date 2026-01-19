@@ -101,7 +101,7 @@ const ModelProviderPage = ({ searchText }: Props) => {
       <div className={cn('mb-2 flex items-center')}>
         <div className="system-md-semibold grow text-text-primary">{t('modelProvider.models', { ns: 'common' })}</div>
         <div className={cn(
-          'relative flex shrink-0 items-center justify-end gap-2 rounded-lg border border-transparent p-px',
+          'relative flex shrink-0 items-center justify-end gap-2 rounded-md border border-transparent p-px',
           defaultModelNotConfigured && 'border-components-panel-border bg-components-panel-bg-blur pl-2 shadow-xs',
         )}
         >

@@ -44,7 +44,7 @@ const ChangeItem = ({
 
   const renderTrigger = useCallback(() => {
     return (
-      <div className="flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover">
+      <div className="flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover">
         {t('panel.change', { ns: 'workflow' })}
       </div>
     )
@@ -98,7 +98,7 @@ const Operator = ({
         </Button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-10">
-        <div className="system-md-regular min-w-[120px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur text-text-secondary shadow-lg">
+        <div className="system-md-regular min-w-[120px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur text-text-secondary shadow-lg">
           <div className="p-1">
             <ChangeItem
               data={data}
@@ -106,7 +106,7 @@ const Operator = ({
               sourceHandle={sourceHandle}
             />
             <div
-              className="flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover"
+              className="flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover"
               onClick={() => handleNodeDisconnect(nodeId)}
             >
               {t('common.disconnect', { ns: 'workflow' })}
@@ -114,7 +114,7 @@ const Operator = ({
           </div>
           <div className="p-1">
             <div
-              className="flex h-8 cursor-pointer items-center rounded-lg px-2 hover:bg-state-base-hover"
+              className="flex h-8 cursor-pointer items-center rounded-md px-2 hover:bg-state-base-hover"
               onClick={() => handleNodeDelete(nodeId)}
             >
               {t('operation.delete', { ns: 'common' })}

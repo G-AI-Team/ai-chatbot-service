@@ -37,12 +37,12 @@ const AgentLogNavMore = ({
         </Button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent>
-        <div className="w-[136px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
+        <div className="w-[136px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
           {
             options.map(option => (
               <div
                 key={option.message_id}
-                className="system-md-regular flex h-8 cursor-pointer items-center rounded-lg px-2 text-text-secondary hover:bg-state-base-hover"
+                className="system-md-regular flex h-8 cursor-pointer items-center rounded-md px-2 text-text-secondary hover:bg-state-base-hover"
                 onClick={() => {
                   onShowAgentOrToolLog(option)
                   setOpen(false)

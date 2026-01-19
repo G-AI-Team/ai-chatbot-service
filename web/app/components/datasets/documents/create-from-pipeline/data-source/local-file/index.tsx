@@ -290,7 +290,7 @@ const LocalFile = ({
         <div
           ref={dropRef}
           className={cn(
-            'relative box-border flex min-h-20 flex-col items-center justify-center gap-1 rounded-xl border border-dashed border-components-dropzone-border bg-components-dropzone-bg px-4 py-3 text-xs leading-4 text-text-tertiary',
+            'relative box-border flex min-h-20 flex-col items-center justify-center gap-1 rounded-md border border-dashed border-components-dropzone-border bg-components-dropzone-bg px-4 py-3 text-xs leading-4 text-text-tertiary',
             dragging && 'border-components-dropzone-border-accent bg-components-dropzone-bg-accent',
           )}
         >
@@ -326,7 +326,7 @@ const LocalFile = ({
                 key={`${fileItem.fileID}-${index}`}
                 onClick={handlePreview.bind(null, fileItem.file)}
                 className={cn(
-                  'flex h-12 items-center rounded-lg border border-components-panel-border bg-components-panel-on-panel-item-bg shadow-xs shadow-shadow-shadow-4',
+                  'flex h-12 items-center rounded-md border border-components-panel-border bg-components-panel-on-panel-item-bg shadow-xs shadow-shadow-shadow-4',
                   isError && 'border-state-destructive-border bg-state-destructive-hover',
                 )}
               >

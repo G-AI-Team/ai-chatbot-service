@@ -128,7 +128,7 @@ const Uploader: FC<Props> = ({
           </div>
         )}
         {file && (
-          <div className="group flex items-center rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-on-panel-item-bg shadow-xs hover:bg-components-panel-on-panel-item-bg-hover">
+          <div className="group flex items-center rounded-md border-[0.5px] border-components-panel-border bg-components-panel-on-panel-item-bg shadow-xs hover:bg-components-panel-on-panel-item-bg-hover">
             <div className="flex items-center justify-center p-3">
               <RiNodeTree className="h-6 w-6 shrink-0 text-text-secondary" />
             </div>

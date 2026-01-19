@@ -22,7 +22,7 @@ const TriggerEventCard = ({ eventInfo, providerInfo }: TriggerEventCardProps) =>
   return (
     <>
       <div
-        className={cn('bg-components-panel-item-bg cursor-pointer rounded-xl border-[0.5px] border-components-panel-border-subtle px-4 py-3 shadow-xs hover:bg-components-panel-on-panel-item-bg-hover')}
+        className={cn('bg-components-panel-item-bg cursor-pointer rounded-md border-[0.5px] border-components-panel-border-subtle px-4 py-3 shadow-xs hover:bg-components-panel-on-panel-item-bg-hover')}
         onClick={() => setShowDetail(true)}
       >
         <div className="system-md-semibold pb-0.5 text-text-secondary">{title}</div>

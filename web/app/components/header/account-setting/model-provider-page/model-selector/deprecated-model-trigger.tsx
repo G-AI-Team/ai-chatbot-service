@@ -26,7 +26,7 @@ const ModelTrigger: FC<ModelTriggerProps> = ({
 
   return (
     <div
-      className={cn('group box-content flex h-8 grow cursor-pointer items-center gap-1 rounded-lg bg-components-input-bg-disabled p-[3px] pl-1', className)}
+      className={cn('group box-content flex h-8 grow cursor-pointer items-center gap-1 rounded-md bg-components-input-bg-disabled p-[3px] pl-1', className)}
     >
       <div className={cn('flex w-full items-center', contentClassName)}>
         <div className="flex min-w-0 flex-1 items-center gap-1 py-[1px]">

@@ -42,7 +42,7 @@ const CreateCard = () => {
 
   return (
     <div
-      className="group relative flex h-[132px] cursor-pointer flex-col rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-on-panel-item-bg pb-3 shadow-xs shadow-shadow-shadow-3"
+      className="group relative flex h-[132px] cursor-pointer flex-col rounded-md border-[0.5px] border-components-panel-border bg-components-panel-on-panel-item-bg pb-3 shadow-xs shadow-shadow-shadow-3"
       onClick={handleCreate}
     >
       <div className="flex items-center gap-x-3 p-4 pb-2">

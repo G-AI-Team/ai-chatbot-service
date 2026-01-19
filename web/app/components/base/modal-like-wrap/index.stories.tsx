@@ -57,7 +57,7 @@ const BaseContent = () => (
     <p>
       Describe the new field your dataset should collect. Provide a clear label and optional helper text.
     </p>
-    <div className="rounded-lg border border-dashed border-gray-200 bg-gray-50 p-4 text-xs text-gray-500">
+    <div className="rounded-md border border-dashed border-gray-200 bg-gray-50 p-4 text-xs text-gray-500">
       Form inputs would be placed here in the real flow.
     </div>
   </div>

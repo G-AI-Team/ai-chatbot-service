@@ -60,12 +60,12 @@ const FileFromLinkOrLocal = ({
         {trigger(open)}
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[1001]">
-        <div className="w-[280px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-3 shadow-lg">
+        <div className="w-[280px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-3 shadow-lg">
           {
             showFromLink && (
               <>
                 <div className={cn(
-                  'flex h-8 items-center rounded-lg border border-components-input-border-active bg-components-input-bg-active p-1 shadow-xs',
+                  'flex h-8 items-center rounded-md border border-components-input-border-active bg-components-input-bg-active p-1 shadow-xs',
                   showError && 'border-components-input-border-destructive',
                 )}
                 >

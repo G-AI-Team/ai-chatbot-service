@@ -56,7 +56,7 @@ const RunAndHistory = ({
   const { RunMode: CustomRunMode } = components || {}
 
   return (
-    <div className="flex h-8 items-center rounded-lg border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg px-0.5 shadow-xs">
+    <div className="flex h-8 items-center rounded-md border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg px-0.5 shadow-xs">
       {
         showRunButton && (
           CustomRunMode ? <CustomRunMode text={runButtonText} /> : <RunMode text={runButtonText} />

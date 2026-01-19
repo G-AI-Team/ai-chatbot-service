@@ -45,7 +45,7 @@ const ProgressCircleDemo = ({
           />
         </label>
       </div>
-      <div className="rounded-lg border border-divider-subtle bg-background-default-subtle p-3 text-[11px] leading-relaxed text-text-tertiary">
+      <div className="rounded-md border border-divider-subtle bg-background-default-subtle p-3 text-[11px] leading-relaxed text-text-tertiary">
         ProgressCircle renders a deterministic SVG slice. Advance the slider to preview how the arc grows for upload indicators.
       </div>
     </div>

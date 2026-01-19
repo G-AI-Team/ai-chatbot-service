@@ -106,7 +106,7 @@ const ExternalKnowledgeAPICard: React.FC<ExternalKnowledgeAPICardProps> = ({ api
 
   return (
     <>
-      <div className={`shadows-shadow-xs flex items-start self-stretch rounded-lg border-[0.5px] border-components-panel-border-subtle
+      <div className={`shadows-shadow-xs flex items-start self-stretch rounded-md border-[0.5px] border-components-panel-border-subtle
         bg-components-panel-on-panel-item-bg p-2
         pl-3 ${isHovered ? 'border-state-destructive-border bg-state-destructive-hover' : ''}`}
       >

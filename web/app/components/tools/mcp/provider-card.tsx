@@ -78,12 +78,12 @@ const MCPCard = ({
     <div
       onClick={() => handleSelect(data.id)}
       className={cn(
-        'group relative flex cursor-pointer flex-col rounded-xl border-[1.5px] border-transparent bg-components-card-bg shadow-xs hover:bg-components-card-bg-alt hover:shadow-md',
+        'group relative flex cursor-pointer flex-col rounded-md border-[1.5px] border-transparent bg-components-card-bg shadow-xs hover:bg-components-card-bg-alt hover:shadow-md',
         currentProvider?.id === data.id && 'border-components-option-card-option-selected-border bg-components-card-bg-alt',
       )}
     >
       <div className="flex grow items-center gap-3 rounded-t-xl p-4">
-        <div className="shrink-0 overflow-hidden rounded-xl border border-components-panel-border-subtle">
+        <div className="shrink-0 overflow-hidden rounded-md border border-components-panel-border-subtle">
           <Icon src={data.icon} />
         </div>
         <div className="grow">

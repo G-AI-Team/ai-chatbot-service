@@ -21,7 +21,7 @@ export default function Select({
     <div className="w-56 text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <MenuButton className="h-[44px]justify-center inline-flex w-full items-center rounded-lg border border-components-button-secondary-border px-[10px] py-[6px] text-[13px] font-medium text-text-primary hover:bg-state-base-hover">
+          <MenuButton className="h-[44px]justify-center inline-flex w-full items-center rounded-md border border-components-button-secondary-border px-[10px] py-[6px] text-[13px] font-medium text-text-primary hover:bg-state-base-hover">
             <GlobeAltIcon className="mr-1 h-5 w-5" aria-hidden="true" />
             {item?.name}
           </MenuButton>
@@ -42,7 +42,7 @@ export default function Select({
                   <MenuItem key={item.value}>
                     <button
                       type="button"
-                      className="group flex w-full items-center rounded-lg px-3 py-2 text-sm text-text-secondary data-[active]:bg-state-base-hover"
+                      className="group flex w-full items-center rounded-md px-3 py-2 text-sm text-text-secondary data-[active]:bg-state-base-hover"
                       onClick={(evt) => {
                         evt.preventDefault()
                         onChange?.(item.value)

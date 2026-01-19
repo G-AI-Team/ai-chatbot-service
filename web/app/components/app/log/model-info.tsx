@@ -56,7 +56,7 @@ const ModelInfo: FC<Props> = ({
   }
 
   return (
-    <div className={cn('flex items-center rounded-lg')}>
+    <div className={cn('flex items-center rounded-md')}>
       <div className="mr-px flex h-8 shrink-0 items-center gap-1 rounded-l-lg bg-components-input-bg-normal pl-1.5 pr-2">
         <ModelIcon
           className="!h-5 !w-5"

@@ -16,7 +16,7 @@ const PermissionItem = ({
 }: PermissionItemProps) => {
   return (
     <div
-      className="flex cursor-pointer items-center gap-x-1 rounded-lg px-2 py-1 hover:bg-state-base-hover"
+      className="flex cursor-pointer items-center gap-x-1 rounded-md px-2 py-1 hover:bg-state-base-hover"
       onClick={onClick}
     >
       {leftIcon}

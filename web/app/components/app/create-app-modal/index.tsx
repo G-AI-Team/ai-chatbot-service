@@ -329,7 +329,7 @@ function AppTypeCard({ icon, title, description, active, onClick }: AppTypeCardP
   return (
     <div
       className={
-        cn(`relative box-content h-[84px] w-[191px] cursor-pointer rounded-xl
+        cn(`relative box-content h-[84px] w-[191px] cursor-pointer rounded-md
       border-[0.5px] border-components-option-card-option-border
       bg-components-panel-on-panel-item-bg p-3 shadow-xs hover:shadow-md`, active
           ? 'shadow-md outline outline-[1.5px] outline-components-option-card-option-selected-border'

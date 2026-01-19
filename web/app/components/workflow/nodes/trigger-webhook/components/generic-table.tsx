@@ -210,7 +210,7 @@ const GenericTable: FC<GenericTableProps> = ({
 
   const renderTable = () => {
     return (
-      <div className="rounded-lg border border-divider-regular">
+      <div className="rounded-md border border-divider-regular">
         {showHeader && (
           <div className="system-xs-medium-uppercase flex h-7 items-center leading-7 text-text-tertiary">
             {columns.map((column, index) => (
@@ -290,13 +290,13 @@ const GenericTable: FC<GenericTableProps> = ({
 
       {showPlaceholder
         ? (
-            <div className="flex h-7 items-center justify-center rounded-lg border border-divider-regular bg-components-panel-bg text-xs font-normal leading-[18px] text-text-quaternary">
-              {placeholder}
-            </div>
-          )
+          <div className="flex h-7 items-center justify-center rounded-md border border-divider-regular bg-components-panel-bg text-xs font-normal leading-[18px] text-text-quaternary">
+            {placeholder}
+          </div>
+        )
         : (
-            renderTable()
-          )}
+          renderTable()
+        )}
     </div>
   )
 }

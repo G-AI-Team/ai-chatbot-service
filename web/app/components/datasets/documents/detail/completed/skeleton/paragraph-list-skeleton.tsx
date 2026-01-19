@@ -36,7 +36,7 @@ const CardSkelton = React.memo(() => {
       </SkeletonContainer>
       <SkeletonContainer className="p-1 pb-2">
         <SkeletonRow>
-          <SkeletonRow className="h-7 gap-x-0.5 rounded-lg bg-dataset-child-chunk-expand-btn-bg pl-1 pr-3">
+          <SkeletonRow className="h-7 gap-x-0.5 rounded-md bg-dataset-child-chunk-expand-btn-bg pl-1 pr-3">
             <RiArrowRightSLine className="h-4 w-4 text-text-secondary opacity-20" />
             <SkeletonRectangle className="w-32 bg-text-quaternary" />
           </SkeletonRow>

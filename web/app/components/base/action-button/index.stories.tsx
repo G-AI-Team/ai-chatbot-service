@@ -146,7 +146,7 @@ export const HoverState: Story = {
 // Real-world examples
 export const ToolbarActions: Story = {
   render: () => (
-    <div className="flex items-center gap-1 rounded-lg bg-background-section-burn p-2">
+    <div className="flex items-center gap-1 rounded-md bg-background-section-burn p-2">
       <ActionButton size="m">
         <RiEditLine className="h-4 w-4" />
       </ActionButton>

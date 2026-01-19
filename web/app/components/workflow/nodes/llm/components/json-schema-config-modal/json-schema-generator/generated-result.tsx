@@ -83,7 +83,7 @@ const GeneratedResult: FC<GeneratedResultProps> = ({
             {/* Content */}
             <div className="px-4 py-2">
               <CodeEditor
-                className="rounded-lg"
+                className="rounded-md"
                 editorWrapperClassName="h-[424px]"
                 value={jsonSchema}
                 readOnly

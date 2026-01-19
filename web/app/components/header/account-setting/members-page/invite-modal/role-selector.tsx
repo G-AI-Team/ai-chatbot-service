@@ -42,16 +42,16 @@ const RoleSelector = ({ value, onChange }: RoleSelectorProps) => {
           onClick={() => setOpen(v => !v)}
           className="block"
         >
-          <div className={cn('flex cursor-pointer items-center rounded-lg bg-components-input-bg-normal px-3 py-2 hover:bg-state-base-hover', open && 'bg-state-base-hover')}>
+          <div className={cn('flex cursor-pointer items-center rounded-md bg-components-input-bg-normal px-3 py-2 hover:bg-state-base-hover', open && 'bg-state-base-hover')}>
             <div className="mr-2 grow text-sm leading-5 text-text-primary">{t('members.invitedAsRole', { ns: 'common', role: t(roleI18nKeyMap[value], { ns: 'common' }) })}</div>
             <RiArrowDownSLine className="h-4 w-4 shrink-0 text-text-secondary" />
           </div>
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[1002]">
-          <div className="relative w-[336px] rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg">
+          <div className="relative w-[336px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg">
             <div className="p-1">
               <div
-                className="cursor-pointer rounded-lg p-2 hover:bg-state-base-hover"
+                className="cursor-pointer rounded-md p-2 hover:bg-state-base-hover"
                 onClick={() => {
                   onChange('normal')
                   setOpen(false)
@@ -64,7 +64,7 @@ const RoleSelector = ({ value, onChange }: RoleSelectorProps) => {
                 </div>
               </div>
               <div
-                className="cursor-pointer rounded-lg p-2 hover:bg-state-base-hover"
+                className="cursor-pointer rounded-md p-2 hover:bg-state-base-hover"
                 onClick={() => {
                   onChange('editor')
                   setOpen(false)
@@ -77,7 +77,7 @@ const RoleSelector = ({ value, onChange }: RoleSelectorProps) => {
                 </div>
               </div>
               <div
-                className="cursor-pointer rounded-lg p-2 hover:bg-state-base-hover"
+                className="cursor-pointer rounded-md p-2 hover:bg-state-base-hover"
                 onClick={() => {
                   onChange('admin')
                   setOpen(false)
@@ -91,7 +91,7 @@ const RoleSelector = ({ value, onChange }: RoleSelectorProps) => {
               </div>
               {datasetOperatorEnabled && (
                 <div
-                  className="cursor-pointer rounded-lg p-2 hover:bg-state-base-hover"
+                  className="cursor-pointer rounded-md p-2 hover:bg-state-base-hover"
                   onClick={() => {
                     onChange('dataset_operator')
                     setOpen(false)

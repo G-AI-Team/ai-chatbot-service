@@ -45,28 +45,26 @@ const MonthlyDaysSelector = ({ selectedDays, onChange }: MonthlyDaysSelectorProp
                 key={day}
                 type="button"
                 onClick={() => handleDayClick(day)}
-                className={`rounded-lg border bg-components-option-card-option-bg py-1 text-xs transition-colors ${
-                  day === 'last' ? 'col-span-2 min-w-0' : ''
-                } ${
-                  isDaySelected(day)
+                className={`rounded-md border bg-components-option-card-option-bg py-1 text-xs transition-colors ${day === 'last' ? 'col-span-2 min-w-0' : ''
+                  } ${isDaySelected(day)
                     ? 'border-util-colors-blue-brand-blue-brand-600 text-text-secondary'
                     : 'border-divider-subtle text-text-tertiary hover:border-divider-regular hover:text-text-secondary'
-                }`}
+                  }`}
               >
                 {day === 'last'
                   ? (
-                      <div className="flex items-center justify-center gap-1">
-                        <span>{t('nodes.triggerSchedule.lastDay', { ns: 'workflow' })}</span>
-                        <Tooltip
-                          popupContent={t('nodes.triggerSchedule.lastDayTooltip', { ns: 'workflow' })}
-                        >
-                          <RiQuestionLine className="h-3 w-3 text-text-quaternary" />
-                        </Tooltip>
-                      </div>
-                    )
+                    <div className="flex items-center justify-center gap-1">
+                      <span>{t('nodes.triggerSchedule.lastDay', { ns: 'workflow' })}</span>
+                      <Tooltip
+                        popupContent={t('nodes.triggerSchedule.lastDayTooltip', { ns: 'workflow' })}
+                      >
+                        <RiQuestionLine className="h-3 w-3 text-text-quaternary" />
+                      </Tooltip>
+                    </div>
+                  )
                   : (
-                      day
-                    )}
+                    day
+                  )}
               </button>
             ))}
             {/* Fill empty cells in the last row (Last day takes 2 cols, so need 1 less) */}

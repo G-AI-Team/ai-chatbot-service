@@ -134,7 +134,7 @@ const SegmentCard: FC<ISegmentCardProps> = ({
     <div
       data-testid="segment-card"
       className={cn(
-        'chunk-card group/card w-full rounded-xl px-3',
+        'chunk-card group/card w-full rounded-md px-3',
         isFullDocMode ? '' : 'pb-2 pt-2.5 hover:bg-dataset-chunk-detail-card-hover-bg',
         focused.segmentContent ? 'bg-dataset-chunk-detail-card-hover-bg' : '',
         className,
@@ -165,65 +165,65 @@ const SegmentCard: FC<ISegmentCardProps> = ({
           </div>
           {!isFullDocMode
             ? (
-                <div className="flex items-center">
-                  <StatusItem status={enabled ? 'enabled' : 'disabled'} reverse textCls="text-text-tertiary system-xs-regular" />
-                  {embeddingAvailable && (
-                    <div className="absolute -right-2.5 -top-2 z-20 hidden items-center gap-x-0.5 rounded-[10px] border-[0.5px]
+              <div className="flex items-center">
+                <StatusItem status={enabled ? 'enabled' : 'disabled'} reverse textCls="text-text-tertiary system-xs-regular" />
+                {embeddingAvailable && (
+                  <div className="absolute -right-2.5 -top-2 z-20 hidden items-center gap-x-0.5 rounded-[10px] border-[0.5px]
                       border-components-actionbar-border bg-components-actionbar-bg p-1 shadow-md backdrop-blur-[5px] group-hover/card:flex"
+                  >
+                    {!archived && (
+                      <>
+                        <Tooltip
+                          popupContent="Edit"
+                          popupClassName="text-text-secondary system-xs-medium"
+                        >
+                          <div
+                            data-testid="segment-edit-button"
+                            className="flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center rounded-md hover:bg-state-base-hover"
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              onClickEdit?.()
+                            }}
+                          >
+                            <RiEditLine className="h-4 w-4 text-text-tertiary" />
+                          </div>
+                        </Tooltip>
+                        <Tooltip
+                          popupContent="Delete"
+                          popupClassName="text-text-secondary system-xs-medium"
+                        >
+                          <div
+                            data-testid="segment-delete-button"
+                            className="group/delete flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center rounded-md hover:bg-state-destructive-hover"
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              setShowModal(true)
+                            }}
+                          >
+                            <RiDeleteBinLine className="h-4 w-4 text-text-tertiary group-hover/delete:text-text-destructive" />
+                          </div>
+                        </Tooltip>
+                        <Divider type="vertical" className="h-3.5 bg-divider-regular" />
+                      </>
+                    )}
+                    <div
+                      onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
+                        e.stopPropagation()}
+                      className="flex items-center"
                     >
-                      {!archived && (
-                        <>
-                          <Tooltip
-                            popupContent="Edit"
-                            popupClassName="text-text-secondary system-xs-medium"
-                          >
-                            <div
-                              data-testid="segment-edit-button"
-                              className="flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center rounded-lg hover:bg-state-base-hover"
-                              onClick={(e) => {
-                                e.stopPropagation()
-                                onClickEdit?.()
-                              }}
-                            >
-                              <RiEditLine className="h-4 w-4 text-text-tertiary" />
-                            </div>
-                          </Tooltip>
-                          <Tooltip
-                            popupContent="Delete"
-                            popupClassName="text-text-secondary system-xs-medium"
-                          >
-                            <div
-                              data-testid="segment-delete-button"
-                              className="group/delete flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center rounded-lg hover:bg-state-destructive-hover"
-                              onClick={(e) => {
-                                e.stopPropagation()
-                                setShowModal(true)
-                              }}
-                            >
-                              <RiDeleteBinLine className="h-4 w-4 text-text-tertiary group-hover/delete:text-text-destructive" />
-                            </div>
-                          </Tooltip>
-                          <Divider type="vertical" className="h-3.5 bg-divider-regular" />
-                        </>
-                      )}
-                      <div
-                        onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
-                          e.stopPropagation()}
-                        className="flex items-center"
-                      >
-                        <Switch
-                          size="md"
-                          disabled={archived || detail?.status !== 'completed'}
-                          defaultValue={enabled}
-                          onChange={async (val) => {
-                            await onChangeSwitch?.(val, id)
-                          }}
-                        />
-                      </div>
+                      <Switch
+                        size="md"
+                        disabled={archived || detail?.status !== 'completed'}
+                        defaultValue={enabled}
+                        onChange={async (val) => {
+                          await onChangeSwitch?.(val, id)
+                        }}
+                      />
                     </div>
-                  )}
-                </div>
-              )
+                  </div>
+                )}
+              </div>
+            )
             : null}
         </>
       </div>
@@ -245,14 +245,14 @@ const SegmentCard: FC<ISegmentCardProps> = ({
       {
         isFullDocMode
           ? (
-              <button
-                type="button"
-                className="system-xs-semibold-uppercase mb-2 mt-0.5 text-text-accent"
-                onClick={() => onClick?.()}
-              >
-                {t('operation.viewMore', { ns: 'common' })}
-              </button>
-            )
+            <button
+              type="button"
+              className="system-xs-semibold-uppercase mb-2 mt-0.5 text-text-accent"
+              onClick={() => onClick?.()}
+            >
+              {t('operation.viewMore', { ns: 'common' })}
+            </button>
+          )
           : null
       }
       {

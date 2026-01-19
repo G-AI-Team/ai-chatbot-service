@@ -29,7 +29,7 @@ const MixedVariableTextInput = ({
   return (
     <PromptEditor
       wrapperClassName={cn(
-        'w-full rounded-lg border border-transparent bg-components-input-bg-normal px-2 py-1',
+        'w-full rounded-md border border-transparent bg-components-input-bg-normal px-2 py-1',
         'hover:border-components-input-border-hover hover:bg-components-input-bg-hover',
         'focus-within:border-components-input-border-active focus-within:bg-components-input-bg-active focus-within:shadow-xs',
       )}

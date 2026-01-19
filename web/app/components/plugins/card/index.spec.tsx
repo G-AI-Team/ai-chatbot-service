@@ -1692,7 +1692,7 @@ describe('Accessibility', () => {
     const { container } = render(<Card payload={plugin} />)
 
     // Card should have proper container structure
-    expect(container.firstChild).toHaveClass('rounded-xl')
+    expect(container.firstChild).toHaveClass('rounded-md')
   })
 })
 
@@ -1722,7 +1722,7 @@ describe('Performance', () => {
     const endTime = performance.now()
 
     // Should render all cards
-    const cards = container.querySelectorAll('.rounded-xl')
+    const cards = container.querySelectorAll('.rounded-md')
     expect(cards.length).toBe(50)
 
     // Should render within reasonable time (less than 1 second)

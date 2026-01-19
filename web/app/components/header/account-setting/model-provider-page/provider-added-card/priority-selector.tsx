@@ -51,14 +51,14 @@ const Selector: FC<SelectorProps> = ({
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <PopoverPanel className="absolute right-0 top-7 z-10 w-[144px] rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg">
+        <PopoverPanel className="absolute right-0 top-7 z-10 w-[144px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg">
           <div className="p-1">
             <div className="px-3 pb-1 pt-2 text-sm font-medium text-text-secondary">{t('modelProvider.card.priorityUse', { ns: 'common' })}</div>
             {
               options.map(option => (
                 <PopoverButton as={Fragment} key={option.key}>
                   <div
-                    className="flex h-9 cursor-pointer items-center justify-between rounded-lg px-3 text-sm text-text-secondary hover:bg-components-panel-on-panel-item-bg-hover"
+                    className="flex h-9 cursor-pointer items-center justify-between rounded-md px-3 text-sm text-text-secondary hover:bg-components-panel-on-panel-item-bg-hover"
                     onClick={() => onSelect(option.key)}
                   >
                     <div className="grow">{option.text}</div>

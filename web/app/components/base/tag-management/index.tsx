@@ -60,7 +60,7 @@ const TagManagementModal = ({ show, type }: TagManagementModalProps) => {
 
   return (
     <Modal
-      className="!w-[600px] !max-w-[600px] rounded-xl px-8 py-6"
+      className="!w-[600px] !max-w-[600px] rounded-md px-8 py-6"
       isShow={show}
       onClose={() => setShowTagManagementModal(false)}
     >
@@ -70,7 +70,7 @@ const TagManagementModal = ({ show, type }: TagManagementModalProps) => {
       </div>
       <div className="mt-3 flex flex-wrap gap-2">
         <input
-          className="w-[100px] shrink-0 appearance-none rounded-lg border border-dashed border-divider-regular bg-transparent px-2 py-1 text-sm leading-5 text-text-secondary caret-primary-600  outline-none placeholder:text-text-quaternary focus:border-solid"
+          className="w-[100px] shrink-0 appearance-none rounded-md border border-dashed border-divider-regular bg-transparent px-2 py-1 text-sm leading-5 text-text-secondary caret-primary-600  outline-none placeholder:text-text-quaternary focus:border-solid"
           placeholder={t('tag.addNew', { ns: 'common' }) || ''}
           autoFocus
           value={name}

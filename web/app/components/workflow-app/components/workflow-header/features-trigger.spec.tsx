@@ -215,7 +215,7 @@ describe('FeaturesTrigger', () => {
       renderWithToast(<FeaturesTrigger />)
 
       // Assert
-      expect(screen.getByRole('button', { name: /workflow\.common\.features/i })).toHaveClass('rounded-lg')
+      expect(screen.getByRole('button', { name: /workflow\.common\.features/i })).toHaveClass('rounded-md')
     })
   })
 

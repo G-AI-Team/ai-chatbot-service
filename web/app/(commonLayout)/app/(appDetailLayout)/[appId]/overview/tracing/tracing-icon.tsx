@@ -11,7 +11,7 @@ type Props = {
 
 const sizeClassMap = {
   lg: 'w-9 h-9 p-2 rounded-[10px]',
-  md: 'w-6 h-6 p-1 rounded-lg',
+  md: 'w-6 h-6 p-1 rounded-md',
 }
 
 const TracingIcon: FC<Props> = ({

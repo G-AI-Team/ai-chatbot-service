@@ -86,7 +86,7 @@ const Tools = () => {
   }
 
   return (
-    <div className="mt-3 rounded-xl bg-gray-50 px-3">
+    <div className="mt-3 rounded-md bg-gray-50 px-3">
       <div className="flex h-12 items-center">
         <div className="flex grow items-center">
           <div
@@ -141,7 +141,7 @@ const Tools = () => {
               externalDataToolsConfig.map((item, index: number) => (
                 <div
                   key={`${index}-${item.type}-${item.label}-${item.variable}`}
-                  className="group mb-1 flex items-center rounded-lg border-[0.5px] border-gray-200 bg-white px-2.5 py-2 shadow-xs last-of-type:mb-0"
+                  className="group mb-1 flex items-center rounded-md border-[0.5px] border-gray-200 bg-white px-2.5 py-2 shadow-xs last-of-type:mb-0"
                 >
                   <div className="flex grow items-center">
                     <AppIcon

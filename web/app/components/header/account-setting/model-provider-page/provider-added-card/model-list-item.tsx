@@ -50,7 +50,7 @@ const ModelListItem = ({ model, provider, isConfigurable, onChange, onModifyLoad
   return (
     <div
       key={`${model.model}-${model.fetch_from}`}
-      className={cn('group flex h-8 items-center rounded-lg pl-2 pr-2.5', isConfigurable && 'hover:bg-components-panel-on-panel-item-bg-hover', model.deprecated && 'opacity-60')}
+      className={cn('group flex h-8 items-center rounded-md pl-2 pr-2.5', isConfigurable && 'hover:bg-components-panel-on-panel-item-bg-hover', model.deprecated && 'opacity-60')}
     >
       <ModelIcon
         className="mr-2 shrink-0"
@@ -86,24 +86,24 @@ const ModelListItem = ({ model, provider, isConfigurable, onChange, onModifyLoad
         {
           model.deprecated
             ? (
-                <Tooltip
-                  popupContent={
-                    <span className="font-semibold">{t('modelProvider.modelHasBeenDeprecated', { ns: 'common' })}</span>
-                  }
-                  offset={{ mainAxis: 4 }}
-                >
-                  <Switch defaultValue={false} disabled size="md" />
-                </Tooltip>
-              )
+              <Tooltip
+                popupContent={
+                  <span className="font-semibold">{t('modelProvider.modelHasBeenDeprecated', { ns: 'common' })}</span>
+                }
+                offset={{ mainAxis: 4 }}
+              >
+                <Switch defaultValue={false} disabled size="md" />
+              </Tooltip>
+            )
             : (isCurrentWorkspaceManager && (
-                <Switch
-                  className="ml-2"
-                  defaultValue={model?.status === ModelStatusEnum.active}
-                  disabled={![ModelStatusEnum.active, ModelStatusEnum.disabled].includes(model.status)}
-                  size="md"
-                  onChange={onEnablingStateChange}
-                />
-              ))
+              <Switch
+                className="ml-2"
+                defaultValue={model?.status === ModelStatusEnum.active}
+                disabled={![ModelStatusEnum.active, ModelStatusEnum.disabled].includes(model.status)}
+                size="md"
+                onChange={onEnablingStateChange}
+              />
+            ))
         }
       </div>
     </div>

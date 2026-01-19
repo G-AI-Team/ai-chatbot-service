@@ -531,8 +531,8 @@ describe('Empty', () => {
     it('should have rounded corners on cards', () => {
       const { container } = render(<Empty />)
 
-      const cards = container.querySelectorAll('.rounded-xl')
-      // 16 cards + 1 icon wrapper = 17 rounded-xl elements
+      const cards = container.querySelectorAll('.rounded-md')
+      // 16 cards + 1 icon wrapper = 17 rounded-md elements
       expect(cards.length).toBeGreaterThanOrEqual(16)
     })
   })

@@ -54,7 +54,7 @@ const FieldItem = ({
     <div
       ref={ref}
       className={cn(
-        'handle flex h-8 cursor-pointer items-center justify-between gap-x-1 rounded-lg border border-components-panel-border-subtle bg-components-panel-on-panel-item-bg py-1 pl-2 shadow-xs hover:shadow-sm',
+        'handle flex h-8 cursor-pointer items-center justify-between gap-x-1 rounded-md border border-components-panel-border-subtle bg-components-panel-on-panel-item-bg py-1 pl-2 shadow-xs hover:shadow-sm',
         (isHovering && !readonly) ? 'cursor-all-scroll pr-1' : 'pr-2.5',
         readonly && 'cursor-default',
       )}
@@ -86,28 +86,28 @@ const FieldItem = ({
       </div>
       {(isHovering && !readonly)
         ? (
-            <div className="flex shrink-0 items-center gap-x-1">
-              <ActionButton
-                className="mr-1"
-                onClick={handleOnClickEdit}
-              >
-                <RiEditLine className="size-4 text-text-tertiary" />
-              </ActionButton>
-              <ActionButton
-                onClick={handleRemove}
-              >
-                <RiDeleteBinLine className="size-4 text-text-tertiary group-hover:text-text-destructive" />
-              </ActionButton>
-            </div>
-          )
+          <div className="flex shrink-0 items-center gap-x-1">
+            <ActionButton
+              className="mr-1"
+              onClick={handleOnClickEdit}
+            >
+              <RiEditLine className="size-4 text-text-tertiary" />
+            </ActionButton>
+            <ActionButton
+              onClick={handleRemove}
+            >
+              <RiDeleteBinLine className="size-4 text-text-tertiary group-hover:text-text-destructive" />
+            </ActionButton>
+          </div>
+        )
         : (
-            <div className="flex shrink-0 items-center gap-x-2">
-              {payload.required && (
-                <Badge>{t('nodes.start.required', { ns: 'workflow' })}</Badge>
-              )}
-              <InputVarTypeIcon type={payload.type as unknown as InputVarType} className="h-3 w-3 text-text-tertiary" />
-            </div>
-          )}
+          <div className="flex shrink-0 items-center gap-x-2">
+            {payload.required && (
+              <Badge>{t('nodes.start.required', { ns: 'workflow' })}</Badge>
+            )}
+            <InputVarTypeIcon type={payload.type as unknown as InputVarType} className="h-3 w-3 text-text-tertiary" />
+          </div>
+        )}
     </div>
   )
 }

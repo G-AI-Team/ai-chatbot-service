@@ -35,7 +35,7 @@ const AgentLogModal: FC<AgentLogModalProps> = ({
 
   return (
     <div
-      className={cn('relative z-10 flex flex-col rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg py-3 shadow-xl')}
+      className={cn('relative z-10 flex flex-col rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg py-3 shadow-xl')}
       style={{
         width: 480,
         position: 'fixed',

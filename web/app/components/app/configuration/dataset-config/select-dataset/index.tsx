@@ -126,7 +126,7 @@ const SelectDataSet: FC<ISelectDataSetProps> = ({
 
       {hasNoData && (
         <div
-          className="mt-6 flex h-[128px] items-center justify-center space-x-1  rounded-lg border text-[13px]"
+          className="mt-6 flex h-[128px] items-center justify-center space-x-1  rounded-md border text-[13px]"
           style={{
             background: 'rgba(0, 0, 0, 0.02)',
             borderColor: 'rgba(0, 0, 0, 0.02',
@@ -144,7 +144,7 @@ const SelectDataSet: FC<ISelectDataSetProps> = ({
               <div
                 key={item.id}
                 className={cn(
-                  'flex h-10 cursor-pointer items-center rounded-lg border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg px-2 shadow-xs hover:border-components-panel-border hover:bg-components-panel-on-panel-item-bg-hover hover:shadow-sm',
+                  'flex h-10 cursor-pointer items-center rounded-md border-[0.5px] border-components-panel-border-subtle bg-components-panel-on-panel-item-bg px-2 shadow-xs hover:border-components-panel-border hover:bg-components-panel-on-panel-item-bg-hover hover:shadow-sm',
                   selected.some(i => i.id === item.id) && 'border-[1.5px] border-components-option-card-option-selected-border bg-state-accent-hover shadow-xs hover:border-components-option-card-option-selected-border hover:bg-state-accent-hover hover:shadow-xs',
                   !item.embedding_available && 'hover:border-components-panel-border-subtle hover:bg-components-panel-on-panel-item-bg hover:shadow-xs',
                 )}

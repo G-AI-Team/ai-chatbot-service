@@ -59,15 +59,15 @@ export default function CustomPopover({
               {...(trigger !== 'hover'
                 ? {}
                 : {
-                    onMouseLeave: () => onMouseLeave(open),
-                    onMouseEnter: () => onMouseEnter(open),
-                  })}
+                  onMouseLeave: () => onMouseLeave(open),
+                  onMouseEnter: () => onMouseEnter(open),
+                })}
             >
               <PopoverButton
                 ref={buttonRef}
                 disabled={disabled}
                 className={cn(
-                  'group inline-flex items-center rounded-lg border border-components-button-secondary-border bg-components-button-secondary-bg px-3 py-2 text-base font-medium hover:border-components-button-secondary-border-hover hover:bg-components-button-secondary-bg-hover focus:outline-none',
+                  'group inline-flex items-center rounded-md border border-components-button-secondary-border bg-components-button-secondary-bg px-3 py-2 text-base font-medium hover:border-components-button-secondary-border-hover hover:bg-components-button-secondary-bg-hover focus:outline-none',
                   open && 'border-components-button-secondary-border bg-components-button-secondary-bg-hover',
                   (btnClassName && typeof btnClassName === 'string') && btnClassName,
                   (btnClassName && typeof btnClassName !== 'string') && btnClassName?.(open),
@@ -87,32 +87,32 @@ export default function CustomPopover({
                   {...(trigger !== 'hover'
                     ? {}
                     : {
-                        onMouseLeave: () => onMouseLeave(open),
-                        onMouseEnter: () => onMouseEnter(open),
-                      })
+                      onMouseLeave: () => onMouseLeave(open),
+                      onMouseEnter: () => onMouseEnter(open),
+                    })
                   }
                 >
                   {({ close }) => (
                     <div
-                      className={cn('w-fit min-w-[130px] overflow-hidden rounded-lg bg-components-panel-bg shadow-lg ring-1 ring-black/5', popupClassName)}
+                      className={cn('w-fit min-w-[130px] overflow-hidden rounded-md bg-components-panel-bg shadow-lg ring-1 ring-black/5', popupClassName)}
                       {...(trigger !== 'hover'
                         ? {}
                         : {
-                            onMouseLeave: () => onMouseLeave(open),
-                            onMouseEnter: () => onMouseEnter(open),
-                          })
+                          onMouseLeave: () => onMouseLeave(open),
+                          onMouseEnter: () => onMouseEnter(open),
+                        })
                       }
                     >
                       {isValidElement(htmlContent)
                         ? cloneElement(htmlContent as React.ReactElement<HtmlContentProps>, {
-                            open,
-                            onClose: close,
-                            ...(manualClose
-                              ? {
-                                  onClick: close,
-                                }
-                              : {}),
-                          })
+                          open,
+                          onClose: close,
+                          ...(manualClose
+                            ? {
+                              onClick: close,
+                            }
+                            : {}),
+                        })
                         : htmlContent}
                     </div>
                   )}

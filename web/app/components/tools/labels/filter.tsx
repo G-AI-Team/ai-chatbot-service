@@ -67,7 +67,7 @@ const LabelFilter: FC<LabelFilterProps> = ({
           className="block"
         >
           <div className={cn(
-            'flex h-8 cursor-pointer select-none items-center gap-1 rounded-lg border-[0.5px] border-transparent bg-components-input-bg-normal px-2 hover:bg-components-input-bg-hover',
+            'flex h-8 cursor-pointer select-none items-center gap-1 rounded-md border-[0.5px] border-transparent bg-components-input-bg-normal px-2 hover:bg-components-input-bg-hover',
             !open && !!value.length && 'shadow-xs',
             open && !!value.length && 'shadow-xs',
           )}
@@ -101,7 +101,7 @@ const LabelFilter: FC<LabelFilterProps> = ({
           </div>
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[1002]">
-          <div className="relative w-[240px] rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg  backdrop-blur-[5px]">
+          <div className="relative w-[240px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg  backdrop-blur-[5px]">
             <div className="p-2">
               <Input
                 showLeftIcon
@@ -115,7 +115,7 @@ const LabelFilter: FC<LabelFilterProps> = ({
               {filteredLabelList.map(label => (
                 <div
                   key={label.name}
-                  className="flex cursor-pointer select-none items-center gap-2 rounded-lg py-[6px] pl-3 pr-2 hover:bg-state-base-hover"
+                  className="flex cursor-pointer select-none items-center gap-2 rounded-md py-[6px] pl-3 pr-2 hover:bg-state-base-hover"
                   onClick={() => selectLabel(label)}
                 >
                   <div title={label.label} className="grow truncate text-sm leading-5 text-text-secondary">{label.label}</div>

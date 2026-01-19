@@ -124,17 +124,17 @@ const ConversationVariableModal = ({
             </div>
             <div className="grow overflow-y-auto">
               {currentVar.value_type !== ChatVarType.Number && currentVar.value_type !== ChatVarType.String && (
-                <div className="flex h-full flex-col rounded-lg bg-components-input-bg-normal px-2 pb-2">
+                <div className="flex h-full flex-col rounded-md bg-components-input-bg-normal px-2 pb-2">
                   <div className="flex h-7 shrink-0 items-center justify-between pl-3 pr-2 pt-1">
                     <div className="system-xs-semibold text-text-secondary">JSON</div>
                     <div className="flex items-center p-1">
                       {!isCopied
                         ? (
-                            <Copy className="h-4 w-4 cursor-pointer text-text-tertiary" onClick={handleCopy} />
-                          )
+                          <Copy className="h-4 w-4 cursor-pointer text-text-tertiary" onClick={handleCopy} />
+                        )
                         : (
-                            <CopyCheck className="h-4 w-4 text-text-tertiary" />
-                          )}
+                          <CopyCheck className="h-4 w-4 text-text-tertiary" />
+                        )}
                     </div>
                   </div>
                   <div className="grow pl-4">
@@ -150,7 +150,7 @@ const ConversationVariableModal = ({
                 </div>
               )}
               {(currentVar.value_type === ChatVarType.Number || currentVar.value_type === ChatVarType.String) && (
-                <div className="system-md-regular h-full overflow-y-auto overflow-x-hidden rounded-lg bg-components-input-bg-normal px-4 py-3 text-components-input-text-filled">{latestValueMap[currentVar.id] || ''}</div>
+                <div className="system-md-regular h-full overflow-y-auto overflow-x-hidden rounded-md bg-components-input-bg-normal px-4 py-3 text-components-input-text-filled">{latestValueMap[currentVar.id] || ''}</div>
               )}
             </div>
           </div>

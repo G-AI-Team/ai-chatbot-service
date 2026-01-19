@@ -128,7 +128,7 @@ describe('SortDropdown', () => {
 
       const trigger = container.querySelector('.cursor-pointer')
       expect(trigger).toBeInTheDocument()
-      expect(trigger).toHaveClass('h-8', 'rounded-lg', 'bg-state-base-hover-alt')
+      expect(trigger).toHaveClass('h-8', 'rounded-md', 'bg-state-base-hover-alt')
     })
 
     it('should not render dropdown content when closed', () => {
@@ -399,7 +399,7 @@ describe('SortDropdown', () => {
 
       const content = screen.getByTestId('portal-content')
       const container = content.firstChild as HTMLElement
-      expect(container).toHaveClass('rounded-xl', 'shadow-lg')
+      expect(container).toHaveClass('rounded-md', 'shadow-lg')
     })
 
     it('should render option items with hover styles', () => {
@@ -445,7 +445,7 @@ describe('SortDropdown', () => {
     })
 
     it('should render correctly when handleSortChange is a no-op', () => {
-      mockHandleSortChange.mockImplementation(() => {})
+      mockHandleSortChange.mockImplementation(() => { })
       render(<SortDropdown />)
 
       fireEvent.click(screen.getByTestId('portal-trigger'))
@@ -623,7 +623,7 @@ describe('SortDropdown', () => {
     it('should apply correct trigger container styles', () => {
       const { container } = render(<SortDropdown />)
 
-      const triggerDiv = container.querySelector('.flex.h-8.cursor-pointer.items-center.rounded-lg')
+      const triggerDiv = container.querySelector('.flex.h-8.cursor-pointer.items-center.rounded-md')
       expect(triggerDiv).toBeInTheDocument()
     })
 

@@ -29,7 +29,7 @@ const UploadOnlyFromLocal: FC<UploadOnlyFromLocalProps> = ({
       {hovering => (
         <div
           className={`
-            relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg
+            relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-md
             ${hovering && 'bg-gray-100'}
           `}
         >
@@ -82,13 +82,13 @@ const UploaderButton: FC<UploaderButtonProps> = ({
         <button
           type="button"
           disabled={disabled}
-          className="relative flex h-8 w-8 items-center justify-center rounded-lg enabled:hover:bg-gray-100 disabled:cursor-not-allowed"
+          className="relative flex h-8 w-8 items-center justify-center rounded-md enabled:hover:bg-gray-100 disabled:cursor-not-allowed"
         >
           <ImagePlus className="h-4 w-4 text-gray-500" />
         </button>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-50">
-        <div className="w-[260px] rounded-lg border-[0.5px] border-gray-200 bg-white p-2 shadow-lg">
+        <div className="w-[260px] rounded-md border-[0.5px] border-gray-200 bg-white p-2 shadow-lg">
           <ImageLinkInput onUpload={handleUpload} disabled={disabled} />
           {hasUploadFromLocal && (
             <>
@@ -105,7 +105,7 @@ const UploaderButton: FC<UploaderButtonProps> = ({
                 {hovering => (
                   <div
                     className={cn(
-                      'flex h-8 cursor-pointer items-center justify-center rounded-lg text-[13px] font-medium text-[#155EEF]',
+                      'flex h-8 cursor-pointer items-center justify-center rounded-md text-[13px] font-medium text-[#155EEF]',
                       hovering && 'bg-primary-50',
                     )}
                   >
@@ -134,7 +134,7 @@ const ChatImageUploader: FC<ChatImageUploaderProps> = ({
 }) => {
   const onlyUploadLocal
     = settings.transfer_methods.length === 1
-      && settings.transfer_methods[0] === TransferMethod.local_file
+    && settings.transfer_methods[0] === TransferMethod.local_file
 
   if (onlyUploadLocal) {
     return (

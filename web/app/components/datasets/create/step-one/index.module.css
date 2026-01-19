@@ -8,7 +8,7 @@
 }
 
 .dataSourceItem {
-  @apply w-full relative flex items-center p-3 h-14 bg-components-option-card-option-bg rounded-xl
+  @apply w-full relative flex items-center p-3 h-14 bg-components-option-card-option-bg rounded-md
   cursor-pointer border border-components-option-card-option-border text-text-secondary;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .datasetIcon {
-  @apply flex shrink-0 mr-2 w-8 h-8 rounded-lg bg-center bg-no-repeat bg-text-primary-on-surface border-[0.5px] border-divider-regular backdrop-blur-sm;
+  @apply flex shrink-0 mr-2 w-8 h-8 rounded-md bg-center bg-no-repeat bg-text-primary-on-surface border-[0.5px] border-divider-regular backdrop-blur-sm;
   background-image: url(../assets/file.svg);
   background-size: 16px;
 }

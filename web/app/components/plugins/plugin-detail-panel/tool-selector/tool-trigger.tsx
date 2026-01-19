@@ -29,13 +29,13 @@ const ToolTrigger = ({
   const { t } = useTranslation()
   return (
     <div className={cn(
-      'group flex cursor-pointer items-center rounded-lg bg-components-input-bg-normal p-2 pl-3 hover:bg-state-base-hover-alt',
+      'group flex cursor-pointer items-center rounded-md bg-components-input-bg-normal p-2 pl-3 hover:bg-state-base-hover-alt',
       open && 'bg-state-base-hover-alt',
       value?.provider_name && 'py-1.5 pl-1.5',
     )}
     >
       {value?.provider_name && provider && (
-        <div className="mr-1 shrink-0 rounded-lg border border-components-panel-border bg-components-panel-bg p-px">
+        <div className="mr-1 shrink-0 rounded-md border border-components-panel-border bg-components-panel-bg p-px">
           <BlockIcon
             className="!h-4 !w-4"
             type={BlockEnum.Tool}

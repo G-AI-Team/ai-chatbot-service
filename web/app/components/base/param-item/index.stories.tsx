@@ -83,7 +83,7 @@ const ParamItemPlayground = () => {
       {PARAMS.map(param => (
         <ParamItem
           key={param.id}
-          className="rounded-xl border border-transparent px-3 py-2 hover:border-divider-subtle hover:bg-background-default-subtle"
+          className="rounded-md border border-transparent px-3 py-2 hover:border-divider-subtle hover:bg-background-default-subtle"
           id={param.id}
           name={param.name}
           tip={param.tip}

@@ -19,7 +19,7 @@ const FilterItem: FC<FilterItemProps> = ({
 }) => {
   return (
     <div
-      className="flex cursor-pointer items-center justify-between gap-x-1 rounded-lg px-2 py-1.5 hover:bg-state-base-hover"
+      className="flex cursor-pointer items-center justify-between gap-x-1 rounded-md px-2 py-1.5 hover:bg-state-base-hover"
       onClick={() => {
         onClick(item.key)
       }}

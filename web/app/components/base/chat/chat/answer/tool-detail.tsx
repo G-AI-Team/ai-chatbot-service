@@ -23,7 +23,7 @@ const ToolDetail = ({
   return (
     <div
       className={cn(
-        'rounded-xl',
+        'rounded-md',
         !expand && 'border-l-[0.25px] border-components-panel-border bg-workflow-process-bg',
         expand && 'border-[0.5px] border-components-panel-border-subtle bg-background-section-burn',
       )}

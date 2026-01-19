@@ -123,7 +123,7 @@ const LogViewer = ({ logs, className }: Props) => {
           <div
             key={logId}
             className={cn(
-              'relative overflow-hidden rounded-lg border bg-components-panel-on-panel-item-bg shadow-sm hover:bg-components-panel-on-panel-item-bg-hover',
+              'relative overflow-hidden rounded-md border bg-components-panel-on-panel-item-bg shadow-sm hover:bg-components-panel-on-panel-item-bg-hover',
               isError && 'border-state-destructive-border',
               !isError && isExpanded && 'border-components-panel-border',
               !isError && !isExpanded && 'border-components-panel-border-subtle',
@@ -156,11 +156,11 @@ const LogViewer = ({ logs, className }: Props) => {
               <div className="flex items-center gap-0">
                 {isExpanded
                   ? (
-                      <RiArrowDownSLine className="h-4 w-4 text-text-tertiary" />
-                    )
+                    <RiArrowDownSLine className="h-4 w-4 text-text-tertiary" />
+                  )
                   : (
-                      <RiArrowRightSLine className="h-4 w-4 text-text-tertiary" />
-                    )}
+                    <RiArrowRightSLine className="h-4 w-4 text-text-tertiary" />
+                  )}
                 <div className="system-xs-semibold-uppercase text-text-secondary">
                   {t(`modal.manual.logs.${LogTypeEnum.REQUEST}`, { ns: 'pluginTrigger' })}
                   {' '}
@@ -176,11 +176,11 @@ const LogViewer = ({ logs, className }: Props) => {
                 <div className="h-3.5 w-3.5">
                   {isSuccess
                     ? (
-                        <RiCheckboxCircleFill className="h-full w-full text-text-success" />
-                      )
+                      <RiCheckboxCircleFill className="h-full w-full text-text-success" />
+                    )
                     : (
-                        <RiErrorWarningFill className="h-full w-full text-text-destructive" />
-                      )}
+                      <RiErrorWarningFill className="h-full w-full text-text-destructive" />
+                    )}
                 </div>
               </div>
             </button>

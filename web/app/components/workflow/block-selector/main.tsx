@@ -190,21 +190,21 @@ const NodeSelector: FC<NodeSelectorProps> = ({
           trigger
             ? trigger(open)
             : (
-                <div
-                  className={`
+              <div
+                className={`
                   z-10 flex h-4
                   w-4 cursor-pointer items-center justify-center rounded-full bg-components-button-primary-bg text-text-primary-on-surface hover:bg-components-button-primary-bg-hover
                   ${triggerClassName?.(open)}
                 `}
-                  style={triggerStyle}
-                >
-                  <Plus02 className="h-2.5 w-2.5" />
-                </div>
-              )
+                style={triggerStyle}
+              >
+                <Plus02 className="h-2.5 w-2.5" />
+              </div>
+            )
         }
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[1000]">
-        <div className={`rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg ${popupClassName}`}>
+        <div className={`rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg ${popupClassName}`}>
           <Tabs
             tabs={tabs}
             activeTab={activeTab}

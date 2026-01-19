@@ -27,8 +27,8 @@ const ModerationContent: FC<ModerationContentProps> = ({
 
   return (
     <div className="py-2">
-      <div className="rounded-lg border border-components-panel-border bg-components-panel-bg">
-        <div className="flex h-10 items-center justify-between rounded-lg px-3">
+      <div className="rounded-md border border-components-panel-border bg-components-panel-bg">
+        <div className="flex h-10 items-center justify-between rounded-md px-3">
           <div className="shrink-0 text-sm font-medium text-text-primary">{title}</div>
           <div className="flex grow items-center justify-end">
             {
@@ -45,12 +45,12 @@ const ModerationContent: FC<ModerationContentProps> = ({
         </div>
         {
           config.enabled && showPreset && (
-            <div className="rounded-lg bg-components-panel-bg px-3 pb-3 pt-1">
+            <div className="rounded-md bg-components-panel-bg px-3 pb-3 pt-1">
               <div className="flex h-8 items-center justify-between text-[13px] font-medium text-text-secondary">
                 {t('feature.moderation.modal.content.preset', { ns: 'appDebug' })}
                 <span className="text-xs font-normal text-text-tertiary">{t('feature.moderation.modal.content.supportMarkdown', { ns: 'appDebug' })}</span>
               </div>
-              <div className="relative h-20 rounded-lg bg-components-input-bg-normal px-3 py-2">
+              <div className="relative h-20 rounded-md bg-components-input-bg-normal px-3 py-2">
                 <textarea
                   value={config.preset_response || ''}
                   className="block h-full w-full resize-none appearance-none bg-transparent text-sm text-text-secondary outline-none"

@@ -107,7 +107,7 @@ const UpgradeOrDownload: FC<UpgradeOrDownloadProps> = ({ doc_name }) => {
 export default function Compliance() {
   const itemClassName = `
   flex items-center w-full h-10 pl-1 pr-2 py-1 text-text-secondary system-md-regular
-  rounded-lg hover:bg-state-base-hover gap-1
+  rounded-md hover:bg-state-base-hover gap-1
 `
   const { t } = useTranslation()
 
@@ -117,7 +117,7 @@ export default function Compliance() {
         ({ open }) => (
           <>
             <MenuButton className={
-              cn('group flex h-9 w-full items-center gap-1 rounded-lg py-2 pl-3 pr-2 hover:bg-state-base-hover', open && 'bg-state-base-hover')
+              cn('group flex h-9 w-full items-center gap-1 rounded-md py-2 pl-3 pr-2 hover:bg-state-base-hover', open && 'bg-state-base-hover')
             }
             >
               <RiVerifiedBadgeLine className="size-4 shrink-0 text-text-tertiary" />
@@ -136,7 +136,7 @@ export default function Compliance() {
               <MenuItems
                 className={cn(
                   `absolute top-[1px] z-10 max-h-[70vh] w-[337px] origin-top-right -translate-x-full divide-y divide-divider-subtle overflow-y-scroll
-                rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px] focus:outline-none
+                rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px] focus:outline-none
               `,
                 )}
               >

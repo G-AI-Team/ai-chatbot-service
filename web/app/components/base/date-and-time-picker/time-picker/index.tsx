@@ -215,42 +215,42 @@ const TimePicker = ({
       <PortalToFollowElemTrigger className={triggerFullWidth ? '!block w-full' : undefined}>
         {renderTrigger
           ? (renderTrigger({
-              inputElem,
-              onClick: handleClickTrigger,
-              isOpen,
-            }))
+            inputElem,
+            onClick: handleClickTrigger,
+            isOpen,
+          }))
           : (
-              <div
+            <div
+              className={cn(
+                'group flex cursor-pointer items-center gap-x-0.5 rounded-md bg-components-input-bg-normal px-2 py-1 hover:bg-state-base-hover-alt',
+                triggerFullWidth ? 'w-full min-w-0' : 'w-[252px]',
+              )}
+              onClick={handleClickTrigger}
+            >
+              {inputElem}
+              {showTimezone && timezone && (
+                <TimezoneLabel timezone={timezone} inline className="shrink-0 select-none text-xs" />
+              )}
+              <RiTimeLine className={cn(
+                'h-4 w-4 shrink-0 text-text-quaternary',
+                isOpen ? 'text-text-secondary' : 'group-hover:text-text-secondary',
+                (displayValue || (isOpen && selectedTime)) && !notClearable && 'group-hover:hidden',
+              )}
+              />
+              <RiCloseCircleFill
                 className={cn(
-                  'group flex cursor-pointer items-center gap-x-0.5 rounded-lg bg-components-input-bg-normal px-2 py-1 hover:bg-state-base-hover-alt',
-                  triggerFullWidth ? 'w-full min-w-0' : 'w-[252px]',
+                  'hidden h-4 w-4 shrink-0 text-text-quaternary',
+                  (displayValue || (isOpen && selectedTime)) && !notClearable && 'hover:text-text-secondary group-hover:inline-block',
                 )}
-                onClick={handleClickTrigger}
-              >
-                {inputElem}
-                {showTimezone && timezone && (
-                  <TimezoneLabel timezone={timezone} inline className="shrink-0 select-none text-xs" />
-                )}
-                <RiTimeLine className={cn(
-                  'h-4 w-4 shrink-0 text-text-quaternary',
-                  isOpen ? 'text-text-secondary' : 'group-hover:text-text-secondary',
-                  (displayValue || (isOpen && selectedTime)) && !notClearable && 'group-hover:hidden',
-                )}
-                />
-                <RiCloseCircleFill
-                  className={cn(
-                    'hidden h-4 w-4 shrink-0 text-text-quaternary',
-                    (displayValue || (isOpen && selectedTime)) && !notClearable && 'hover:text-text-secondary group-hover:inline-block',
-                  )}
-                  role="button"
-                  aria-label={t('operation.clear', { ns: 'common' })}
-                  onClick={handleClear}
-                />
-              </div>
-            )}
+                role="button"
+                aria-label={t('operation.clear', { ns: 'common' })}
+                onClick={handleClear}
+              />
+            </div>
+          )}
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className={cn('z-50', popupClassName)}>
-        <div className="mt-1 w-[252px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg shadow-shadow-shadow-5">
+        <div className="mt-1 w-[252px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg shadow-shadow-shadow-5">
           {/* Header */}
           <Header title={title} />
 

@@ -63,7 +63,7 @@ const MemberSelector: FC<Props> = ({
         className="w-full"
         onClick={() => setOpen(v => !v)}
       >
-        <div className={cn('group flex cursor-pointer items-center gap-1.5 rounded-lg bg-components-input-bg-normal px-2 py-1 hover:bg-state-base-hover-alt', open && 'bg-state-base-hover-alt')}>
+        <div className={cn('group flex cursor-pointer items-center gap-1.5 rounded-md bg-components-input-bg-normal px-2 py-1 hover:bg-state-base-hover-alt', open && 'bg-state-base-hover-alt')}>
           {!currentValue && (
             <div className="system-sm-regular grow p-1 text-components-input-text-placeholder">{t('members.transferModal.transferPlaceholder', { ns: 'common' })}</div>
           )}
@@ -78,7 +78,7 @@ const MemberSelector: FC<Props> = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[1000]">
-        <div className="min-w-[372px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
+        <div className="min-w-[372px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm">
           <div className="p-2 pb-1">
             <Input
               showLeftIcon
@@ -90,7 +90,7 @@ const MemberSelector: FC<Props> = ({
             {filteredList.map(account => (
               <div
                 key={account.id}
-                className="flex cursor-pointer items-center gap-2 rounded-lg py-1 pl-2 pr-3 hover:bg-state-base-hover"
+                className="flex cursor-pointer items-center gap-2 rounded-md py-1 pl-2 pr-3 hover:bg-state-base-hover"
                 onClick={() => {
                   onSelect(account.id)
                   setOpen(false)

@@ -82,7 +82,7 @@ const ConversationOpener = ({
   return (
     <FeatureCard
       icon={(
-        <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-light-blue-light-500 p-1 shadow-xs">
+        <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-light-blue-light-500 p-1 shadow-xs">
           <LoveMessage className="h-4 w-4 text-text-primary-on-surface" />
         </div>
       )}

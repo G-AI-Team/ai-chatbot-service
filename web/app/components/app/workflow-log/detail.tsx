@@ -35,7 +35,7 @@ const DetailPanel: FC<ILogDetail> = ({ runID, onClose, canReplay = false }) => {
         {canReplay && (
           <TooltipPlus
             popupContent={t('runDetail.testWithParams', { ns: 'appLog' })}
-            popupClassName="rounded-xl"
+            popupClassName="rounded-md"
           >
             <button
               type="button"

@@ -31,11 +31,11 @@ const SettingTimeZone: FC<{
 }> = ({
   children,
 }) => {
-  const setShowAccountSettingModal = useModalContextSelector(s => s.setShowAccountSettingModal)
-  return (
-    <span className="body-xs-regular cursor-pointer text-text-accent" onClick={() => setShowAccountSettingModal({ payload: ACCOUNT_SETTING_TAB.LANGUAGE })}>{children}</span>
-  )
-}
+    const setShowAccountSettingModal = useModalContextSelector(s => s.setShowAccountSettingModal)
+    return (
+      <span className="body-xs-regular cursor-pointer text-text-accent" onClick={() => setShowAccountSettingModal({ payload: ACCOUNT_SETTING_TAB.LANGUAGE })}>{children}</span>
+    )
+  }
 const AutoUpdateSetting: FC<Props> = ({
   payload,
   onChange,
@@ -105,7 +105,7 @@ const AutoUpdateSetting: FC<Props> = ({
   const renderTimePickerTrigger = useCallback(({ inputElem, onClick, isOpen }: TriggerParams) => {
     return (
       <div
-        className="group float-right flex h-8 w-[160px] cursor-pointer items-center justify-between rounded-lg bg-components-input-bg-normal px-2 hover:bg-state-base-hover-alt"
+        className="group float-right flex h-8 w-[160px] cursor-pointer items-center justify-between rounded-md bg-components-input-bg-normal px-2 hover:bg-state-base-hover-alt"
         onClick={onClick}
       >
         <div className="flex w-0 grow items-center gap-x-1">

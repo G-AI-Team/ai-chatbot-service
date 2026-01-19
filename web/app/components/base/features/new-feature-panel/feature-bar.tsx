@@ -52,7 +52,7 @@ const FeatureBar = ({
               <Tooltip
                 popupContent={t('feature.moreLikeThis.title', { ns: 'appDebug' })}
               >
-                <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-light-blue-light-500 p-1 shadow-xs">
+                <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-light-blue-light-500 p-1 shadow-xs">
                   <RiSparklingFill className="h-3.5 w-3.5 text-text-primary-on-surface" />
                 </div>
               </Tooltip>
@@ -61,7 +61,7 @@ const FeatureBar = ({
               <Tooltip
                 popupContent={t('feature.conversationOpener.title', { ns: 'appDebug' })}
               >
-                <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-light-blue-light-500 p-1 shadow-xs">
+                <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-light-blue-light-500 p-1 shadow-xs">
                   <LoveMessage className="h-3.5 w-3.5 text-text-primary-on-surface" />
                 </div>
               </Tooltip>
@@ -70,7 +70,7 @@ const FeatureBar = ({
               <Tooltip
                 popupContent={t('feature.moderation.title', { ns: 'appDebug' })}
               >
-                <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-text-success p-1 shadow-xs">
+                <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-text-success p-1 shadow-xs">
                   <ContentModeration className="h-3.5 w-3.5 text-text-primary-on-surface" />
                 </div>
               </Tooltip>
@@ -79,7 +79,7 @@ const FeatureBar = ({
               <Tooltip
                 popupContent={t('feature.speechToText.title', { ns: 'appDebug' })}
               >
-                <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-violet-violet-600 p-1 shadow-xs">
+                <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-violet-violet-600 p-1 shadow-xs">
                   <Microphone01 className="h-3.5 w-3.5 text-text-primary-on-surface" />
                 </div>
               </Tooltip>
@@ -89,7 +89,7 @@ const FeatureBar = ({
                 <Tooltip
                   popupContent={t('feature.textToSpeech.title', { ns: 'appDebug' })}
                 >
-                  <div className={cn('shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-violet-violet-600 p-1 shadow-xs', !disabled && 'cursor-pointer')}>
+                  <div className={cn('shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-violet-violet-600 p-1 shadow-xs', !disabled && 'cursor-pointer')}>
                     <TextToAudio className="h-3.5 w-3.5 text-text-primary-on-surface" />
                   </div>
                 </Tooltip>
@@ -99,7 +99,7 @@ const FeatureBar = ({
               <Tooltip
                 popupContent={t('feature.fileUpload.title', { ns: 'appDebug' })}
               >
-                <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-blue-600 p-1 shadow-xs">
+                <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-blue-600 p-1 shadow-xs">
                   <FolderUpload className="h-3.5 w-3.5 text-text-primary-on-surface" />
                 </div>
               </Tooltip>
@@ -108,7 +108,7 @@ const FeatureBar = ({
               <Tooltip
                 popupContent={t('feature.suggestedQuestionsAfterAnswer.title', { ns: 'appDebug' })}
               >
-                <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-light-blue-light-500 p-1 shadow-xs">
+                <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-light-blue-light-500 p-1 shadow-xs">
                   <VirtualAssistant className="h-3.5 w-3.5 text-text-primary-on-surface" />
                 </div>
               </Tooltip>
@@ -117,7 +117,7 @@ const FeatureBar = ({
               <Tooltip
                 popupContent={t('feature.citation.title', { ns: 'appDebug' })}
               >
-                <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-warning-warning-500 p-1 shadow-xs">
+                <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-warning-warning-500 p-1 shadow-xs">
                   <Citations className="h-4 w-4 text-text-primary-on-surface" />
                 </div>
               </Tooltip>
@@ -126,7 +126,7 @@ const FeatureBar = ({
               <Tooltip
                 popupContent={t('feature.annotation.title', { ns: 'appDebug' })}
               >
-                <div className="shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-indigo-indigo-600 p-1 shadow-xs">
+                <div className="shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-indigo-indigo-600 p-1 shadow-xs">
                   <MessageFast className="h-3.5 w-3.5 text-text-primary-on-surface" />
                 </div>
               </Tooltip>

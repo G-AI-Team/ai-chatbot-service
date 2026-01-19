@@ -82,7 +82,7 @@ const FileImageItem = ({
           showDownloadAction && (
             <div className="absolute inset-0.5 z-10 hidden bg-background-overlay-alt bg-opacity-[0.3] group-hover/file-image:block">
               <div
-                className="absolute bottom-0.5 right-0.5  flex h-6 w-6 items-center justify-center rounded-lg bg-components-actionbar-bg shadow-md"
+                className="absolute bottom-0.5 right-0.5  flex h-6 w-6 items-center justify-center rounded-md bg-components-actionbar-bg shadow-md"
                 onClick={(e) => {
                   e.stopPropagation()
                   downloadFile(download_url || '', name)

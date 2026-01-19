@@ -26,7 +26,7 @@ const UninstalledItem = ({
   }] = useBoolean(false)
 
   return (
-    <div className="flex h-8 items-center rounded-lg pl-3 pr-2 hover:bg-state-base-hover">
+    <div className="flex h-8 items-center rounded-md pl-3 pr-2 hover:bg-state-base-hover">
       <BlockIcon
         className="shrink-0"
         type={BlockEnum.Tool}

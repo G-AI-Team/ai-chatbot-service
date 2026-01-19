@@ -92,7 +92,7 @@ export const AgentStrategy = memo((props: AgentStrategyProps) => {
               nodeId={nodeId}
               isSupportPromptGenerator={!!def.auto_generate?.type}
               titleTooltip={schema.tooltip && renderI18nObject(schema.tooltip)}
-              editorContainerClassName="px-0 bg-components-input-bg-normal focus-within:bg-components-input-bg-active rounded-lg"
+              editorContainerClassName="px-0 bg-components-input-bg-normal focus-within:bg-components-input-bg-active rounded-md"
               availableNodes={availableNodes}
               nodesOutputVars={nodeOutputVars}
               isSupportJinja={def.template?.enabled}
@@ -101,11 +101,11 @@ export const AgentStrategy = memo((props: AgentStrategyProps) => {
               modelConfig={
                 defaultModel.data
                   ? {
-                      mode: AppModeEnum.CHAT,
-                      name: defaultModel.data.model,
-                      provider: defaultModel.data.provider.provider,
-                      completion_params: {},
-                    }
+                    mode: AppModeEnum.CHAT,
+                    name: defaultModel.data.model,
+                    provider: defaultModel.data.provider.provider,
+                    completion_params: {},
+                  }
                   : undefined
               }
               placeholderClassName="px-2 py-1"
@@ -221,49 +221,49 @@ export const AgentStrategy = memo((props: AgentStrategyProps) => {
       {
         strategy
           ? (
-              <div>
-                <Form<CustomField>
-                  formSchemas={[
-                    ...formSchema,
-                  ]}
-                  value={formValue}
-                  onChange={onFormValueChange}
-                  validating={false}
-                  showOnVariableMap={{}}
-                  isEditMode={true}
-                  isAgentStrategy={true}
-                  fieldLabelClassName="uppercase"
-                  customRenderField={renderField}
-                  override={override}
-                  nodeId={nodeId}
-                  nodeOutputVars={nodeOutputVars || []}
-                  availableNodes={availableNodes || []}
-                />
-              </div>
-            )
-          : (
-              <ListEmpty
-                icon={<Agent className="h-5 w-5 shrink-0 text-text-accent" />}
-                title={t('nodes.agent.strategy.configureTip', { ns: 'workflow' })}
-                description={(
-                  <div className="text-xs text-text-tertiary">
-                    {t('nodes.agent.strategy.configureTipDesc', { ns: 'workflow' })}
-                    {' '}
-                    <br />
-                    <Link
-                      href={docLink('/guides/workflow/node/agent#select-an-agent-strategy', {
-                        'zh-Hans': '/guides/workflow/node/agent#选择-agent-策略',
-                        'ja-JP': '/guides/workflow/node/agent#エージェント戦略の選択',
-                      })}
-                      className="text-text-accent-secondary"
-                      target="_blank"
-                    >
-                      {t('nodes.agent.learnMore', { ns: 'workflow' })}
-                    </Link>
-                  </div>
-                )}
+            <div>
+              <Form<CustomField>
+                formSchemas={[
+                  ...formSchema,
+                ]}
+                value={formValue}
+                onChange={onFormValueChange}
+                validating={false}
+                showOnVariableMap={{}}
+                isEditMode={true}
+                isAgentStrategy={true}
+                fieldLabelClassName="uppercase"
+                customRenderField={renderField}
+                override={override}
+                nodeId={nodeId}
+                nodeOutputVars={nodeOutputVars || []}
+                availableNodes={availableNodes || []}
               />
-            )
+            </div>
+          )
+          : (
+            <ListEmpty
+              icon={<Agent className="h-5 w-5 shrink-0 text-text-accent" />}
+              title={t('nodes.agent.strategy.configureTip', { ns: 'workflow' })}
+              description={(
+                <div className="text-xs text-text-tertiary">
+                  {t('nodes.agent.strategy.configureTipDesc', { ns: 'workflow' })}
+                  {' '}
+                  <br />
+                  <Link
+                    href={docLink('/guides/workflow/node/agent#select-an-agent-strategy', {
+                      'zh-Hans': '/guides/workflow/node/agent#选择-agent-策略',
+                      'ja-JP': '/guides/workflow/node/agent#エージェント戦略の選択',
+                    })}
+                    className="text-text-accent-secondary"
+                    target="_blank"
+                  >
+                    {t('nodes.agent.learnMore', { ns: 'workflow' })}
+                  </Link>
+                </div>
+              )}
+            />
+          )
       }
     </div>
   )

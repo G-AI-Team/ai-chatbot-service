@@ -67,7 +67,7 @@ const SegmentAdd: FC<ISegmentAddProps> = ({
     return (
       <>
         {(importStatus === ProcessStatus.WAITING || importStatus === ProcessStatus.PROCESSING) && (
-          <div className="relative mr-2 inline-flex items-center overflow-hidden rounded-lg border-[0.5px] border-components-progress-bar-border
+          <div className="relative mr-2 inline-flex items-center overflow-hidden rounded-md border-[0.5px] border-components-progress-bar-border
             bg-components-progress-bar-border px-2.5 py-2 text-components-button-secondary-accent-text
             shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]"
           >
@@ -77,7 +77,7 @@ const SegmentAdd: FC<ISegmentAddProps> = ({
           </div>
         )}
         {importStatus === ProcessStatus.COMPLETED && (
-          <div className="relative mr-2 inline-flex items-center overflow-hidden rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]">
+          <div className="relative mr-2 inline-flex items-center overflow-hidden rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]">
             <div className="inline-flex items-center border-r border-r-divider-subtle px-2.5 py-2 text-text-success">
               <CheckCircle className="mr-1 h-4 w-4" />
               <span className="system-sm-medium pr-0.5">{t('list.batchModal.completed', { ns: 'datasetDocuments' })}</span>
@@ -89,7 +89,7 @@ const SegmentAdd: FC<ISegmentAddProps> = ({
           </div>
         )}
         {importStatus === ProcessStatus.ERROR && (
-          <div className="relative mr-2 inline-flex items-center overflow-hidden rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]">
+          <div className="relative mr-2 inline-flex items-center overflow-hidden rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]">
             <div className="inline-flex items-center border-r border-r-divider-subtle px-2.5 py-2 text-text-destructive">
               <RiErrorWarningFill className="mr-1 h-4 w-4" />
               <span className="system-sm-medium pr-0.5">{t('list.batchModal.error', { ns: 'datasetDocuments' })}</span>
@@ -106,7 +106,7 @@ const SegmentAdd: FC<ISegmentAddProps> = ({
 
   return (
     <div className={cn(
-      'relative z-20 flex items-center rounded-lg border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]',
+      'relative z-20 flex items-center rounded-md border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg shadow-xs shadow-shadow-shadow-3 backdrop-blur-[5px]',
       embedding && 'border-components-button-secondary-border-disabled bg-components-button-secondary-bg-disabled',
     )}
     >
@@ -131,7 +131,7 @@ const SegmentAdd: FC<ISegmentAddProps> = ({
           <div className="w-full p-1">
             <button
               type="button"
-              className="system-md-regular flex w-full items-center rounded-lg px-2 py-1.5 text-text-secondary"
+              className="system-md-regular flex w-full items-center rounded-md px-2 py-1.5 text-text-secondary"
               onClick={withNeedUpgradeCheck(showBatchModal)}
             >
               {t('list.action.batchAdd', { ns: 'datasetDocuments' })}
@@ -148,7 +148,7 @@ const SegmentAdd: FC<ISegmentAddProps> = ({
           disabled:cursor-not-allowed disabled:bg-transparent disabled:hover:bg-transparent`,
           open ? '!bg-state-base-hover' : '',
         )}
-        popupClassName="!min-w-[128px] !bg-components-panel-bg-blur !rounded-xl border-[0.5px] !ring-0
+        popupClassName="!min-w-[128px] !bg-components-panel-bg-blur !rounded-md border-[0.5px] !ring-0
           border-components-panel-border !shadow-xl !shadow-shadow-shadow-5 backdrop-blur-[5px]"
         className="h-fit min-w-[128px]"
         disabled={embedding}

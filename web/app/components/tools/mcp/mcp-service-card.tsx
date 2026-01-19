@@ -149,25 +149,25 @@ function MCPServiceCard({
 
   return (
     <>
-      <div className={cn('w-full max-w-full rounded-xl border-l-[0.5px] border-t border-effects-highlight', isMinimalState && 'h-12')}>
-        <div className={cn('relative rounded-xl bg-background-default', triggerModeDisabled && 'opacity-60')}>
+      <div className={cn('w-full max-w-full rounded-md border-l-[0.5px] border-t border-effects-highlight', isMinimalState && 'h-12')}>
+        <div className={cn('relative rounded-md bg-background-default', triggerModeDisabled && 'opacity-60')}>
           {triggerModeDisabled && (
             triggerModeMessage
               ? (
-                  <Tooltip
-                    popupContent={triggerModeMessage}
-                    popupClassName="max-w-64 rounded-xl bg-components-panel-bg px-3 py-2 text-xs text-text-secondary shadow-lg"
-                    position="right"
-                  >
-                    <div className="absolute inset-0 z-10 cursor-not-allowed rounded-xl" aria-hidden="true"></div>
-                  </Tooltip>
-                )
-              : <div className="absolute inset-0 z-10 cursor-not-allowed rounded-xl" aria-hidden="true"></div>
+                <Tooltip
+                  popupContent={triggerModeMessage}
+                  popupClassName="max-w-64 rounded-md bg-components-panel-bg px-3 py-2 text-xs text-text-secondary shadow-lg"
+                  position="right"
+                >
+                  <div className="absolute inset-0 z-10 cursor-not-allowed rounded-md" aria-hidden="true"></div>
+                </Tooltip>
+              )
+              : <div className="absolute inset-0 z-10 cursor-not-allowed rounded-md" aria-hidden="true"></div>
           )}
           <div className={cn('flex w-full flex-col items-start justify-center gap-3 self-stretch p-3', isMinimalState ? 'border-0' : 'border-b-[0.5px] border-divider-subtle')}>
             <div className="flex w-full items-center gap-3 self-stretch">
               <div className="flex grow items-center">
-                <div className="mr-2 shrink-0 rounded-lg border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 p-1 shadow-md">
+                <div className="mr-2 shrink-0 rounded-md border-[0.5px] border-divider-subtle bg-util-colors-blue-brand-blue-brand-500 p-1 shadow-md">
                   <Mcp className="h-4 w-4 text-text-primary-on-surface" />
                 </div>
                 <div className="group w-full">
@@ -188,30 +188,30 @@ function MCPServiceCard({
                 popupContent={
                   toggleDisabled
                     ? (
-                        appUnpublished
+                      appUnpublished
+                        ? (
+                          t('mcp.server.publishTip', { ns: 'tools' })
+                        )
+                        : missingStartNode
                           ? (
-                              t('mcp.server.publishTip', { ns: 'tools' })
-                            )
-                          : missingStartNode
-                            ? (
-                                <>
-                                  <div className="mb-1 text-xs font-normal text-text-secondary">
-                                    {t('overview.appInfo.enableTooltip.description', { ns: 'appOverview' })}
-                                  </div>
-                                  <div
-                                    className="cursor-pointer text-xs font-normal text-text-accent hover:underline"
-                                    onClick={() => window.open(docLink('/guides/workflow/node/user-input'), '_blank')}
-                                  >
-                                    {t('overview.appInfo.enableTooltip.learnMore', { ns: 'appOverview' })}
-                                  </div>
-                                </>
-                              )
-                            : triggerModeMessage || ''
-                      )
+                            <>
+                              <div className="mb-1 text-xs font-normal text-text-secondary">
+                                {t('overview.appInfo.enableTooltip.description', { ns: 'appOverview' })}
+                              </div>
+                              <div
+                                className="cursor-pointer text-xs font-normal text-text-accent hover:underline"
+                                onClick={() => window.open(docLink('/guides/workflow/node/user-input'), '_blank')}
+                              >
+                                {t('overview.appInfo.enableTooltip.learnMore', { ns: 'appOverview' })}
+                              </div>
+                            </>
+                          )
+                          : triggerModeMessage || ''
+                    )
                     : ''
                 }
                 position="right"
-                popupClassName="w-58 max-w-60 rounded-xl bg-components-panel-bg px-3.5 py-3 shadow-lg"
+                popupClassName="w-58 max-w-60 rounded-md bg-components-panel-bg px-3.5 py-3 shadow-lg"
                 offset={24}
               >
                 <div>
@@ -224,7 +224,7 @@ function MCPServiceCard({
                 <div className="system-xs-medium pb-1 text-text-tertiary">
                   {t('mcp.server.url', { ns: 'tools' })}
                 </div>
-                <div className="inline-flex h-9 w-full items-center gap-0.5 rounded-lg bg-components-input-bg-normal p-1 pl-2">
+                <div className="inline-flex h-9 w-full items-center gap-0.5 rounded-md bg-components-input-bg-normal p-1 pl-2">
                   <div className="flex h-4 min-w-0 flex-1 items-start justify-start gap-2 px-1">
                     <div className="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-medium text-text-secondary">
                       {serverURL}

@@ -150,7 +150,7 @@ const Annotation: FC<Props> = (props) => {
           <div className="flex items-center space-x-2">
             {isChatApp && (
               <>
-                <div className={cn(!annotationConfig?.enabled && 'pr-2', 'flex h-7 items-center space-x-1 rounded-lg border border-components-panel-border bg-components-panel-bg-blur pl-2')}>
+                <div className={cn(!annotationConfig?.enabled && 'pr-2', 'flex h-7 items-center space-x-1 rounded-md border border-components-panel-border bg-components-panel-bg-blur pl-2')}>
                   <MessageFast className="h-4 w-4 text-util-colors-indigo-indigo-600" />
                   <div className="system-sm-medium text-text-primary">{t('name', { ns: 'appAnnotation' })}</div>
                   <Switch
@@ -206,28 +206,28 @@ const Annotation: FC<Props> = (props) => {
           // eslint-disable-next-line sonarjs/no-nested-conditional
           : total > 0
             ? (
-                <List
-                  list={list}
-                  onRemove={handleRemove}
-                  onView={handleView}
-                  selectedIds={selectedIds}
-                  onSelectedIdsChange={setSelectedIds}
-                  onBatchDelete={handleBatchDelete}
-                  onCancel={() => setSelectedIds([])}
-                />
-              )
+              <List
+                list={list}
+                onRemove={handleRemove}
+                onView={handleView}
+                selectedIds={selectedIds}
+                onSelectedIdsChange={setSelectedIds}
+                onBatchDelete={handleBatchDelete}
+                onCancel={() => setSelectedIds([])}
+              />
+            )
             : <div className="flex h-full grow items-center justify-center"><EmptyElement /></div>}
         {/* Show Pagination only if the total is more than the limit */}
         {(total && total > APP_PAGE_LIMIT)
           ? (
-              <Pagination
-                current={currPage}
-                onChange={setCurrPage}
-                total={total}
-                limit={limit}
-                onLimitChange={setLimit}
-              />
-            )
+            <Pagination
+              current={currPage}
+              onChange={setCurrPage}
+              total={total}
+              limit={limit}
+              onLimitChange={setLimit}
+            />
+          )
           : null}
 
         {isShowViewModal && (

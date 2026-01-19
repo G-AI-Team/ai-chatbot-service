@@ -32,7 +32,7 @@ const FeatureCard = ({
 }: Props) => {
   return (
     <div
-      className="mb-1 rounded-xl border-l-[0.5px] border-t-[0.5px] border-effects-highlight bg-background-section-burn p-3"
+      className="mb-1 rounded-md border-l-[0.5px] border-t-[0.5px] border-effects-highlight bg-background-section-burn p-3"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >

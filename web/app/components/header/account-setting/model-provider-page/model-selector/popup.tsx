@@ -82,10 +82,10 @@ const Popup: FC<PopupProps> = ({
   }, [language, modelList, scopeFeatures, searchText])
 
   return (
-    <div ref={scrollRef} className="max-h-[480px] w-[320px] overflow-y-auto rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg">
+    <div ref={scrollRef} className="max-h-[480px] w-[320px] overflow-y-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg shadow-lg">
       <div className="sticky top-0 z-10 bg-components-panel-bg pb-1 pl-3 pr-2 pt-3">
         <div className={`
-          flex h-8 items-center rounded-lg border pl-[9px] pr-[10px]
+          flex h-8 items-center rounded-md border pl-[9px] pr-[10px]
           ${searchText ? 'border-components-input-border-active bg-components-input-bg-active shadow-xs' : 'border-transparent bg-components-input-bg-normal'}
         `}
         >

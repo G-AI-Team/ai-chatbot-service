@@ -260,7 +260,7 @@ const ConditionItem = ({
   return (
     <div className={cn('mb-1 flex last-of-type:mb-0', className)}>
       <div className={cn(
-        'grow rounded-lg bg-components-input-bg-normal',
+        'grow rounded-md bg-components-input-bg-normal',
         isHovered && 'bg-state-destructive-hover',
       )}
       >
@@ -268,39 +268,39 @@ const ConditionItem = ({
           <div className="w-0 grow">
             {isSubVarSelect
               ? (
-                  <Select
-                    wrapperClassName="h-6"
-                    className="pl-0 text-xs"
-                    optionWrapClassName="w-[165px] max-h-none"
-                    defaultValue={condition.key}
-                    items={subVarOptions}
-                    onSelect={item => handleSubVarKeyChange(item.value as string)}
-                    renderTrigger={item => (
-                      item
-                        ? (
-                            <div className="flex cursor-pointer justify-start">
-                              <div className="inline-flex h-6 max-w-full items-center rounded-md border-[0.5px] border-components-panel-border-subtle bg-components-badge-white-to-dark px-1.5 text-text-accent shadow-xs">
-                                <Variable02 className="h-3.5 w-3.5 shrink-0 text-text-accent" />
-                                <div className="system-xs-medium ml-0.5 truncate">{item?.name}</div>
-                              </div>
-                            </div>
-                          )
-                        : <div className="system-sm-regular text-left text-components-input-text-placeholder">{t('placeholder.select', { ns: 'common' })}</div>
-                    )}
-                    hideChecked
-                  />
-                )
+                <Select
+                  wrapperClassName="h-6"
+                  className="pl-0 text-xs"
+                  optionWrapClassName="w-[165px] max-h-none"
+                  defaultValue={condition.key}
+                  items={subVarOptions}
+                  onSelect={item => handleSubVarKeyChange(item.value as string)}
+                  renderTrigger={item => (
+                    item
+                      ? (
+                        <div className="flex cursor-pointer justify-start">
+                          <div className="inline-flex h-6 max-w-full items-center rounded-md border-[0.5px] border-components-panel-border-subtle bg-components-badge-white-to-dark px-1.5 text-text-accent shadow-xs">
+                            <Variable02 className="h-3.5 w-3.5 shrink-0 text-text-accent" />
+                            <div className="system-xs-medium ml-0.5 truncate">{item?.name}</div>
+                          </div>
+                        </div>
+                      )
+                      : <div className="system-sm-regular text-left text-components-input-text-placeholder">{t('placeholder.select', { ns: 'common' })}</div>
+                  )}
+                  hideChecked
+                />
+              )
               : (
-                  <ConditionVarSelector
-                    open={open}
-                    onOpenChange={setOpen}
-                    valueSelector={condition.variable_selector || []}
-                    varType={condition.varType}
-                    availableNodes={availableNodes}
-                    nodesOutputVars={nodesOutputVars}
-                    onChange={handleVarChange}
-                  />
-                )}
+                <ConditionVarSelector
+                  open={open}
+                  onOpenChange={setOpen}
+                  valueSelector={condition.variable_selector || []}
+                  varType={condition.varType}
+                  availableNodes={availableNodes}
+                  nodesOutputVars={nodesOutputVars}
+                  onChange={handleVarChange}
+                />
+              )}
 
           </div>
           <div className="mx-1 h-3 w-[1px] bg-divider-regular"></div>
@@ -388,7 +388,7 @@ const ConditionItem = ({
         }
       </div>
       <div
-        className="ml-1 mt-1 flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center rounded-lg text-text-tertiary hover:bg-state-destructive-hover hover:text-text-destructive"
+        className="ml-1 mt-1 flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center rounded-md text-text-tertiary hover:bg-state-destructive-hover hover:text-text-destructive"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={doRemoveCondition}

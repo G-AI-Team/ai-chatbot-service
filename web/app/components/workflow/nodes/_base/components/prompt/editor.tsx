@@ -157,7 +157,7 @@ const Editor: FC<Props> = ({
   return (
     <Wrap className={cn(className, wrapClassName)} style={wrapStyle} isInNode isExpand={isExpand}>
       <div ref={ref} className={cn(isFocus ? (gradientBorder && 'bg-gradient-to-r from-components-input-border-active-prompt-1 to-components-input-border-active-prompt-2') : 'bg-transparent', isExpand && 'h-full', '!rounded-[9px] p-0.5', containerClassName)}>
-        <div className={cn(isFocus ? 'bg-background-default' : 'bg-components-input-bg-normal', isExpand && 'flex h-full flex-col', 'rounded-lg', containerClassName)}>
+        <div className={cn(isFocus ? 'bg-background-default' : 'bg-components-input-bg-normal', isExpand && 'flex h-full flex-col', 'rounded-md', containerClassName)}>
           <div className={cn('flex items-center justify-between pl-3 pr-2 pt-1', headerClassName)}>
             <div className="flex gap-2">
               <div className={cn('text-xs font-semibold uppercase leading-4 text-text-secondary', titleClassName)}>
@@ -221,15 +221,15 @@ const Editor: FC<Props> = ({
                 )}
                 {!isCopied
                   ? (
-                      <ActionButton onClick={handleCopy}>
-                        <Copy className="h-4 w-4" />
-                      </ActionButton>
-                    )
+                    <ActionButton onClick={handleCopy}>
+                      <Copy className="h-4 w-4" />
+                    </ActionButton>
+                  )
                   : (
-                      <ActionButton>
-                        <CopyCheck className="h-4 w-4" />
-                      </ActionButton>
-                    )}
+                    <ActionButton>
+                      <CopyCheck className="h-4 w-4" />
+                    </ActionButton>
+                  )}
                 <ToggleExpandBtn isExpand={isExpand} onExpandChange={setIsExpand} />
               </div>
 
@@ -240,83 +240,83 @@ const Editor: FC<Props> = ({
           <div className={cn('pb-2', isExpand && 'flex grow flex-col')}>
             {!(isSupportJinja && editionType === EditionType.jinja2)
               ? (
-                  <div className={cn(isExpand ? 'grow' : 'max-h-[536px]', 'relative min-h-[56px] overflow-y-auto  px-3', editorContainerClassName)}>
-                    <PromptEditor
-                      key={controlPromptEditorRerenderKey}
-                      placeholder={placeholder}
-                      placeholderClassName={placeholderClassName}
-                      instanceId={instanceId}
-                      compact
-                      className={cn('min-h-[56px]', inputClassName)}
-                      style={isExpand ? { height: editorExpandHeight - 5 } : {}}
-                      value={value}
-                      contextBlock={{
-                        show: justVar ? false : isShowContext,
-                        selectable: !hasSetBlockStatus?.context,
-                        canNotAddContext: true,
-                      }}
-                      historyBlock={{
-                        show: justVar ? false : isShowHistory,
-                        selectable: !hasSetBlockStatus?.history,
-                        history: {
-                          user: 'Human',
-                          assistant: 'Assistant',
-                        },
-                      }}
-                      queryBlock={{
-                        show: false, // use [sys.query] instead of query block
-                        selectable: false,
-                      }}
-                      workflowVariableBlock={{
-                        show: true,
-                        variables: nodesOutputVars || [],
-                        getVarType: getVarType as any,
-                        workflowNodesMap: availableNodes.reduce((acc, node) => {
-                          acc[node.id] = {
-                            title: node.data.title,
-                            type: node.data.type,
-                            width: node.width,
-                            height: node.height,
-                            position: node.position,
+                <div className={cn(isExpand ? 'grow' : 'max-h-[536px]', 'relative min-h-[56px] overflow-y-auto  px-3', editorContainerClassName)}>
+                  <PromptEditor
+                    key={controlPromptEditorRerenderKey}
+                    placeholder={placeholder}
+                    placeholderClassName={placeholderClassName}
+                    instanceId={instanceId}
+                    compact
+                    className={cn('min-h-[56px]', inputClassName)}
+                    style={isExpand ? { height: editorExpandHeight - 5 } : {}}
+                    value={value}
+                    contextBlock={{
+                      show: justVar ? false : isShowContext,
+                      selectable: !hasSetBlockStatus?.context,
+                      canNotAddContext: true,
+                    }}
+                    historyBlock={{
+                      show: justVar ? false : isShowHistory,
+                      selectable: !hasSetBlockStatus?.history,
+                      history: {
+                        user: 'Human',
+                        assistant: 'Assistant',
+                      },
+                    }}
+                    queryBlock={{
+                      show: false, // use [sys.query] instead of query block
+                      selectable: false,
+                    }}
+                    workflowVariableBlock={{
+                      show: true,
+                      variables: nodesOutputVars || [],
+                      getVarType: getVarType as any,
+                      workflowNodesMap: availableNodes.reduce((acc, node) => {
+                        acc[node.id] = {
+                          title: node.data.title,
+                          type: node.data.type,
+                          width: node.width,
+                          height: node.height,
+                          position: node.position,
+                        }
+                        if (node.data.type === BlockEnum.Start) {
+                          acc.sys = {
+                            title: t('blocks.start', { ns: 'workflow' }),
+                            type: BlockEnum.Start,
                           }
-                          if (node.data.type === BlockEnum.Start) {
-                            acc.sys = {
-                              title: t('blocks.start', { ns: 'workflow' }),
-                              type: BlockEnum.Start,
-                            }
-                          }
-                          return acc
-                        }, {} as any),
-                        showManageInputField: !!pipelineId,
-                        onManageInputField: () => setShowInputFieldPanel?.(true),
-                      }}
-                      onChange={onChange}
-                      onBlur={setBlur}
-                      onFocus={setFocus}
-                      editable={!readOnly}
-                      isSupportFileVar={isSupportFileVar}
-                    />
-                    {/* to patch Editor not support dynamic change editable status */}
-                    {readOnly && <div className="absolute inset-0 z-10"></div>}
-                  </div>
-                )
+                        }
+                        return acc
+                      }, {} as any),
+                      showManageInputField: !!pipelineId,
+                      onManageInputField: () => setShowInputFieldPanel?.(true),
+                    }}
+                    onChange={onChange}
+                    onBlur={setBlur}
+                    onFocus={setFocus}
+                    editable={!readOnly}
+                    isSupportFileVar={isSupportFileVar}
+                  />
+                  {/* to patch Editor not support dynamic change editable status */}
+                  {readOnly && <div className="absolute inset-0 z-10"></div>}
+                </div>
+              )
               : (
-                  <div className={cn(isExpand ? 'grow' : 'max-h-[536px]', 'relative min-h-[56px] overflow-y-auto  px-3', editorContainerClassName)}>
-                    <CodeEditor
-                      availableVars={nodesOutputVars || []}
-                      varList={varList}
-                      onAddVar={handleAddVariable}
-                      isInNode
-                      readOnly={readOnly}
-                      language={CodeLanguage.python3}
-                      value={value}
-                      onChange={onChange}
-                      noWrapper
-                      isExpand={isExpand}
-                      className={inputClassName}
-                    />
-                  </div>
-                )}
+                <div className={cn(isExpand ? 'grow' : 'max-h-[536px]', 'relative min-h-[56px] overflow-y-auto  px-3', editorContainerClassName)}>
+                  <CodeEditor
+                    availableVars={nodesOutputVars || []}
+                    varList={varList}
+                    onAddVar={handleAddVariable}
+                    isInNode
+                    readOnly={readOnly}
+                    language={CodeLanguage.python3}
+                    value={value}
+                    onChange={onChange}
+                    noWrapper
+                    isExpand={isExpand}
+                    className={inputClassName}
+                  />
+                </div>
+              )}
           </div>
         </div>
       </div>

@@ -68,7 +68,7 @@ const HistoryBlockComponent: FC<HistoryBlockComponentProps> = ({
           </div>
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent style={{ zIndex: 100 }}>
-          <div className="w-[360px] rounded-xl bg-white shadow-lg">
+          <div className="w-[360px] rounded-md bg-white shadow-lg">
             <div className="p-4">
               <div className="mb-2 text-xs font-medium text-gray-500">{t('promptEditor.history.modal.title', { ns: 'common' })}</div>
               <div className="flex items-center text-sm text-gray-700">

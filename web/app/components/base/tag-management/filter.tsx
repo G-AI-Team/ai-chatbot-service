@@ -79,7 +79,7 @@ const TagFilter: FC<TagFilterProps> = ({
           className="block"
         >
           <div className={cn(
-            'flex h-8 cursor-pointer select-none items-center gap-1 rounded-lg border-[0.5px] border-transparent bg-components-input-bg-normal px-2',
+            'flex h-8 cursor-pointer select-none items-center gap-1 rounded-md border-[0.5px] border-transparent bg-components-input-bg-normal px-2',
             !open && !!value.length && 'shadow-xs',
             open && !!value.length && 'shadow-xs',
           )}
@@ -113,7 +113,7 @@ const TagFilter: FC<TagFilterProps> = ({
           </div>
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className="z-[1002]">
-          <div className="relative w-[240px] rounded-lg border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px]">
+          <div className="relative w-[240px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px]">
             <div className="p-2">
               <Input
                 showLeftIcon
@@ -127,7 +127,7 @@ const TagFilter: FC<TagFilterProps> = ({
               {filteredTagList.map(tag => (
                 <div
                   key={tag.id}
-                  className="flex cursor-pointer select-none items-center gap-2 rounded-lg py-[6px] pl-3 pr-2 hover:bg-state-base-hover"
+                  className="flex cursor-pointer select-none items-center gap-2 rounded-md py-[6px] pl-3 pr-2 hover:bg-state-base-hover"
                   onClick={() => selectTag(tag)}
                 >
                   <div title={tag.name} className="grow truncate text-sm leading-5 text-text-tertiary">{tag.name}</div>
@@ -144,7 +144,7 @@ const TagFilter: FC<TagFilterProps> = ({
             <div className="border-t-[0.5px] border-divider-regular" />
             <div className="p-1">
               <div
-                className="flex cursor-pointer select-none items-center gap-2 rounded-lg py-[6px] pl-3 pr-2 hover:bg-state-base-hover"
+                className="flex cursor-pointer select-none items-center gap-2 rounded-md py-[6px] pl-3 pr-2 hover:bg-state-base-hover"
                 onClick={() => {
                   setShowTagManagementModal(true)
                   setOpen(false)

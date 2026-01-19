@@ -1494,7 +1494,7 @@ describe('WebsiteCrawl', () => {
       const { container } = render(<WebsiteCrawl {...props} />)
 
       // Assert
-      const optionsContainer = container.querySelector('.rounded-xl')
+      const optionsContainer = container.querySelector('.rounded-md')
       expect(optionsContainer).toBeInTheDocument()
     })
   })

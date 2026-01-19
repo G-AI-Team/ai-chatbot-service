@@ -111,7 +111,7 @@ const CheckboxList: FC<CheckboxListProps> = ({
         </div>
       )}
 
-      <div className="rounded-lg border border-components-panel-border bg-components-panel-bg">
+      <div className="rounded-md border border-components-panel-border bg-components-panel-bg">
         {(showSelectAll || title || showSearch) && (
           <div className="relative flex items-center gap-2 border-b border-divider-subtle px-3 py-2">
             {!searchQuery && showSelectAll && (
@@ -124,28 +124,28 @@ const CheckboxList: FC<CheckboxListProps> = ({
             )}
             {!searchQuery
               ? (
-                  <div className="flex min-w-0 flex-1 items-center gap-1">
-                    {title && (
-                      <span className="system-xs-semibold-uppercase truncate leading-5 text-text-secondary">
-                        {title}
-                      </span>
-                    )}
-                    {showCount && selectedCount > 0 && (
-                      <Badge uppercase>
-                        {t('operation.selectCount', { ns: 'common', count: selectedCount })}
-                      </Badge>
-                    )}
-                  </div>
-                )
+                <div className="flex min-w-0 flex-1 items-center gap-1">
+                  {title && (
+                    <span className="system-xs-semibold-uppercase truncate leading-5 text-text-secondary">
+                      {title}
+                    </span>
+                  )}
+                  {showCount && selectedCount > 0 && (
+                    <Badge uppercase>
+                      {t('operation.selectCount', { ns: 'common', count: selectedCount })}
+                    </Badge>
+                  )}
+                </div>
+              )
               : (
-                  <div className="system-sm-medium-uppercase flex-1 leading-6 text-text-secondary">
-                    {
-                      filteredOptions.length > 0
-                        ? t('operation.searchCount', { ns: 'common', count: filteredOptions.length, content: title })
-                        : t('operation.noSearchCount', { ns: 'common', content: title })
-                    }
-                  </div>
-                )}
+                <div className="system-sm-medium-uppercase flex-1 leading-6 text-text-secondary">
+                  {
+                    filteredOptions.length > 0
+                      ? t('operation.searchCount', { ns: 'common', count: filteredOptions.length, content: title })
+                      : t('operation.noSearchCount', { ns: 'common', content: title })
+                  }
+                </div>
+              )}
             {showSearch && (
               <SearchInput
                 value={searchQuery}
@@ -163,52 +163,52 @@ const CheckboxList: FC<CheckboxListProps> = ({
         >
           {!filteredOptions.length
             ? (
-                <div className="px-3 py-6 text-center text-sm text-text-tertiary">
-                  {searchQuery
-                    ? (
-                        <div className="flex flex-col items-center justify-center gap-2">
-                          <Image alt="search menu" src={SearchMenu} width={32} />
-                          <span className="system-sm-regular text-text-secondary">{t('operation.noSearchResults', { ns: 'common', content: title })}</span>
-                          <Button variant="secondary-accent" size="small" onClick={() => setSearchQuery('')}>{t('operation.resetKeywords', { ns: 'common' })}</Button>
-                        </div>
-                      )
-                    : t('noData', { ns: 'common' })}
-                </div>
-              )
+              <div className="px-3 py-6 text-center text-sm text-text-tertiary">
+                {searchQuery
+                  ? (
+                    <div className="flex flex-col items-center justify-center gap-2">
+                      <Image alt="search menu" src={SearchMenu} width={32} />
+                      <span className="system-sm-regular text-text-secondary">{t('operation.noSearchResults', { ns: 'common', content: title })}</span>
+                      <Button variant="secondary-accent" size="small" onClick={() => setSearchQuery('')}>{t('operation.resetKeywords', { ns: 'common' })}</Button>
+                    </div>
+                  )
+                  : t('noData', { ns: 'common' })}
+              </div>
+            )
             : (
-                filteredOptions.map((option) => {
-                  const selected = value.includes(option.value)
+              filteredOptions.map((option) => {
+                const selected = value.includes(option.value)
 
-                  return (
-                    <div
-                      key={option.value}
-                      className={cn(
-                        'flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 transition-colors hover:bg-state-base-hover',
-                        option.disabled && 'cursor-not-allowed opacity-50',
-                      )}
-                      onClick={() => {
+                return (
+                  <div
+                    key={option.value}
+                    className={cn(
+                      'flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 transition-colors hover:bg-state-base-hover',
+                      option.disabled && 'cursor-not-allowed opacity-50',
+                    )}
+                    onClick={() => {
+                      if (!option.disabled && !disabled)
+                        handleToggleOption(option.value)
+                    }}
+                  >
+                    <Checkbox
+                      checked={selected}
+                      onCheck={() => {
                         if (!option.disabled && !disabled)
                           handleToggleOption(option.value)
                       }}
+                      disabled={option.disabled || disabled}
+                    />
+                    <div
+                      className="system-sm-medium flex-1 truncate text-text-secondary"
+                      title={option.label}
                     >
-                      <Checkbox
-                        checked={selected}
-                        onCheck={() => {
-                          if (!option.disabled && !disabled)
-                            handleToggleOption(option.value)
-                        }}
-                        disabled={option.disabled || disabled}
-                      />
-                      <div
-                        className="system-sm-medium flex-1 truncate text-text-secondary"
-                        title={option.label}
-                      >
-                        {option.label}
-                      </div>
+                      {option.label}
                     </div>
-                  )
-                })
-              )}
+                  </div>
+                )
+              })
+            )}
         </div>
       </div>
     </div>

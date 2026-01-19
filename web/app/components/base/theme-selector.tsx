@@ -53,10 +53,10 @@ export default function ThemeSelector() {
         </ActionButton>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[1000]">
-        <div className="flex w-[144px] flex-col items-start rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
+        <div className="flex w-[144px] flex-col items-start rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg">
           <button
             type="button"
-            className="flex w-full items-center gap-1 rounded-lg px-2 py-1.5 text-text-secondary hover:bg-state-base-hover"
+            className="flex w-full items-center gap-1 rounded-md px-2 py-1.5 text-text-secondary hover:bg-state-base-hover"
             onClick={() => handleThemeChange('light')}
           >
             <RiSunLine className="h-4 w-4 text-text-tertiary" />
@@ -71,7 +71,7 @@ export default function ThemeSelector() {
           </button>
           <button
             type="button"
-            className="flex w-full items-center gap-1 rounded-lg px-2 py-1.5 text-text-secondary hover:bg-state-base-hover"
+            className="flex w-full items-center gap-1 rounded-md px-2 py-1.5 text-text-secondary hover:bg-state-base-hover"
             onClick={() => handleThemeChange('dark')}
           >
             <RiMoonLine className="h-4 w-4 text-text-tertiary" />
@@ -86,7 +86,7 @@ export default function ThemeSelector() {
           </button>
           <button
             type="button"
-            className="flex w-full items-center gap-1 rounded-lg px-2 py-1.5 text-text-secondary hover:bg-state-base-hover"
+            className="flex w-full items-center gap-1 rounded-md px-2 py-1.5 text-text-secondary hover:bg-state-base-hover"
             onClick={() => handleThemeChange('system')}
           >
             <RiComputerLine className="h-4 w-4 text-text-tertiary" />

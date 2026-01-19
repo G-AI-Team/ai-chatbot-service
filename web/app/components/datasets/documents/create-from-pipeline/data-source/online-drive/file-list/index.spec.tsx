@@ -123,7 +123,7 @@ describe('FileList', () => {
       expect(wrapper).toHaveClass('h-[400px]')
       expect(wrapper).toHaveClass('flex-col')
       expect(wrapper).toHaveClass('overflow-hidden')
-      expect(wrapper).toHaveClass('rounded-xl')
+      expect(wrapper).toHaveClass('rounded-md')
     })
 
     it('should render Header component with search input', () => {

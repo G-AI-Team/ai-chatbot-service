@@ -39,7 +39,7 @@ import Support from './support'
 export default function AppSelector() {
   const itemClassName = `
     flex items-center w-full h-8 pl-3 pr-2 text-text-secondary system-md-regular
-    rounded-lg hover:bg-state-base-hover cursor-pointer gap-1
+    rounded-md hover:bg-state-base-hover cursor-pointer gap-1
   `
   const router = useRouter()
   const [aboutVisible, setAboutVisible] = useState(false)
@@ -87,7 +87,7 @@ export default function AppSelector() {
                 <MenuItems
                   className="
                     absolute right-0 mt-1.5 w-60 max-w-80
-                    origin-top-right divide-y divide-divider-subtle rounded-xl bg-components-panel-bg-blur shadow-lg
+                    origin-top-right divide-y divide-divider-subtle rounded-md bg-components-panel-bg-blur shadow-lg
                     backdrop-blur-sm focus:outline-none
                   "
                 >

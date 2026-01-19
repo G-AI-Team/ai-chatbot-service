@@ -383,13 +383,13 @@ const FormInputItem: FC<Props> = ({
           placeholder={placeholder?.[language] || placeholder?.en_US}
           renderOption={options.some((opt: any) => opt.icon)
             ? ({ item }) => (
-                <div className="flex items-center">
-                  {item.icon && (
-                    <img src={item.icon} alt="" className="mr-2 h-4 w-4" />
-                  )}
-                  <span>{item.name}</span>
-                </div>
-              )
+              <div className="flex items-center">
+                {item.icon && (
+                  <img src={item.icon} alt="" className="mr-2 h-4 w-4" />
+                )}
+                <span>{item.name}</span>
+              </div>
+            )
             : undefined}
         />
       )}
@@ -401,7 +401,7 @@ const FormInputItem: FC<Props> = ({
           disabled={readOnly}
         >
           <div className="group/simple-select relative h-8 grow">
-            <ListboxButton className="flex h-full w-full cursor-pointer items-center rounded-lg border-0 bg-components-input-bg-normal pl-3 pr-10 focus-visible:bg-state-base-hover-alt focus-visible:outline-none group-hover/simple-select:bg-state-base-hover-alt sm:text-sm sm:leading-6">
+            <ListboxButton className="flex h-full w-full cursor-pointer items-center rounded-md border-0 bg-components-input-bg-normal pl-3 pr-10 focus-visible:bg-state-base-hover-alt focus-visible:outline-none group-hover/simple-select:bg-state-base-hover-alt sm:text-sm sm:leading-6">
               <span className={cn('system-sm-regular block truncate text-left', varInput?.value?.length > 0 ? 'text-components-input-text-filled' : 'text-components-input-text-placeholder')}>
                 {getSelectedLabels(varInput?.value) || placeholder?.[language] || placeholder?.en_US || 'Select options'}
               </span>
@@ -412,7 +412,7 @@ const FormInputItem: FC<Props> = ({
                 />
               </span>
             </ListboxButton>
-            <ListboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur px-1 py-1 text-base shadow-lg backdrop-blur-sm focus:outline-none sm:text-sm">
+            <ListboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur px-1 py-1 text-base shadow-lg backdrop-blur-sm focus:outline-none sm:text-sm">
               {options.filter((option: { show_on: any[] }) => {
                 if (option.show_on?.length)
                   return option.show_on.every(showOnItem => value[showOnItem.variable] === showOnItem.value)
@@ -422,7 +422,7 @@ const FormInputItem: FC<Props> = ({
                   key={option.value}
                   value={option.value}
                   className={({ focus }) =>
-                    cn('relative cursor-pointer select-none rounded-lg py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover', focus && 'bg-state-base-hover')}
+                    cn('relative cursor-pointer select-none rounded-md py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover', focus && 'bg-state-base-hover')}
                 >
                   {({ selected }) => (
                     <>
@@ -482,7 +482,7 @@ const FormInputItem: FC<Props> = ({
           disabled={readOnly || isLoadingOptions}
         >
           <div className="group/simple-select relative h-8 grow">
-            <ListboxButton className="flex h-full w-full cursor-pointer items-center rounded-lg border-0 bg-components-input-bg-normal pl-3 pr-10 focus-visible:bg-state-base-hover-alt focus-visible:outline-none group-hover/simple-select:bg-state-base-hover-alt sm:text-sm sm:leading-6">
+            <ListboxButton className="flex h-full w-full cursor-pointer items-center rounded-md border-0 bg-components-input-bg-normal pl-3 pr-10 focus-visible:bg-state-base-hover-alt focus-visible:outline-none group-hover/simple-select:bg-state-base-hover-alt sm:text-sm sm:leading-6">
               <span className={cn('system-sm-regular block truncate text-left', isLoadingOptions
                 ? 'text-components-input-text-placeholder'
                 : varInput?.value?.length > 0 ? 'text-components-input-text-filled' : 'text-components-input-text-placeholder')}
@@ -494,17 +494,17 @@ const FormInputItem: FC<Props> = ({
               <span className="absolute inset-y-0 right-0 flex items-center pr-2">
                 {isLoadingOptions
                   ? (
-                      <RiLoader4Line className="h-3.5 w-3.5 animate-spin text-text-secondary" />
-                    )
+                    <RiLoader4Line className="h-3.5 w-3.5 animate-spin text-text-secondary" />
+                  )
                   : (
-                      <ChevronDownIcon
-                        className="h-4 w-4 text-text-quaternary group-hover/simple-select:text-text-secondary"
-                        aria-hidden="true"
-                      />
-                    )}
+                    <ChevronDownIcon
+                      className="h-4 w-4 text-text-quaternary group-hover/simple-select:text-text-secondary"
+                      aria-hidden="true"
+                    />
+                  )}
               </span>
             </ListboxButton>
-            <ListboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur px-1 py-1 text-base shadow-lg backdrop-blur-sm focus:outline-none sm:text-sm">
+            <ListboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur px-1 py-1 text-base shadow-lg backdrop-blur-sm focus:outline-none sm:text-sm">
               {(dynamicOptions || options || []).filter((option: { show_on?: any[] }) => {
                 if (option.show_on?.length)
                   return option.show_on.every(showOnItem => value[showOnItem.variable] === showOnItem.value)
@@ -514,7 +514,7 @@ const FormInputItem: FC<Props> = ({
                   key={option.value}
                   value={option.value}
                   className={({ focus }) =>
-                    cn('relative cursor-pointer select-none rounded-lg py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover', focus && 'bg-state-base-hover')}
+                    cn('relative cursor-pointer select-none rounded-md py-2 pl-3 pr-9 text-text-secondary hover:bg-state-base-hover', focus && 'bg-state-base-hover')}
                 >
                   {({ selected }) => (
                     <>

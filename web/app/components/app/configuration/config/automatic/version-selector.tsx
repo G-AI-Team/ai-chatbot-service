@@ -68,7 +68,7 @@ const VersionSelector: React.FC<VersionSelectorProps> = ({ versionLen, value, on
       >
         <div
           className={cn(
-            'w-[208px] rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg',
+            'w-[208px] rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg',
           )}
         >
           <div className={cn('system-xs-medium-uppercase flex h-[22px] items-center px-3 pl-3 text-text-tertiary')}>
@@ -79,7 +79,7 @@ const VersionSelector: React.FC<VersionSelectorProps> = ({ versionLen, value, on
               <div
                 key={option.value}
                 className={cn(
-                  'system-sm-medium flex h-7 cursor-pointer items-center rounded-lg px-2 text-text-secondary hover:bg-state-base-hover',
+                  'system-sm-medium flex h-7 cursor-pointer items-center rounded-md px-2 text-text-secondary hover:bg-state-base-hover',
                 )}
                 title={option.label}
                 onClick={() => {

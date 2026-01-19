@@ -145,7 +145,7 @@ const NotionPageSelector = ({
         docTitle="Notion docs"
         docLink="https://www.notion.so/docs"
       />
-      <div className="rounded-xl border border-components-panel-border bg-background-default-subtle">
+      <div className="rounded-md border border-components-panel-border bg-background-default-subtle">
         <div className="flex h-12 items-center gap-x-2 rounded-t-xl border-b border-b-divider-regular bg-components-panel-bg p-2">
           <div className="flex grow items-center gap-x-1">
             <WorkspaceSelector
@@ -162,23 +162,23 @@ const NotionPageSelector = ({
         <div className="overflow-hidden rounded-b-xl">
           {isFetchingNotionPages
             ? (
-                <div className="flex h-[296px] items-center justify-center">
-                  <Loading />
-                </div>
-              )
+              <div className="flex h-[296px] items-center justify-center">
+                <Loading />
+              </div>
+            )
             : (
-                <PageSelector
-                  value={selectedPagesId}
-                  disabledValue={pagesMapAndSelectedPagesId[2]}
-                  searchValue={searchValue}
-                  list={notionsPages!.notion_info?.[0].pages || []}
-                  pagesMap={pagesMapAndSelectedPagesId[0]}
-                  onSelect={handleSelectPages}
-                  canPreview={canPreview}
-                  previewPageId={previewPageId}
-                  onPreview={handlePreviewPage}
-                />
-              )}
+              <PageSelector
+                value={selectedPagesId}
+                disabledValue={pagesMapAndSelectedPagesId[2]}
+                searchValue={searchValue}
+                list={notionsPages!.notion_info?.[0].pages || []}
+                pagesMap={pagesMapAndSelectedPagesId[0]}
+                onSelect={handleSelectPages}
+                canPreview={canPreview}
+                previewPageId={previewPageId}
+                onPreview={handlePreviewPage}
+              />
+            )}
         </div>
       </div>
     </div>

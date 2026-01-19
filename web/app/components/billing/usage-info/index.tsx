@@ -50,18 +50,18 @@ const UsageInfo: FC<Props> = ({
   const resetText = resetHint ?? (typeof resetInDays === 'number' ? t('usagePage.resetsIn', { ns: 'billing', count: resetInDays }) : undefined)
   const rightInfo = resetText
     ? (
-        <div className="system-xs-regular ml-auto flex-1 text-right text-text-tertiary">
-          {resetText}
-        </div>
-      )
+      <div className="system-xs-regular ml-auto flex-1 text-right text-text-tertiary">
+        {resetText}
+      </div>
+    )
     : (showUnit && (
-        <div className="system-xs-medium ml-auto text-text-tertiary">
-          {unit}
-        </div>
-      ))
+      <div className="system-xs-medium ml-auto text-text-tertiary">
+        {unit}
+      </div>
+    ))
 
   return (
-    <div className={cn('flex flex-col gap-2 rounded-xl bg-components-panel-bg p-4', className)}>
+    <div className={cn('flex flex-col gap-2 rounded-md bg-components-panel-bg p-4', className)}>
       {!hideIcon && Icon && (
         <Icon className="h-4 w-4 text-text-tertiary" />
       )}

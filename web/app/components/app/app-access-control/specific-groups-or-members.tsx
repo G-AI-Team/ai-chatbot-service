@@ -47,7 +47,7 @@ export default function SpecificGroupsOrMembers() {
         </div>
       </div>
       <div className="px-1 pb-1">
-        <div className="flex max-h-[400px] flex-col gap-y-2 overflow-y-auto rounded-lg bg-background-section p-2">
+        <div className="flex max-h-[400px] flex-col gap-y-2 overflow-y-auto rounded-md bg-background-section p-2">
           {isPending ? <Loading /> : <RenderGroupsAndMembers />}
         </div>
       </div>

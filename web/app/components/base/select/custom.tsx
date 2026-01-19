@@ -94,7 +94,7 @@ const CustomSelect = <T extends Option>({
       >
         <div
           className={cn(
-            'system-sm-regular group flex h-8 cursor-pointer items-center rounded-lg bg-components-input-bg-normal px-2 text-components-input-text-filled hover:bg-state-base-hover-alt',
+            'system-sm-regular group flex h-8 cursor-pointer items-center rounded-md bg-components-input-bg-normal px-2 text-components-input-text-filled hover:bg-state-base-hover-alt',
             mergedOpen && 'bg-state-base-hover-alt',
             triggerClassName,
           )}
@@ -102,21 +102,21 @@ const CustomSelect = <T extends Option>({
           {CustomTrigger
             ? CustomTrigger(selectedOption, mergedOpen)
             : (
-                <>
-                  <div
-                    className="grow"
-                    title={triggerText}
-                  >
-                    {triggerText}
-                  </div>
-                  <RiArrowDownSLine
-                    className={cn(
-                      'h-4 w-4 shrink-0 text-text-quaternary group-hover:text-text-secondary',
-                      mergedOpen && 'text-text-secondary',
-                    )}
-                  />
-                </>
-              )}
+              <>
+                <div
+                  className="grow"
+                  title={triggerText}
+                >
+                  {triggerText}
+                </div>
+                <RiArrowDownSLine
+                  className={cn(
+                    'h-4 w-4 shrink-0 text-text-quaternary group-hover:text-text-secondary',
+                    mergedOpen && 'text-text-secondary',
+                  )}
+                />
+              </>
+            )}
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className={cn(
@@ -126,7 +126,7 @@ const CustomSelect = <T extends Option>({
       >
         <div
           className={cn(
-            'rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg shadow-shadow-shadow-5',
+            'rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur p-1 shadow-lg shadow-shadow-shadow-5',
             popupClassName,
           )}
         >
@@ -137,7 +137,7 @@ const CustomSelect = <T extends Option>({
                 <div
                   key={option.value}
                   className={cn(
-                    'system-sm-medium flex h-8 cursor-pointer items-center rounded-lg px-2 text-text-secondary hover:bg-state-base-hover',
+                    'system-sm-medium flex h-8 cursor-pointer items-center rounded-md px-2 text-text-secondary hover:bg-state-base-hover',
                     popupItemClassName,
                   )}
                   title={option.label}
@@ -149,15 +149,15 @@ const CustomSelect = <T extends Option>({
                   {CustomOption
                     ? CustomOption(option, selected)
                     : (
-                        <>
-                          <div className="mr-1 grow truncate px-1">
-                            {option.label}
-                          </div>
-                          {
-                            selected && <RiCheckLine className="h-4 w-4 shrink-0 text-text-accent" />
-                          }
-                        </>
-                      )}
+                      <>
+                        <div className="mr-1 grow truncate px-1">
+                          {option.label}
+                        </div>
+                        {
+                          selected && <RiCheckLine className="h-4 w-4 shrink-0 text-text-accent" />
+                        }
+                      </>
+                    )}
                 </div>
               )
             })

@@ -70,7 +70,7 @@ const ContextBlockComponent: FC<ContextBlockComponentProps> = ({
             </div>
           </PortalToFollowElemTrigger>
           <PortalToFollowElemContent style={{ zIndex: 100 }}>
-            <div className="w-[360px] rounded-xl bg-white shadow-lg">
+            <div className="w-[360px] rounded-md bg-white shadow-lg">
               <div className="p-4">
                 <div className="mb-2 text-xs font-medium text-gray-500">
                   {t('promptEditor.context.modal.title', { ns: 'common', num: localDatasets.length })}

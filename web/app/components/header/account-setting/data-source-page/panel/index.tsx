@@ -50,9 +50,9 @@ const Panel: FC<Props> = ({
   }
 
   return (
-    <div className="mb-2 rounded-xl bg-background-section-burn">
+    <div className="mb-2 rounded-md bg-background-section-burn">
       <div className="flex items-center px-3 py-[9px]">
-        <div className={cn(s[`${type}-icon`], 'mr-3 h-8 w-8 rounded-lg border border-divider-subtle !bg-background-default')} />
+        <div className={cn(s[`${type}-icon`], 'mr-3 h-8 w-8 rounded-md border border-divider-subtle !bg-background-default')} />
         <div className="grow">
           <div className="flex h-5 items-center">
             <div className="text-sm font-medium text-text-primary">{t(`dataSource.${type}.title`, { ns: 'common' })}</div>
@@ -77,30 +77,30 @@ const Panel: FC<Props> = ({
             {
               isConfigured
                 ? (
-                    <Button
-                      disabled={readOnly}
-                      className="ml-3"
-                      onClick={onConfigure}
-                    >
-                      {t('dataSource.configure', { ns: 'common' })}
-                    </Button>
-                  )
+                  <Button
+                    disabled={readOnly}
+                    className="ml-3"
+                    onClick={onConfigure}
+                  >
+                    {t('dataSource.configure', { ns: 'common' })}
+                  </Button>
+                )
                 : (
-                    <>
-                      {isSupportList && (
-                        <div
-                          className={
-                            `system-sm-medium flex min-h-7 items-center rounded-md border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg px-3 py-1 text-components-button-secondary-accent-text
+                  <>
+                    {isSupportList && (
+                      <div
+                        className={
+                          `system-sm-medium flex min-h-7 items-center rounded-md border-[0.5px] border-components-button-secondary-border bg-components-button-secondary-bg px-3 py-1 text-components-button-secondary-accent-text
                   ${!readOnly ? 'cursor-pointer' : 'cursor-default opacity-50 grayscale'}`
-                          }
-                          onClick={onConfigure}
-                        >
-                          <RiAddLine className="mr-[5px] h-4 w-4 text-components-button-secondary-accent-text" />
-                          {t('dataSource.connect', { ns: 'common' })}
-                        </div>
-                      )}
-                    </>
-                  )
+                        }
+                        onClick={onConfigure}
+                      >
+                        <RiAddLine className="mr-[5px] h-4 w-4 text-components-button-secondary-accent-text" />
+                        {t('dataSource.connect', { ns: 'common' })}
+                      </div>
+                    )}
+                  </>
+                )
             }
           </>
         )}

@@ -108,7 +108,7 @@ const HeaderInMobile = () => {
           className="fixed inset-0 z-50 flex bg-background-overlay p-1"
           onClick={() => setShowSidebar(false)}
         >
-          <div className="flex h-full w-[calc(100vw_-_40px)] rounded-xl bg-components-panel-bg shadow-lg backdrop-blur-sm" onClick={e => e.stopPropagation()}>
+          <div className="flex h-full w-[calc(100vw_-_40px)] rounded-md bg-components-panel-bg shadow-lg backdrop-blur-sm" onClick={e => e.stopPropagation()}>
             <Sidebar />
           </div>
         </div>
@@ -118,7 +118,7 @@ const HeaderInMobile = () => {
           className="fixed inset-0 z-50 flex justify-end bg-background-overlay p-1"
           onClick={() => setShowChatSettings(false)}
         >
-          <div className="flex h-full w-[calc(100vw_-_40px)] flex-col rounded-xl bg-components-panel-bg shadow-lg backdrop-blur-sm" onClick={e => e.stopPropagation()}>
+          <div className="flex h-full w-[calc(100vw_-_40px)] flex-col rounded-md bg-components-panel-bg shadow-lg backdrop-blur-sm" onClick={e => e.stopPropagation()}>
             <div className="flex items-center gap-3 rounded-t-2xl border-b border-divider-subtle px-4 py-3">
               <Message3Fill className="h-6 w-6 shrink-0" />
               <div className="system-xl-semibold grow text-text-secondary">{t('chat.chatSettingsTitle', { ns: 'share' })}</div>

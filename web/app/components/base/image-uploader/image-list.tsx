@@ -52,7 +52,7 @@ const ImageList: FC<ImageListProps> = ({
       {list.map(item => (
         <div
           key={item._id}
-          className="group relative mr-1 rounded-lg border-[0.5px] border-black/5"
+          className="group relative mr-1 rounded-md border-[0.5px] border-black/5"
         >
           {item.type === TransferMethod.local_file && item.progress !== 100 && (
             <>
@@ -78,11 +78,11 @@ const ImageList: FC<ImageListProps> = ({
           {item.type === TransferMethod.remote_url && item.progress !== 100 && (
             <div
               className={`
-                  absolute inset-0 z-[1] flex items-center justify-center rounded-lg border
+                  absolute inset-0 z-[1] flex items-center justify-center rounded-md border
                   ${item.progress === -1
-              ? 'border-[#DC6803] bg-[#FEF0C7]'
-              : 'border-transparent bg-black/[0.16]'
-            }
+                  ? 'border-[#DC6803] bg-[#FEF0C7]'
+                  : 'border-transparent bg-black/[0.16]'
+                }
                 `}
             >
               {item.progress > -1 && (
@@ -98,7 +98,7 @@ const ImageList: FC<ImageListProps> = ({
             </div>
           )}
           <img
-            className="h-16 w-16 cursor-pointer rounded-lg border-[0.5px] border-black/5 object-cover"
+            className="h-16 w-16 cursor-pointer rounded-md border-[0.5px] border-black/5 object-cover"
             alt={item.file?.name}
             onLoad={() => handleImageLinkLoadSuccess(item)}
             onError={() => handleImageLinkLoadError(item)}

@@ -40,7 +40,7 @@ const Nav = ({
 
   return (
     <div className={`
-      flex h-8 max-w-[670px] shrink-0 items-center rounded-xl px-0.5 text-sm font-medium max-[1024px]:max-w-[400px]
+      flex h-8 max-w-[670px] shrink-0 items-center rounded-md px-0.5 text-sm font-medium max-[1024px]:max-w-[400px]
       ${isActivated && 'bg-components-main-nav-nav-button-bg-active font-semibold shadow-md'}
       ${!curNav && !isActivated && 'hover:bg-components-main-nav-nav-button-bg-hover'}
     `}

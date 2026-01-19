@@ -53,7 +53,7 @@ const CustomizeModal: FC<IShareLinkProps> = ({
       className="w-[640px] !max-w-2xl"
       closable={true}
     >
-      <div className="mt-4 w-full rounded-lg border-[0.5px] border-components-panel-border px-6 py-5">
+      <div className="mt-4 w-full rounded-md border-[0.5px] border-components-panel-border px-6 py-5">
         <Tag bordered={true} hideBg={true} className="border-text-accent-secondary uppercase text-text-accent-secondary">
           {t(`${prefixCustomize}.way`, { ns: 'appOverview' })}
           {' '}
@@ -91,7 +91,7 @@ const CustomizeModal: FC<IShareLinkProps> = ({
           <div className="flex w-full flex-col overflow-hidden">
             <div className="text-text-primary">{t(`${prefixCustomize}.way1.step3`, { ns: 'appOverview' })}</div>
             <div className="mb-2 mt-1 text-xs text-text-tertiary">{t(`${prefixCustomize}.way1.step3Tip`, { ns: 'appOverview' })}</div>
-            <pre className="box-border select-text overflow-x-scroll rounded-lg border-[0.5px] border-components-panel-border bg-background-section px-4 py-3 text-xs font-medium text-text-secondary">
+            <pre className="box-border select-text overflow-x-scroll rounded-md border-[0.5px] border-components-panel-border bg-background-section px-4 py-3 text-xs font-medium text-text-secondary">
               NEXT_PUBLIC_APP_ID=
               {`'${appId}'`}
               {' '}
@@ -107,7 +107,7 @@ const CustomizeModal: FC<IShareLinkProps> = ({
         </div>
 
       </div>
-      <div className="mt-4 w-full rounded-lg border-[0.5px] border-components-panel-border px-6 py-5">
+      <div className="mt-4 w-full rounded-md border-[0.5px] border-components-panel-border px-6 py-5">
         <Tag bordered={true} hideBg={true} className="border-text-accent-secondary uppercase text-text-accent-secondary">
           {t(`${prefixCustomize}.way`, { ns: 'appOverview' })}
           {' '}

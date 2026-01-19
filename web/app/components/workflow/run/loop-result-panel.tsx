@@ -43,7 +43,7 @@ const LoopResultPanel: FC<Props> = ({
       <div className={cn(!noWrap && 'shrink-0 ', 'px-4 pt-3')}>
         <div className="flex h-8 shrink-0 items-center justify-between">
           <div className="system-xl-semibold truncate text-text-primary">
-            {t(`${i18nPrefix}.testRunLoop`, { ns: 'workflow' }) }
+            {t(`${i18nPrefix}.testRunLoop`, { ns: 'workflow' })}
           </div>
           <div className="ml-2 shrink-0 cursor-pointer p-1" onClick={onHide}>
             <RiCloseLine className="h-4 w-4 text-text-tertiary" />
@@ -57,12 +57,12 @@ const LoopResultPanel: FC<Props> = ({
       {/* List */}
       <div className={cn(!noWrap ? 'grow overflow-auto' : 'max-h-full', 'bg-components-panel-bg p-2')}>
         {list.map((loop, index) => (
-          <div key={index} className={cn('mb-1 overflow-hidden rounded-xl border-none bg-background-section-burn')}>
+          <div key={index} className={cn('mb-1 overflow-hidden rounded-md border-none bg-background-section-burn')}>
             <div
               className={cn(
                 'flex w-full cursor-pointer items-center justify-between px-3',
                 expandedLoops[index] ? 'pb-2 pt-3' : 'py-3',
-                'rounded-xl text-left',
+                'rounded-md text-left',
               )}
               onClick={() => toggleLoop(index)}
             >

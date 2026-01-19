@@ -103,11 +103,11 @@ const Operation = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-[999]">
-        <div className={cn('inline-flex flex-col rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm')}>
+        <div className={cn('inline-flex flex-col rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-sm')}>
           <div className="p-1">
             {
               roleList.map(role => (
-                <div key={role} className="flex cursor-pointer rounded-lg px-3 py-2 hover:bg-state-base-hover" onClick={() => handleUpdateMemberRole(role)}>
+                <div key={role} className="flex cursor-pointer rounded-md px-3 py-2 hover:bg-state-base-hover" onClick={() => handleUpdateMemberRole(role)}>
                   {
                     role === member.role
                       ? <CheckIcon className="mr-1 mt-[2px] h-4 w-4 text-text-accent" />
@@ -122,7 +122,7 @@ const Operation = ({
             }
           </div>
           <div className="border-t border-divider-subtle p-1">
-            <div className="flex cursor-pointer rounded-lg px-3 py-2 hover:bg-state-base-hover" onClick={handleDeleteMemberOrCancelInvitation}>
+            <div className="flex cursor-pointer rounded-md px-3 py-2 hover:bg-state-base-hover" onClick={handleDeleteMemberOrCancelInvitation}>
               <div className="mr-1 mt-[2px] h-4 w-4 text-text-accent" />
               <div>
                 <div className="system-sm-semibold whitespace-nowrap text-text-secondary">{t('members.removeFromTeam', { ns: 'common' })}</div>

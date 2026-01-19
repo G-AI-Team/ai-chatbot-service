@@ -51,19 +51,19 @@ const EditCustomCollectionModal: FC<Props> = ({
   const [labels, setLabels] = useState<string[]>(payload?.labels || [])
   const [customCollection, setCustomCollection, getCustomCollection] = useGetState<CustomCollectionBackend>(isAdd
     ? {
-        provider: '',
-        credentials: {
-          auth_type: AuthType.none,
-          api_key_header: 'Authorization',
-          api_key_header_prefix: AuthHeaderPrefix.basic,
-        },
-        icon: {
-          content: '🕵️',
-          background: '#FEF7C3',
-        },
-        schema_type: '',
-        schema: '',
-      }
+      provider: '',
+      credentials: {
+        auth_type: AuthType.none,
+        api_key_header: 'Authorization',
+        api_key_header_prefix: AuthHeaderPrefix.basic,
+      },
+      icon: {
+        content: '🕵️',
+        background: '#FEF7C3',
+      },
+      schema_type: '',
+      schema: '',
+    }
     : payload)
 
   const originalProvider = isEdit ? payload.provider : ''
@@ -261,7 +261,7 @@ const EditCustomCollectionModal: FC<Props> = ({
               {/* Available Tools  */}
               <div>
                 <div className="system-sm-medium py-2 text-text-primary">{t('createTool.availableTools.title', { ns: 'tools' })}</div>
-                <div className="w-full overflow-x-auto rounded-lg border border-divider-regular">
+                <div className="w-full overflow-x-auto rounded-md border border-divider-regular">
                   <table className="system-xs-regular w-full text-text-secondary">
                     <thead className="uppercase text-text-tertiary">
                       <tr className={cn(paramsSchemas.length > 0 && 'border-b', 'border-divider-regular')}>
@@ -300,7 +300,7 @@ const EditCustomCollectionModal: FC<Props> = ({
               {/* Authorization method */}
               <div>
                 <div className="system-sm-medium py-2 text-text-primary">{t('createTool.authMethod.title', { ns: 'tools' })}</div>
-                <div className="flex h-9 cursor-pointer items-center justify-between rounded-lg bg-components-input-bg-normal px-2.5" onClick={() => setCredentialsModalShow(true)}>
+                <div className="flex h-9 cursor-pointer items-center justify-between rounded-md bg-components-input-bg-normal px-2.5" onClick={() => setCredentialsModalShow(true)}>
                   <div className="system-xs-regular text-text-primary">{t(`createTool.authMethod.types.${credential.auth_type}`, { ns: 'tools' })}</div>
                   <RiSettings2Line className="h-4 w-4 text-text-secondary" />
                 </div>

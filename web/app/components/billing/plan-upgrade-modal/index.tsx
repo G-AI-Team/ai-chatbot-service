@@ -54,7 +54,7 @@ const PlanUpgradeModal: FC<Props> = ({
           className={`${styles.heroOverlay} pointer-events-none absolute inset-0`}
         />
         <div className="px-8 pt-8">
-          <div className={`${styles.icon} flex size-12 items-center justify-center rounded-xl shadow-lg backdrop-blur-[5px]`}>
+          <div className={`${styles.icon} flex size-12 items-center justify-center rounded-md shadow-lg backdrop-blur-[5px]`}>
             <Icon className="size-6 text-text-primary-on-surface" />
           </div>
           <div className="mt-6 space-y-2">
@@ -79,7 +79,7 @@ const PlanUpgradeModal: FC<Props> = ({
           size="custom"
           isShort
           onClick={handleUpgrade}
-          className="!h-8 !rounded-lg px-2"
+          className="!h-8 !rounded-md px-2"
           labelKey="triggerLimitModal.upgrade"
           loc="trigger-events-limit-modal"
         />

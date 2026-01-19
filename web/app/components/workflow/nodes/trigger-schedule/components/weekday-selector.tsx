@@ -39,11 +39,10 @@ const WeekdaySelector = ({ selectedDays, onChange }: WeekdaySelectorProps) => {
           <button
             key={day.key}
             type="button"
-            className={`flex-1 rounded-lg border bg-components-option-card-option-bg py-1 text-xs transition-colors ${
-              isDaySelected(day.key)
+            className={`flex-1 rounded-md border bg-components-option-card-option-bg py-1 text-xs transition-colors ${isDaySelected(day.key)
                 ? 'border-util-colors-blue-brand-blue-brand-600 text-text-secondary'
                 : 'border-divider-subtle text-text-tertiary hover:border-divider-regular hover:text-text-secondary'
-            }`}
+              }`}
             onClick={() => handleDaySelect(day.key)}
           >
             {day.label}

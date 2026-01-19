@@ -25,7 +25,7 @@ const ParagraphInput: FC<ParagraphInputProps> = ({
   const lineCount = Math.max(3, lines.length)
 
   return (
-    <div className={cn('rounded-xl bg-components-input-bg-normal px-3 pb-2 pt-3', className)}>
+    <div className={cn('rounded-md bg-components-input-bg-normal px-3 pb-2 pt-3', className)}>
       <div className="relative">
         <div className="pointer-events-none absolute left-0 top-0 flex flex-col">
           {Array.from({ length: lineCount }, (_, index) => (

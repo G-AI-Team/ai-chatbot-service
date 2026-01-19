@@ -52,7 +52,7 @@ const CSVDownload: FC<{ docForm: ChunkingMode }> = ({ docForm }) => {
       <div className="text-sm font-medium text-text-primary">{t('generation.csvStructureTitle', { ns: 'share' })}</div>
       <div className="mt-2 max-h-[500px] overflow-auto">
         {docForm === ChunkingMode.qa && (
-          <table className="w-full table-fixed border-separate border-spacing-0 rounded-lg border border-divider-subtle text-xs">
+          <table className="w-full table-fixed border-separate border-spacing-0 rounded-md border border-divider-subtle text-xs">
             <thead className="text-text-secondary">
               <tr>
                 <td className="h-9 border-b border-divider-subtle pl-3 pr-2">{t('list.batchModal.question', { ns: 'datasetDocuments' })}</td>
@@ -88,7 +88,7 @@ const CSVDownload: FC<{ docForm: ChunkingMode }> = ({ docForm }) => {
           </table>
         )}
         {docForm === ChunkingMode.text && (
-          <table className="w-full table-fixed border-separate border-spacing-0 rounded-lg border border-divider-subtle text-xs">
+          <table className="w-full table-fixed border-separate border-spacing-0 rounded-md border border-divider-subtle text-xs">
             <thead className="text-text-secondary">
               <tr>
                 <td className="h-9 border-b border-divider-subtle pl-3 pr-2">{t('list.batchModal.contentTitle', { ns: 'datasetDocuments' })}</td>

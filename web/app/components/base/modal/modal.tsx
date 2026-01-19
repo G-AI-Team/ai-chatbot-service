@@ -79,7 +79,7 @@ const Modal = ({
               )
             }
             <div
-              className="absolute right-5 top-5 flex h-8 w-8 cursor-pointer items-center justify-center rounded-lg"
+              className="absolute right-5 top-5 flex h-8 w-8 cursor-pointer items-center justify-center rounded-md"
               onClick={onClose}
             >
               <RiCloseLine className="h-5 w-5 text-text-tertiary" />

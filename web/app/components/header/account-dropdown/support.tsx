@@ -18,7 +18,7 @@ type SupportProps = {
 export default function Support({ closeAccountDropdown }: SupportProps) {
   const itemClassName = `
   flex items-center w-full h-9 pl-3 pr-2 text-text-secondary system-md-regular
-  rounded-lg hover:bg-state-base-hover cursor-pointer gap-1
+  rounded-md hover:bg-state-base-hover cursor-pointer gap-1
 `
   const { t } = useTranslation()
   const { plan } = useProviderContext()
@@ -31,7 +31,7 @@ export default function Support({ closeAccountDropdown }: SupportProps) {
         ({ open }) => (
           <>
             <MenuButton className={
-              cn('group flex h-9 w-full items-center gap-1 rounded-lg py-2 pl-3 pr-2 hover:bg-state-base-hover', open && 'bg-state-base-hover')
+              cn('group flex h-9 w-full items-center gap-1 rounded-md py-2 pl-3 pr-2 hover:bg-state-base-hover', open && 'bg-state-base-hover')
             }
             >
               <RiQuestionLine className="size-4 shrink-0 text-text-tertiary" />
@@ -50,7 +50,7 @@ export default function Support({ closeAccountDropdown }: SupportProps) {
               <MenuItems
                 className={cn(
                   `absolute top-[1px] z-10 max-h-[70vh] w-[216px] origin-top-right -translate-x-full divide-y divide-divider-subtle overflow-y-auto
-                rounded-xl border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px] focus:outline-none
+                rounded-md border-[0.5px] border-components-panel-border bg-components-panel-bg-blur shadow-lg backdrop-blur-[5px] focus:outline-none
               `,
                 )}
               >
@@ -59,29 +59,29 @@ export default function Support({ closeAccountDropdown }: SupportProps) {
                     <MenuItem>
                       {ZENDESK_WIDGET_KEY && ZENDESK_WIDGET_KEY.trim() !== ''
                         ? (
-                            <button
-                              className={cn(itemClassName, 'group justify-between text-left data-[active]:bg-state-base-hover')}
-                              onClick={() => {
-                                toggleZendeskWindow(true)
-                                closeAccountDropdown()
-                              }}
-                            >
-                              <RiChatSmile2Line className="size-4 shrink-0 text-text-tertiary" />
-                              <div className="system-md-regular grow px-1 text-text-secondary">{t('userProfile.contactUs', { ns: 'common' })}</div>
-                            </button>
-                          )
+                          <button
+                            className={cn(itemClassName, 'group justify-between text-left data-[active]:bg-state-base-hover')}
+                            onClick={() => {
+                              toggleZendeskWindow(true)
+                              closeAccountDropdown()
+                            }}
+                          >
+                            <RiChatSmile2Line className="size-4 shrink-0 text-text-tertiary" />
+                            <div className="system-md-regular grow px-1 text-text-secondary">{t('userProfile.contactUs', { ns: 'common' })}</div>
+                          </button>
+                        )
                         : (
-                            <a
-                              className={cn(itemClassName, 'group justify-between', 'data-[active]:bg-state-base-hover')}
-                              href={mailToSupport(userProfile.email, plan.type, langGeniusVersionInfo?.current_version)}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <RiMailSendLine className="size-4 shrink-0 text-text-tertiary" />
-                              <div className="system-md-regular grow px-1 text-text-secondary">{t('userProfile.emailSupport', { ns: 'common' })}</div>
-                              <RiArrowRightUpLine className="size-[14px] shrink-0 text-text-tertiary" />
-                            </a>
-                          )}
+                          <a
+                            className={cn(itemClassName, 'group justify-between', 'data-[active]:bg-state-base-hover')}
+                            href={mailToSupport(userProfile.email, plan.type, langGeniusVersionInfo?.current_version)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <RiMailSendLine className="size-4 shrink-0 text-text-tertiary" />
+                            <div className="system-md-regular grow px-1 text-text-secondary">{t('userProfile.emailSupport', { ns: 'common' })}</div>
+                            <RiArrowRightUpLine className="size-[14px] shrink-0 text-text-tertiary" />
+                          </a>
+                        )}
                     </MenuItem>
                   )}
                   <MenuItem>

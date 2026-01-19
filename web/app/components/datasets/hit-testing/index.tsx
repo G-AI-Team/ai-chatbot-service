@@ -81,15 +81,15 @@ const HitTestingPage: FC<Props> = ({ datasetId }: Props) => {
         {results.map((record, idx) =>
           isExternal
             ? (
-                <ResultItemExternal
-                  key={idx}
-                  positionId={idx + 1}
-                  payload={record as ExternalKnowledgeBaseHitTesting}
-                />
-              )
+              <ResultItemExternal
+                key={idx}
+                positionId={idx + 1}
+                payload={record as ExternalKnowledgeBaseHitTesting}
+              />
+            )
             : (
-                <ResultItem key={idx} payload={record as HitTesting} />
-              ),
+              <ResultItem key={idx} payload={record as HitTesting} />
+            ),
         )}
       </div>
     </div>
@@ -163,21 +163,21 @@ const HitTestingPage: FC<Props> = ({ datasetId }: Props) => {
         <div className="flex min-w-0 flex-1 flex-col pt-3">
           {isRetrievalLoading
             ? (
-                <div className="flex h-full flex-col rounded-tl-2xl bg-background-body px-4 py-3">
-                  <CardSkelton />
-                </div>
-              )
+              <div className="flex h-full flex-col rounded-tl-2xl bg-background-body px-4 py-3">
+                <CardSkelton />
+              </div>
+            )
             : (
-                (() => {
-                  if (!hitResult?.records.length && !externalHitResult?.records.length)
-                    return renderEmptyState()
+              (() => {
+                if (!hitResult?.records.length && !externalHitResult?.records.length)
+                  return renderEmptyState()
 
-                  if (hitResult?.records.length)
-                    return renderHitResults(hitResult.records)
+                if (hitResult?.records.length)
+                  return renderHitResults(hitResult.records)
 
-                  return renderHitResults(externalHitResult?.records || [])
-                })()
-              )}
+                return renderHitResults(externalHitResult?.records || [])
+              })()
+            )}
         </div>
       </FloatRightContainer>
       <Drawer
@@ -186,7 +186,7 @@ const HitTestingPage: FC<Props> = ({ datasetId }: Props) => {
         onClose={() => setIsShowModifyRetrievalModal(false)}
         footer={null}
         mask={isMobile}
-        panelClassName="mt-16 mx-2 sm:mr-2 mb-3 !p-0 !max-w-[640px] rounded-xl"
+        panelClassName="mt-16 mx-2 sm:mr-2 mb-3 !p-0 !max-w-[640px] rounded-md"
       >
         <ModifyRetrievalModal
           indexMethod={currentDataset?.indexing_technique || ''}
